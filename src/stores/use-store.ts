@@ -1,40 +1,46 @@
-import { randomColor } from '@utils'
-import * as THREE from 'three'
+import { Vector3 } from 'three'
 import { create } from 'zustand'
 
 export type PointData = {
   position: [number, number, number]
-  cluster_id: number | null
   token: string
   step: number
+  path_id: number
+  cluster_id: number
 }
 
 export type PathData = {
+  id: number
   name: string
   prompt: string
+  response: string
   points: PointData[]
-  pathColor: string
-  clusterColor: string
+}
+
+export type ClusterData = {
+  id: number
+  name: string
+  count: number
 }
 
 export type VisualizerData = {
   paths: PathData[]
-  clusters: number
+  clusters: ClusterData[]
 }
 
 type HoverData = {
-  pathId: string
-  clusterId: number | null
+  pathName: string
+  pathId: number
+  clusterId: number
   token: string
   step: number
-  color: string
   clientX: number
   clientY: number
 }
 
 type VisualizerState = {
   data: VisualizerData | null
-  centroid: THREE.Vector3
+  centroid: Vector3
   mode: 'paths' | 'clusters'
   spreadScale: number
   hoveredNode: HoverData | null
@@ -48,21 +54,16 @@ type VisualizerState = {
 
 export const useStore = create<VisualizerState>()(set => ({
   data: null,
-  centroid: new THREE.Vector3(0, 0, 0),
+  centroid: new Vector3(0, 0, 0),
   mode: 'paths',
   spreadScale: 1.0,
   hoveredNode: null,
 
   setData: data => {
-    data.paths.forEach(path => {
-      path.pathColor = randomColor()
-      path.clusterColor = randomColor()
-    })
-
     // Calculate centroid
-    const centroid = new THREE.Vector3(0, 0, 0)
+    const centroid = new Vector3(0, 0, 0)
     let totalPoints = 0
-    Object.values(data.paths).forEach(path => {
+    data.paths.forEach(path => {
       path.points.forEach(p => {
         centroid.x += p.position[0]
         centroid.y += p.position[1]

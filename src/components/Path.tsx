@@ -1,22 +1,21 @@
 import { Line } from '@react-three/drei'
-import * as THREE from 'three'
+import { COLORS } from '@utils'
+import type { Vector3 } from 'three'
 import { Point } from './Point'
 
 export type ParsedPoint = {
-  position: THREE.Vector3
-  clusterId: number | null
+  position: Vector3
   token: string
   step: number
-  color: string
+  pathId: number
+  clusterId: number
 }
 
 export type ParsedPath = {
-  id: string
-  index: number
+  id: number
+  name: string
   points: ParsedPoint[]
-  smoothPoints: THREE.Vector3[]
-  pathColor: string
-  clusterColor: string
+  smoothPoints: Vector3[]
 }
 
 interface TrajectoryProps {
@@ -28,7 +27,6 @@ interface TrajectoryProps {
 }
 
 export function Path({ path, mode, onPointOver, onPointOut, pointRadius }: TrajectoryProps) {
-  const lineColor = path.pathColor
   const lineOpacity = mode === 'paths' ? 0.6 : 0.15
 
   return (
@@ -36,7 +34,7 @@ export function Path({ path, mode, onPointOver, onPointOut, pointRadius }: Traje
       {mode === 'paths' && (
         <Line
           points={path.smoothPoints}
-          color={lineColor}
+          color={COLORS[path.id]}
           opacity={lineOpacity}
           transparent
           lineWidth={1}

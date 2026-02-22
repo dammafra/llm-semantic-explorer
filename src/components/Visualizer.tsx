@@ -1,6 +1,6 @@
 import { useStore } from '@stores'
 import { useMemo } from 'react'
-import * as THREE from 'three'
+import { CatmullRomCurve3, Vector3 } from 'three'
 import { Path, type ParsedPath, type ParsedPoint } from './Path'
 
 const POINT_RADIUS = 0.025
@@ -14,46 +14,42 @@ export function Visualizer() {
 
   // Parse data
   const parsedPaths = useMemo(() => {
-    if (!data?.paths) return []
+    if (!data || !data.paths || !data.paths.length) return []
     const result: ParsedPath[] = []
     let pathIdx = 0
 
-    Object.entries(data.paths).forEach(([id, path]) => {
+    data.paths.forEach(path => {
       const parsedPoints: ParsedPoint[] = []
-      const splineControlPoints: THREE.Vector3[] = []
+      const splineControlPoints: Vector3[] = []
 
       path.points.forEach(p => {
-        const pos = new THREE.Vector3(
+        const pos = new Vector3(
           (p.position[0] - centroid.x) * spreadScale,
           (p.position[1] - centroid.y) * spreadScale,
           (p.position[2] - centroid.z) * spreadScale,
         )
 
-        const color = mode === 'paths' ? path.pathColor : path.clusterColor
-
         parsedPoints.push({
           position: pos,
-          clusterId: p.cluster_id,
           token: p.token,
           step: p.step,
-          color,
+          pathId: path.id,
+          clusterId: p.cluster_id,
         })
         splineControlPoints.push(pos)
       })
 
-      let smoothPoints: THREE.Vector3[] = []
+      let smoothPoints: Vector3[] = []
       if (splineControlPoints.length > 1) {
-        const curve = new THREE.CatmullRomCurve3(splineControlPoints)
+        const curve = new CatmullRomCurve3(splineControlPoints)
         smoothPoints = curve.getPoints((splineControlPoints.length - 1) * 12)
       }
 
       result.push({
-        id,
-        index: pathIdx,
+        id: path.id,
+        name: path.name,
         points: parsedPoints,
         smoothPoints,
-        pathColor: path.pathColor,
-        clusterColor: path.clusterColor,
       })
       pathIdx++
     })
@@ -63,19 +59,19 @@ export function Visualizer() {
 
   return (
     <group>
-      {parsedPaths.map(path => (
+      {parsedPaths.map((path, index) => (
         <Path
-          key={path.id}
+          key={`path-${path.name}-${index}`}
           path={path}
           mode={mode}
           pointRadius={POINT_RADIUS}
           onPointOver={(p, clientX, clientY) => {
             setHoveredNode({
-              pathId: path.id,
+              pathId: p.pathId,
+              pathName: path.name,
               clusterId: p.clusterId,
               token: p.token,
               step: p.step,
-              color: p.color,
               clientX,
               clientY,
             })

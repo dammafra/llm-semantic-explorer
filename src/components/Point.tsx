@@ -1,3 +1,5 @@
+import { useStore } from '@stores'
+import { COLORS } from '@utils'
 import { type ParsedPoint } from './Path'
 
 interface PointProps {
@@ -9,8 +11,11 @@ interface PointProps {
 }
 
 export function Point({ point, pointRadius, onPointOver, onPointOut }: PointProps) {
+  const mode = useStore(state => state.mode)
+
   return (
     <mesh
+      visible={mode === 'paths' || (mode === 'clusters' && point.clusterId !== -1)}
       position={point.position}
       onPointerOver={e => {
         e.stopPropagation()
@@ -22,7 +27,7 @@ export function Point({ point, pointRadius, onPointOver, onPointOut }: PointProp
       }}
     >
       <icosahedronGeometry args={[pointRadius, 2]} />
-      <meshMatcapMaterial color={point.color} />
+      <meshMatcapMaterial color={COLORS[mode === 'paths' ? point.pathId : point.clusterId]} />
     </mesh>
   )
 }

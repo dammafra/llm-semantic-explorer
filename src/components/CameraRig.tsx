@@ -1,11 +1,11 @@
 import { CameraControls } from '@react-three/drei'
 import { useStore } from '@stores'
 import { useEffect, useRef } from 'react'
-import * as THREE from 'three'
+import type { Group } from 'three'
 
 export function CameraRig({ children }: { children: React.ReactNode }) {
   const controlsRef = useRef<any>(null)
-  const groupRef = useRef<THREE.Group>(null)
+  const groupRef = useRef<Group>(null)
   const hasAutoFitted = useRef(false)
 
   const data = useStore(state => state.data)
@@ -17,7 +17,7 @@ export function CameraRig({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     const controls = controlsRef.current
-    const hasData = data && data.paths && Object.keys(data.paths).length > 0
+    const hasData = data && data.paths && data.paths.length
 
     if (!hasAutoFitted.current && controls && groupRef.current && hasData) {
       setTimeout(() => {

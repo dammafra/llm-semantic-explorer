@@ -1,4 +1,5 @@
 import { useStore, type VisualizerData } from '@stores'
+import { COLORS } from '@utils'
 import { useEffect, useRef } from 'react'
 import { Pane } from 'tweakpane'
 
@@ -36,21 +37,33 @@ export function GUI() {
 
     const pathsTab = tabs.pages[0]
 
-    Object.values(state.data.paths).forEach(path => {
-      const color = path.pathColor
-      const folder = pathsTab.addFolder({
-        title: path.name,
-        expanded: false,
-      })
+    state.data.paths.forEach(path => {
+      const folder = pathsTab.addFolder({ title: path.name })
 
-      const titleElement = folder.element.querySelector('.tp-fldv_t')
-      if (titleElement) {
-        const dot = document.createElement('span')
-        dot.className = 'inline-block w-2 h-2 rounded-full mr-2'
-        dot.style.backgroundColor = color
-        titleElement.prepend(dot)
-      }
+      const titleElement = folder.element.querySelector('.tp-fldv_t')!
+      const dot = document.createElement('span')
+      dot.className = 'inline-block w-2 h-2 rounded-full mr-2'
+      dot.style.backgroundColor = COLORS[path.id]
+      titleElement.prepend(dot)
+
+      folder.addBinding(path, 'prompt', { readonly: true })
+      folder.addBinding(path, 'response', { readonly: true })
     })
+
+    const clustersTab = tabs.pages[1]
+
+    state.data.clusters.forEach((cluster, id) => {
+      const folder = clustersTab.addFolder({ title: cluster.name })
+
+      const titleElement = folder.element.querySelector('.tp-fldv_t')!
+      const dot = document.createElement('span')
+      dot.className = 'inline-block w-2 h-2 rounded-full mr-2'
+      dot.style.backgroundColor = COLORS[id]
+      titleElement.prepend(dot)
+
+      folder.addBinding(cluster, 'count', { readonly: true })
+    })
+
     return () => paneRef.current.dispose()
   }, [state.data])
 
