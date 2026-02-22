@@ -33,6 +33,24 @@ export function GUI() {
       if (e.index < 0) return
       state.setMode(e.index === 0 ? 'paths' : 'clusters')
     })
+
+    const pathsTab = tabs.pages[0]
+
+    Object.values(state.data.paths).forEach(path => {
+      const color = path.pathColor
+      const folder = pathsTab.addFolder({
+        title: path.name,
+        expanded: false,
+      })
+
+      const titleElement = folder.element.querySelector('.tp-fldv_t')
+      if (titleElement) {
+        const dot = document.createElement('span')
+        dot.className = 'inline-block w-2 h-2 rounded-full mr-2'
+        dot.style.backgroundColor = color
+        titleElement.prepend(dot)
+      }
+    })
     return () => paneRef.current.dispose()
   }, [state.data])
 

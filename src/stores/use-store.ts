@@ -1,3 +1,4 @@
+import { randomColor } from '@utils'
 import * as THREE from 'three'
 import { create } from 'zustand'
 
@@ -9,14 +10,16 @@ export type PointData = {
 }
 
 export type PathData = {
-  prompt?: string
+  name: string
+  prompt: string
   points: PointData[]
+  pathColor: string
+  clusterColor: string
 }
 
 export type VisualizerData = {
-  topic?: string
-  paths: Record<string, PathData>
-  clusters?: { num_clusters: number }
+  paths: PathData[]
+  clusters: number
 }
 
 type HoverData = {
@@ -37,7 +40,7 @@ type VisualizerState = {
   hoveredNode: HoverData | null
 
   // Actions
-  setData: (data: VisualizerData | null) => void
+  setData: (data: VisualizerData) => void
   setMode: (mode: 'paths' | 'clusters') => void
   setSpreadScale: (scale: number) => void
   setHoveredNode: (node: HoverData | null) => void
@@ -51,20 +54,24 @@ export const useStore = create<VisualizerState>()(set => ({
   hoveredNode: null,
 
   setData: data => {
+    data.paths.forEach(path => {
+      path.pathColor = randomColor()
+      path.clusterColor = randomColor()
+    })
+
     // Calculate centroid
     const centroid = new THREE.Vector3(0, 0, 0)
-    if (data?.paths) {
-      let totalPoints = 0
-      Object.values(data.paths).forEach(path => {
-        path.points.forEach(p => {
-          centroid.x += p.position[0]
-          centroid.y += p.position[1]
-          centroid.z += p.position[2]
-          totalPoints++
-        })
+    let totalPoints = 0
+    Object.values(data.paths).forEach(path => {
+      path.points.forEach(p => {
+        centroid.x += p.position[0]
+        centroid.y += p.position[1]
+        centroid.z += p.position[2]
+        totalPoints++
       })
-      if (totalPoints > 0) centroid.divideScalar(totalPoints)
-    }
+    })
+
+    centroid.divideScalar(totalPoints > 0 ? totalPoints : 1)
 
     set({
       data,

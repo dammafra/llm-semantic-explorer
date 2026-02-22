@@ -1,9 +1,9 @@
 import { useStore } from '@stores'
 import { useMemo } from 'react'
 import * as THREE from 'three'
-import { CLUSTER_COLORS, Path, PATH_COLORS, type ParsedPath, type ParsedPoint } from './Path'
+import { Path, type ParsedPath, type ParsedPoint } from './Path'
 
-const POINT_RADIUS = 0.05
+const POINT_RADIUS = 0.025
 
 export function Visualizer() {
   const data = useStore(state => state.data)
@@ -29,13 +29,7 @@ export function Visualizer() {
           (p.position[2] - centroid.z) * spreadScale,
         )
 
-        let color = '#444444'
-        if (mode === 'paths') {
-          color = PATH_COLORS[pathIdx % PATH_COLORS.length]
-        } else {
-          color =
-            p.cluster_id !== null ? CLUSTER_COLORS[p.cluster_id % CLUSTER_COLORS.length] : '#444444'
-        }
+        const color = mode === 'paths' ? path.pathColor : path.clusterColor
 
         parsedPoints.push({
           position: pos,
@@ -53,7 +47,14 @@ export function Visualizer() {
         smoothPoints = curve.getPoints((splineControlPoints.length - 1) * 12)
       }
 
-      result.push({ id, index: pathIdx, points: parsedPoints, smoothPoints })
+      result.push({
+        id,
+        index: pathIdx,
+        points: parsedPoints,
+        smoothPoints,
+        pathColor: path.pathColor,
+        clusterColor: path.clusterColor,
+      })
       pathIdx++
     })
 
