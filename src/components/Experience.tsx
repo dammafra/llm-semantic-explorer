@@ -1,10 +1,9 @@
-import { CameraControls } from '@react-three/drei'
 import { PCFShadowMap } from 'three'
 
 import { Canvas, Helpers } from '@components/helpers'
 
-import { Environment } from './Environment'
-import { World } from './World'
+import { CameraRig } from './CameraRig'
+import { Visualizer } from './Visualizer'
 
 export function Experience() {
   return (
@@ -13,14 +12,14 @@ export function Experience() {
       camera={{
         fov: 45,
         near: 0.1,
-        far: 100,
+        far: 1000,
         position: [2, 4, 6],
       }}
     >
-      <Environment />
-      <CameraControls makeDefault />
+      <CameraRig>
+        <Visualizer />
+      </CameraRig>
 
-      <World />
       <Helpers />
     </Canvas>
   )

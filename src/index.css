@@ -3,5 +3,5 @@
 html,
 body,
 #root {
-  @apply fixed inset-0 overflow-hidden bg-slate-900;
+  @apply fixed inset-0 overflow-hidden bg-radial from-slate-800 to-slate-950;
 }

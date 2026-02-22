@@ -1,10 +1,81 @@
+import * as THREE from 'three'
 import { create } from 'zustand'
 
-type Store = {
-  value?: unknown
-  setValue: (value: unknown) => void
+export type PointData = {
+  position: [number, number, number]
+  cluster_id: number | null
+  token: string
+  step: number
 }
 
-export const useStore = create<Store>()(set => ({
-  setValue: value => set(state => ({ value: state.value || value })),
+export type PathData = {
+  prompt?: string
+  points: PointData[]
+}
+
+export type VisualizerData = {
+  topic?: string
+  paths: Record<string, PathData>
+  clusters?: { num_clusters: number }
+}
+
+type HoverData = {
+  pathId: string
+  clusterId: number | null
+  token: string
+  step: number
+  color: string
+  clientX: number
+  clientY: number
+}
+
+type VisualizerState = {
+  data: VisualizerData | null
+  centroid: THREE.Vector3
+  mode: 'paths' | 'clusters'
+  spreadScale: number
+  hoveredNode: HoverData | null
+
+  // Actions
+  setData: (data: VisualizerData | null) => void
+  setMode: (mode: 'paths' | 'clusters') => void
+  setSpreadScale: (scale: number) => void
+  setHoveredNode: (node: HoverData | null) => void
+}
+
+export const useStore = create<VisualizerState>()(set => ({
+  data: null,
+  centroid: new THREE.Vector3(0, 0, 0),
+  mode: 'paths',
+  spreadScale: 1.0,
+  hoveredNode: null,
+
+  setData: data => {
+    // Calculate centroid
+    const centroid = new THREE.Vector3(0, 0, 0)
+    if (data?.paths) {
+      let totalPoints = 0
+      Object.values(data.paths).forEach(path => {
+        path.points.forEach(p => {
+          centroid.x += p.position[0]
+          centroid.y += p.position[1]
+          centroid.z += p.position[2]
+          totalPoints++
+        })
+      })
+      if (totalPoints > 0) centroid.divideScalar(totalPoints)
+    }
+
+    set({
+      data,
+      centroid,
+      hoveredNode: null,
+    })
+  },
+
+  setMode: mode => set({ mode }),
+
+  setSpreadScale: spreadScale => set({ spreadScale }),
+
+  setHoveredNode: hoveredNode => set({ hoveredNode }),
 }))
