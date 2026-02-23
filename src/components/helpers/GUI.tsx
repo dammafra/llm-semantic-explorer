@@ -5,6 +5,8 @@ import { useRef, useState } from 'react'
 
 export function GUI() {
   const state = useStore()
+  const hiddenPaths = useStore(s => s.hiddenPaths)
+  const hiddenClusters = useStore(s => s.hiddenClusters)
   const fileInputRef = useRef<HTMLInputElement>(null!)
   const [expandedPaths, setExpandedPaths] = useState<Record<number, boolean>>({})
 
@@ -42,7 +44,7 @@ export function GUI() {
       <div className="glass p-4 rounded-xl flex flex-col gap-4 pointer-events-auto min-h-0 overflow-hidden">
         <button
           onClick={() => fileInputRef.current?.click()}
-          className="w-full bg-blue-600 hover:bg-blue-500 text-white font-medium py-1 rounded-lg transition-colors cursor-pointer shrink-0"
+          className="w-full bg-blue-600 hover:bg-blue-500 text-white font-medium py-1 rounded-lg  cursor-pointer shrink-0"
         >
           Load JSON
         </button>
@@ -70,7 +72,7 @@ export function GUI() {
                 <button
                   key={m}
                   onClick={() => state.setMode(m)}
-                  className={`flex-1 py-1.5 text-xs font-medium rounded-md transition-all capitalize cursor-pointer ${
+                  className={`flex-1 py-1.5 text-xs font-medium rounded-md  capitalize cursor-pointer ${
                     state.mode === m
                       ? 'bg-white/10 text-white shadow-sm'
                       : 'text-white/40 hover:text-white/60'
@@ -90,13 +92,35 @@ export function GUI() {
                     >
                       <button
                         onClick={() => togglePath(path.id)}
-                        className="w-full p-2 flex items-center gap-2 hover:bg-white/5 transition-colors cursor-pointer"
+                        className="w-full p-2 flex items-center gap-2 hover:bg-white/5  cursor-pointer"
                       >
-                        <div
-                          className="w-2 h-2 rounded-full shrink-0"
-                          style={{ backgroundColor: COLORS[path.id] }}
-                        />
-                        <span className="text-xs font-medium text-white/80 truncate flex-1 text-left">
+                        <button
+                          onClick={e => {
+                            e.stopPropagation()
+                            state.togglePathVisibility(path.id)
+                            if (!hiddenPaths.has(path.id)) {
+                              setExpandedPaths(prev => ({ ...prev, [path.id]: false }))
+                            }
+                          }}
+                          className="w-3.5 h-3.5 rounded-sm border shrink-0 flex items-center justify-center  cursor-pointer"
+                          style={{
+                            backgroundColor: hiddenPaths.has(path.id)
+                              ? 'transparent'
+                              : COLORS[path.id],
+                            borderColor: hiddenPaths.has(path.id)
+                              ? 'rgba(255,255,255,0.2)'
+                              : COLORS[path.id],
+                          }}
+                        >
+                          {!hiddenPaths.has(path.id) && (
+                            <Icon icon="lucide:check" className="w-2.5 h-2.5 text-white" />
+                          )}
+                        </button>
+                        <span
+                          className={`text-xs font-medium truncate flex-1 text-left  ${
+                            hiddenPaths.has(path.id) ? 'text-white/30' : 'text-white/80'
+                          }`}
+                        >
                           {path.name}
                         </span>
                         <Icon
@@ -132,7 +156,7 @@ export function GUI() {
                                     e.stopPropagation()
                                     state.togglePlaying(path.id)
                                   }}
-                                  className="w-4 h-4 rounded-full bg-blue-600/20 hover:bg-blue-600/40 text-blue-400 flex items-center justify-center transition-colors cursor-pointer"
+                                  className="w-4 h-4 rounded-full bg-blue-600/20 hover:bg-blue-600/40 text-blue-400 flex items-center justify-center  cursor-pointer"
                                 >
                                   {state.playingPaths[path.id] ? (
                                     <Icon icon="lucide:pause" className="w-2 h-2" />
@@ -168,15 +192,31 @@ export function GUI() {
                       key={cluster.id}
                       className="flex items-center gap-2 bg-white/5 rounded-lg border border-white/5 p-2"
                     >
-                      <div
-                        className="w-2 h-2 rounded-full shrink-0"
-                        style={{ backgroundColor: COLORS[cluster.id] }}
-                      />
-                      <span className="text-xs font-medium text-white/80 truncate flex-1 text-left">
+                      <button
+                        onClick={() => state.toggleClusterVisibility(cluster.id)}
+                        className="w-3.5 h-3.5 rounded-sm border shrink-0 flex items-center justify-center  cursor-pointer"
+                        style={{
+                          backgroundColor: hiddenClusters.has(cluster.id)
+                            ? 'transparent'
+                            : COLORS[cluster.id],
+                          borderColor: hiddenClusters.has(cluster.id)
+                            ? 'rgba(255,255,255,0.2)'
+                            : COLORS[cluster.id],
+                        }}
+                      >
+                        {!hiddenClusters.has(cluster.id) && (
+                          <Icon icon="lucide:check" className="w-2.5 h-2.5 text-white" />
+                        )}
+                      </button>
+                      <span
+                        className={`text-xs font-medium truncate flex-1 text-left  ${
+                          hiddenClusters.has(cluster.id) ? 'text-white/30' : 'text-white/80'
+                        }`}
+                      >
                         {cluster.name}
                       </span>
                       <span className="text-xs text-white font-mono shrink-0">
-                        {cluster.count} tokens
+                        {cluster.count} tks
                       </span>
                     </div>
                   ))}

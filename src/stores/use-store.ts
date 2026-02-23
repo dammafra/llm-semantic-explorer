@@ -46,6 +46,8 @@ type VisualizerState = {
   hoveredNode: HoverData | null
   pathVisibleSteps: Record<number, number>
   playingPaths: Record<number, boolean>
+  hiddenPaths: Set<number>
+  hiddenClusters: Set<number>
 
   // Actions
   setData: (data: VisualizerData) => void
@@ -55,6 +57,8 @@ type VisualizerState = {
   setVisibleSteps: (pathId: number, steps: number) => void
   setPlaying: (pathId: number, isPlaying: boolean) => void
   togglePlaying: (pathId: number) => void
+  togglePathVisibility: (id: number) => void
+  toggleClusterVisibility: (id: number) => void
 }
 
 export const useStore = create<VisualizerState>()(set => ({
@@ -65,6 +69,8 @@ export const useStore = create<VisualizerState>()(set => ({
   hoveredNode: null,
   pathVisibleSteps: {},
   playingPaths: {},
+  hiddenPaths: new Set(),
+  hiddenClusters: new Set(),
 
   setData: data => {
     // Calculate centroid
@@ -93,6 +99,8 @@ export const useStore = create<VisualizerState>()(set => ({
         {},
       ),
       playingPaths: {},
+      hiddenPaths: new Set(),
+      hiddenClusters: new Set(),
     })
   },
 
@@ -100,6 +108,8 @@ export const useStore = create<VisualizerState>()(set => ({
     set(state => ({
       mode,
       playingPaths: {},
+      hiddenPaths: new Set(),
+      hiddenClusters: new Set(),
       pathVisibleSteps: state.data
         ? state.data.paths.reduce((acc, path) => ({ ...acc, [path.id]: path.points.length }), {})
         : state.pathVisibleSteps,
@@ -141,5 +151,19 @@ export const useStore = create<VisualizerState>()(set => ({
       }
 
       return newState
+    }),
+
+  togglePathVisibility: id =>
+    set(state => {
+      const next = new Set(state.hiddenPaths)
+      next.has(id) ? next.delete(id) : next.add(id)
+      return { hiddenPaths: next }
+    }),
+
+  toggleClusterVisibility: id =>
+    set(state => {
+      const next = new Set(state.hiddenClusters)
+      next.has(id) ? next.delete(id) : next.add(id)
+      return { hiddenClusters: next }
     }),
 }))

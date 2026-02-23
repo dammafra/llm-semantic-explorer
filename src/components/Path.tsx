@@ -29,7 +29,11 @@ interface TrajectoryProps {
 
 export function Path({ path, mode, onPointOver, onPointOut, pointRadius }: TrajectoryProps) {
   const visibleSteps = useStore(state => state.pathVisibleSteps[path.id] ?? path.points.length)
+  const hiddenPaths = useStore(state => state.hiddenPaths)
+  const hiddenClusters = useStore(state => state.hiddenClusters)
   const lineOpacity = mode === 'paths' ? 0.6 : 0.15
+
+  if (hiddenPaths.has(path.id)) return null
 
   const visiblePoints = path.points.slice(0, visibleSteps)
 
@@ -51,16 +55,18 @@ export function Path({ path, mode, onPointOver, onPointOut, pointRadius }: Traje
         />
       )}
 
-      {visiblePoints.map((p, i) => (
-        <Point
-          key={i}
-          point={p}
-          index={i}
-          pointRadius={pointRadius}
-          onPointOver={onPointOver}
-          onPointOut={onPointOut}
-        />
-      ))}
+      {visiblePoints
+        .filter(p => mode !== 'clusters' || !hiddenClusters.has(p.clusterId))
+        .map((p, i) => (
+          <Point
+            key={i}
+            point={p}
+            index={i}
+            pointRadius={pointRadius}
+            onPointOver={onPointOver}
+            onPointOut={onPointOut}
+          />
+        ))}
     </group>
   )
 }
