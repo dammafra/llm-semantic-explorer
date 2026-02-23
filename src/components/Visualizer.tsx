@@ -3,7 +3,7 @@ import { useMemo } from 'react'
 import { CatmullRomCurve3, Vector3 } from 'three'
 import { Path, type ParsedPath, type ParsedPoint } from './Path'
 
-const POINT_RADIUS = 0.025
+const POINT_RADIUS = 0.05
 
 export function Visualizer() {
   const data = useStore(state => state.data)

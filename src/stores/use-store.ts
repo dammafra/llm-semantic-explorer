@@ -96,7 +96,14 @@ export const useStore = create<VisualizerState>()(set => ({
     })
   },
 
-  setMode: mode => set({ mode }),
+  setMode: mode =>
+    set(state => ({
+      mode,
+      playingPaths: {},
+      pathVisibleSteps: state.data
+        ? state.data.paths.reduce((acc, path) => ({ ...acc, [path.id]: path.points.length }), {})
+        : state.pathVisibleSteps,
+    })),
 
   setSpreadScale: spreadScale => set({ spreadScale }),
 
