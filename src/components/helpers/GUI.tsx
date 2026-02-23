@@ -1,3 +1,4 @@
+import { Icon } from '@iconify/react'
 import { useStore, type VisualizerData } from '@stores'
 import { COLORS } from '@utils'
 import { useRef, useState } from 'react'
@@ -98,19 +99,12 @@ export function GUI() {
                         <span className="text-xs font-medium text-white/80 truncate flex-1 text-left">
                           {path.name}
                         </span>
-                        <svg
-                          className={`w-3 h-3 text-white/40 transition-transform ${expandedPaths[path.id] ? 'rotate-180' : ''}`}
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M19 9l-7 7-7-7"
-                          />
-                        </svg>
+                        <Icon
+                          icon="lucide:chevron-down"
+                          className={`w-3 h-3 text-white/40 transition-transform ${
+                            expandedPaths[path.id] ? 'rotate-180' : ''
+                          }`}
+                        />
                       </button>
                       {expandedPaths[path.id] && (
                         <div className="p-2 pt-0 flex flex-col gap-2 border-t border-white/5 bg-black/20">
@@ -141,21 +135,9 @@ export function GUI() {
                                   className="w-4 h-4 rounded-full bg-blue-600/20 hover:bg-blue-600/40 text-blue-400 flex items-center justify-center transition-colors cursor-pointer"
                                 >
                                   {state.playingPaths[path.id] ? (
-                                    <svg
-                                      className="w-2 h-2"
-                                      viewBox="0 0 16 16"
-                                      fill="currentColor"
-                                    >
-                                      <path d="M5.5 3.5h2v9h-2v-9zM8.5 3.5h2v9h-2v-9z" />
-                                    </svg>
+                                    <Icon icon="lucide:pause" className="w-2 h-2" />
                                   ) : (
-                                    <svg
-                                      className="w-2 h-2 ml-0.5"
-                                      viewBox="0 0 16 16"
-                                      fill="currentColor"
-                                    >
-                                      <path d="M6 3.5L12 8L6 12.5V3.5Z" />
-                                    </svg>
+                                    <Icon icon="lucide:play" className="w-2 h-2 ml-0.5" />
                                   )}
                                 </button>
                                 <span>Playback</span>
