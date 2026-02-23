@@ -72,11 +72,10 @@ export function GUI() {
                 <button
                   key={m}
                   onClick={() => state.setMode(m)}
-                  className={`flex-1 py-1.5 text-xs font-medium rounded-md  capitalize cursor-pointer ${
-                    state.mode === m
-                      ? 'bg-white/10 text-white shadow-sm'
-                      : 'text-white/40 hover:text-white/60'
-                  }`}
+                  className={`flex-1 py-1.5 text-xs font-medium rounded-md  capitalize cursor-pointer ${state.mode === m
+                    ? 'bg-white/10 text-white shadow-sm'
+                    : 'text-white/40 hover:text-white/60'
+                    }`}
                 >
                   {m}
                 </button>
@@ -86,140 +85,133 @@ export function GUI() {
             <div className="flex-1 overflow-y-auto hud-scroll flex flex-col gap-1 pr-1">
               {state.mode === 'paths'
                 ? state.data.paths.map(path => (
-                    <div
-                      key={path.id}
-                      className="flex flex-col bg-white/5 rounded-lg overflow-hidden border border-white/5 shrink-0"
+                  <div
+                    key={path.id}
+                    className="flex flex-col bg-white/5 rounded-lg overflow-hidden border border-white/5 shrink-0"
+                  >
+                    <button
+                      onClick={() => togglePath(path.id)}
+                      className="w-full p-2 flex items-center gap-2 hover:bg-white/5 cursor-pointer"
                     >
                       <button
-                        onClick={() => togglePath(path.id)}
-                        className="w-full p-2 flex items-center gap-2 hover:bg-white/5  cursor-pointer"
-                      >
-                        <button
-                          onClick={e => {
-                            e.stopPropagation()
-                            state.togglePathVisibility(path.id)
-                            if (!hiddenPaths.has(path.id)) {
-                              setExpandedPaths(prev => ({ ...prev, [path.id]: false }))
-                            }
-                          }}
-                          className="w-3.5 h-3.5 rounded-sm border shrink-0 flex items-center justify-center  cursor-pointer"
-                          style={{
-                            backgroundColor: hiddenPaths.has(path.id)
-                              ? 'transparent'
-                              : COLORS[path.id],
-                            borderColor: hiddenPaths.has(path.id)
-                              ? 'rgba(255,255,255,0.2)'
-                              : COLORS[path.id],
-                          }}
-                        >
-                          {!hiddenPaths.has(path.id) && (
-                            <Icon icon="lucide:check" className="w-2.5 h-2.5 text-white" />
-                          )}
-                        </button>
-                        <span
-                          className={`text-xs font-medium truncate flex-1 text-left  ${
-                            hiddenPaths.has(path.id) ? 'text-white/30' : 'text-white/80'
-                          }`}
-                        >
-                          {path.name}
-                        </span>
-                        <Icon
-                          icon="lucide:chevron-down"
-                          className={`w-3 h-3 text-white/40 transition-transform ${
-                            expandedPaths[path.id] ? 'rotate-180' : ''
-                          }`}
-                        />
-                      </button>
-                      {expandedPaths[path.id] && (
-                        <div className="p-2 pt-0 flex flex-col gap-2 border-t border-white/5 bg-black/20">
-                          <div className="flex flex-col gap-1 mt-2">
-                            <span className="text-[10px] text-white/30 uppercase tracking-tighter">
-                              Prompt
-                            </span>
-                            <p className="text-[11px] text-white/70 bg-white/5 p-1.5 rounded">
-                              {path.prompt}
-                            </p>
-                          </div>
-                          <div className="flex flex-col gap-1">
-                            <span className="text-[10px] text-white/30 uppercase tracking-tighter">
-                              Response
-                            </span>
-                            <p className="text-[11px] text-white/70 bg-white/5 p-1.5 rounded">
-                              {path.response}
-                            </p>
-                          </div>
-                          <div className="flex flex-col gap-1 mt-2">
-                            <div className="flex justify-between items-center text-[10px] text-white/30 uppercase tracking-tighter mb-1">
-                              <div className="flex items-center gap-1.5">
-                                <button
-                                  onClick={e => {
-                                    e.stopPropagation()
-                                    state.togglePlaying(path.id)
-                                  }}
-                                  className="w-4 h-4 rounded-full bg-blue-600/20 hover:bg-blue-600/40 text-blue-400 flex items-center justify-center  cursor-pointer"
-                                >
-                                  {state.playingPaths[path.id] ? (
-                                    <Icon icon="lucide:pause" className="w-2 h-2" />
-                                  ) : (
-                                    <Icon icon="lucide:play" className="w-2 h-2 ml-0.5" />
-                                  )}
-                                </button>
-                                <span>Playback</span>
-                              </div>
-                              <span className="text-white font-mono">
-                                {state.pathVisibleSteps[path.id]} / {path.points.length}
-                              </span>
-                            </div>
-                            <input
-                              type="range"
-                              min="1"
-                              max={path.points.length}
-                              step="1"
-                              value={state.pathVisibleSteps[path.id] || path.points.length}
-                              onChange={e =>
-                                state.setVisibleSteps(path.id, parseInt(e.target.value))
-                              }
-                              className="w-full accent-blue-500 cursor-pointer h-3"
-                              onClick={e => e.stopPropagation()}
-                            />
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  ))
-                : state.data.clusters.map(cluster => (
-                    <div
-                      key={cluster.id}
-                      className="flex items-center gap-2 bg-white/5 rounded-lg border border-white/5 p-2"
-                    >
-                      <button
-                        onClick={() => state.toggleClusterVisibility(cluster.id)}
-                        className="w-3.5 h-3.5 rounded-sm border shrink-0 flex items-center justify-center  cursor-pointer"
+                        onClick={e => {
+                          e.stopPropagation()
+                          state.togglePathVisibility(path.id)
+                          if (!hiddenPaths.has(path.id)) {
+                            setExpandedPaths(prev => ({ ...prev, [path.id]: false }))
+                          }
+                        }}
+                        className="size-3.5 rounded-sm border shrink-0 flex items-center justify-center  cursor-pointer"
                         style={{
-                          backgroundColor: hiddenClusters.has(cluster.id)
+                          backgroundColor: hiddenPaths.has(path.id)
                             ? 'transparent'
-                            : COLORS[cluster.id],
-                          borderColor: hiddenClusters.has(cluster.id)
+                            : COLORS[path.id],
+                          borderColor: hiddenPaths.has(path.id)
                             ? 'rgba(255,255,255,0.2)'
-                            : COLORS[cluster.id],
+                            : COLORS[path.id],
                         }}
                       >
-                        {!hiddenClusters.has(cluster.id) && (
-                          <Icon icon="lucide:check" className="w-2.5 h-2.5 text-white" />
+                        {!hiddenPaths.has(path.id) && (
+                          <Icon icon="ri:check-fill" className="size-4 text-white" />
                         )}
                       </button>
                       <span
-                        className={`text-xs font-medium truncate flex-1 text-left  ${
-                          hiddenClusters.has(cluster.id) ? 'text-white/30' : 'text-white/80'
-                        }`}
+                        className={`text-xs font-medium truncate flex-1 text-left  ${hiddenPaths.has(path.id) ? 'text-white/30' : 'text-white/80'
+                          }`}
                       >
-                        {cluster.name}
+                        {path.name}
                       </span>
-                      <span className="text-xs text-white font-mono shrink-0">
-                        {cluster.count} tks
-                      </span>
-                    </div>
-                  ))}
+                      <Icon
+                        icon="ri:arrow-down-s-line"
+                        className={`size-5 text-white/40 transition-transform ${expandedPaths[path.id] ? 'rotate-180' : ''
+                          }`}
+                      />
+                    </button>
+                    {expandedPaths[path.id] && (
+                      <div className="p-2 pt-0 flex flex-col gap-2 border-t border-white/5 bg-black/20">
+                        <div className="flex flex-col gap-1 mt-2">
+                          <div className="flex justify-between items-center text-[10px] text-white/30 uppercase tracking-tighter mb-1">
+                            <div className="flex items-center gap-1.5">
+                              <button
+                                onClick={e => {
+                                  e.stopPropagation()
+                                  state.togglePlaying(path.id)
+                                }}
+                                className="size-5 rounded-full bg-blue-600/20 hover:bg-blue-600/40 text-blue-400 flex items-center justify-center  cursor-pointer"
+                              >
+                                <Icon icon={state.playingPaths[path.id] ? "ri:pause-fill" : "ri:play-fill"} className="size-4" />
+                              </button>
+                              <span>Playback</span>
+                            </div>
+                            <span className="text-white font-mono">
+                              {state.pathVisibleSteps[path.id]} / {path.points.length}
+                            </span>
+                          </div>
+                          <input
+                            type="range"
+                            min="1"
+                            max={path.points.length}
+                            step="1"
+                            value={state.pathVisibleSteps[path.id] || path.points.length}
+                            onChange={e =>
+                              state.setVisibleSteps(path.id, parseInt(e.target.value))
+                            }
+                            className="w-full accent-blue-500 cursor-pointer h-3"
+                            onClick={e => e.stopPropagation()}
+                          />
+                        </div>
+                        <div className="flex flex-col gap-1 mt-2">
+                          <span className="text-[10px] text-white/30 uppercase tracking-tighter">
+                            Prompt
+                          </span>
+                          <p className="text-[11px] text-white/70 bg-white/5 p-1.5 rounded">
+                            {path.prompt}
+                          </p>
+                        </div>
+                        <div className="flex flex-col gap-1">
+                          <span className="text-[10px] text-white/30 uppercase tracking-tighter">
+                            Response
+                          </span>
+                          <p className="text-[11px] text-white/70 bg-white/5 p-1.5 rounded">
+                            {path.response}
+                          </p>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                ))
+                : state.data.clusters.map(cluster => (
+                  <div
+                    key={cluster.id}
+                    className="flex items-center gap-2 bg-white/5 rounded-lg border border-white/5 p-2"
+                  >
+                    <button
+                      onClick={() => state.toggleClusterVisibility(cluster.id)}
+                      className="size-3.5 rounded-sm border shrink-0 flex items-center justify-center  cursor-pointer"
+                      style={{
+                        backgroundColor: hiddenClusters.has(cluster.id)
+                          ? 'transparent'
+                          : COLORS[cluster.id],
+                        borderColor: hiddenClusters.has(cluster.id)
+                          ? 'rgba(255,255,255,0.2)'
+                          : COLORS[cluster.id],
+                      }}
+                    >
+                      {!hiddenClusters.has(cluster.id) && (
+                        <Icon icon="ri:check-fill" className="size-4 text-white" />
+                      )}
+                    </button>
+                    <span
+                      className={`text-xs font-medium truncate flex-1 text-left  ${hiddenClusters.has(cluster.id) ? 'text-white/30' : 'text-white/80'
+                        }`}
+                    >
+                      {cluster.name}
+                    </span>
+                    <span className="text-xs text-white font-mono shrink-0">
+                      {cluster.count} tks
+                    </span>
+                  </div>
+                ))}
             </div>
           </>
         )}
