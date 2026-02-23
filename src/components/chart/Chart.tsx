@@ -1,16 +1,20 @@
-import { useStore } from '@stores'
 import { useMemo } from 'react'
 import { CatmullRomCurve3, Vector3 } from 'three'
+
+import { useChart } from '@stores'
+
+import { CameraRig } from './CameraRig'
 import { Path, type ParsedPath, type ParsedPoint } from './Path'
+import { PlaybackManager } from './PlaybackManager'
 
 const POINT_RADIUS = 0.05
 
-export function Visualizer() {
-  const data = useStore(state => state.data)
-  const centroid = useStore(state => state.centroid)
-  const spreadScale = useStore(state => state.spreadScale)
-  const mode = useStore(state => state.mode)
-  const setHoveredNode = useStore(state => state.setHoveredNode)
+export function Chart() {
+  const data = useChart(state => state.data)
+  const centroid = useChart(state => state.centroid)
+  const spreadScale = useChart(state => state.spreadScale)
+  const mode = useChart(state => state.mode)
+  const setHoveredNode = useChart(state => state.setHoveredNode)
 
   // Parse data
   const parsedPaths = useMemo(() => {
@@ -58,27 +62,30 @@ export function Visualizer() {
   }, [data, centroid, spreadScale, mode])
 
   return (
-    <group>
-      {parsedPaths.map((path, index) => (
-        <Path
-          key={`path-${path.name}-${index}`}
-          path={path}
-          mode={mode}
-          pointRadius={POINT_RADIUS}
-          onPointOver={(p, clientX, clientY) => {
-            setHoveredNode({
-              pathId: p.pathId,
-              pathName: path.name,
-              clusterId: p.clusterId,
-              token: p.token,
-              step: p.step,
-              clientX,
-              clientY,
-            })
-          }}
-          onPointOut={() => setHoveredNode(null)}
-        />
-      ))}
-    </group>
+    <>
+      <CameraRig>
+        {parsedPaths.map((path, index) => (
+          <Path
+            key={`path-${path.name}-${index}`}
+            path={path}
+            mode={mode}
+            pointRadius={POINT_RADIUS}
+            onPointOver={(p, clientX, clientY) => {
+              setHoveredNode({
+                pathId: p.pathId,
+                pathName: path.name,
+                clusterId: p.clusterId,
+                token: p.token,
+                step: p.step,
+                clientX,
+                clientY,
+              })
+            }}
+            onPointOut={() => setHoveredNode(null)}
+          />
+        ))}
+      </CameraRig>
+      <PlaybackManager />
+    </>
   )
 }

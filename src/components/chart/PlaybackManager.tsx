@@ -1,11 +1,12 @@
 import { useFrame } from '@react-three/fiber'
-import { useStore } from '@stores'
 import { useRef } from 'react'
 
+import { useChart } from '@stores'
+
 export function PlaybackManager() {
-  const { playingPaths, pathVisibleSteps, setVisibleSteps, setPlaying, data } = useStore()
+  const { playingPaths, pathVisibleSteps, setVisibleSteps, setPlaying, data } = useChart()
   const lastUpdate = useRef(0)
-  const interval = 0.05 // 50ms per step (20 steps/sec)
+  const interval = 0.1 // 100ms per step (10 steps/sec)
 
   useFrame(state => {
     const time = state.clock.getElapsedTime()

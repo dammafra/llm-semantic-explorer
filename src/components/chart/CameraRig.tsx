@@ -1,5 +1,5 @@
 import { CameraControls } from '@react-three/drei'
-import { useStore } from '@stores'
+import { useChart } from '@stores'
 import { useEffect, useRef } from 'react'
 import type { Group } from 'three'
 
@@ -8,8 +8,8 @@ export function CameraRig({ children }: { children: React.ReactNode }) {
   const groupRef = useRef<Group>(null)
   const hasAutoFitted = useRef(false)
 
-  const data = useStore(state => state.data)
-  const spreadScale = useStore(state => state.spreadScale)
+  const data = useChart(state => state.data)
+  const spreadScale = useChart(state => state.spreadScale)
 
   useEffect(() => {
     hasAutoFitted.current = false

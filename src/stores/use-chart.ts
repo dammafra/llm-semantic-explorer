@@ -23,7 +23,7 @@ export type ClusterData = {
   count: number
 }
 
-export type VisualizerData = {
+export type ChartData = {
   paths: PathData[]
   clusters: ClusterData[]
 }
@@ -38,8 +38,8 @@ type HoverData = {
   clientY: number
 }
 
-type VisualizerState = {
-  data: VisualizerData | null
+type ChartState = {
+  data: ChartData | null
   centroid: Vector3
   mode: 'paths' | 'clusters'
   spreadScale: number
@@ -50,7 +50,7 @@ type VisualizerState = {
   hiddenClusters: Set<number>
 
   // Actions
-  setData: (data: VisualizerData) => void
+  setData: (data: ChartData) => void
   setMode: (mode: 'paths' | 'clusters') => void
   setSpreadScale: (scale: number) => void
   setHoveredNode: (node: HoverData | null) => void
@@ -61,7 +61,7 @@ type VisualizerState = {
   toggleClusterVisibility: (id: number) => void
 }
 
-export const useStore = create<VisualizerState>()(set => ({
+export const useChart = create<ChartState>()(set => ({
   data: null,
   centroid: new Vector3(0, 0, 0),
   mode: 'paths',
@@ -138,7 +138,7 @@ export const useStore = create<VisualizerState>()(set => ({
       const currentSteps = state.pathVisibleSteps[pathId]
       const totalPoints = state.data?.paths.find(p => p.id === pathId)?.points.length || 0
 
-      const newState: Partial<VisualizerState> = {
+      const newState: Partial<ChartState> = {
         playingPaths: { ...state.playingPaths, [pathId]: isPlaying },
       }
 

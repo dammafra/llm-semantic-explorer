@@ -1,7 +1,9 @@
 import { Line } from '@react-three/drei'
-import { useStore } from '@stores'
-import { COLORS } from '@utils'
 import type { Vector3 } from 'three'
+
+import { useChart } from '@stores'
+import { COLORS } from '@utils'
+
 import { Point } from './Point'
 
 export type ParsedPoint = {
@@ -28,9 +30,9 @@ interface TrajectoryProps {
 }
 
 export function Path({ path, mode, onPointOver, onPointOut, pointRadius }: TrajectoryProps) {
-  const visibleSteps = useStore(state => state.pathVisibleSteps[path.id] ?? path.points.length)
-  const hiddenPaths = useStore(state => state.hiddenPaths)
-  const hiddenClusters = useStore(state => state.hiddenClusters)
+  const visibleSteps = useChart(state => state.pathVisibleSteps[path.id] ?? path.points.length)
+  const hiddenPaths = useChart(state => state.hiddenPaths)
+  const hiddenClusters = useChart(state => state.hiddenClusters)
   const lineOpacity = mode === 'paths' ? 0.6 : 0.15
 
   if (hiddenPaths.has(path.id)) return null
@@ -38,7 +40,7 @@ export function Path({ path, mode, onPointOver, onPointOut, pointRadius }: Traje
   const visiblePoints = path.points.slice(0, visibleSteps)
 
   // Calculate exactly which index in smoothPoints corresponds to the last visible point.
-  // Visualizer uses (points.length - 1) * 12 as the subdivision count.
+  // Chart uses (points.length - 1) * 12 as the subdivision count.
   const segmentsPerPoint = (path.smoothPoints.length - 1) / (path.points.length - 1)
   const smoothPointsCount = visibleSteps > 1 ? (visibleSteps - 1) * segmentsPerPoint + 1 : 0
   const visibleSmoothPoints = path.smoothPoints.slice(0, Math.round(smoothPointsCount))

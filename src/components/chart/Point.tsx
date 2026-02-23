@@ -1,5 +1,6 @@
-import { useStore } from '@stores'
+import { useChart } from '@stores'
 import { COLORS } from '@utils'
+
 import { type ParsedPoint } from './Path'
 
 interface PointProps {
@@ -11,7 +12,7 @@ interface PointProps {
 }
 
 export function Point({ point, pointRadius, onPointOver, onPointOut }: PointProps) {
-  const mode = useStore(state => state.mode)
+  const mode = useChart(state => state.mode)
 
   return (
     <mesh

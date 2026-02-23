@@ -1,27 +1,28 @@
 import { PCFShadowMap } from 'three'
 
-import { Canvas, Helpers, PlaybackManager } from '@components/helpers'
+import { Canvas, Helpers } from '@components/helpers'
 
-import { CameraRig } from './CameraRig'
-import { Visualizer } from './Visualizer'
+import { Chart } from './chart'
+import { GUI, Tooltip } from './ui'
 
 export function Experience() {
   return (
-    <Canvas
-      shadows={{ type: PCFShadowMap }}
-      camera={{
-        fov: 45,
-        near: 0.1,
-        far: 1000,
-        position: [2, 4, 6],
-      }}
-    >
-      <CameraRig>
-        <Visualizer />
-      </CameraRig>
+    <>
+      <GUI />
+      <Tooltip />
 
-      <PlaybackManager />
-      <Helpers />
-    </Canvas>
+      <Canvas
+        shadows={{ type: PCFShadowMap }}
+        camera={{
+          fov: 45,
+          near: 0.1,
+          far: 1000,
+          position: [2, 4, 6],
+        }}
+      >
+        <Chart />
+        <Helpers />
+      </Canvas>
+    </>
   )
 }

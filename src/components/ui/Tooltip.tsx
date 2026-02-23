@@ -1,10 +1,10 @@
-import { useStore } from '@stores'
+import { useChart } from '@stores'
 import { COLORS } from '@utils'
 
 export function Tooltip() {
-  const hoveredNode = useStore(state => state.hoveredNode)
-  const mode = useStore(state => state.mode)
-  const clusters = useStore(state => state.data?.clusters)
+  const hoveredNode = useChart(state => state.hoveredNode)
+  const mode = useChart(state => state.mode)
+  const clusters = useChart(state => state.data?.clusters)
 
   if (!hoveredNode) return null
 
