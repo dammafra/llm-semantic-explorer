@@ -50,7 +50,7 @@ export function GUI() {
             {/* <DistanceSlider /> */}
             <ModeSelector />
 
-            <div className="flex-1 overflow-y-auto hud-scroll flex flex-col gap-1 pr-1">
+            <div className="flex-1 overflow-y-auto gui-scroll flex flex-col gap-1 pr-1">
               {state.mode === 'paths'
                 ? state.data.paths.map(path => <PathItem key={path.id} path={path} />)
                 : state.data.clusters.map(cluster => (

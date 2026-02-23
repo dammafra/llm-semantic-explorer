@@ -10,19 +10,14 @@ body,
   @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl;
 }
 
-.hud-scroll::-webkit-scrollbar {
+.gui-scroll::-webkit-scrollbar {
   @apply w-1;
 }
 
-.hud-scroll::-webkit-scrollbar-track {
+.gui-scroll::-webkit-scrollbar-track {
   @apply bg-transparent;
 }
 
-.hud-scroll::-webkit-scrollbar-thumb {
+.gui-scroll::-webkit-scrollbar-thumb {
   @apply bg-white/20 rounded-full;
-}
-
-@theme {
-  --color-hud-bg: #1a1b1e;
-  --color-hud-accent: #3b82f6;
 }
