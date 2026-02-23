@@ -1,6 +1,6 @@
 import { PCFShadowMap } from 'three'
 
-import { Canvas, Helpers } from '@components/helpers'
+import { Canvas, Helpers, PlaybackManager } from '@components/helpers'
 
 import { CameraRig } from './CameraRig'
 import { Visualizer } from './Visualizer'
@@ -20,6 +20,7 @@ export function Experience() {
         <Visualizer />
       </CameraRig>
 
+      <PlaybackManager />
       <Helpers />
     </Canvas>
   )

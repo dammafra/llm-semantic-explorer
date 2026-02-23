@@ -45,6 +45,7 @@ type VisualizerState = {
   spreadScale: number
   hoveredNode: HoverData | null
   pathVisibleSteps: Record<number, number>
+  playingPaths: Record<number, boolean>
 
   // Actions
   setData: (data: VisualizerData) => void
@@ -52,6 +53,8 @@ type VisualizerState = {
   setSpreadScale: (scale: number) => void
   setHoveredNode: (node: HoverData | null) => void
   setVisibleSteps: (pathId: number, steps: number) => void
+  setPlaying: (pathId: number, isPlaying: boolean) => void
+  togglePlaying: (pathId: number) => void
 }
 
 export const useStore = create<VisualizerState>()(set => ({
@@ -61,6 +64,7 @@ export const useStore = create<VisualizerState>()(set => ({
   spreadScale: 1.0,
   hoveredNode: null,
   pathVisibleSteps: {},
+  playingPaths: {},
 
   setData: data => {
     // Calculate centroid
@@ -86,8 +90,9 @@ export const useStore = create<VisualizerState>()(set => ({
           ...acc,
           [path.id]: path.points.length,
         }),
-        {}
+        {},
       ),
+      playingPaths: {},
     })
   },
 
@@ -104,4 +109,30 @@ export const useStore = create<VisualizerState>()(set => ({
         [pathId]: steps,
       },
     })),
+
+  setPlaying: (pathId, isPlaying) =>
+    set(state => ({
+      playingPaths: { ...state.playingPaths, [pathId]: isPlaying },
+    })),
+
+  togglePlaying: pathId =>
+    set(state => {
+      const isPlaying = !state.playingPaths[pathId]
+      const currentSteps = state.pathVisibleSteps[pathId]
+      const totalPoints = state.data?.paths.find(p => p.id === pathId)?.points.length || 0
+
+      const newState: Partial<VisualizerState> = {
+        playingPaths: { ...state.playingPaths, [pathId]: isPlaying },
+      }
+
+      // If starting and already at the end, reset to start
+      if (isPlaying && currentSteps >= totalPoints) {
+        newState.pathVisibleSteps = {
+          ...state.pathVisibleSteps,
+          [pathId]: 1,
+        }
+      }
+
+      return newState
+    }),
 }))

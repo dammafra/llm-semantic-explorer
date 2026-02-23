@@ -69,10 +69,11 @@ export function GUI() {
                 <button
                   key={m}
                   onClick={() => state.setMode(m)}
-                  className={`flex-1 py-1.5 text-xs font-medium rounded-md transition-all capitalize cursor-pointer ${state.mode === m
+                  className={`flex-1 py-1.5 text-xs font-medium rounded-md transition-all capitalize cursor-pointer ${
+                    state.mode === m
                       ? 'bg-white/10 text-white shadow-sm'
                       : 'text-white/40 hover:text-white/60'
-                    }`}
+                  }`}
                 >
                   {m}
                 </button>
@@ -82,94 +83,121 @@ export function GUI() {
             <div className="flex-1 overflow-y-auto hud-scroll flex flex-col gap-1 pr-1">
               {state.mode === 'paths'
                 ? state.data.paths.map(path => (
-                  <div
-                    key={path.id}
-                    className="flex flex-col bg-white/5 rounded-lg overflow-hidden border border-white/5 shrink-0"
-                  >
-                    <button
-                      onClick={() => togglePath(path.id)}
-                      className="w-full p-2 flex items-center gap-2 hover:bg-white/5 transition-colors cursor-pointer"
+                    <div
+                      key={path.id}
+                      className="flex flex-col bg-white/5 rounded-lg overflow-hidden border border-white/5 shrink-0"
+                    >
+                      <button
+                        onClick={() => togglePath(path.id)}
+                        className="w-full p-2 flex items-center gap-2 hover:bg-white/5 transition-colors cursor-pointer"
+                      >
+                        <div
+                          className="w-2 h-2 rounded-full shrink-0"
+                          style={{ backgroundColor: COLORS[path.id] }}
+                        />
+                        <span className="text-xs font-medium text-white/80 truncate flex-1 text-left">
+                          {path.name}
+                        </span>
+                        <svg
+                          className={`w-3 h-3 text-white/40 transition-transform ${expandedPaths[path.id] ? 'rotate-180' : ''}`}
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M19 9l-7 7-7-7"
+                          />
+                        </svg>
+                      </button>
+                      {expandedPaths[path.id] && (
+                        <div className="p-2 pt-0 flex flex-col gap-2 border-t border-white/5 bg-black/20">
+                          <div className="flex flex-col gap-1 mt-2">
+                            <span className="text-[10px] text-white/30 uppercase tracking-tighter">
+                              Prompt
+                            </span>
+                            <p className="text-[11px] text-white/70 bg-white/5 p-1.5 rounded">
+                              {path.prompt}
+                            </p>
+                          </div>
+                          <div className="flex flex-col gap-1">
+                            <span className="text-[10px] text-white/30 uppercase tracking-tighter">
+                              Response
+                            </span>
+                            <p className="text-[11px] text-white/70 bg-white/5 p-1.5 rounded">
+                              {path.response}
+                            </p>
+                          </div>
+                          <div className="flex flex-col gap-1 mt-2">
+                            <div className="flex justify-between items-center text-[10px] text-white/30 uppercase tracking-tighter mb-1">
+                              <div className="flex items-center gap-1.5">
+                                <button
+                                  onClick={e => {
+                                    e.stopPropagation()
+                                    state.togglePlaying(path.id)
+                                  }}
+                                  className="w-4 h-4 rounded-full bg-blue-600/20 hover:bg-blue-600/40 text-blue-400 flex items-center justify-center transition-colors cursor-pointer"
+                                >
+                                  {state.playingPaths[path.id] ? (
+                                    <svg
+                                      className="w-2 h-2"
+                                      viewBox="0 0 16 16"
+                                      fill="currentColor"
+                                    >
+                                      <path d="M5.5 3.5h2v9h-2v-9zM8.5 3.5h2v9h-2v-9z" />
+                                    </svg>
+                                  ) : (
+                                    <svg
+                                      className="w-2 h-2 ml-0.5"
+                                      viewBox="0 0 16 16"
+                                      fill="currentColor"
+                                    >
+                                      <path d="M6 3.5L12 8L6 12.5V3.5Z" />
+                                    </svg>
+                                  )}
+                                </button>
+                                <span>Playback</span>
+                              </div>
+                              <span className="text-white font-mono">
+                                {state.pathVisibleSteps[path.id]} / {path.points.length}
+                              </span>
+                            </div>
+                            <input
+                              type="range"
+                              min="1"
+                              max={path.points.length}
+                              step="1"
+                              value={state.pathVisibleSteps[path.id] || path.points.length}
+                              onChange={e =>
+                                state.setVisibleSteps(path.id, parseInt(e.target.value))
+                              }
+                              className="w-full accent-blue-500 cursor-pointer h-3"
+                              onClick={e => e.stopPropagation()}
+                            />
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  ))
+                : state.data.clusters.map(cluster => (
+                    <div
+                      key={cluster.id}
+                      className="flex items-center gap-2 bg-white/5 rounded-lg border border-white/5 p-2"
                     >
                       <div
                         className="w-2 h-2 rounded-full shrink-0"
-                        style={{ backgroundColor: COLORS[path.id] }}
+                        style={{ backgroundColor: COLORS[cluster.id] }}
                       />
                       <span className="text-xs font-medium text-white/80 truncate flex-1 text-left">
-                        {path.name}
+                        {cluster.name}
                       </span>
-                      <svg
-                        className={`w-3 h-3 text-white/40 transition-transform ${expandedPaths[path.id] ? 'rotate-180' : ''}`}
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M19 9l-7 7-7-7"
-                        />
-                      </svg>
-                    </button>
-                    {expandedPaths[path.id] && (
-                      <div className="p-2 pt-0 flex flex-col gap-2 border-t border-white/5 bg-black/20">
-                        <div className="flex flex-col gap-1 mt-2">
-                          <span className="text-[10px] text-white/30 uppercase tracking-tighter">
-                            Prompt
-                          </span>
-                          <p className="text-[11px] text-white/70 bg-white/5 p-1.5 rounded">
-                            {path.prompt}
-                          </p>
-                        </div>
-                        <div className="flex flex-col gap-1">
-                          <span className="text-[10px] text-white/30 uppercase tracking-tighter">
-                            Response
-                          </span>
-                          <p className="text-[11px] text-white/70 bg-white/5 p-1.5 rounded">
-                            {path.response}
-                          </p>
-                        </div>
-                        <div className="flex flex-col gap-1 mt-2">
-                          <div className="flex justify-between items-center text-[10px] text-white/30 uppercase tracking-tighter">
-                            <span>Playback</span>
-                            <span className="text-white font-mono">
-                              {state.pathVisibleSteps[path.id]} / {path.points.length}
-                            </span>
-                          </div>
-                          <input
-                            type="range"
-                            min="1"
-                            max={path.points.length}
-                            step="1"
-                            value={state.pathVisibleSteps[path.id] || path.points.length}
-                            onChange={e =>
-                              state.setVisibleSteps(path.id, parseInt(e.target.value))
-                            }
-                            className="w-full accent-blue-500 cursor-pointer h-3"
-                            onClick={e => e.stopPropagation()}
-                          />
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                ))
-                : state.data.clusters.map(cluster => (
-                  <div
-                    key={cluster.id}
-                    className="flex items-center gap-2 bg-white/5 rounded-lg border border-white/5 p-2"
-                  >
-                    <div
-                      className="w-2 h-2 rounded-full shrink-0"
-                      style={{ backgroundColor: COLORS[cluster.id] }}
-                    />
-                    <span className="text-xs font-medium text-white/80 truncate flex-1 text-left">
-                      {cluster.name}
-                    </span>
-                    <span className="text-xs text-white font-mono shrink-0">
-                      {cluster.count} tokens
-                    </span>
-                  </div>
-                ))}
+                      <span className="text-xs text-white font-mono shrink-0">
+                        {cluster.count} tokens
+                      </span>
+                    </div>
+                  ))}
             </div>
           </>
         )}
