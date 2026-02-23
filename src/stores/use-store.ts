@@ -44,12 +44,14 @@ type VisualizerState = {
   mode: 'paths' | 'clusters'
   spreadScale: number
   hoveredNode: HoverData | null
+  pathVisibleSteps: Record<number, number>
 
   // Actions
   setData: (data: VisualizerData) => void
   setMode: (mode: 'paths' | 'clusters') => void
   setSpreadScale: (scale: number) => void
   setHoveredNode: (node: HoverData | null) => void
+  setVisibleSteps: (pathId: number, steps: number) => void
 }
 
 export const useStore = create<VisualizerState>()(set => ({
@@ -58,6 +60,7 @@ export const useStore = create<VisualizerState>()(set => ({
   mode: 'paths',
   spreadScale: 1.0,
   hoveredNode: null,
+  pathVisibleSteps: {},
 
   setData: data => {
     // Calculate centroid
@@ -78,6 +81,13 @@ export const useStore = create<VisualizerState>()(set => ({
       data,
       centroid,
       hoveredNode: null,
+      pathVisibleSteps: data.paths.reduce(
+        (acc, path) => ({
+          ...acc,
+          [path.id]: path.points.length,
+        }),
+        {}
+      ),
     })
   },
 
@@ -86,4 +96,12 @@ export const useStore = create<VisualizerState>()(set => ({
   setSpreadScale: spreadScale => set({ spreadScale }),
 
   setHoveredNode: hoveredNode => set({ hoveredNode }),
+
+  setVisibleSteps: (pathId, steps) =>
+    set(state => ({
+      pathVisibleSteps: {
+        ...state.pathVisibleSteps,
+        [pathId]: steps,
+      },
+    })),
 }))
