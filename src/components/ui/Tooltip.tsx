@@ -10,7 +10,7 @@ export function Tooltip() {
 
   return (
     <div
-      className="absolute pointer-events-none z-50 p-3 glass rounded-xl text-xs w-48"
+      className="absolute pointer-events-none z-50 p-3 glass rounded-xl text-xs w-60"
       style={{
         left: hoveredNode.clientX + 15,
         top: hoveredNode.clientY + 15,
@@ -41,6 +41,22 @@ export function Tooltip() {
             Step
           </span>
           <span className="text-xs text-white/90 font-mono">{hoveredNode.step}</span>
+        </div>
+
+        <div className="flex justify-between items-center bg-white/5 px-2 py-1 rounded-md">
+          <span className="text-xs text-white/30 uppercase tracking-tighter font-semibold">
+            {mode === 'paths' ? 'Cluster' : 'Path'}
+          </span>
+          <span
+            className="text-xs text-white/90 text-right"
+            style={{
+              color: mode === 'paths' ? COLORS[hoveredNode.clusterId] : COLORS[hoveredNode.pathId],
+            }}
+          >
+            {mode === 'paths'
+              ? clusters?.find(c => c.id === hoveredNode.clusterId)?.name
+              : hoveredNode.pathName}
+          </span>
         </div>
       </div>
     </div>

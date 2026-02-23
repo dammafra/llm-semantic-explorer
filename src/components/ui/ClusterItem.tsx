@@ -26,7 +26,7 @@ export function ClusterItem({ cluster }: Props) {
       />
       <span
         className={clsx(
-          'text-xs font-medium truncate flex-1 text-left',
+          'text-xs font-medium truncate flex-1 text-left pointer-events-none',
           isHidden ? 'text-white/30' : 'text-white/80',
         )}
       >

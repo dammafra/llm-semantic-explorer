@@ -51,7 +51,7 @@ export function PathItem({ path }: Props) {
         </span>
         <Icon
           icon="ri:arrow-down-s-line"
-          className={clsx('size-5 text-white/40 transition-transform', expanded && 'rotate-180')}
+          className={clsx('size-4 text-white/40 transition-transform', expanded && 'rotate-180')}
         />
       </button>
 
