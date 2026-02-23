@@ -10,14 +10,14 @@ export function Tooltip() {
 
   return (
     <div
-      className="absolute pointer-events-none z-50 p-2.5 bg-black/90 text-white rounded-lg text-xs border border-white/20 shadow-[0_10px_15px_-3px_rgb(0_0_0_/_0.5)] backdrop-blur-sm"
+      className="absolute pointer-events-none z-50 p-3 glass rounded-xl text-xs w-48"
       style={{
         left: hoveredNode.clientX + 15,
         top: hoveredNode.clientY + 15,
       }}
     >
       <div
-        className="font-bold mb-1 border-b border-white/10 pb-1 uppercase tracking-tighter"
+        className="font-bold mb-2 border-b border-white/10 pb-1.5 uppercase tracking-wider text-sm"
         style={{
           color: mode === 'paths' ? COLORS[hoveredNode.pathId] : COLORS[hoveredNode.clusterId],
         }}
@@ -26,13 +26,22 @@ export function Tooltip() {
           ? hoveredNode.pathName
           : clusters?.find(c => c.id === hoveredNode.clusterId)?.name}
       </div>
-      <div className="mt-1 flex justify-between items-center gap-4">
-        <span className="opacity-50 text-[9px] uppercase">Token:</span>
-        <b className="text-sm">"{hoveredNode.token}"</b>
-      </div>
-      <div className="flex justify-between items-center gap-4">
-        <span className="opacity-50 text-[9px] uppercase">Step:</span>
-        <span>{hoveredNode.step}</span>
+      <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-0.5">
+          <div className="flex justify-between items-center bg-white/5 px-2 py-1 rounded-md">
+            <span className="text-xs text-white/30 uppercase tracking-tighter font-semibold">
+              Token
+            </span>
+            <b className="text-xs text-white/90">"{hoveredNode.token}"</b>
+          </div>
+        </div>
+
+        <div className="flex justify-between items-center bg-white/5 px-2 py-1 rounded-md">
+          <span className="text-xs text-white/30 uppercase tracking-tighter font-semibold">
+            Step
+          </span>
+          <span className="text-xs text-white/90 font-mono">{hoveredNode.step}</span>
+        </div>
       </div>
     </div>
   )
