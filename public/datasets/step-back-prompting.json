@@ -1,0 +1,2052 @@
+{
+  "paths": [
+    {
+      "id": 0,
+      "name": "bad_prompt",
+      "prompt": "What is the best strategy to manage a conflict between two teams?",
+      "response": "Establish clear goals, define roles and expectations, and facilitate open communication. \n\nIdentify common goals and interests, encourage collaboration, and provide incentives for successful resolution. \n\nUse active listening, remain impartial, and monitor progress. \n\nEscalate to a higher authority if necessary, and document agreements.",
+      "points": [
+        {
+          "position": [
+            7.728203773498535,
+            10.407958030700684,
+            6.023414611816406
+          ],
+          "token": "Establish",
+          "step": 0,
+          "path_id": 0,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            7.616920471191406,
+            10.45654582977295,
+            5.906790256500244
+          ],
+          "token": " clear",
+          "step": 1,
+          "path_id": 0,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            9.300777435302734,
+            12.834568977355957,
+            5.561515808105469
+          ],
+          "token": " goals",
+          "step": 2,
+          "path_id": 0,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            7.842343807220459,
+            10.42756175994873,
+            5.748940467834473
+          ],
+          "token": " define",
+          "step": 4,
+          "path_id": 0,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            9.326211929321289,
+            12.827776908874512,
+            5.343440532684326
+          ],
+          "token": " roles",
+          "step": 5,
+          "path_id": 0,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            9.43226146697998,
+            12.974648475646973,
+            5.784459114074707
+          ],
+          "token": " expectations",
+          "step": 7,
+          "path_id": 0,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            7.818558692932129,
+            10.645142555236816,
+            6.377832412719727
+          ],
+          "token": " facilitate",
+          "step": 10,
+          "path_id": 0,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            8.139569282531738,
+            10.981142044067383,
+            6.365365028381348
+          ],
+          "token": " open",
+          "step": 11,
+          "path_id": 0,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            9.559545516967773,
+            13.019684791564941,
+            5.858534336090088
+          ],
+          "token": " communication",
+          "step": 12,
+          "path_id": 0,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            9.674992561340332,
+            10.56421947479248,
+            6.873232364654541
+          ],
+          "token": "Ident",
+          "step": 15,
+          "path_id": 0,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            7.742640495300293,
+            10.43012523651123,
+            5.596865653991699
+          ],
+          "token": "ify",
+          "step": 16,
+          "path_id": 0,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            7.582069396972656,
+            10.459714889526367,
+            5.43829345703125
+          ],
+          "token": " common",
+          "step": 17,
+          "path_id": 0,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            9.331767082214355,
+            13.063956260681152,
+            5.505711078643799
+          ],
+          "token": " goals",
+          "step": 18,
+          "path_id": 0,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            9.31423568725586,
+            13.117522239685059,
+            5.467857837677002
+          ],
+          "token": " interests",
+          "step": 20,
+          "path_id": 0,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            7.632176876068115,
+            10.750545501708984,
+            6.226927757263184
+          ],
+          "token": " encourage",
+          "step": 22,
+          "path_id": 0,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            9.43901538848877,
+            13.166605949401855,
+            5.418983459472656
+          ],
+          "token": " collaboration",
+          "step": 23,
+          "path_id": 0,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            7.645656585693359,
+            10.386688232421875,
+            6.241308689117432
+          ],
+          "token": " provide",
+          "step": 26,
+          "path_id": 0,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            9.697911262512207,
+            12.96744441986084,
+            5.419891834259033
+          ],
+          "token": " incentives",
+          "step": 27,
+          "path_id": 0,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            7.51872444152832,
+            10.774004936218262,
+            6.035871505737305
+          ],
+          "token": " successful",
+          "step": 29,
+          "path_id": 0,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            9.643921852111816,
+            13.258221626281738,
+            5.188425540924072
+          ],
+          "token": " resolution",
+          "step": 30,
+          "path_id": 0,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            7.694983959197998,
+            10.539873123168945,
+            6.3676581382751465
+          ],
+          "token": "Use",
+          "step": 33,
+          "path_id": 0,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            7.926032543182373,
+            10.984064102172852,
+            6.5327372550964355
+          ],
+          "token": " active",
+          "step": 34,
+          "path_id": 0,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            9.30723762512207,
+            12.677817344665527,
+            5.9221510887146
+          ],
+          "token": " listening",
+          "step": 35,
+          "path_id": 0,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            7.741327285766602,
+            10.471208572387695,
+            6.595311164855957
+          ],
+          "token": " remain",
+          "step": 37,
+          "path_id": 0,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            9.48664665222168,
+            12.410013198852539,
+            5.767160415649414
+          ],
+          "token": " impartial",
+          "step": 38,
+          "path_id": 0,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            8.05982780456543,
+            10.491718292236328,
+            6.1692986488342285
+          ],
+          "token": " monitor",
+          "step": 41,
+          "path_id": 0,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            9.86416244506836,
+            12.887643814086914,
+            5.554697513580322
+          ],
+          "token": " progress",
+          "step": 42,
+          "path_id": 0,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            9.775869369506836,
+            10.809342384338379,
+            7.111806392669678
+          ],
+          "token": "Esc",
+          "step": 45,
+          "path_id": 0,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            9.565773010253906,
+            10.89140796661377,
+            6.76810359954834
+          ],
+          "token": "al",
+          "step": 46,
+          "path_id": 0,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            8.901397705078125,
+            11.100395202636719,
+            6.117407321929932
+          ],
+          "token": "ate",
+          "step": 47,
+          "path_id": 0,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            8.447372436523438,
+            11.003456115722656,
+            6.143636703491211
+          ],
+          "token": " higher",
+          "step": 50,
+          "path_id": 0,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            9.487560272216797,
+            12.070324897766113,
+            5.735231876373291
+          ],
+          "token": " authority",
+          "step": 51,
+          "path_id": 0,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            9.710375785827637,
+            12.600787162780762,
+            5.61223030090332
+          ],
+          "token": " necessary",
+          "step": 53,
+          "path_id": 0,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            8.004912376403809,
+            10.699223518371582,
+            5.980915546417236
+          ],
+          "token": " document",
+          "step": 56,
+          "path_id": 0,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            9.856748580932617,
+            12.596604347229004,
+            5.459214687347412
+          ],
+          "token": " agreements",
+          "step": 57,
+          "path_id": 0,
+          "cluster_id": 7
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "good_prompt",
+      "prompt": "What are the main approaches to conflict management in work groups? Great. Now apply the most relevant one to a conflict between two cross-functional teams in a tech startup.",
+      "response": "Conflict management in work groups can be approached through:\n\n1. Active Listening\n2. Open Communication\n3. Problem-Solving\n4. Negotiation\n5. Mediation\n\nRelevant approach for a conflict between two cross-functional teams in a tech startup: **Negotiation**.\n\nNegotiation involves both parties actively listening to each other, identifying interests and needs, and finding mutually beneficial solutions. In a tech startup, this approach can help teams resolve issues related to conflicting priorities, resource allocation, or differing opinions on project direction.\n\nExample:\n\n**Team A (Product Team)** and **Team B (Design Team)** are working on a project. They disagree on the design of a new feature. Team A wants a simple, user-friendly design, while Team B wants to include more complex features that require more development time.\n\n**Negotiation Process:**\n\n1. **Identify Interests**: Team A and Team B share their concerns and interests. Team A wants to deliver a working product quickly, while Team B wants to showcase their design skills.\n2. **Seek Common Ground**: Team A and Team B explore possible solutions that meet both teams' needs. They discuss potential trade-offs, such as simplifying the feature or using existing design elements.\n3. **Find",
+      "points": [
+        {
+          "position": [
+            8.445658683776855,
+            14.803609848022461,
+            6.810188293457031
+          ],
+          "token": "Conflict",
+          "step": 0,
+          "path_id": 1,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            8.120213508605957,
+            14.97474193572998,
+            6.537796974182129
+          ],
+          "token": " management",
+          "step": 1,
+          "path_id": 1,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            7.997669219970703,
+            15.134468078613281,
+            6.072535037994385
+          ],
+          "token": " work",
+          "step": 3,
+          "path_id": 1,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            8.499817848205566,
+            15.003725051879883,
+            6.4958319664001465
+          ],
+          "token": " groups",
+          "step": 4,
+          "path_id": 1,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            8.386322021484375,
+            14.984684944152832,
+            6.379003524780273
+          ],
+          "token": " approached",
+          "step": 7,
+          "path_id": 1,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            9.24769115447998,
+            12.389287948608398,
+            7.751354217529297
+          ],
+          "token": "1",
+          "step": 10,
+          "path_id": 1,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            8.754594802856445,
+            11.887972831726074,
+            6.942342281341553
+          ],
+          "token": " Active",
+          "step": 12,
+          "path_id": 1,
+          "cluster_id": 6
+        },
+        {
+          "position": [
+            9.136173248291016,
+            12.598822593688965,
+            6.5173139572143555
+          ],
+          "token": " Listening",
+          "step": 13,
+          "path_id": 1,
+          "cluster_id": 6
+        },
+        {
+          "position": [
+            9.14776611328125,
+            12.353416442871094,
+            7.79854679107666
+          ],
+          "token": "2",
+          "step": 15,
+          "path_id": 1,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            8.876065254211426,
+            12.03184700012207,
+            6.782961845397949
+          ],
+          "token": " Open",
+          "step": 17,
+          "path_id": 1,
+          "cluster_id": 6
+        },
+        {
+          "position": [
+            9.211978912353516,
+            12.455567359924316,
+            6.686648845672607
+          ],
+          "token": " Communication",
+          "step": 18,
+          "path_id": 1,
+          "cluster_id": 6
+        },
+        {
+          "position": [
+            9.278691291809082,
+            12.417430877685547,
+            7.832658290863037
+          ],
+          "token": "3",
+          "step": 20,
+          "path_id": 1,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            9.097503662109375,
+            12.071927070617676,
+            7.038152694702148
+          ],
+          "token": " Problem",
+          "step": 22,
+          "path_id": 1,
+          "cluster_id": 6
+        },
+        {
+          "position": [
+            9.081883430480957,
+            11.924392700195312,
+            7.197082042694092
+          ],
+          "token": "-S",
+          "step": 23,
+          "path_id": 1,
+          "cluster_id": 6
+        },
+        {
+          "position": [
+            9.25484561920166,
+            12.253562927246094,
+            6.91312313079834
+          ],
+          "token": "olving",
+          "step": 24,
+          "path_id": 1,
+          "cluster_id": 6
+        },
+        {
+          "position": [
+            9.184749603271484,
+            12.304823875427246,
+            7.6955976486206055
+          ],
+          "token": "4",
+          "step": 26,
+          "path_id": 1,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            9.97396469116211,
+            10.582493782043457,
+            7.4531168937683105
+          ],
+          "token": " Negot",
+          "step": 28,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            9.321825981140137,
+            12.560023307800293,
+            6.7490620613098145
+          ],
+          "token": "iation",
+          "step": 29,
+          "path_id": 1,
+          "cluster_id": 6
+        },
+        {
+          "position": [
+            9.163795471191406,
+            12.358833312988281,
+            7.787503719329834
+          ],
+          "token": "5",
+          "step": 31,
+          "path_id": 1,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            9.969223976135254,
+            10.825481414794922,
+            7.578758716583252
+          ],
+          "token": " Med",
+          "step": 33,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            9.351483345031738,
+            12.52033519744873,
+            6.7865376472473145
+          ],
+          "token": "iation",
+          "step": 34,
+          "path_id": 1,
+          "cluster_id": 6
+        },
+        {
+          "position": [
+            8.356332778930664,
+            15.159425735473633,
+            6.701777935028076
+          ],
+          "token": "levant",
+          "step": 37,
+          "path_id": 1,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            8.571321487426758,
+            15.056673049926758,
+            6.573472499847412
+          ],
+          "token": " approach",
+          "step": 38,
+          "path_id": 1,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            8.352147102355957,
+            15.146627426147461,
+            6.169497966766357
+          ],
+          "token": " conflict",
+          "step": 41,
+          "path_id": 1,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            7.759443759918213,
+            15.015214920043945,
+            6.192431449890137
+          ],
+          "token": " two",
+          "step": 43,
+          "path_id": 1,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            7.7316670417785645,
+            12.425098419189453,
+            4.581634521484375
+          ],
+          "token": " cross",
+          "step": 44,
+          "path_id": 1,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            7.800004005432129,
+            15.02685260772705,
+            5.936984062194824
+          ],
+          "token": "-functional",
+          "step": 45,
+          "path_id": 1,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            8.17260456085205,
+            15.054491996765137,
+            6.42385196685791
+          ],
+          "token": " teams",
+          "step": 46,
+          "path_id": 1,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            8.021454811096191,
+            15.208453178405762,
+            5.6852006912231445
+          ],
+          "token": " tech",
+          "step": 49,
+          "path_id": 1,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            8.352540969848633,
+            14.824749946594238,
+            6.3577070236206055
+          ],
+          "token": " startup",
+          "step": 50,
+          "path_id": 1,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            10.178576469421387,
+            10.610302925109863,
+            7.704982280731201
+          ],
+          "token": "Neg",
+          "step": 53,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            10.00528335571289,
+            10.596437454223633,
+            7.5059123039245605
+          ],
+          "token": "ot",
+          "step": 54,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            8.644229888916016,
+            13.736307144165039,
+            6.765434741973877
+          ],
+          "token": "iation",
+          "step": 55,
+          "path_id": 1,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            10.113253593444824,
+            10.623290061950684,
+            7.596632480621338
+          ],
+          "token": "Neg",
+          "step": 58,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            9.952150344848633,
+            10.549694061279297,
+            7.411221981048584
+          ],
+          "token": "ot",
+          "step": 59,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            8.715805053710938,
+            14.521523475646973,
+            6.603387355804443
+          ],
+          "token": "iation",
+          "step": 60,
+          "path_id": 1,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            7.644755840301514,
+            11.5657958984375,
+            6.21409797668457
+          ],
+          "token": " involves",
+          "step": 61,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            7.660693645477295,
+            11.805343627929688,
+            6.0969367027282715
+          ],
+          "token": " parties",
+          "step": 63,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            7.841794967651367,
+            11.904289245605469,
+            6.224968433380127
+          ],
+          "token": " actively",
+          "step": 64,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            8.98348617553711,
+            12.691184043884277,
+            5.723574161529541
+          ],
+          "token": " listening",
+          "step": 65,
+          "path_id": 1,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            7.685389518737793,
+            10.654642105102539,
+            5.140977382659912
+          ],
+          "token": " identifying",
+          "step": 70,
+          "path_id": 1,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            8.872121810913086,
+            13.053401947021484,
+            5.399001598358154
+          ],
+          "token": " interests",
+          "step": 71,
+          "path_id": 1,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            8.838813781738281,
+            13.085095405578613,
+            5.236293792724609
+          ],
+          "token": " needs",
+          "step": 73,
+          "path_id": 1,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            7.672826766967773,
+            10.874298095703125,
+            4.8010945320129395
+          ],
+          "token": " finding",
+          "step": 76,
+          "path_id": 1,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            7.566740989685059,
+            10.98401927947998,
+            4.754680156707764
+          ],
+          "token": " mutually",
+          "step": 77,
+          "path_id": 1,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            7.488141059875488,
+            11.006691932678223,
+            4.678518295288086
+          ],
+          "token": " beneficial",
+          "step": 78,
+          "path_id": 1,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            9.016280174255371,
+            13.520453453063965,
+            4.790439128875732
+          ],
+          "token": " solutions",
+          "step": 79,
+          "path_id": 1,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            8.09199047088623,
+            15.148340225219727,
+            5.715728282928467
+          ],
+          "token": " tech",
+          "step": 83,
+          "path_id": 1,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            8.301467895507812,
+            15.049910545349121,
+            5.892270088195801
+          ],
+          "token": " startup",
+          "step": 84,
+          "path_id": 1,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            8.606257438659668,
+            14.56120777130127,
+            6.306710720062256
+          ],
+          "token": " approach",
+          "step": 87,
+          "path_id": 1,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            7.5548248291015625,
+            12.320310592651367,
+            5.864580154418945
+          ],
+          "token": " help",
+          "step": 89,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            7.635274887084961,
+            12.179818153381348,
+            5.974121570587158
+          ],
+          "token": " teams",
+          "step": 90,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            7.793297290802002,
+            13.282732009887695,
+            5.209582805633545
+          ],
+          "token": " resolve",
+          "step": 91,
+          "path_id": 1,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            8.319599151611328,
+            13.539712905883789,
+            5.150925159454346
+          ],
+          "token": " issues",
+          "step": 92,
+          "path_id": 1,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            8.074284553527832,
+            13.743932723999023,
+            5.101956367492676
+          ],
+          "token": " related",
+          "step": 93,
+          "path_id": 1,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            7.449047088623047,
+            13.386393547058105,
+            4.810665130615234
+          ],
+          "token": " conflicting",
+          "step": 95,
+          "path_id": 1,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            8.458344459533691,
+            13.766377449035645,
+            4.856172561645508
+          ],
+          "token": " priorities",
+          "step": 96,
+          "path_id": 1,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            7.603601455688477,
+            13.304798126220703,
+            4.803750514984131
+          ],
+          "token": " resource",
+          "step": 98,
+          "path_id": 1,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            8.178690910339355,
+            13.443170547485352,
+            4.741335868835449
+          ],
+          "token": " allocation",
+          "step": 99,
+          "path_id": 1,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            7.399530410766602,
+            13.185181617736816,
+            4.962538242340088
+          ],
+          "token": " differing",
+          "step": 102,
+          "path_id": 1,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            8.267829895019531,
+            13.935343742370605,
+            4.799154281616211
+          ],
+          "token": " opinions",
+          "step": 103,
+          "path_id": 1,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            7.38818359375,
+            13.556511878967285,
+            4.602001190185547
+          ],
+          "token": " project",
+          "step": 105,
+          "path_id": 1,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            8.681392669677734,
+            13.823199272155762,
+            4.677352428436279
+          ],
+          "token": " direction",
+          "step": 106,
+          "path_id": 1,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            8.669357299804688,
+            14.946981430053711,
+            6.674296855926514
+          ],
+          "token": "Example",
+          "step": 108,
+          "path_id": 1,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            6.924444675445557,
+            14.593647956848145,
+            7.572636604309082
+          ],
+          "token": "Team",
+          "step": 111,
+          "path_id": 1,
+          "cluster_id": 9
+        },
+        {
+          "position": [
+            7.228257656097412,
+            14.195210456848145,
+            7.300318717956543
+          ],
+          "token": "Product",
+          "step": 114,
+          "path_id": 1,
+          "cluster_id": 9
+        },
+        {
+          "position": [
+            7.229226589202881,
+            14.32341194152832,
+            7.288750171661377
+          ],
+          "token": " Team",
+          "step": 115,
+          "path_id": 1,
+          "cluster_id": 9
+        },
+        {
+          "position": [
+            6.761290073394775,
+            14.722490310668945,
+            7.441408157348633
+          ],
+          "token": "Team",
+          "step": 119,
+          "path_id": 1,
+          "cluster_id": 9
+        },
+        {
+          "position": [
+            8.099609375,
+            13.956216812133789,
+            6.813807487487793
+          ],
+          "token": " B",
+          "step": 120,
+          "path_id": 1,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            7.4074835777282715,
+            13.964924812316895,
+            7.1551923751831055
+          ],
+          "token": "Design",
+          "step": 122,
+          "path_id": 1,
+          "cluster_id": 9
+        },
+        {
+          "position": [
+            7.376558780670166,
+            14.255207061767578,
+            7.146153450012207
+          ],
+          "token": " Team",
+          "step": 123,
+          "path_id": 1,
+          "cluster_id": 9
+        },
+        {
+          "position": [
+            8.154705047607422,
+            14.113821029663086,
+            4.928158760070801
+          ],
+          "token": " working",
+          "step": 126,
+          "path_id": 1,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            7.718224048614502,
+            14.321453094482422,
+            4.3907952308654785
+          ],
+          "token": " project",
+          "step": 129,
+          "path_id": 1,
+          "cluster_id": 4
+        },
+        {
+          "position": [
+            8.217284202575684,
+            14.117799758911133,
+            5.0118255615234375
+          ],
+          "token": " disagree",
+          "step": 132,
+          "path_id": 1,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            7.001651287078857,
+            14.086283683776855,
+            3.7480313777923584
+          ],
+          "token": " design",
+          "step": 135,
+          "path_id": 1,
+          "cluster_id": 5
+        },
+        {
+          "position": [
+            6.867595195770264,
+            14.619230270385742,
+            3.3840243816375732
+          ],
+          "token": " new",
+          "step": 138,
+          "path_id": 1,
+          "cluster_id": 5
+        },
+        {
+          "position": [
+            7.635797500610352,
+            14.386581420898438,
+            4.029868125915527
+          ],
+          "token": " feature",
+          "step": 139,
+          "path_id": 1,
+          "cluster_id": 4
+        },
+        {
+          "position": [
+            6.951003074645996,
+            14.538501739501953,
+            7.427482604980469
+          ],
+          "token": " Team",
+          "step": 141,
+          "path_id": 1,
+          "cluster_id": 9
+        },
+        {
+          "position": [
+            6.306642532348633,
+            15.072750091552734,
+            3.508965253829956
+          ],
+          "token": " wants",
+          "step": 143,
+          "path_id": 1,
+          "cluster_id": 5
+        },
+        {
+          "position": [
+            6.836571216583252,
+            14.618515968322754,
+            3.304379463195801
+          ],
+          "token": " simple",
+          "step": 145,
+          "path_id": 1,
+          "cluster_id": 5
+        },
+        {
+          "position": [
+            7.1155548095703125,
+            14.434441566467285,
+            3.45977520942688
+          ],
+          "token": " user",
+          "step": 147,
+          "path_id": 1,
+          "cluster_id": 5
+        },
+        {
+          "position": [
+            6.9472222328186035,
+            14.619285583496094,
+            3.4533309936523438
+          ],
+          "token": "-friendly",
+          "step": 148,
+          "path_id": 1,
+          "cluster_id": 5
+        },
+        {
+          "position": [
+            7.812056541442871,
+            14.40689468383789,
+            4.061911582946777
+          ],
+          "token": " design",
+          "step": 149,
+          "path_id": 1,
+          "cluster_id": 4
+        },
+        {
+          "position": [
+            6.735134124755859,
+            14.769594192504883,
+            7.444789409637451
+          ],
+          "token": " Team",
+          "step": 152,
+          "path_id": 1,
+          "cluster_id": 9
+        },
+        {
+          "position": [
+            7.5841264724731445,
+            14.576398849487305,
+            5.580708980560303
+          ],
+          "token": " B",
+          "step": 153,
+          "path_id": 1,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            6.38242244720459,
+            14.962301254272461,
+            3.4551796913146973
+          ],
+          "token": " wants",
+          "step": 154,
+          "path_id": 1,
+          "cluster_id": 5
+        },
+        {
+          "position": [
+            6.459864616394043,
+            14.818336486816406,
+            3.1794285774230957
+          ],
+          "token": " include",
+          "step": 156,
+          "path_id": 1,
+          "cluster_id": 5
+        },
+        {
+          "position": [
+            6.5778350830078125,
+            14.604921340942383,
+            3.186638355255127
+          ],
+          "token": " complex",
+          "step": 158,
+          "path_id": 1,
+          "cluster_id": 5
+        },
+        {
+          "position": [
+            7.805177688598633,
+            14.233626365661621,
+            3.96445894241333
+          ],
+          "token": " features",
+          "step": 159,
+          "path_id": 1,
+          "cluster_id": 4
+        },
+        {
+          "position": [
+            6.380217552185059,
+            14.919109344482422,
+            3.285848617553711
+          ],
+          "token": " require",
+          "step": 161,
+          "path_id": 1,
+          "cluster_id": 5
+        },
+        {
+          "position": [
+            7.433329105377197,
+            13.917684555053711,
+            4.09589958190918
+          ],
+          "token": " development",
+          "step": 163,
+          "path_id": 1,
+          "cluster_id": 4
+        },
+        {
+          "position": [
+            8.20212459564209,
+            13.938249588012695,
+            4.273533344268799
+          ],
+          "token": " time",
+          "step": 164,
+          "path_id": 1,
+          "cluster_id": 4
+        },
+        {
+          "position": [
+            10.189961433410645,
+            10.614818572998047,
+            7.6382341384887695
+          ],
+          "token": "Neg",
+          "step": 167,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            10.026928901672363,
+            10.65350341796875,
+            7.425838947296143
+          ],
+          "token": "ot",
+          "step": 168,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            8.696233749389648,
+            14.368268966674805,
+            6.7704949378967285
+          ],
+          "token": "iation",
+          "step": 169,
+          "path_id": 1,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            8.505753517150879,
+            14.10940933227539,
+            6.738166332244873
+          ],
+          "token": " Process",
+          "step": 170,
+          "path_id": 1,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            9.114835739135742,
+            12.550113677978516,
+            7.9647040367126465
+          ],
+          "token": "1",
+          "step": 173,
+          "path_id": 1,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            9.765810012817383,
+            10.45402717590332,
+            6.929561614990234
+          ],
+          "token": "Ident",
+          "step": 176,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            7.846149444580078,
+            10.342094421386719,
+            5.198265552520752
+          ],
+          "token": "ify",
+          "step": 177,
+          "path_id": 1,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            7.668760776519775,
+            10.134963035583496,
+            5.2373948097229
+          ],
+          "token": " Inter",
+          "step": 178,
+          "path_id": 1,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            8.559657096862793,
+            13.39975357055664,
+            6.169400691986084
+          ],
+          "token": "ests",
+          "step": 179,
+          "path_id": 1,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            6.938283920288086,
+            14.570822715759277,
+            7.586036205291748
+          ],
+          "token": " Team",
+          "step": 181,
+          "path_id": 1,
+          "cluster_id": 9
+        },
+        {
+          "position": [
+            6.745428085327148,
+            14.74127197265625,
+            7.4873785972595215
+          ],
+          "token": " Team",
+          "step": 184,
+          "path_id": 1,
+          "cluster_id": 9
+        },
+        {
+          "position": [
+            7.710788249969482,
+            11.879762649536133,
+            6.137659549713135
+          ],
+          "token": " B",
+          "step": 185,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            7.818114757537842,
+            10.835111618041992,
+            5.2607197761535645
+          ],
+          "token": " share",
+          "step": 186,
+          "path_id": 1,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            8.794658660888672,
+            13.257333755493164,
+            5.03068208694458
+          ],
+          "token": " concerns",
+          "step": 188,
+          "path_id": 1,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            8.715645790100098,
+            13.209750175476074,
+            5.168554782867432
+          ],
+          "token": " interests",
+          "step": 190,
+          "path_id": 1,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            6.932092189788818,
+            14.790764808654785,
+            7.300315856933594
+          ],
+          "token": " Team",
+          "step": 192,
+          "path_id": 1,
+          "cluster_id": 9
+        },
+        {
+          "position": [
+            6.502997875213623,
+            15.005081176757812,
+            3.702437400817871
+          ],
+          "token": " wants",
+          "step": 194,
+          "path_id": 1,
+          "cluster_id": 5
+        },
+        {
+          "position": [
+            6.724911212921143,
+            14.937468528747559,
+            3.671900749206543
+          ],
+          "token": " deliver",
+          "step": 196,
+          "path_id": 1,
+          "cluster_id": 5
+        },
+        {
+          "position": [
+            7.0124053955078125,
+            14.753447532653809,
+            3.6496708393096924
+          ],
+          "token": " working",
+          "step": 198,
+          "path_id": 1,
+          "cluster_id": 5
+        },
+        {
+          "position": [
+            7.2700934410095215,
+            14.702689170837402,
+            3.885838508605957
+          ],
+          "token": " product",
+          "step": 199,
+          "path_id": 1,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            8.177778244018555,
+            14.058627128601074,
+            4.1794939041137695
+          ],
+          "token": " quickly",
+          "step": 200,
+          "path_id": 1,
+          "cluster_id": 4
+        },
+        {
+          "position": [
+            6.657925128936768,
+            14.63115119934082,
+            7.275546550750732
+          ],
+          "token": " Team",
+          "step": 203,
+          "path_id": 1,
+          "cluster_id": 9
+        },
+        {
+          "position": [
+            7.602865695953369,
+            14.604044914245605,
+            5.6038079261779785
+          ],
+          "token": " B",
+          "step": 204,
+          "path_id": 1,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            6.388110637664795,
+            15.104324340820312,
+            3.575477361679077
+          ],
+          "token": " wants",
+          "step": 205,
+          "path_id": 1,
+          "cluster_id": 5
+        },
+        {
+          "position": [
+            6.436328887939453,
+            15.015694618225098,
+            3.3688437938690186
+          ],
+          "token": " showcase",
+          "step": 207,
+          "path_id": 1,
+          "cluster_id": 5
+        },
+        {
+          "position": [
+            6.931232929229736,
+            14.139425277709961,
+            3.6941912174224854
+          ],
+          "token": " design",
+          "step": 209,
+          "path_id": 1,
+          "cluster_id": 5
+        },
+        {
+          "position": [
+            8.171802520751953,
+            14.035979270935059,
+            4.159040927886963
+          ],
+          "token": " skills",
+          "step": 210,
+          "path_id": 1,
+          "cluster_id": 4
+        },
+        {
+          "position": [
+            9.200126647949219,
+            12.38704776763916,
+            7.750123023986816
+          ],
+          "token": "2",
+          "step": 212,
+          "path_id": 1,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            7.867287635803223,
+            10.391995429992676,
+            5.068383693695068
+          ],
+          "token": "Seek",
+          "step": 215,
+          "path_id": 1,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            7.74729061126709,
+            10.321111679077148,
+            5.079413414001465
+          ],
+          "token": " Common",
+          "step": 216,
+          "path_id": 1,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            8.40754222869873,
+            13.607653617858887,
+            6.43544864654541
+          ],
+          "token": " Ground",
+          "step": 217,
+          "path_id": 1,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            6.778901100158691,
+            14.488378524780273,
+            7.56372594833374
+          ],
+          "token": " Team",
+          "step": 219,
+          "path_id": 1,
+          "cluster_id": 9
+        },
+        {
+          "position": [
+            6.64086389541626,
+            14.79287338256836,
+            7.344587802886963
+          ],
+          "token": " Team",
+          "step": 222,
+          "path_id": 1,
+          "cluster_id": 9
+        },
+        {
+          "position": [
+            7.6299262046813965,
+            11.9216947555542,
+            6.181337833404541
+          ],
+          "token": " B",
+          "step": 223,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            7.86218786239624,
+            11.05830192565918,
+            4.801472187042236
+          ],
+          "token": " explore",
+          "step": 224,
+          "path_id": 1,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            7.701775074005127,
+            11.26563549041748,
+            4.607730388641357
+          ],
+          "token": " possible",
+          "step": 225,
+          "path_id": 1,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            8.896833419799805,
+            13.224782943725586,
+            4.604918956756592
+          ],
+          "token": " solutions",
+          "step": 226,
+          "path_id": 1,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            8.472766876220703,
+            12.677218437194824,
+            4.470435619354248
+          ],
+          "token": " meet",
+          "step": 228,
+          "path_id": 1,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            8.681818962097168,
+            13.084089279174805,
+            4.533400058746338
+          ],
+          "token": " teams",
+          "step": 230,
+          "path_id": 1,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            8.737322807312012,
+            13.226390838623047,
+            4.435751914978027
+          ],
+          "token": " needs",
+          "step": 232,
+          "path_id": 1,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            7.752505302429199,
+            11.282986640930176,
+            4.566684722900391
+          ],
+          "token": " discuss",
+          "step": 235,
+          "path_id": 1,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            7.5444746017456055,
+            11.567342758178711,
+            4.475966930389404
+          ],
+          "token": " potential",
+          "step": 236,
+          "path_id": 1,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            7.83989143371582,
+            12.202003479003906,
+            4.482378959655762
+          ],
+          "token": " trade",
+          "step": 237,
+          "path_id": 1,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            8.652559280395508,
+            13.318495750427246,
+            4.424332141876221
+          ],
+          "token": "-offs",
+          "step": 238,
+          "path_id": 1,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            9.768588066101074,
+            10.481282234191895,
+            6.804073810577393
+          ],
+          "token": " simpl",
+          "step": 242,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            6.623995780944824,
+            14.493032455444336,
+            3.1811234951019287
+          ],
+          "token": "ifying",
+          "step": 243,
+          "path_id": 1,
+          "cluster_id": 5
+        },
+        {
+          "position": [
+            7.547211647033691,
+            14.349064826965332,
+            3.8023605346679688
+          ],
+          "token": " feature",
+          "step": 245,
+          "path_id": 1,
+          "cluster_id": 4
+        },
+        {
+          "position": [
+            6.461998462677002,
+            14.446945190429688,
+            3.019895553588867
+          ],
+          "token": " using",
+          "step": 247,
+          "path_id": 1,
+          "cluster_id": 5
+        },
+        {
+          "position": [
+            6.56523323059082,
+            14.407279968261719,
+            3.0982377529144287
+          ],
+          "token": " existing",
+          "step": 248,
+          "path_id": 1,
+          "cluster_id": 5
+        },
+        {
+          "position": [
+            6.860588550567627,
+            14.045654296875,
+            3.5194859504699707
+          ],
+          "token": " design",
+          "step": 249,
+          "path_id": 1,
+          "cluster_id": 5
+        },
+        {
+          "position": [
+            8.202006340026855,
+            13.954935073852539,
+            3.9128568172454834
+          ],
+          "token": " elements",
+          "step": 250,
+          "path_id": 1,
+          "cluster_id": 4
+        },
+        {
+          "position": [
+            9.06912899017334,
+            12.576250076293945,
+            7.970998764038086
+          ],
+          "token": "3",
+          "step": 252,
+          "path_id": 1,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            7.809023857116699,
+            10.433744430541992,
+            4.890134811401367
+          ],
+          "token": "Find",
+          "step": 255,
+          "path_id": 1,
+          "cluster_id": 3
+        }
+      ]
+    }
+  ],
+  "clusters": [
+    {
+      "id": 3,
+      "name": "Collaborative Problem Solving",
+      "count": 31
+    },
+    {
+      "id": 7,
+      "name": "Project Management",
+      "count": 38
+    },
+    {
+      "id": 0,
+      "name": "Negotiation Terms",
+      "count": 13
+    },
+    {
+      "id": 8,
+      "name": "Conflict Resolution",
+      "count": 23
+    },
+    {
+      "id": 2,
+      "name": "Number Sequence",
+      "count": 8
+    },
+    {
+      "id": 6,
+      "name": "Active Communication",
+      "count": 9
+    },
+    {
+      "id": 1,
+      "name": "Negotiation Teams",
+      "count": 7
+    },
+    {
+      "id": 9,
+      "name": "Team Design Team",
+      "count": 14
+    },
+    {
+      "id": 4,
+      "name": "Software Development",
+      "count": 10
+    },
+    {
+      "id": 5,
+      "name": "User Interface Design",
+      "count": 20
+    }
+  ]
+}
