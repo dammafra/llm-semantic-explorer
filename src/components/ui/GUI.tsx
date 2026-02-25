@@ -3,6 +3,7 @@ import { useChart } from '@stores'
 import { ClusterItem } from './ClusterItem'
 import { DatasetSelector } from './DatasetSelector'
 import { ModeSelector } from './ModeSelector'
+import { NoiseCounter } from './NoiseCounter'
 import { PathItem } from './PathItem'
 
 export function GUI() {
@@ -19,9 +20,16 @@ export function GUI() {
             <ModeSelector />
 
             <div className="flex-1 overflow-y-auto gui-scroll flex flex-col gap-1 pr-1">
-              {mode === 'paths'
-                ? data.paths.map(path => <PathItem key={path.id} path={path} />)
-                : data.clusters.map(cluster => <ClusterItem key={cluster.id} cluster={cluster} />)}
+              {mode === 'paths' ? (
+                data.paths.map(path => <PathItem key={path.id} path={path} />)
+              ) : (
+                <>
+                  {data.clusters.map(cluster => (
+                    <ClusterItem key={cluster.id} cluster={cluster} />
+                  ))}
+                  <NoiseCounter />
+                </>
+              )}
             </div>
           </>
         )}
