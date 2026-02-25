@@ -34,6 +34,8 @@ export function ClusterItem({ cluster }: Props) {
     return count
   }, [data, hiddenPaths, pathVisibleSteps, cluster.id])
 
+  if (filteredCount === 0) return null
+
   return (
     <div className="flex items-center gap-2 bg-white/5 rounded-lg border border-white/5 p-2">
       <ColorCheckbox
