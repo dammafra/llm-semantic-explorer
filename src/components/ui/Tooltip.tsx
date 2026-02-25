@@ -1,5 +1,5 @@
 import { useChart } from '@stores'
-import { COLORS } from '@utils'
+import { getColor } from '@utils'
 
 export function Tooltip() {
   const hoveredNode = useChart(state => state.hoveredNode)
@@ -19,7 +19,7 @@ export function Tooltip() {
       <div
         className="font-bold mb-2 border-b border-white/10 pb-1.5 uppercase tracking-wider text-sm"
         style={{
-          color: mode === 'paths' ? COLORS[hoveredNode.pathId] : COLORS[hoveredNode.clusterId],
+          color: getColor(mode === 'paths' ? hoveredNode.pathId : hoveredNode.clusterId),
         }}
       >
         {mode === 'paths'
@@ -50,7 +50,7 @@ export function Tooltip() {
           <span
             className="text-xs text-white/90 text-right"
             style={{
-              color: mode === 'paths' ? COLORS[hoveredNode.clusterId] : COLORS[hoveredNode.pathId],
+              color: getColor(mode === 'paths' ? hoveredNode.clusterId : hoveredNode.pathId),
             }}
           >
             {mode === 'paths'

@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 
 import { useChart, type ChartData } from '@stores'
-import { COLORS } from '@utils'
+import { getColor } from '@utils'
 
 import { ColorCheckbox } from './ColorCheckbox'
 
@@ -20,7 +20,7 @@ export function ClusterItem({ cluster }: Props) {
   return (
     <div className="flex items-center gap-2 bg-white/5 rounded-lg border border-white/5 p-2">
       <ColorCheckbox
-        color={COLORS[cluster.id]}
+        color={getColor(cluster.id)}
         checked={!isHidden}
         onClick={() => toggleClusterVisibility(cluster.id)}
       />

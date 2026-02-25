@@ -1,5 +1,5 @@
 import { useChart } from '@stores'
-import { COLORS } from '@utils'
+import { getColor } from '@utils'
 
 import { useCursor } from '@react-three/drei'
 import { useState } from 'react'
@@ -36,7 +36,7 @@ export function Point({ point, pointRadius, onPointOver, onPointOut }: PointProp
       }}
     >
       <icosahedronGeometry args={[pointRadius, 2]} />
-      <meshMatcapMaterial color={COLORS[mode === 'paths' ? point.pathId : point.clusterId]} />
+      <meshMatcapMaterial color={getColor(mode === 'paths' ? point.pathId : point.clusterId)} />
     </mesh>
   )
 }

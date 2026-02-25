@@ -2,7 +2,7 @@ import { Line } from '@react-three/drei'
 import type { Vector3 } from 'three'
 
 import { useChart } from '@stores'
-import { COLORS } from '@utils'
+import { getColor } from '@utils'
 
 import { Point } from './Point'
 
@@ -50,7 +50,7 @@ export function Path({ path, mode, onPointOver, onPointOut, pointRadius }: Traje
       {mode === 'paths' && visibleSmoothPoints.length >= 2 && (
         <Line
           points={visibleSmoothPoints}
-          color={COLORS[path.id]}
+          color={getColor(path.id)}
           opacity={lineOpacity}
           transparent
           lineWidth={1}

@@ -3,7 +3,7 @@ import clsx from 'clsx'
 import { useState } from 'react'
 
 import { useChart, type ChartData } from '@stores'
-import { COLORS } from '@utils'
+import { getColor } from '@utils'
 
 import { ColorCheckbox } from './ColorCheckbox'
 
@@ -37,7 +37,7 @@ export function PathItem({ path }: Props) {
         className="w-full p-2 flex items-center gap-2 hover:bg-white/5 cursor-pointer"
       >
         <ColorCheckbox
-          color={COLORS[path.id]}
+          color={getColor(path.id)}
           checked={!isHidden}
           onClick={handleToggleVisibility}
         />
@@ -92,12 +92,16 @@ export function PathItem({ path }: Props) {
 
           <div className="flex flex-col gap-1 mt-2">
             <span className="text-[10px] text-white/30 uppercase tracking-tighter">Prompt</span>
-            <p className="text-[11px] text-white/70 bg-white/5 p-1.5 rounded">{path.prompt}</p>
+            <p className="text-[11px] text-white/70 bg-white/5 p-1.5 rounded whitespace-break-spaces">
+              {path.prompt}
+            </p>
           </div>
 
           <div className="flex flex-col gap-1">
             <span className="text-[10px] text-white/30 uppercase tracking-tighter">Response</span>
-            <p className="text-[11px] text-white/70 bg-white/5 p-1.5 rounded">{path.response}</p>
+            <p className="text-[11px] text-white/70 bg-white/5 p-1.5 rounded whitespace-break-spaces">
+              {path.response}
+            </p>
           </div>
         </div>
       )}
