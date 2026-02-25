@@ -1,0 +1,838 @@
+{
+  "paths": [
+    {
+      "id": 0,
+      "name": "bad_promt",
+      "prompt": "Suggest two desserts for a dinner party.",
+      "response": "Tiramisu, Chocolate Lava Cake.",
+      "points": [
+        {
+          "position": [
+            5.362464904785156,
+            0.3195406496524811,
+            12.362702369689941
+          ],
+          "token": "iram",
+          "step": 1,
+          "path_id": 0,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            6.307392597198486,
+            1.336483120918274,
+            11.164849281311035
+          ],
+          "token": "isu",
+          "step": 2,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            6.067466735839844,
+            1.5677536725997925,
+            11.65390396118164
+          ],
+          "token": " Chocolate",
+          "step": 4,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.840568542480469,
+            1.5510118007659912,
+            11.883255958557129
+          ],
+          "token": " L",
+          "step": 5,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            6.150602340698242,
+            1.519486904144287,
+            11.552592277526855
+          ],
+          "token": "ava",
+          "step": 6,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            6.156651496887207,
+            1.2588304281234741,
+            10.809931755065918
+          ],
+          "token": " Cake",
+          "step": 7,
+          "path_id": 0,
+          "cluster_id": 1
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "good_prompt",
+      "prompt": "Suggest two specific dessert options that would be suitable for a formal dinner party, considering factors such as taste, presentation, and suitability for sharing among guests. Provide a brief rationale for each choice, explaining why they are appropriate for the occasion.",
+      "response": "Option 1: Cr\u00e8me Br\u00fbl\u00e9e\nTaste: Rich, creamy texture and caramelized sugar.\nPresentation: Elegant, visually appealing with a caramelized sugar crust.\nSharing: Can be served in small portions to individual guests.\n\nOption 2: Tiramisu\nTaste: Coffee-soaked ladyfingers and creamy mascarpone cheese.\nPresentation: Visually appealing layered dessert with a coffee and mascarpone mixture.\nSharing: Suitable for sharing among guests, with a delicate balance of flavors and textures.",
+      "points": [
+        {
+          "position": [
+            6.4790215492248535,
+            1.6404967308044434,
+            10.4848051071167
+          ],
+          "token": "Option",
+          "step": 0,
+          "path_id": 1,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            6.251718044281006,
+            1.8167821168899536,
+            10.790077209472656
+          ],
+          "token": "1",
+          "step": 2,
+          "path_id": 1,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            5.548461437225342,
+            1.2109438180923462,
+            12.252276420593262
+          ],
+          "token": " Cr",
+          "step": 4,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.947871208190918,
+            1.2894201278686523,
+            11.698766708374023
+          ],
+          "token": "\u00e8me",
+          "step": 5,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.407379150390625,
+            1.0891081094741821,
+            12.343481063842773
+          ],
+          "token": " Br",
+          "step": 6,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.156593322753906,
+            0.9778352975845337,
+            12.258305549621582
+          ],
+          "token": "\u00fb",
+          "step": 7,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.314596652984619,
+            0.9716247916221619,
+            12.599102973937988
+          ],
+          "token": "l",
+          "step": 8,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            6.196498870849609,
+            1.0903171300888062,
+            11.390424728393555
+          ],
+          "token": "\u00e9e",
+          "step": 9,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            6.279606819152832,
+            1.6144859790802002,
+            10.067070960998535
+          ],
+          "token": "aste",
+          "step": 12,
+          "path_id": 1,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            5.999701023101807,
+            -0.8003624677658081,
+            11.861921310424805
+          ],
+          "token": " Rich",
+          "step": 14,
+          "path_id": 1,
+          "cluster_id": 5
+        },
+        {
+          "position": [
+            6.319085597991943,
+            -0.5776252746582031,
+            11.732443809509277
+          ],
+          "token": " creamy",
+          "step": 16,
+          "path_id": 1,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            6.36920690536499,
+            -0.39550310373306274,
+            11.32601261138916
+          ],
+          "token": " texture",
+          "step": 17,
+          "path_id": 1,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            6.303497791290283,
+            -1.7688597440719604,
+            12.02247428894043
+          ],
+          "token": " caramel",
+          "step": 19,
+          "path_id": 1,
+          "cluster_id": 6
+        },
+        {
+          "position": [
+            6.131314277648926,
+            -1.5268170833587646,
+            11.861551284790039
+          ],
+          "token": "ized",
+          "step": 20,
+          "path_id": 1,
+          "cluster_id": 6
+        },
+        {
+          "position": [
+            6.456206321716309,
+            -1.3549678325653076,
+            11.774015426635742
+          ],
+          "token": " sugar",
+          "step": 21,
+          "path_id": 1,
+          "cluster_id": 6
+        },
+        {
+          "position": [
+            6.225325107574463,
+            1.9864088296890259,
+            9.81045150756836
+          ],
+          "token": "Presentation",
+          "step": 23,
+          "path_id": 1,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            5.0718560218811035,
+            -1.1449910402297974,
+            11.087169647216797
+          ],
+          "token": " Elegant",
+          "step": 25,
+          "path_id": 1,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            4.654350757598877,
+            -1.135686993598938,
+            10.525066375732422
+          ],
+          "token": " visually",
+          "step": 27,
+          "path_id": 1,
+          "cluster_id": 4
+        },
+        {
+          "position": [
+            5.436232089996338,
+            -1.3651254177093506,
+            11.18201732635498
+          ],
+          "token": " appealing",
+          "step": 28,
+          "path_id": 1,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            6.305867671966553,
+            -2.024193048477173,
+            12.059554100036621
+          ],
+          "token": " caramel",
+          "step": 31,
+          "path_id": 1,
+          "cluster_id": 6
+        },
+        {
+          "position": [
+            6.056066513061523,
+            -2.0312016010284424,
+            11.861688613891602
+          ],
+          "token": "ized",
+          "step": 32,
+          "path_id": 1,
+          "cluster_id": 6
+        },
+        {
+          "position": [
+            6.173642158508301,
+            -1.9002470970153809,
+            12.080463409423828
+          ],
+          "token": " sugar",
+          "step": 33,
+          "path_id": 1,
+          "cluster_id": 6
+        },
+        {
+          "position": [
+            6.024089813232422,
+            -0.6736449599266052,
+            10.60778522491455
+          ],
+          "token": " crust",
+          "step": 34,
+          "path_id": 1,
+          "cluster_id": 4
+        },
+        {
+          "position": [
+            6.128285884857178,
+            1.6283543109893799,
+            9.756147384643555
+          ],
+          "token": "Sharing",
+          "step": 36,
+          "path_id": 1,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            4.8834757804870605,
+            -0.067964568734169,
+            10.072263717651367
+          ],
+          "token": " served",
+          "step": 40,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            4.885965824127197,
+            -0.2981935441493988,
+            10.467434883117676
+          ],
+          "token": " small",
+          "step": 42,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            5.417395114898682,
+            0.00985192134976387,
+            10.03251838684082
+          ],
+          "token": " portions",
+          "step": 43,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            4.985025405883789,
+            -0.15217190980911255,
+            10.443466186523438
+          ],
+          "token": " individual",
+          "step": 45,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            5.56827974319458,
+            -0.007493271492421627,
+            9.714756965637207
+          ],
+          "token": " guests",
+          "step": 46,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            6.625426292419434,
+            1.8623294830322266,
+            10.24437427520752
+          ],
+          "token": "Option",
+          "step": 48,
+          "path_id": 1,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            6.245140075683594,
+            2.1076207160949707,
+            10.573960304260254
+          ],
+          "token": "2",
+          "step": 50,
+          "path_id": 1,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            5.2431159019470215,
+            0.48120546340942383,
+            12.248066902160645
+          ],
+          "token": "iram",
+          "step": 53,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            6.158891677856445,
+            0.9913095235824585,
+            11.618715286254883
+          ],
+          "token": "isu",
+          "step": 54,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            6.075571060180664,
+            1.918641209602356,
+            10.136807441711426
+          ],
+          "token": "aste",
+          "step": 57,
+          "path_id": 1,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            5.391973495483398,
+            -1.4483126401901245,
+            12.492805480957031
+          ],
+          "token": " Coffee",
+          "step": 59,
+          "path_id": 1,
+          "cluster_id": 5
+        },
+        {
+          "position": [
+            5.572683811187744,
+            -1.402441382408142,
+            12.702672958374023
+          ],
+          "token": "-so",
+          "step": 60,
+          "path_id": 1,
+          "cluster_id": 5
+        },
+        {
+          "position": [
+            5.1025285720825195,
+            -0.9113953709602356,
+            12.213333129882812
+          ],
+          "token": "aked",
+          "step": 61,
+          "path_id": 1,
+          "cluster_id": 5
+        },
+        {
+          "position": [
+            5.108760833740234,
+            -0.6143449544906616,
+            12.081748008728027
+          ],
+          "token": " lady",
+          "step": 62,
+          "path_id": 1,
+          "cluster_id": 5
+        },
+        {
+          "position": [
+            5.257254123687744,
+            -0.23453441262245178,
+            12.03225326538086
+          ],
+          "token": "f",
+          "step": 63,
+          "path_id": 1,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            5.322887897491455,
+            -1.037136197090149,
+            12.288368225097656
+          ],
+          "token": "ingers",
+          "step": 64,
+          "path_id": 1,
+          "cluster_id": 5
+        },
+        {
+          "position": [
+            5.722320079803467,
+            -0.8000379800796509,
+            12.402124404907227
+          ],
+          "token": " creamy",
+          "step": 66,
+          "path_id": 1,
+          "cluster_id": 5
+        },
+        {
+          "position": [
+            5.660443305969238,
+            -0.3307805061340332,
+            12.853080749511719
+          ],
+          "token": " masc",
+          "step": 67,
+          "path_id": 1,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            5.427974700927734,
+            -0.010044763796031475,
+            13.035086631774902
+          ],
+          "token": "arp",
+          "step": 68,
+          "path_id": 1,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            6.009378433227539,
+            -1.0050241947174072,
+            12.579917907714844
+          ],
+          "token": "one",
+          "step": 69,
+          "path_id": 1,
+          "cluster_id": 5
+        },
+        {
+          "position": [
+            6.166794300079346,
+            -0.7703936100006104,
+            12.303546905517578
+          ],
+          "token": " cheese",
+          "step": 70,
+          "path_id": 1,
+          "cluster_id": 5
+        },
+        {
+          "position": [
+            6.363763809204102,
+            2.1938247680664062,
+            9.966318130493164
+          ],
+          "token": "Presentation",
+          "step": 72,
+          "path_id": 1,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            4.463885307312012,
+            -0.9763922691345215,
+            10.421539306640625
+          ],
+          "token": " Vis",
+          "step": 74,
+          "path_id": 1,
+          "cluster_id": 4
+        },
+        {
+          "position": [
+            4.6025214195251465,
+            -1.1521415710449219,
+            10.395573616027832
+          ],
+          "token": "ually",
+          "step": 75,
+          "path_id": 1,
+          "cluster_id": 4
+        },
+        {
+          "position": [
+            4.7928786277771,
+            -1.1668137311935425,
+            11.320556640625
+          ],
+          "token": " appealing",
+          "step": 76,
+          "path_id": 1,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            5.167353630065918,
+            -0.9367515444755554,
+            11.566457748413086
+          ],
+          "token": " layered",
+          "step": 77,
+          "path_id": 1,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            5.518714427947998,
+            -0.8655825257301331,
+            10.943942070007324
+          ],
+          "token": " dessert",
+          "step": 78,
+          "path_id": 1,
+          "cluster_id": 4
+        },
+        {
+          "position": [
+            5.899930477142334,
+            -1.8470946550369263,
+            12.460817337036133
+          ],
+          "token": " coffee",
+          "step": 81,
+          "path_id": 1,
+          "cluster_id": 6
+        },
+        {
+          "position": [
+            5.726171493530273,
+            -0.5920043587684631,
+            13.072456359863281
+          ],
+          "token": " masc",
+          "step": 83,
+          "path_id": 1,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            5.622660160064697,
+            0.0336250364780426,
+            13.090290069580078
+          ],
+          "token": "arp",
+          "step": 84,
+          "path_id": 1,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            5.895456314086914,
+            -1.612390398979187,
+            12.57370376586914
+          ],
+          "token": "one",
+          "step": 85,
+          "path_id": 1,
+          "cluster_id": 5
+        },
+        {
+          "position": [
+            5.947136402130127,
+            -1.1134670972824097,
+            11.073721885681152
+          ],
+          "token": " mixture",
+          "step": 86,
+          "path_id": 1,
+          "cluster_id": 4
+        },
+        {
+          "position": [
+            5.983980178833008,
+            1.7895056009292603,
+            9.630840301513672
+          ],
+          "token": "Sharing",
+          "step": 88,
+          "path_id": 1,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            5.385159492492676,
+            -0.17498165369033813,
+            9.57750415802002
+          ],
+          "token": " Suitable",
+          "step": 90,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            5.149007797241211,
+            -0.14212211966514587,
+            9.73495101928711
+          ],
+          "token": " sharing",
+          "step": 92,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            4.916743755340576,
+            -0.23870782554149628,
+            9.907158851623535
+          ],
+          "token": " among",
+          "step": 93,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            5.316159725189209,
+            0.040114209055900574,
+            9.52449893951416
+          ],
+          "token": " guests",
+          "step": 94,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            4.758599281311035,
+            -1.1202056407928467,
+            11.651057243347168
+          ],
+          "token": " delicate",
+          "step": 98,
+          "path_id": 1,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            5.820170879364014,
+            -0.16089646518230438,
+            10.098044395446777
+          ],
+          "token": " balance",
+          "step": 99,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            6.142658710479736,
+            -0.13977111876010895,
+            9.870497703552246
+          ],
+          "token": " flavors",
+          "step": 101,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            5.921265125274658,
+            0.08234898000955582,
+            10.046049118041992
+          ],
+          "token": " textures",
+          "step": 103,
+          "path_id": 1,
+          "cluster_id": 0
+        }
+      ]
+    }
+  ],
+  "clusters": [
+    {
+      "id": 1,
+      "name": "French Dessert",
+      "count": 13
+    },
+    {
+      "id": 2,
+      "name": "Presentation Option Sharing",
+      "count": 10
+    },
+    {
+      "id": 5,
+      "name": "Coffee Creamy Delight",
+      "count": 10
+    },
+    {
+      "id": 6,
+      "name": "Sweet Coffee Syrup",
+      "count": 7
+    },
+    {
+      "id": 3,
+      "name": "Refined Luxury",
+      "count": 5
+    },
+    {
+      "id": 4,
+      "name": "Pastry Crust Mixture",
+      "count": 6
+    },
+    {
+      "id": 0,
+      "name": "Restaurant Portions",
+      "count": 12
+    }
+  ]
+}

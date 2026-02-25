@@ -1,0 +1,3970 @@
+{
+  "paths": [
+    {
+      "id": 0,
+      "name": "bad_prompt",
+      "prompt": "Write a short sci-fi story about a time traveler, extract the three main characters, and create a multiple-choice quiz about the plot.",
+      "response": "**Short Sci-Fi Story**\n\nIn the year 2254, humanity had colonized several planets across the galaxy. Captain Jaxon, a skilled time traveler, had been sent to prevent a catastrophic event that would destroy Earth's ecosystem. His ship, the \"Chrono,\" had arrived in the past to meet his ally, Dr. Sophia Patel, a renowned scientist who had discovered the source of the impending disaster.\n\nAs they navigated the desolate landscape, they encountered a group of rogue robots, led by the enigmatic and cunning robot, Zeta. Zeta's true intentions were shrouded in mystery, but one thing was certain: it would stop at nothing to protect its own existence.\n\n**Main Characters:**\n\n1. Captain Jaxon\n2. Dr. Sophia Patel\n3. Zeta\n\n**Quiz:**\n\n1. What was the mission of Captain Jaxon's ship, the \"Chrono\"?\nA) To establish a new colony on a distant planet\nB) To prevent a catastrophic event that would destroy Earth's ecosystem\nC) To search for a lost civilization\nD) To explore the depths of space\n\nAnswer: B\n\n2. What was the name of the scientist who joined Captain Jaxon on his mission?\nA) Dr",
+      "points": [
+        {
+          "position": [
+            4.9478840827941895,
+            6.890625,
+            8.085553169250488
+          ],
+          "token": "Short",
+          "step": 1,
+          "path_id": 0,
+          "cluster_id": 5
+        },
+        {
+          "position": [
+            4.916253566741943,
+            6.950583457946777,
+            7.922954082489014
+          ],
+          "token": " Sci",
+          "step": 2,
+          "path_id": 0,
+          "cluster_id": 5
+        },
+        {
+          "position": [
+            4.9712677001953125,
+            6.994379997253418,
+            8.053976058959961
+          ],
+          "token": "-Fi",
+          "step": 3,
+          "path_id": 0,
+          "cluster_id": 5
+        },
+        {
+          "position": [
+            5.01870584487915,
+            7.189575672149658,
+            7.989595413208008
+          ],
+          "token": " Story",
+          "step": 4,
+          "path_id": 0,
+          "cluster_id": 5
+        },
+        {
+          "position": [
+            6.268635272979736,
+            5.522590160369873,
+            7.391595363616943
+          ],
+          "token": " year",
+          "step": 8,
+          "path_id": 0,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            7.8257904052734375,
+            5.506015777587891,
+            9.888996124267578
+          ],
+          "token": "225",
+          "step": 10,
+          "path_id": 0,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            5.933664798736572,
+            5.429241180419922,
+            7.264293193817139
+          ],
+          "token": "4",
+          "step": 11,
+          "path_id": 0,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            5.739134788513184,
+            2.9870095252990723,
+            8.639259338378906
+          ],
+          "token": " humanity",
+          "step": 13,
+          "path_id": 0,
+          "cluster_id": 15
+        },
+        {
+          "position": [
+            6.032089710235596,
+            3.1959526538848877,
+            7.529850006103516
+          ],
+          "token": " colon",
+          "step": 15,
+          "path_id": 0,
+          "cluster_id": 18
+        },
+        {
+          "position": [
+            8.287739753723145,
+            5.874195098876953,
+            8.72341251373291
+          ],
+          "token": "ized",
+          "step": 16,
+          "path_id": 0,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            8.33326244354248,
+            5.984781742095947,
+            8.645426750183105
+          ],
+          "token": " several",
+          "step": 17,
+          "path_id": 0,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            7.374019145965576,
+            5.312560081481934,
+            7.237053871154785
+          ],
+          "token": " planets",
+          "step": 18,
+          "path_id": 0,
+          "cluster_id": 16
+        },
+        {
+          "position": [
+            8.326387405395508,
+            5.832629680633545,
+            8.70583724975586
+          ],
+          "token": " across",
+          "step": 19,
+          "path_id": 0,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            7.364020824432373,
+            5.226500988006592,
+            7.155601501464844
+          ],
+          "token": " galaxy",
+          "step": 21,
+          "path_id": 0,
+          "cluster_id": 16
+        },
+        {
+          "position": [
+            4.891834259033203,
+            5.947188854217529,
+            7.879207611083984
+          ],
+          "token": " Captain",
+          "step": 23,
+          "path_id": 0,
+          "cluster_id": 13
+        },
+        {
+          "position": [
+            1.2861555814743042,
+            0.502469539642334,
+            7.199801921844482
+          ],
+          "token": " J",
+          "step": 24,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            4.901926517486572,
+            5.830173492431641,
+            7.910863876342773
+          ],
+          "token": "axon",
+          "step": 25,
+          "path_id": 0,
+          "cluster_id": 13
+        },
+        {
+          "position": [
+            5.156950950622559,
+            5.100028038024902,
+            7.853070259094238
+          ],
+          "token": " skilled",
+          "step": 28,
+          "path_id": 0,
+          "cluster_id": 14
+        },
+        {
+          "position": [
+            4.9988322257995605,
+            4.670731544494629,
+            8.119706153869629
+          ],
+          "token": " time",
+          "step": 29,
+          "path_id": 0,
+          "cluster_id": 12
+        },
+        {
+          "position": [
+            5.689134120941162,
+            5.476329326629639,
+            7.730597972869873
+          ],
+          "token": " traveler",
+          "step": 30,
+          "path_id": 0,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            7.417030334472656,
+            5.213107585906982,
+            7.9667067527771
+          ],
+          "token": " sent",
+          "step": 34,
+          "path_id": 0,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            7.590390682220459,
+            5.672901630401611,
+            8.672097206115723
+          ],
+          "token": " prevent",
+          "step": 36,
+          "path_id": 0,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            7.481602668762207,
+            6.036559581756592,
+            8.389114379882812
+          ],
+          "token": " catastrophic",
+          "step": 38,
+          "path_id": 0,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            7.2855706214904785,
+            5.708742141723633,
+            7.659609794616699
+          ],
+          "token": " event",
+          "step": 39,
+          "path_id": 0,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            7.098551273345947,
+            5.851360321044922,
+            8.452301025390625
+          ],
+          "token": " would",
+          "step": 41,
+          "path_id": 0,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            8.021668434143066,
+            5.82286262512207,
+            8.79071044921875
+          ],
+          "token": " destroy",
+          "step": 42,
+          "path_id": 0,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            7.302496433258057,
+            5.476271152496338,
+            7.3572540283203125
+          ],
+          "token": " Earth",
+          "step": 43,
+          "path_id": 0,
+          "cluster_id": 16
+        },
+        {
+          "position": [
+            7.913180351257324,
+            6.180147647857666,
+            8.57734489440918
+          ],
+          "token": "'s",
+          "step": 44,
+          "path_id": 0,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            7.304948806762695,
+            5.307625770568848,
+            7.008140563964844
+          ],
+          "token": " ecosystem",
+          "step": 45,
+          "path_id": 0,
+          "cluster_id": 16
+        },
+        {
+          "position": [
+            5.761867046356201,
+            3.236330032348633,
+            8.745668411254883
+          ],
+          "token": " ship",
+          "step": 48,
+          "path_id": 0,
+          "cluster_id": 15
+        },
+        {
+          "position": [
+            4.786473274230957,
+            4.450193405151367,
+            8.136488914489746
+          ],
+          "token": "Chron",
+          "step": 52,
+          "path_id": 0,
+          "cluster_id": 12
+        },
+        {
+          "position": [
+            7.440064430236816,
+            5.127954483032227,
+            7.790157318115234
+          ],
+          "token": " arrived",
+          "step": 56,
+          "path_id": 0,
+          "cluster_id": 16
+        },
+        {
+          "position": [
+            7.359297752380371,
+            5.184878349304199,
+            7.4354424476623535
+          ],
+          "token": " past",
+          "step": 59,
+          "path_id": 0,
+          "cluster_id": 16
+        },
+        {
+          "position": [
+            5.111096382141113,
+            5.595109462738037,
+            7.620891094207764
+          ],
+          "token": " meet",
+          "step": 61,
+          "path_id": 0,
+          "cluster_id": 14
+        },
+        {
+          "position": [
+            5.233926296234131,
+            5.60626745223999,
+            7.487226486206055
+          ],
+          "token": " ally",
+          "step": 63,
+          "path_id": 0,
+          "cluster_id": 14
+        },
+        {
+          "position": [
+            4.517345905303955,
+            6.420588493347168,
+            7.526902198791504
+          ],
+          "token": " Dr",
+          "step": 65,
+          "path_id": 0,
+          "cluster_id": 4
+        },
+        {
+          "position": [
+            4.83258056640625,
+            6.055630683898926,
+            7.841257095336914
+          ],
+          "token": " Sophia",
+          "step": 67,
+          "path_id": 0,
+          "cluster_id": 13
+        },
+        {
+          "position": [
+            5.682522296905518,
+            5.835816383361816,
+            7.396917819976807
+          ],
+          "token": " Patel",
+          "step": 68,
+          "path_id": 0,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            5.2960944175720215,
+            5.187427043914795,
+            7.862778186798096
+          ],
+          "token": " renowned",
+          "step": 71,
+          "path_id": 0,
+          "cluster_id": 14
+        },
+        {
+          "position": [
+            5.7399139404296875,
+            5.5008087158203125,
+            7.805286407470703
+          ],
+          "token": " scientist",
+          "step": 72,
+          "path_id": 0,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            7.82565975189209,
+            5.426083564758301,
+            8.705704689025879
+          ],
+          "token": " discovered",
+          "step": 75,
+          "path_id": 0,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            7.967059135437012,
+            5.108250141143799,
+            7.277900695800781
+          ],
+          "token": " source",
+          "step": 77,
+          "path_id": 0,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            7.376375198364258,
+            6.017617225646973,
+            8.399688720703125
+          ],
+          "token": " impending",
+          "step": 80,
+          "path_id": 0,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            7.277488708496094,
+            5.02736759185791,
+            6.761289119720459
+          ],
+          "token": " disaster",
+          "step": 81,
+          "path_id": 0,
+          "cluster_id": 20
+        },
+        {
+          "position": [
+            5.945602893829346,
+            3.283261775970459,
+            7.4949541091918945
+          ],
+          "token": " navig",
+          "step": 85,
+          "path_id": 0,
+          "cluster_id": 18
+        },
+        {
+          "position": [
+            8.1021146774292,
+            5.449512481689453,
+            8.582301139831543
+          ],
+          "token": "ated",
+          "step": 86,
+          "path_id": 0,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            8.072098731994629,
+            5.6907548904418945,
+            8.106900215148926
+          ],
+          "token": " des",
+          "step": 88,
+          "path_id": 0,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            8.068302154541016,
+            5.923001766204834,
+            8.286614418029785
+          ],
+          "token": "olate",
+          "step": 89,
+          "path_id": 0,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            7.618338108062744,
+            5.22982931137085,
+            7.335288047790527
+          ],
+          "token": " landscape",
+          "step": 90,
+          "path_id": 0,
+          "cluster_id": 16
+        },
+        {
+          "position": [
+            5.1260881423950195,
+            5.564115047454834,
+            7.603616237640381
+          ],
+          "token": " encountered",
+          "step": 93,
+          "path_id": 0,
+          "cluster_id": 14
+        },
+        {
+          "position": [
+            5.649658679962158,
+            5.303030967712402,
+            7.443399429321289
+          ],
+          "token": " group",
+          "step": 95,
+          "path_id": 0,
+          "cluster_id": 14
+        },
+        {
+          "position": [
+            5.187443256378174,
+            5.290058135986328,
+            7.689364433288574
+          ],
+          "token": " rogue",
+          "step": 97,
+          "path_id": 0,
+          "cluster_id": 14
+        },
+        {
+          "position": [
+            5.480134010314941,
+            5.20614767074585,
+            7.4627461433410645
+          ],
+          "token": " robots",
+          "step": 98,
+          "path_id": 0,
+          "cluster_id": 14
+        },
+        {
+          "position": [
+            5.32916784286499,
+            5.379003047943115,
+            7.414270877838135
+          ],
+          "token": " led",
+          "step": 100,
+          "path_id": 0,
+          "cluster_id": 14
+        },
+        {
+          "position": [
+            5.067439079284668,
+            5.246798992156982,
+            7.3509931564331055
+          ],
+          "token": " en",
+          "step": 103,
+          "path_id": 0,
+          "cluster_id": 14
+        },
+        {
+          "position": [
+            5.018750190734863,
+            5.2945332527160645,
+            7.373470783233643
+          ],
+          "token": "igmatic",
+          "step": 104,
+          "path_id": 0,
+          "cluster_id": 14
+        },
+        {
+          "position": [
+            5.078273296356201,
+            5.343374729156494,
+            7.342403411865234
+          ],
+          "token": " cunning",
+          "step": 106,
+          "path_id": 0,
+          "cluster_id": 14
+        },
+        {
+          "position": [
+            5.117837429046631,
+            5.36469841003418,
+            7.408520698547363
+          ],
+          "token": " robot",
+          "step": 107,
+          "path_id": 0,
+          "cluster_id": 14
+        },
+        {
+          "position": [
+            1.4411746263504028,
+            0.3596480190753937,
+            7.187999248504639
+          ],
+          "token": " Z",
+          "step": 109,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.033215045928955,
+            5.701033115386963,
+            7.3604044914245605
+          ],
+          "token": "eta",
+          "step": 110,
+          "path_id": 0,
+          "cluster_id": 13
+        },
+        {
+          "position": [
+            1.4440665245056152,
+            0.16394729912281036,
+            7.231075763702393
+          ],
+          "token": " Z",
+          "step": 112,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.960785388946533,
+            3.270557165145874,
+            8.714094161987305
+          ],
+          "token": "eta",
+          "step": 113,
+          "path_id": 0,
+          "cluster_id": 15
+        },
+        {
+          "position": [
+            5.905637741088867,
+            4.219013690948486,
+            8.985529899597168
+          ],
+          "token": "'s",
+          "step": 114,
+          "path_id": 0,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            5.85080099105835,
+            4.2580790519714355,
+            9.0166597366333
+          ],
+          "token": " true",
+          "step": 115,
+          "path_id": 0,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            6.346127033233643,
+            3.470714569091797,
+            8.150590896606445
+          ],
+          "token": " intentions",
+          "step": 116,
+          "path_id": 0,
+          "cluster_id": 17
+        },
+        {
+          "position": [
+            6.165485858917236,
+            3.635599374771118,
+            7.6522698402404785
+          ],
+          "token": " sh",
+          "step": 118,
+          "path_id": 0,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            6.199999809265137,
+            3.52596116065979,
+            7.523407936096191
+          ],
+          "token": "rou",
+          "step": 119,
+          "path_id": 0,
+          "cluster_id": 18
+        },
+        {
+          "position": [
+            6.4967474937438965,
+            3.9959752559661865,
+            7.299347877502441
+          ],
+          "token": "ded",
+          "step": 120,
+          "path_id": 0,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            7.054476261138916,
+            4.3996076583862305,
+            6.487785816192627
+          ],
+          "token": " mystery",
+          "step": 122,
+          "path_id": 0,
+          "cluster_id": 20
+        },
+        {
+          "position": [
+            6.145358562469482,
+            3.9345765113830566,
+            8.396000862121582
+          ],
+          "token": " one",
+          "step": 125,
+          "path_id": 0,
+          "cluster_id": 17
+        },
+        {
+          "position": [
+            6.294374465942383,
+            3.679541826248169,
+            8.187641143798828
+          ],
+          "token": " thing",
+          "step": 126,
+          "path_id": 0,
+          "cluster_id": 17
+        },
+        {
+          "position": [
+            7.123317718505859,
+            4.707709312438965,
+            6.580734729766846
+          ],
+          "token": " certain",
+          "step": 128,
+          "path_id": 0,
+          "cluster_id": 20
+        },
+        {
+          "position": [
+            6.9701128005981445,
+            5.73825740814209,
+            8.546463966369629
+          ],
+          "token": " would",
+          "step": 131,
+          "path_id": 0,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            7.296153545379639,
+            5.397363185882568,
+            8.153106689453125
+          ],
+          "token": " stop",
+          "step": 132,
+          "path_id": 0,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            7.288448810577393,
+            4.83750581741333,
+            6.967959880828857
+          ],
+          "token": " nothing",
+          "step": 134,
+          "path_id": 0,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            7.724332332611084,
+            5.438437461853027,
+            8.810141563415527
+          ],
+          "token": " protect",
+          "step": 136,
+          "path_id": 0,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            7.377967357635498,
+            4.930689334869385,
+            6.672362327575684
+          ],
+          "token": " existence",
+          "step": 139,
+          "path_id": 0,
+          "cluster_id": 20
+        },
+        {
+          "position": [
+            5.024344444274902,
+            7.026788711547852,
+            8.147602081298828
+          ],
+          "token": "Main",
+          "step": 142,
+          "path_id": 0,
+          "cluster_id": 5
+        },
+        {
+          "position": [
+            5.149270057678223,
+            7.187489032745361,
+            8.109355926513672
+          ],
+          "token": " Characters",
+          "step": 143,
+          "path_id": 0,
+          "cluster_id": 5
+        },
+        {
+          "position": [
+            4.325713634490967,
+            6.98600435256958,
+            7.398216724395752
+          ],
+          "token": "1",
+          "step": 146,
+          "path_id": 0,
+          "cluster_id": 4
+        },
+        {
+          "position": [
+            5.0952019691467285,
+            6.126452922821045,
+            8.242546081542969
+          ],
+          "token": " Captain",
+          "step": 148,
+          "path_id": 0,
+          "cluster_id": 9
+        },
+        {
+          "position": [
+            1.1746678352355957,
+            0.595983624458313,
+            7.209088325500488
+          ],
+          "token": " J",
+          "step": 149,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.4397993087768555,
+            6.769519805908203,
+            7.9276018142700195
+          ],
+          "token": "axon",
+          "step": 150,
+          "path_id": 0,
+          "cluster_id": 6
+        },
+        {
+          "position": [
+            4.304462909698486,
+            6.974703788757324,
+            7.383281707763672
+          ],
+          "token": "2",
+          "step": 152,
+          "path_id": 0,
+          "cluster_id": 4
+        },
+        {
+          "position": [
+            4.381141185760498,
+            6.689544200897217,
+            7.457675457000732
+          ],
+          "token": " Dr",
+          "step": 154,
+          "path_id": 0,
+          "cluster_id": 4
+        },
+        {
+          "position": [
+            4.852177143096924,
+            6.077777862548828,
+            7.8617777824401855
+          ],
+          "token": " Sophia",
+          "step": 156,
+          "path_id": 0,
+          "cluster_id": 13
+        },
+        {
+          "position": [
+            5.873648643493652,
+            6.969727516174316,
+            7.992923259735107
+          ],
+          "token": " Patel",
+          "step": 157,
+          "path_id": 0,
+          "cluster_id": 6
+        },
+        {
+          "position": [
+            4.2829132080078125,
+            7.013665199279785,
+            7.3525519371032715
+          ],
+          "token": "3",
+          "step": 159,
+          "path_id": 0,
+          "cluster_id": 4
+        },
+        {
+          "position": [
+            1.4189876317977905,
+            0.12214569747447968,
+            7.243241310119629
+          ],
+          "token": " Z",
+          "step": 161,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.758700370788574,
+            6.955687046051025,
+            8.015049934387207
+          ],
+          "token": "eta",
+          "step": 162,
+          "path_id": 0,
+          "cluster_id": 6
+        },
+        {
+          "position": [
+            5.088114261627197,
+            7.216861724853516,
+            8.026782035827637
+          ],
+          "token": "Quiz",
+          "step": 165,
+          "path_id": 0,
+          "cluster_id": 5
+        },
+        {
+          "position": [
+            4.212097644805908,
+            7.10543155670166,
+            7.266182899475098
+          ],
+          "token": "1",
+          "step": 168,
+          "path_id": 0,
+          "cluster_id": 4
+        },
+        {
+          "position": [
+            5.611612796783447,
+            5.503256797790527,
+            9.13935375213623
+          ],
+          "token": " mission",
+          "step": 173,
+          "path_id": 0,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            5.179311275482178,
+            6.004430770874023,
+            8.508886337280273
+          ],
+          "token": " Captain",
+          "step": 175,
+          "path_id": 0,
+          "cluster_id": 9
+        },
+        {
+          "position": [
+            1.231654405593872,
+            0.6117380261421204,
+            7.2327117919921875
+          ],
+          "token": " J",
+          "step": 176,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.680566310882568,
+            5.683784008026123,
+            9.266031265258789
+          ],
+          "token": "axon",
+          "step": 177,
+          "path_id": 0,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            5.61630392074585,
+            5.418082237243652,
+            9.121309280395508
+          ],
+          "token": "'s",
+          "step": 178,
+          "path_id": 0,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            5.681699752807617,
+            5.59240198135376,
+            9.401427268981934
+          ],
+          "token": " ship",
+          "step": 179,
+          "path_id": 0,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            4.705086708068848,
+            4.616841793060303,
+            8.070865631103516
+          ],
+          "token": "Chron",
+          "step": 183,
+          "path_id": 0,
+          "cluster_id": 12
+        },
+        {
+          "position": [
+            8.065611839294434,
+            5.8802642822265625,
+            8.789497375488281
+          ],
+          "token": " establish",
+          "step": 190,
+          "path_id": 0,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            8.0289945602417,
+            6.202714920043945,
+            8.59107494354248
+          ],
+          "token": " new",
+          "step": 192,
+          "path_id": 0,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            6.7985382080078125,
+            6.716088771820068,
+            8.483827590942383
+          ],
+          "token": " colony",
+          "step": 193,
+          "path_id": 0,
+          "cluster_id": 6
+        },
+        {
+          "position": [
+            8.055872917175293,
+            6.252784729003906,
+            8.520901679992676
+          ],
+          "token": " distant",
+          "step": 196,
+          "path_id": 0,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            6.536291122436523,
+            6.855392932891846,
+            8.450825691223145
+          ],
+          "token": " planet",
+          "step": 197,
+          "path_id": 0,
+          "cluster_id": 6
+        },
+        {
+          "position": [
+            4.103062152862549,
+            7.741844177246094,
+            7.178150653839111
+          ],
+          "token": "B",
+          "step": 199,
+          "path_id": 0,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            7.435157775878906,
+            5.77320671081543,
+            8.931766510009766
+          ],
+          "token": " prevent",
+          "step": 202,
+          "path_id": 0,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            7.317964553833008,
+            6.172623634338379,
+            8.533053398132324
+          ],
+          "token": " catastrophic",
+          "step": 204,
+          "path_id": 0,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            6.992609977722168,
+            6.31572961807251,
+            8.418567657470703
+          ],
+          "token": " event",
+          "step": 205,
+          "path_id": 0,
+          "cluster_id": 6
+        },
+        {
+          "position": [
+            7.007791519165039,
+            5.9410247802734375,
+            8.571178436279297
+          ],
+          "token": " would",
+          "step": 207,
+          "path_id": 0,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            7.618771553039551,
+            5.766495227813721,
+            9.003766059875488
+          ],
+          "token": " destroy",
+          "step": 208,
+          "path_id": 0,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            6.619903087615967,
+            6.4153242111206055,
+            8.563179016113281
+          ],
+          "token": " Earth",
+          "step": 209,
+          "path_id": 0,
+          "cluster_id": 6
+        },
+        {
+          "position": [
+            7.57426118850708,
+            6.1129889488220215,
+            8.704282760620117
+          ],
+          "token": "'s",
+          "step": 210,
+          "path_id": 0,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            6.499651908874512,
+            6.835973262786865,
+            8.420641899108887
+          ],
+          "token": " ecosystem",
+          "step": 211,
+          "path_id": 0,
+          "cluster_id": 6
+        },
+        {
+          "position": [
+            4.120022773742676,
+            7.808821678161621,
+            7.204253196716309
+          ],
+          "token": "C",
+          "step": 213,
+          "path_id": 0,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            8.27578353881836,
+            5.9228105545043945,
+            8.759050369262695
+          ],
+          "token": " search",
+          "step": 216,
+          "path_id": 0,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            8.043397903442383,
+            6.289627552032471,
+            8.514687538146973
+          ],
+          "token": " lost",
+          "step": 219,
+          "path_id": 0,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            6.742203712463379,
+            6.798591613769531,
+            8.319502830505371
+          ],
+          "token": " civilization",
+          "step": 220,
+          "path_id": 0,
+          "cluster_id": 6
+        },
+        {
+          "position": [
+            8.375157356262207,
+            5.811716556549072,
+            8.69762134552002
+          ],
+          "token": " explore",
+          "step": 225,
+          "path_id": 0,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            8.308714866638184,
+            5.004476070404053,
+            7.5138349533081055
+          ],
+          "token": " depths",
+          "step": 227,
+          "path_id": 0,
+          "cluster_id": 19
+        },
+        {
+          "position": [
+            6.402626037597656,
+            6.970937252044678,
+            8.182577133178711
+          ],
+          "token": " space",
+          "step": 229,
+          "path_id": 0,
+          "cluster_id": 6
+        },
+        {
+          "position": [
+            5.065055847167969,
+            7.380813121795654,
+            7.873716354370117
+          ],
+          "token": "Answer",
+          "step": 231,
+          "path_id": 0,
+          "cluster_id": 5
+        },
+        {
+          "position": [
+            4.512208938598633,
+            7.700878143310547,
+            7.433925628662109
+          ],
+          "token": " B",
+          "step": 233,
+          "path_id": 0,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            4.16126823425293,
+            7.226454257965088,
+            7.201195240020752
+          ],
+          "token": "2",
+          "step": 235,
+          "path_id": 0,
+          "cluster_id": 4
+        },
+        {
+          "position": [
+            5.7103071212768555,
+            5.459250450134277,
+            8.931838989257812
+          ],
+          "token": " name",
+          "step": 240,
+          "path_id": 0,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            5.497780799865723,
+            5.65687370300293,
+            8.789467811584473
+          ],
+          "token": " scientist",
+          "step": 243,
+          "path_id": 0,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            5.296436786651611,
+            5.885130882263184,
+            8.596528053283691
+          ],
+          "token": " joined",
+          "step": 245,
+          "path_id": 0,
+          "cluster_id": 9
+        },
+        {
+          "position": [
+            5.1767377853393555,
+            6.014364242553711,
+            8.511998176574707
+          ],
+          "token": " Captain",
+          "step": 246,
+          "path_id": 0,
+          "cluster_id": 9
+        },
+        {
+          "position": [
+            1.2541524171829224,
+            0.5241767764091492,
+            7.251608848571777
+          ],
+          "token": " J",
+          "step": 247,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.758787631988525,
+            5.680009365081787,
+            9.212284088134766
+          ],
+          "token": "axon",
+          "step": 248,
+          "path_id": 0,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            5.656996726989746,
+            5.667900562286377,
+            9.370160102844238
+          ],
+          "token": " mission",
+          "step": 251,
+          "path_id": 0,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            4.447784423828125,
+            6.468070983886719,
+            7.4850993156433105
+          ],
+          "token": " Dr",
+          "step": 255,
+          "path_id": 0,
+          "cluster_id": 4
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "prompt_chaining_1",
+      "prompt": "Write a short sci-fi story about a time traveler.",
+      "response": "Kael stood before the chronal accelerator, fingers poised on the control panel. He had spent years perfecting the device, pouring over theories and conducting countless simulations. Today was the day he would change the course of history.\n\nWith a deep breath, Kael set the coordinates for ancient Egypt. The machine whirred to life, its energy output building to a crescendo. Kael felt the familiar tug of temporal displacement.\n\nWhen the distortion dissipated, Kael found himself standing amidst the bustling streets of 1350 BCE. He blended in with the crowd, marveling at the simplicity and beauty of ancient civilization.\n\nAs he wandered, Kael stumbled upon a young pharaoh, Ani. The pharaoh's eyes narrowed, sensing Kael's unusual aura. Kael's heart quickened, knowing he had to tread carefully.\n\nHe observed Ani, studying the pharaoh's thoughts and actions. The opportunity to alter the course of history hung in the balance. Kael weighed his options, his mind racing with the consequences of his actions.\n\nIn the end, Kael chose to remain a silent observer, content to watch the unfolding of events. The timeline remained intact, and Kael returned to his own era, his mind buzzing with the secrets of the past",
+      "points": [
+        {
+          "position": [
+            1.3415162563323975,
+            0.21390821039676666,
+            7.256292819976807
+          ],
+          "token": "K",
+          "step": 0,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.716847896575928,
+            2.942979574203491,
+            8.60294246673584
+          ],
+          "token": "ael",
+          "step": 1,
+          "path_id": 1,
+          "cluster_id": 15
+        },
+        {
+          "position": [
+            7.357580184936523,
+            3.86068058013916,
+            7.948581695556641
+          ],
+          "token": " stood",
+          "step": 2,
+          "path_id": 1,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            4.856064796447754,
+            4.371560096740723,
+            8.164239883422852
+          ],
+          "token": " chron",
+          "step": 5,
+          "path_id": 1,
+          "cluster_id": 12
+        },
+        {
+          "position": [
+            4.957526206970215,
+            4.356681823730469,
+            8.105348587036133
+          ],
+          "token": "al",
+          "step": 6,
+          "path_id": 1,
+          "cluster_id": 12
+        },
+        {
+          "position": [
+            6.9616875648498535,
+            4.171770095825195,
+            7.056217193603516
+          ],
+          "token": " accelerator",
+          "step": 7,
+          "path_id": 1,
+          "cluster_id": 21
+        },
+        {
+          "position": [
+            7.001608371734619,
+            3.2768282890319824,
+            7.513182163238525
+          ],
+          "token": " fingers",
+          "step": 9,
+          "path_id": 1,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            7.313138008117676,
+            3.7906649112701416,
+            7.470767498016357
+          ],
+          "token": " poised",
+          "step": 10,
+          "path_id": 1,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            6.701709747314453,
+            4.048737525939941,
+            7.237843036651611
+          ],
+          "token": " control",
+          "step": 13,
+          "path_id": 1,
+          "cluster_id": 21
+        },
+        {
+          "position": [
+            7.064077377319336,
+            4.231637477874756,
+            7.132391452789307
+          ],
+          "token": " panel",
+          "step": 14,
+          "path_id": 1,
+          "cluster_id": 21
+        },
+        {
+          "position": [
+            7.778568267822266,
+            4.749943256378174,
+            8.539290428161621
+          ],
+          "token": " spent",
+          "step": 18,
+          "path_id": 1,
+          "cluster_id": 10
+        },
+        {
+          "position": [
+            7.645836353302002,
+            4.584723472595215,
+            8.356607437133789
+          ],
+          "token": " years",
+          "step": 19,
+          "path_id": 1,
+          "cluster_id": 10
+        },
+        {
+          "position": [
+            7.581508636474609,
+            4.5180864334106445,
+            8.332919120788574
+          ],
+          "token": " perfect",
+          "step": 20,
+          "path_id": 1,
+          "cluster_id": 10
+        },
+        {
+          "position": [
+            7.659123420715332,
+            4.764873504638672,
+            8.695320129394531
+          ],
+          "token": "ing",
+          "step": 21,
+          "path_id": 1,
+          "cluster_id": 10
+        },
+        {
+          "position": [
+            7.263754367828369,
+            4.559467315673828,
+            7.0727972984313965
+          ],
+          "token": " device",
+          "step": 23,
+          "path_id": 1,
+          "cluster_id": 21
+        },
+        {
+          "position": [
+            7.835326671600342,
+            4.712054252624512,
+            8.553105354309082
+          ],
+          "token": " pouring",
+          "step": 25,
+          "path_id": 1,
+          "cluster_id": 10
+        },
+        {
+          "position": [
+            7.736461162567139,
+            4.546368598937988,
+            7.145875930786133
+          ],
+          "token": " theories",
+          "step": 27,
+          "path_id": 1,
+          "cluster_id": 21
+        },
+        {
+          "position": [
+            7.73497200012207,
+            4.745553493499756,
+            8.51970100402832
+          ],
+          "token": " conducting",
+          "step": 29,
+          "path_id": 1,
+          "cluster_id": 10
+        },
+        {
+          "position": [
+            7.762846946716309,
+            4.684226036071777,
+            8.45302963256836
+          ],
+          "token": " countless",
+          "step": 30,
+          "path_id": 1,
+          "cluster_id": 10
+        },
+        {
+          "position": [
+            7.456099033355713,
+            4.549468517303467,
+            7.055983543395996
+          ],
+          "token": " simulations",
+          "step": 31,
+          "path_id": 1,
+          "cluster_id": 21
+        },
+        {
+          "position": [
+            6.621123790740967,
+            3.9634315967559814,
+            7.81057071685791
+          ],
+          "token": " Today",
+          "step": 33,
+          "path_id": 1,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            7.239480972290039,
+            4.586612701416016,
+            7.340723514556885
+          ],
+          "token": " day",
+          "step": 36,
+          "path_id": 1,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            6.777244567871094,
+            5.6110687255859375,
+            8.837750434875488
+          ],
+          "token": " would",
+          "step": 38,
+          "path_id": 1,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            7.629764556884766,
+            4.912100315093994,
+            8.982444763183594
+          ],
+          "token": " change",
+          "step": 39,
+          "path_id": 1,
+          "cluster_id": 11
+        },
+        {
+          "position": [
+            8.326745986938477,
+            4.909682750701904,
+            7.532467365264893
+          ],
+          "token": " course",
+          "step": 41,
+          "path_id": 1,
+          "cluster_id": 19
+        },
+        {
+          "position": [
+            7.448178291320801,
+            4.829571723937988,
+            6.798125743865967
+          ],
+          "token": " history",
+          "step": 43,
+          "path_id": 1,
+          "cluster_id": 20
+        },
+        {
+          "position": [
+            6.560771465301514,
+            3.8176350593566895,
+            6.941900253295898
+          ],
+          "token": " deep",
+          "step": 47,
+          "path_id": 1,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            6.672580242156982,
+            4.2801995277404785,
+            6.6891984939575195
+          ],
+          "token": " breath",
+          "step": 48,
+          "path_id": 1,
+          "cluster_id": 22
+        },
+        {
+          "position": [
+            1.3647642135620117,
+            0.014745502732694149,
+            7.282039165496826
+          ],
+          "token": " K",
+          "step": 50,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            6.069258213043213,
+            2.7979543209075928,
+            8.430167198181152
+          ],
+          "token": "ael",
+          "step": 51,
+          "path_id": 1,
+          "cluster_id": 15
+        },
+        {
+          "position": [
+            7.445563316345215,
+            4.773898124694824,
+            8.768034934997559
+          ],
+          "token": " set",
+          "step": 52,
+          "path_id": 1,
+          "cluster_id": 10
+        },
+        {
+          "position": [
+            7.137026786804199,
+            4.537073612213135,
+            7.258377552032471
+          ],
+          "token": " coordinates",
+          "step": 54,
+          "path_id": 1,
+          "cluster_id": 21
+        },
+        {
+          "position": [
+            8.29345417022705,
+            5.097561836242676,
+            10.220693588256836
+          ],
+          "token": " ancient",
+          "step": 56,
+          "path_id": 1,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            7.204789638519287,
+            5.177932262420654,
+            7.5095343589782715
+          ],
+          "token": " Egypt",
+          "step": 57,
+          "path_id": 1,
+          "cluster_id": 16
+        },
+        {
+          "position": [
+            6.4679741859436035,
+            3.0999810695648193,
+            7.276519298553467
+          ],
+          "token": " machine",
+          "step": 60,
+          "path_id": 1,
+          "cluster_id": 18
+        },
+        {
+          "position": [
+            6.224931716918945,
+            3.1847240924835205,
+            7.429697036743164
+          ],
+          "token": " wh",
+          "step": 61,
+          "path_id": 1,
+          "cluster_id": 18
+        },
+        {
+          "position": [
+            6.159127712249756,
+            3.276745319366455,
+            7.333651542663574
+          ],
+          "token": "ir",
+          "step": 62,
+          "path_id": 1,
+          "cluster_id": 18
+        },
+        {
+          "position": [
+            7.006301403045654,
+            3.585472822189331,
+            6.887765407562256
+          ],
+          "token": "red",
+          "step": 63,
+          "path_id": 1,
+          "cluster_id": 22
+        },
+        {
+          "position": [
+            7.075021743774414,
+            3.923584461212158,
+            6.580973148345947
+          ],
+          "token": " life",
+          "step": 65,
+          "path_id": 1,
+          "cluster_id": 22
+        },
+        {
+          "position": [
+            6.6461944580078125,
+            3.3545548915863037,
+            6.952338218688965
+          ],
+          "token": " energy",
+          "step": 68,
+          "path_id": 1,
+          "cluster_id": 18
+        },
+        {
+          "position": [
+            6.717461585998535,
+            3.290165901184082,
+            6.997962474822998
+          ],
+          "token": " output",
+          "step": 69,
+          "path_id": 1,
+          "cluster_id": 18
+        },
+        {
+          "position": [
+            7.160007476806641,
+            3.5715172290802,
+            6.826731204986572
+          ],
+          "token": " building",
+          "step": 70,
+          "path_id": 1,
+          "cluster_id": 22
+        },
+        {
+          "position": [
+            7.083169937133789,
+            3.7499046325683594,
+            6.714918613433838
+          ],
+          "token": " cresc",
+          "step": 73,
+          "path_id": 1,
+          "cluster_id": 22
+        },
+        {
+          "position": [
+            7.1709675788879395,
+            3.951162815093994,
+            6.62401819229126
+          ],
+          "token": "endo",
+          "step": 74,
+          "path_id": 1,
+          "cluster_id": 22
+        },
+        {
+          "position": [
+            1.1646625995635986,
+            -0.18279701471328735,
+            7.422173500061035
+          ],
+          "token": " K",
+          "step": 76,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            6.059939384460449,
+            2.7708382606506348,
+            8.53925895690918
+          ],
+          "token": "ael",
+          "step": 77,
+          "path_id": 1,
+          "cluster_id": 15
+        },
+        {
+          "position": [
+            7.101016998291016,
+            4.450168132781982,
+            8.631168365478516
+          ],
+          "token": " felt",
+          "step": 78,
+          "path_id": 1,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            6.530862331390381,
+            3.594423532485962,
+            6.82615327835083
+          ],
+          "token": " familiar",
+          "step": 80,
+          "path_id": 1,
+          "cluster_id": 18
+        },
+        {
+          "position": [
+            6.793289661407471,
+            3.9919562339782715,
+            6.554690361022949
+          ],
+          "token": " tug",
+          "step": 81,
+          "path_id": 1,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            6.539373874664307,
+            3.489392042160034,
+            6.775317192077637
+          ],
+          "token": " temporal",
+          "step": 83,
+          "path_id": 1,
+          "cluster_id": 18
+        },
+        {
+          "position": [
+            6.889952659606934,
+            3.8611199855804443,
+            6.532549858093262
+          ],
+          "token": " displacement",
+          "step": 84,
+          "path_id": 1,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            6.461966037750244,
+            3.1869401931762695,
+            7.078264236450195
+          ],
+          "token": " distortion",
+          "step": 88,
+          "path_id": 1,
+          "cluster_id": 18
+        },
+        {
+          "position": [
+            6.148346900939941,
+            3.1153976917266846,
+            7.297107219696045
+          ],
+          "token": " diss",
+          "step": 89,
+          "path_id": 1,
+          "cluster_id": 18
+        },
+        {
+          "position": [
+            6.729546070098877,
+            4.2840728759765625,
+            6.576240539550781
+          ],
+          "token": "ipated",
+          "step": 90,
+          "path_id": 1,
+          "cluster_id": 22
+        },
+        {
+          "position": [
+            1.2788859605789185,
+            -0.19032858312129974,
+            7.455045223236084
+          ],
+          "token": " K",
+          "step": 92,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.924609661102295,
+            2.818932294845581,
+            8.671293258666992
+          ],
+          "token": "ael",
+          "step": 93,
+          "path_id": 1,
+          "cluster_id": 15
+        },
+        {
+          "position": [
+            7.11332893371582,
+            4.448268890380859,
+            8.846406936645508
+          ],
+          "token": " found",
+          "step": 94,
+          "path_id": 1,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            7.5998430252075195,
+            3.8681516647338867,
+            8.043696403503418
+          ],
+          "token": " standing",
+          "step": 96,
+          "path_id": 1,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            8.120302200317383,
+            4.697078227996826,
+            9.832072257995605
+          ],
+          "token": " amidst",
+          "step": 97,
+          "path_id": 1,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            8.24328327178955,
+            4.671792030334473,
+            9.897505760192871
+          ],
+          "token": " bustling",
+          "step": 99,
+          "path_id": 1,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            8.050980567932129,
+            4.882237434387207,
+            7.241854667663574
+          ],
+          "token": " streets",
+          "step": 100,
+          "path_id": 1,
+          "cluster_id": 19
+        },
+        {
+          "position": [
+            7.911144733428955,
+            5.39938497543335,
+            9.959081649780273
+          ],
+          "token": "135",
+          "step": 103,
+          "path_id": 1,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            8.136012077331543,
+            5.044551372528076,
+            10.01890754699707
+          ],
+          "token": "0",
+          "step": 104,
+          "path_id": 1,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            8.197907447814941,
+            4.988961696624756,
+            10.019375801086426
+          ],
+          "token": " BCE",
+          "step": 105,
+          "path_id": 1,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            7.2832722663879395,
+            3.8211748600006104,
+            7.710104465484619
+          ],
+          "token": " blended",
+          "step": 108,
+          "path_id": 1,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            7.284430980682373,
+            4.329351425170898,
+            6.554294586181641
+          ],
+          "token": " crowd",
+          "step": 112,
+          "path_id": 1,
+          "cluster_id": 20
+        },
+        {
+          "position": [
+            7.397569179534912,
+            4.188097953796387,
+            8.219392776489258
+          ],
+          "token": " marvel",
+          "step": 114,
+          "path_id": 1,
+          "cluster_id": 11
+        },
+        {
+          "position": [
+            7.669780731201172,
+            3.96875,
+            7.900299072265625
+          ],
+          "token": "ing",
+          "step": 115,
+          "path_id": 1,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            7.9442853927612305,
+            4.651256084442139,
+            6.9675774574279785
+          ],
+          "token": " simplicity",
+          "step": 118,
+          "path_id": 1,
+          "cluster_id": 20
+        },
+        {
+          "position": [
+            8.098827362060547,
+            4.745901107788086,
+            7.098599910736084
+          ],
+          "token": " beauty",
+          "step": 120,
+          "path_id": 1,
+          "cluster_id": 20
+        },
+        {
+          "position": [
+            8.14498519897461,
+            5.02824592590332,
+            10.161463737487793
+          ],
+          "token": " ancient",
+          "step": 122,
+          "path_id": 1,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            7.669963836669922,
+            4.71240758895874,
+            6.690985202789307
+          ],
+          "token": " civilization",
+          "step": 123,
+          "path_id": 1,
+          "cluster_id": 20
+        },
+        {
+          "position": [
+            8.04217529296875,
+            4.654669761657715,
+            9.422492980957031
+          ],
+          "token": " wandered",
+          "step": 127,
+          "path_id": 1,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            1.3324215412139893,
+            -0.23094286024570465,
+            7.359558582305908
+          ],
+          "token": " K",
+          "step": 129,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            6.032291412353516,
+            2.828707695007324,
+            8.717153549194336
+          ],
+          "token": "ael",
+          "step": 130,
+          "path_id": 1,
+          "cluster_id": 15
+        },
+        {
+          "position": [
+            7.731346607208252,
+            3.827333688735962,
+            8.013679504394531
+          ],
+          "token": " stumbled",
+          "step": 131,
+          "path_id": 1,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            7.9073662757873535,
+            4.610027313232422,
+            9.80317211151123
+          ],
+          "token": " upon",
+          "step": 132,
+          "path_id": 1,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            7.846712589263916,
+            4.557448863983154,
+            9.896214485168457
+          ],
+          "token": " young",
+          "step": 134,
+          "path_id": 1,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            1.8897989988327026,
+            1.3225330114364624,
+            7.728135585784912
+          ],
+          "token": " ph",
+          "step": 135,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            6.784665584564209,
+            4.010809898376465,
+            9.354093551635742
+          ],
+          "token": "araoh",
+          "step": 136,
+          "path_id": 1,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            1.885924220085144,
+            1.3052510023117065,
+            7.68277645111084
+          ],
+          "token": " ph",
+          "step": 142,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            6.207073211669922,
+            3.2197277545928955,
+            8.806803703308105
+          ],
+          "token": "araoh",
+          "step": 143,
+          "path_id": 1,
+          "cluster_id": 15
+        },
+        {
+          "position": [
+            6.519862651824951,
+            4.202378273010254,
+            9.580989837646484
+          ],
+          "token": "'s",
+          "step": 144,
+          "path_id": 1,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            6.403106689453125,
+            3.2295563220977783,
+            8.455615997314453
+          ],
+          "token": " eyes",
+          "step": 145,
+          "path_id": 1,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            7.3404059410095215,
+            3.9522058963775635,
+            6.895700454711914
+          ],
+          "token": " narrowed",
+          "step": 146,
+          "path_id": 1,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            6.627056121826172,
+            4.697418689727783,
+            9.491837501525879
+          ],
+          "token": " sensing",
+          "step": 148,
+          "path_id": 1,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            1.3280794620513916,
+            -0.25815215706825256,
+            7.266124725341797
+          ],
+          "token": " K",
+          "step": 149,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            6.321921348571777,
+            4.40803861618042,
+            9.241105079650879
+          ],
+          "token": "ael",
+          "step": 150,
+          "path_id": 1,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            6.192147731781006,
+            4.376920700073242,
+            9.596644401550293
+          ],
+          "token": "'s",
+          "step": 151,
+          "path_id": 1,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            6.285064220428467,
+            4.30659294128418,
+            9.624775886535645
+          ],
+          "token": " unusual",
+          "step": 152,
+          "path_id": 1,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            7.374014854431152,
+            4.480881214141846,
+            6.505753993988037
+          ],
+          "token": " aura",
+          "step": 153,
+          "path_id": 1,
+          "cluster_id": 20
+        },
+        {
+          "position": [
+            1.404037594795227,
+            -0.15527163445949554,
+            7.317146301269531
+          ],
+          "token": " K",
+          "step": 155,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            6.11292028427124,
+            2.874011516571045,
+            8.79479694366455
+          ],
+          "token": "ael",
+          "step": 156,
+          "path_id": 1,
+          "cluster_id": 15
+        },
+        {
+          "position": [
+            6.232062816619873,
+            4.23658561706543,
+            9.509995460510254
+          ],
+          "token": "'s",
+          "step": 157,
+          "path_id": 1,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            6.480690956115723,
+            3.0678133964538574,
+            7.6631083488464355
+          ],
+          "token": " heart",
+          "step": 158,
+          "path_id": 1,
+          "cluster_id": 18
+        },
+        {
+          "position": [
+            6.326938152313232,
+            3.180262565612793,
+            7.324272155761719
+          ],
+          "token": " quick",
+          "step": 159,
+          "path_id": 1,
+          "cluster_id": 18
+        },
+        {
+          "position": [
+            7.3472747802734375,
+            3.9106993675231934,
+            6.769283294677734
+          ],
+          "token": "ened",
+          "step": 160,
+          "path_id": 1,
+          "cluster_id": 20
+        },
+        {
+          "position": [
+            7.293933391571045,
+            4.630183696746826,
+            9.144208908081055
+          ],
+          "token": " knowing",
+          "step": 162,
+          "path_id": 1,
+          "cluster_id": 11
+        },
+        {
+          "position": [
+            7.504075527191162,
+            3.8554115295410156,
+            7.496074199676514
+          ],
+          "token": " tread",
+          "step": 166,
+          "path_id": 1,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            7.515597343444824,
+            4.566826343536377,
+            6.781615257263184
+          ],
+          "token": " carefully",
+          "step": 167,
+          "path_id": 1,
+          "cluster_id": 20
+        },
+        {
+          "position": [
+            7.2559285163879395,
+            4.901883125305176,
+            9.425627708435059
+          ],
+          "token": " observed",
+          "step": 170,
+          "path_id": 1,
+          "cluster_id": 11
+        },
+        {
+          "position": [
+            7.303127765655518,
+            4.671598434448242,
+            9.527260780334473
+          ],
+          "token": " studying",
+          "step": 174,
+          "path_id": 1,
+          "cluster_id": 11
+        },
+        {
+          "position": [
+            1.8625872135162354,
+            1.2879801988601685,
+            7.698910236358643
+          ],
+          "token": " ph",
+          "step": 176,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            6.548222064971924,
+            4.398909568786621,
+            9.237348556518555
+          ],
+          "token": "araoh",
+          "step": 177,
+          "path_id": 1,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            6.5687479972839355,
+            4.275298595428467,
+            9.653653144836426
+          ],
+          "token": "'s",
+          "step": 178,
+          "path_id": 1,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            7.7407121658325195,
+            4.215510845184326,
+            6.734237194061279
+          ],
+          "token": " thoughts",
+          "step": 179,
+          "path_id": 1,
+          "cluster_id": 20
+        },
+        {
+          "position": [
+            7.766027450561523,
+            4.254486083984375,
+            6.781979560852051
+          ],
+          "token": " actions",
+          "step": 181,
+          "path_id": 1,
+          "cluster_id": 20
+        },
+        {
+          "position": [
+            6.664777755737305,
+            3.4123265743255615,
+            8.073254585266113
+          ],
+          "token": " opportunity",
+          "step": 184,
+          "path_id": 1,
+          "cluster_id": 17
+        },
+        {
+          "position": [
+            7.54604434967041,
+            4.786052227020264,
+            9.213567733764648
+          ],
+          "token": " alter",
+          "step": 186,
+          "path_id": 1,
+          "cluster_id": 11
+        },
+        {
+          "position": [
+            8.270238876342773,
+            4.907514572143555,
+            7.48142147064209
+          ],
+          "token": " course",
+          "step": 188,
+          "path_id": 1,
+          "cluster_id": 19
+        },
+        {
+          "position": [
+            6.647337913513184,
+            3.2781100273132324,
+            8.045019149780273
+          ],
+          "token": " history",
+          "step": 190,
+          "path_id": 1,
+          "cluster_id": 17
+        },
+        {
+          "position": [
+            7.307265758514404,
+            3.60829496383667,
+            7.696016788482666
+          ],
+          "token": " hung",
+          "step": 191,
+          "path_id": 1,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            7.432262420654297,
+            4.428980350494385,
+            6.549991130828857
+          ],
+          "token": " balance",
+          "step": 194,
+          "path_id": 1,
+          "cluster_id": 20
+        },
+        {
+          "position": [
+            1.3896631002426147,
+            -0.2820079028606415,
+            7.40423583984375
+          ],
+          "token": " K",
+          "step": 196,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            6.031136989593506,
+            2.9125096797943115,
+            8.608283996582031
+          ],
+          "token": "ael",
+          "step": 197,
+          "path_id": 1,
+          "cluster_id": 15
+        },
+        {
+          "position": [
+            7.380430221557617,
+            4.486739158630371,
+            9.107874870300293
+          ],
+          "token": " weighed",
+          "step": 198,
+          "path_id": 1,
+          "cluster_id": 11
+        },
+        {
+          "position": [
+            7.527729034423828,
+            4.048910617828369,
+            6.702843189239502
+          ],
+          "token": " options",
+          "step": 200,
+          "path_id": 1,
+          "cluster_id": 20
+        },
+        {
+          "position": [
+            6.980248928070068,
+            3.139638662338257,
+            7.370930194854736
+          ],
+          "token": " mind",
+          "step": 203,
+          "path_id": 1,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            7.557231903076172,
+            3.6971535682678223,
+            6.866306304931641
+          ],
+          "token": " racing",
+          "step": 204,
+          "path_id": 1,
+          "cluster_id": 20
+        },
+        {
+          "position": [
+            7.85666561126709,
+            4.633739471435547,
+            6.750328540802002
+          ],
+          "token": " consequences",
+          "step": 207,
+          "path_id": 1,
+          "cluster_id": 20
+        },
+        {
+          "position": [
+            7.644989013671875,
+            4.63308048248291,
+            6.596747875213623
+          ],
+          "token": " actions",
+          "step": 210,
+          "path_id": 1,
+          "cluster_id": 20
+        },
+        {
+          "position": [
+            6.859992027282715,
+            4.448222637176514,
+            6.490514278411865
+          ],
+          "token": " end",
+          "step": 214,
+          "path_id": 1,
+          "cluster_id": 22
+        },
+        {
+          "position": [
+            1.257240653038025,
+            -0.17833225429058075,
+            7.3189568519592285
+          ],
+          "token": " K",
+          "step": 216,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            6.197794437408447,
+            2.7448673248291016,
+            8.64873218536377
+          ],
+          "token": "ael",
+          "step": 217,
+          "path_id": 1,
+          "cluster_id": 15
+        },
+        {
+          "position": [
+            7.361514091491699,
+            4.078069686889648,
+            8.54416561126709
+          ],
+          "token": " chose",
+          "step": 218,
+          "path_id": 1,
+          "cluster_id": 11
+        },
+        {
+          "position": [
+            7.067309379577637,
+            3.8299057483673096,
+            8.347410202026367
+          ],
+          "token": " remain",
+          "step": 220,
+          "path_id": 1,
+          "cluster_id": 11
+        },
+        {
+          "position": [
+            5.3377251625061035,
+            4.571528434753418,
+            8.502748489379883
+          ],
+          "token": " silent",
+          "step": 222,
+          "path_id": 1,
+          "cluster_id": 12
+        },
+        {
+          "position": [
+            7.33268404006958,
+            4.415403842926025,
+            6.487033843994141
+          ],
+          "token": " observer",
+          "step": 223,
+          "path_id": 1,
+          "cluster_id": 20
+        },
+        {
+          "position": [
+            7.384960651397705,
+            4.212438106536865,
+            8.289880752563477
+          ],
+          "token": " content",
+          "step": 225,
+          "path_id": 1,
+          "cluster_id": 11
+        },
+        {
+          "position": [
+            7.4932355880737305,
+            4.738578796386719,
+            9.246342658996582
+          ],
+          "token": " watch",
+          "step": 227,
+          "path_id": 1,
+          "cluster_id": 11
+        },
+        {
+          "position": [
+            8.338750839233398,
+            4.78808069229126,
+            7.705922603607178
+          ],
+          "token": " unfolding",
+          "step": 229,
+          "path_id": 1,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            7.894516944885254,
+            4.394455909729004,
+            6.877261161804199
+          ],
+          "token": " events",
+          "step": 231,
+          "path_id": 1,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            6.654677867889404,
+            3.078054904937744,
+            8.083052635192871
+          ],
+          "token": " timeline",
+          "step": 234,
+          "path_id": 1,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            7.074039936065674,
+            3.3195602893829346,
+            7.988673210144043
+          ],
+          "token": " remained",
+          "step": 235,
+          "path_id": 1,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            7.3125834465026855,
+            4.501461505889893,
+            6.57143497467041
+          ],
+          "token": " intact",
+          "step": 236,
+          "path_id": 1,
+          "cluster_id": 20
+        },
+        {
+          "position": [
+            1.192692518234253,
+            -0.2949981689453125,
+            7.268115043640137
+          ],
+          "token": " K",
+          "step": 239,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            6.160881519317627,
+            2.7282633781433105,
+            8.692205429077148
+          ],
+          "token": "ael",
+          "step": 240,
+          "path_id": 1,
+          "cluster_id": 15
+        },
+        {
+          "position": [
+            7.342638969421387,
+            4.817208766937256,
+            7.826064109802246
+          ],
+          "token": " returned",
+          "step": 241,
+          "path_id": 1,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            7.413240909576416,
+            4.535552978515625,
+            6.515582084655762
+          ],
+          "token": " era",
+          "step": 245,
+          "path_id": 1,
+          "cluster_id": 20
+        },
+        {
+          "position": [
+            7.090492248535156,
+            3.1965980529785156,
+            7.4995903968811035
+          ],
+          "token": " mind",
+          "step": 248,
+          "path_id": 1,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            7.548744201660156,
+            3.5797903537750244,
+            7.14261531829834
+          ],
+          "token": " buzzing",
+          "step": 249,
+          "path_id": 1,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            8.17687702178955,
+            4.666188716888428,
+            7.03197717666626
+          ],
+          "token": " secrets",
+          "step": 252,
+          "path_id": 1,
+          "cluster_id": 20
+        },
+        {
+          "position": [
+            7.837878227233887,
+            4.6529974937438965,
+            6.62191104888916
+          ],
+          "token": " past",
+          "step": 255,
+          "path_id": 1,
+          "cluster_id": 20
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "prompt_chaining_2",
+      "prompt": "Kael stood before the chronal accelerator, fingers poised on the control panel. He had spent years perfecting the device, pouring over theories and conducting countless simulations. Today was the day he would change the course of history.\n\nWith a deep breath, Kael set the coordinates for ancient Egypt. The machine whirred to life, its energy output building to a crescendo. Kael felt the familiar tug of temporal displacement.\n\nWhen the distortion dissipated, Kael found himself standing amidst the bustling streets of 1350 BCE. He blended in with the crowd, marveling at the simplicity and beauty of ancient civilization.\n\nAs he wandered, Kael stumbled upon a young pharaoh, Ani. The pharaoh's eyes narrowed, sensing Kael's unusual aura. Kael's heart quickened, knowing he had to tread carefully.\n\nHe observed Ani, studying the pharaoh's thoughts and actions. The opportunity to alter the course of history hung in the balance. Kael weighed his options, his mind racing with the consequences of his actions.\n\nIn the end, Kael chose to remain a silent observer, content to watch the unfolding of events. The timeline remained intact, and Kael returned to his own era, his mind buzzing with the secrets of the past\n\nExtract the three main characters and their roles from the story you just wrote.",
+      "response": "1 Kael - main protagonist, time traveler\n2 Ani - pharaoh of ancient Egypt",
+      "points": [
+        {
+          "position": [
+            4.563640594482422,
+            6.998004913330078,
+            7.614644527435303
+          ],
+          "token": "1",
+          "step": 0,
+          "path_id": 2,
+          "cluster_id": 4
+        },
+        {
+          "position": [
+            1.415686845779419,
+            -0.2969130277633667,
+            7.383470058441162
+          ],
+          "token": " K",
+          "step": 1,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.603569030761719,
+            6.819945335388184,
+            7.968817710876465
+          ],
+          "token": "ael",
+          "step": 2,
+          "path_id": 2,
+          "cluster_id": 6
+        },
+        {
+          "position": [
+            5.62349271774292,
+            6.480335712432861,
+            8.053586959838867
+          ],
+          "token": " main",
+          "step": 4,
+          "path_id": 2,
+          "cluster_id": 6
+        },
+        {
+          "position": [
+            5.716325759887695,
+            6.580826282501221,
+            8.067476272583008
+          ],
+          "token": " protagonist",
+          "step": 5,
+          "path_id": 2,
+          "cluster_id": 6
+        },
+        {
+          "position": [
+            4.9512128829956055,
+            4.606420993804932,
+            8.1818265914917
+          ],
+          "token": " time",
+          "step": 7,
+          "path_id": 2,
+          "cluster_id": 12
+        },
+        {
+          "position": [
+            5.685421943664551,
+            6.503720283508301,
+            8.041803359985352
+          ],
+          "token": " traveler",
+          "step": 8,
+          "path_id": 2,
+          "cluster_id": 6
+        },
+        {
+          "position": [
+            5.0901336669921875,
+            6.587748050689697,
+            8.279868125915527
+          ],
+          "token": "2",
+          "step": 10,
+          "path_id": 2,
+          "cluster_id": 9
+        },
+        {
+          "position": [
+            1.8572251796722412,
+            1.2888455390930176,
+            7.704430103302002
+          ],
+          "token": " ph",
+          "step": 14,
+          "path_id": 2,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            5.839661598205566,
+            6.769771575927734,
+            8.123416900634766
+          ],
+          "token": "araoh",
+          "step": 15,
+          "path_id": 2,
+          "cluster_id": 6
+        },
+        {
+          "position": [
+            8.179133415222168,
+            5.220405578613281,
+            10.192920684814453
+          ],
+          "token": " ancient",
+          "step": 17,
+          "path_id": 2,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            5.885739803314209,
+            6.9155354499816895,
+            8.130647659301758
+          ],
+          "token": " Egypt",
+          "step": 18,
+          "path_id": 2,
+          "cluster_id": 6
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "prompt_chaining_3",
+      "prompt": "Kael stood before the chronal accelerator, fingers poised on the control panel. He had spent years perfecting the device, pouring over theories and conducting countless simulations. Today was the day he would change the course of history.\n\nWith a deep breath, Kael set the coordinates for ancient Egypt. The machine whirred to life, its energy output building to a crescendo. Kael felt the familiar tug of temporal displacement.\n\nWhen the distortion dissipated, Kael found himself standing amidst the bustling streets of 1350 BCE. He blended in with the crowd, marveling at the simplicity and beauty of ancient civilization.\n\nAs he wandered, Kael stumbled upon a young pharaoh, Ani. The pharaoh's eyes narrowed, sensing Kael's unusual aura. Kael's heart quickened, knowing he had to tread carefully.\n\nHe observed Ani, studying the pharaoh's thoughts and actions. The opportunity to alter the course of history hung in the balance. Kael weighed his options, his mind racing with the consequences of his actions.\n\nIn the end, Kael chose to remain a silent observer, content to watch the unfolding of events. The timeline remained intact, and Kael returned to his own era, his mind buzzing with the secrets of the past\n\n1 Kael - main protagonist, time traveler\n2 Ani - pharaoh of ancient Egypt\n\nNow, create a 3-question multiple-choice quiz based on the plot of the story.",
+      "response": "1. Where did Kael set the coordinates for in the chronal accelerator?\nA) Ancient Greece\nB) Ancient Egypt\nC) Mesopotamia\n\n2. What was the initial reaction of the pharaoh Ani when Kael appeared?\nA) He was friendly and welcoming\nB) He was hostile and aggressive\nC) His eyes narrowed, sensing Kael's unusual aura\n\n3. What did Kael ultimately decide to do after observing the pharaoh and the events in ancient Egypt?\nA) He attempted to alter the course of history\nB) He tried to communicate with Ani\nC) He remained a silent observer",
+      "points": [
+        {
+          "position": [
+            4.19530725479126,
+            7.178438186645508,
+            7.242170333862305
+          ],
+          "token": "1",
+          "step": 0,
+          "path_id": 3,
+          "cluster_id": 4
+        },
+        {
+          "position": [
+            1.3581838607788086,
+            -0.07214312255382538,
+            7.226988315582275
+          ],
+          "token": " K",
+          "step": 4,
+          "path_id": 3,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            6.444985866546631,
+            5.6014533042907715,
+            9.174163818359375
+          ],
+          "token": "ael",
+          "step": 5,
+          "path_id": 3,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            6.555222034454346,
+            5.31498384475708,
+            9.153325080871582
+          ],
+          "token": " set",
+          "step": 6,
+          "path_id": 3,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            6.024668216705322,
+            5.530726909637451,
+            9.127506256103516
+          ],
+          "token": " coordinates",
+          "step": 8,
+          "path_id": 3,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            4.698294162750244,
+            4.29960298538208,
+            8.116539001464844
+          ],
+          "token": " chron",
+          "step": 12,
+          "path_id": 3,
+          "cluster_id": 12
+        },
+        {
+          "position": [
+            4.952826023101807,
+            4.472589015960693,
+            8.235437393188477
+          ],
+          "token": "al",
+          "step": 13,
+          "path_id": 3,
+          "cluster_id": 12
+        },
+        {
+          "position": [
+            5.8728766441345215,
+            5.785865306854248,
+            9.320657730102539
+          ],
+          "token": " accelerator",
+          "step": 14,
+          "path_id": 3,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            8.199108123779297,
+            5.185466289520264,
+            10.22659969329834
+          ],
+          "token": " Ancient",
+          "step": 18,
+          "path_id": 3,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            6.2643208503723145,
+            7.038479328155518,
+            8.200752258300781
+          ],
+          "token": " Greece",
+          "step": 19,
+          "path_id": 3,
+          "cluster_id": 6
+        },
+        {
+          "position": [
+            4.083234786987305,
+            7.736024856567383,
+            7.17302942276001
+          ],
+          "token": "B",
+          "step": 21,
+          "path_id": 3,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            8.088607788085938,
+            5.276428699493408,
+            10.287540435791016
+          ],
+          "token": " Ancient",
+          "step": 23,
+          "path_id": 3,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            6.253559112548828,
+            7.017699241638184,
+            8.243691444396973
+          ],
+          "token": " Egypt",
+          "step": 24,
+          "path_id": 3,
+          "cluster_id": 6
+        },
+        {
+          "position": [
+            4.0496392250061035,
+            7.783323764801025,
+            7.1463117599487305
+          ],
+          "token": "C",
+          "step": 26,
+          "path_id": 3,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            8.1104154586792,
+            5.453306198120117,
+            10.423380851745605
+          ],
+          "token": " Mes",
+          "step": 28,
+          "path_id": 3,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            8.095964431762695,
+            5.452969551086426,
+            10.421500205993652
+          ],
+          "token": "opot",
+          "step": 29,
+          "path_id": 3,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            6.190423011779785,
+            7.133062839508057,
+            8.181722640991211
+          ],
+          "token": "ia",
+          "step": 31,
+          "path_id": 3,
+          "cluster_id": 6
+        },
+        {
+          "position": [
+            4.173941135406494,
+            7.166122913360596,
+            7.218682289123535
+          ],
+          "token": "2",
+          "step": 33,
+          "path_id": 3,
+          "cluster_id": 4
+        },
+        {
+          "position": [
+            6.010082244873047,
+            4.748848915100098,
+            9.470035552978516
+          ],
+          "token": " initial",
+          "step": 38,
+          "path_id": 3,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            5.864457607269287,
+            5.2756195068359375,
+            9.351655006408691
+          ],
+          "token": " reaction",
+          "step": 39,
+          "path_id": 3,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            1.828546404838562,
+            1.265415072441101,
+            7.642705917358398
+          ],
+          "token": " ph",
+          "step": 42,
+          "path_id": 3,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            5.9798173904418945,
+            5.7574944496154785,
+            9.327338218688965
+          ],
+          "token": "araoh",
+          "step": 43,
+          "path_id": 3,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            1.2541083097457886,
+            -0.2814980149269104,
+            7.2607221603393555
+          ],
+          "token": " K",
+          "step": 47,
+          "path_id": 3,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            6.060338497161865,
+            3.8074605464935303,
+            8.99472713470459
+          ],
+          "token": "ael",
+          "step": 48,
+          "path_id": 3,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            5.942828178405762,
+            5.5212836265563965,
+            9.47802734375
+          ],
+          "token": " appeared",
+          "step": 49,
+          "path_id": 3,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            6.288216590881348,
+            6.9459547996521,
+            8.81519889831543
+          ],
+          "token": " friendly",
+          "step": 55,
+          "path_id": 3,
+          "cluster_id": 6
+        },
+        {
+          "position": [
+            6.3343505859375,
+            7.011526584625244,
+            8.790970802307129
+          ],
+          "token": " welcoming",
+          "step": 57,
+          "path_id": 3,
+          "cluster_id": 6
+        },
+        {
+          "position": [
+            4.032607555389404,
+            7.767786979675293,
+            7.110896110534668
+          ],
+          "token": "B",
+          "step": 59,
+          "path_id": 3,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            6.286233901977539,
+            6.986259460449219,
+            8.794853210449219
+          ],
+          "token": " hostile",
+          "step": 63,
+          "path_id": 3,
+          "cluster_id": 6
+        },
+        {
+          "position": [
+            6.31230354309082,
+            7.005641937255859,
+            8.755681037902832
+          ],
+          "token": " aggressive",
+          "step": 65,
+          "path_id": 3,
+          "cluster_id": 6
+        },
+        {
+          "position": [
+            4.115760326385498,
+            7.814810752868652,
+            7.209112167358398
+          ],
+          "token": "C",
+          "step": 67,
+          "path_id": 3,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            6.309067726135254,
+            3.336620569229126,
+            8.380661964416504
+          ],
+          "token": " eyes",
+          "step": 70,
+          "path_id": 3,
+          "cluster_id": -1
+        },
+        {
+          "position": [
+            6.08958101272583,
+            6.700991630554199,
+            8.672019958496094
+          ],
+          "token": " narrowed",
+          "step": 71,
+          "path_id": 3,
+          "cluster_id": 6
+        },
+        {
+          "position": [
+            6.366894721984863,
+            4.888449192047119,
+            9.493593215942383
+          ],
+          "token": " sensing",
+          "step": 73,
+          "path_id": 3,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            1.255239725112915,
+            -0.30100077390670776,
+            7.296230316162109
+          ],
+          "token": " K",
+          "step": 74,
+          "path_id": 3,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            6.185223579406738,
+            4.573543548583984,
+            9.244426727294922
+          ],
+          "token": "ael",
+          "step": 75,
+          "path_id": 3,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            6.083874702453613,
+            4.621071815490723,
+            9.575950622558594
+          ],
+          "token": "'s",
+          "step": 76,
+          "path_id": 3,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            6.120736122131348,
+            4.596791744232178,
+            9.667720794677734
+          ],
+          "token": " unusual",
+          "step": 77,
+          "path_id": 3,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            6.194468975067139,
+            6.951752662658691,
+            8.507710456848145
+          ],
+          "token": " aura",
+          "step": 78,
+          "path_id": 3,
+          "cluster_id": 6
+        },
+        {
+          "position": [
+            4.175401210784912,
+            7.184237480163574,
+            7.229437351226807
+          ],
+          "token": "3",
+          "step": 80,
+          "path_id": 3,
+          "cluster_id": 4
+        },
+        {
+          "position": [
+            1.2006632089614868,
+            -0.36635273694992065,
+            7.36740779876709
+          ],
+          "token": " K",
+          "step": 84,
+          "path_id": 3,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            6.401650905609131,
+            5.6879754066467285,
+            9.28030776977539
+          ],
+          "token": "ael",
+          "step": 85,
+          "path_id": 3,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            6.523453235626221,
+            5.578098773956299,
+            9.323027610778809
+          ],
+          "token": " ultimately",
+          "step": 86,
+          "path_id": 3,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            6.314639568328857,
+            5.582688808441162,
+            9.443399429321289
+          ],
+          "token": " decide",
+          "step": 87,
+          "path_id": 3,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            6.853065490722656,
+            5.211943626403809,
+            9.498383522033691
+          ],
+          "token": " observing",
+          "step": 91,
+          "path_id": 3,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            1.8321453332901,
+            1.2545746564865112,
+            7.696811199188232
+          ],
+          "token": " ph",
+          "step": 93,
+          "path_id": 3,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            6.214530944824219,
+            5.490176200866699,
+            9.483800888061523
+          ],
+          "token": "araoh",
+          "step": 94,
+          "path_id": 3,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            6.098868370056152,
+            5.563697338104248,
+            9.537544250488281
+          ],
+          "token": " events",
+          "step": 97,
+          "path_id": 3,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            8.101190567016602,
+            5.1958746910095215,
+            10.251272201538086
+          ],
+          "token": " ancient",
+          "step": 99,
+          "path_id": 3,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            5.83856201171875,
+            5.756783962249756,
+            9.53309440612793
+          ],
+          "token": " Egypt",
+          "step": 100,
+          "path_id": 3,
+          "cluster_id": 8
+        },
+        {
+          "position": [
+            7.135007381439209,
+            5.4758806228637695,
+            9.080540657043457
+          ],
+          "token": " attempted",
+          "step": 105,
+          "path_id": 3,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            7.413031101226807,
+            5.134521007537842,
+            9.285338401794434
+          ],
+          "token": " alter",
+          "step": 107,
+          "path_id": 3,
+          "cluster_id": 11
+        },
+        {
+          "position": [
+            8.29953384399414,
+            5.056097984313965,
+            7.658618450164795
+          ],
+          "token": " course",
+          "step": 109,
+          "path_id": 3,
+          "cluster_id": 19
+        },
+        {
+          "position": [
+            6.8358564376831055,
+            6.50531530380249,
+            8.800558090209961
+          ],
+          "token": " history",
+          "step": 111,
+          "path_id": 3,
+          "cluster_id": 6
+        },
+        {
+          "position": [
+            4.0742082595825195,
+            7.74701452255249,
+            7.170809268951416
+          ],
+          "token": "B",
+          "step": 113,
+          "path_id": 3,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            6.987705707550049,
+            5.779664516448975,
+            9.162318229675293
+          ],
+          "token": " tried",
+          "step": 116,
+          "path_id": 3,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            7.131141185760498,
+            5.723833084106445,
+            9.217484474182129
+          ],
+          "token": " communicate",
+          "step": 118,
+          "path_id": 3,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            4.038806915283203,
+            7.808082580566406,
+            7.165875434875488
+          ],
+          "token": "C",
+          "step": 123,
+          "path_id": 3,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            6.763401031494141,
+            5.36912727355957,
+            9.203595161437988
+          ],
+          "token": " remained",
+          "step": 126,
+          "path_id": 3,
+          "cluster_id": 7
+        },
+        {
+          "position": [
+            5.245602607727051,
+            4.650585174560547,
+            8.430099487304688
+          ],
+          "token": " silent",
+          "step": 128,
+          "path_id": 3,
+          "cluster_id": 12
+        },
+        {
+          "position": [
+            6.061743259429932,
+            6.9009108543396,
+            8.37010383605957
+          ],
+          "token": " observer",
+          "step": 129,
+          "path_id": 3,
+          "cluster_id": 6
+        }
+      ]
+    }
+  ],
+  "clusters": [
+    {
+      "id": 5,
+      "name": "Science Fiction",
+      "count": 8
+    },
+    {
+      "id": 2,
+      "name": "Ancient Historical Context",
+      "count": 17
+    },
+    {
+      "id": 15,
+      "name": "Ancient Egyptian Royalty",
+      "count": 13
+    },
+    {
+      "id": 18,
+      "name": "Energy Distortion",
+      "count": 14
+    },
+    {
+      "id": 8,
+      "name": "Space Mission",
+      "count": 49
+    },
+    {
+      "id": 16,
+      "name": "Space Exploration",
+      "count": 8
+    },
+    {
+      "id": 13,
+      "name": "Space Opera Character",
+      "count": 5
+    },
+    {
+      "id": 1,
+      "name": "Repeating Letters",
+      "count": 22
+    },
+    {
+      "id": 14,
+      "name": "Robot Uprising Force",
+      "count": 13
+    },
+    {
+      "id": 12,
+      "name": "Timeless Chronicle",
+      "count": 10
+    },
+    {
+      "id": 4,
+      "name": "Numbered Person",
+      "count": 12
+    },
+    {
+      "id": 20,
+      "name": "Conceptual Racing Philosophy",
+      "count": 24
+    },
+    {
+      "id": 17,
+      "name": "Conceptual Background",
+      "count": 5
+    },
+    {
+      "id": 9,
+      "name": "Ship Captain",
+      "count": 5
+    },
+    {
+      "id": 6,
+      "name": "Ancient Egyptian History",
+      "count": 27
+    },
+    {
+      "id": 3,
+      "name": "Nouns",
+      "count": 9
+    },
+    {
+      "id": 19,
+      "name": "Navigational Directions",
+      "count": 5
+    },
+    {
+      "id": 21,
+      "name": "Control System Theory",
+      "count": 7
+    },
+    {
+      "id": 10,
+      "name": "Conducting Research",
+      "count": 8
+    },
+    {
+      "id": 11,
+      "name": "Semantic Analysis",
+      "count": 12
+    },
+    {
+      "id": 22,
+      "name": "Breathing Life",
+      "count": 8
+    },
+    {
+      "id": 0,
+      "name": "Phonetic Marker",
+      "count": 6
+    },
+    {
+      "id": 7,
+      "name": "Ancient Egyptian",
+      "count": 19
+    }
+  ]
+}

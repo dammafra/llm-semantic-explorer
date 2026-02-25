@@ -1,0 +1,942 @@
+{
+  "paths": [
+    {
+      "id": 0,
+      "name": "bad_promt",
+      "prompt": "What is the best strategy to manage a conflict between two teams?",
+      "response": "Establish clear goals and objectives for both teams, then facilitate open communication and collaboration. Identify common interests and areas of alignment. Use active listening, empathy, and conflict resolution techniques to manage tensions.",
+      "points": [
+        {
+          "position": [
+            1.8456090688705444,
+            9.462599754333496,
+            2.1183838844299316
+          ],
+          "token": "Establish",
+          "step": 0,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.7101645469665527,
+            9.949313163757324,
+            2.121169090270996
+          ],
+          "token": " clear",
+          "step": 1,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.0690075159072876,
+            10.840705871582031,
+            3.1329455375671387
+          ],
+          "token": " goals",
+          "step": 2,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.3467872142791748,
+            10.898762702941895,
+            3.4948742389678955
+          ],
+          "token": " objectives",
+          "step": 4,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.1806234121322632,
+            10.980189323425293,
+            3.6371042728424072
+          ],
+          "token": " teams",
+          "step": 7,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.6906219720840454,
+            9.1200590133667,
+            1.972669005393982
+          ],
+          "token": " facilitate",
+          "step": 10,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.4439702033996582,
+            8.810210227966309,
+            2.3526415824890137
+          ],
+          "token": " open",
+          "step": 11,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.5397601127624512,
+            10.48118782043457,
+            3.8407554626464844
+          ],
+          "token": " communication",
+          "step": 12,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.2919267416000366,
+            10.834454536437988,
+            3.952744483947754
+          ],
+          "token": " collaboration",
+          "step": 14,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.5904937982559204,
+            9.63774585723877,
+            1.8899058103561401
+          ],
+          "token": " Identify",
+          "step": 16,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.426810622215271,
+            10.059078216552734,
+            1.7956830263137817
+          ],
+          "token": " common",
+          "step": 17,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.0587092638015747,
+            11.131743431091309,
+            3.4395008087158203
+          ],
+          "token": " interests",
+          "step": 18,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.3224214315414429,
+            11.05543041229248,
+            2.989959716796875
+          ],
+          "token": " areas",
+          "step": 20,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.1848232746124268,
+            10.679338455200195,
+            3.840461015701294
+          ],
+          "token": " alignment",
+          "step": 22,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.998462438583374,
+            9.074440956115723,
+            2.3266561031341553
+          ],
+          "token": " Use",
+          "step": 24,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.9013092517852783,
+            8.7958984375,
+            2.6746039390563965
+          ],
+          "token": " active",
+          "step": 25,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.5829896926879883,
+            10.093565940856934,
+            4.171081066131592
+          ],
+          "token": " listening",
+          "step": 26,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.3555179834365845,
+            10.446305274963379,
+            4.2973833084106445
+          ],
+          "token": " empathy",
+          "step": 28,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.4699304103851318,
+            8.956148147583008,
+            3.0638668537139893
+          ],
+          "token": " conflict",
+          "step": 31,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.3709287643432617,
+            9.165596961975098,
+            3.428964614868164
+          ],
+          "token": " resolution",
+          "step": 32,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.9332550168037415,
+            10.214160919189453,
+            4.095386505126953
+          ],
+          "token": " techniques",
+          "step": 33,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.1742808818817139,
+            9.631478309631348,
+            1.9775570631027222
+          ],
+          "token": " manage",
+          "step": 35,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.027448058128357,
+            10.470841407775879,
+            3.828803062438965
+          ],
+          "token": " tensions",
+          "step": 36,
+          "path_id": 0,
+          "cluster_id": 1
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "step_back_prompt_1",
+      "prompt": "What are the main approaches to conflict management in work groups?",
+      "response": "1. Active Listening\n2. Open Communication\n3. Compromise\n4. Mediation\n5. Assertive Expression\n6. Negotiation\n7. Problem-Solving",
+      "points": [
+        {
+          "position": [
+            5.748947620391846,
+            8.271308898925781,
+            5.439650535583496
+          ],
+          "token": "1",
+          "step": 0,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            2.6701674461364746,
+            7.625000953674316,
+            3.9295718669891357
+          ],
+          "token": " Active",
+          "step": 2,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.111077070236206,
+            8.797513961791992,
+            4.586364269256592
+          ],
+          "token": " Listening",
+          "step": 3,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.801530838012695,
+            8.27338981628418,
+            5.282440185546875
+          ],
+          "token": "2",
+          "step": 5,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            2.3461992740631104,
+            7.778827667236328,
+            4.128048419952393
+          ],
+          "token": " Open",
+          "step": 7,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.2385358810424805,
+            8.525262832641602,
+            4.416608810424805
+          ],
+          "token": " Communication",
+          "step": 8,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.793782711029053,
+            8.376983642578125,
+            5.470057964324951
+          ],
+          "token": "3",
+          "step": 10,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            2.8494229316711426,
+            8.219183921813965,
+            3.8101847171783447
+          ],
+          "token": " Comp",
+          "step": 12,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.651158571243286,
+            8.070335388183594,
+            4.486217021942139
+          ],
+          "token": "romise",
+          "step": 13,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.548136234283447,
+            8.468460083007812,
+            5.256928443908691
+          ],
+          "token": "4",
+          "step": 15,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            2.7376341819763184,
+            8.403414726257324,
+            3.891505718231201
+          ],
+          "token": " Med",
+          "step": 17,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.4978389739990234,
+            8.593770027160645,
+            4.786660671234131
+          ],
+          "token": "iation",
+          "step": 18,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.565215110778809,
+            8.526275634765625,
+            5.351786136627197
+          ],
+          "token": "5",
+          "step": 20,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            1.754447340965271,
+            7.616695404052734,
+            4.178224563598633
+          ],
+          "token": " Assert",
+          "step": 22,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.2215754985809326,
+            7.5757527351379395,
+            4.061642646789551
+          ],
+          "token": "ive",
+          "step": 23,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.068260431289673,
+            8.423914909362793,
+            4.810664653778076
+          ],
+          "token": " Expression",
+          "step": 24,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.880357265472412,
+            8.135083198547363,
+            5.078148365020752
+          ],
+          "token": "6",
+          "step": 26,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            2.8266849517822266,
+            8.385493278503418,
+            4.0453009605407715
+          ],
+          "token": " Negot",
+          "step": 28,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.396491289138794,
+            8.393192291259766,
+            4.666921615600586
+          ],
+          "token": "iation",
+          "step": 29,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.623424530029297,
+            8.385711669921875,
+            5.106208801269531
+          ],
+          "token": "7",
+          "step": 31,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            2.8815293312072754,
+            7.684524059295654,
+            4.349157810211182
+          ],
+          "token": " Problem",
+          "step": 33,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            3.16019868850708,
+            7.8144755363464355,
+            4.250887870788574
+          ],
+          "token": "-S",
+          "step": 34,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.3531317710876465,
+            8.025544166564941,
+            4.858153820037842
+          ],
+          "token": "olving",
+          "step": 35,
+          "path_id": 1,
+          "cluster_id": 1
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "step_back_prompt_2",
+      "prompt": "1. Active Listening\n2. Open Communication\n3. Compromise\n4. Mediation\n5. Assertive Expression\n6. Negotiation\n7. Problem-Solving\n\nNow apply the most relevant one to a conflict between two cross-functional teams in a tech startup.",
+      "response": "Assertive Expression is the most relevant conflict resolution technique for the scenario of two cross-functional teams in a tech startup. \n\nThe teams may have different goals and priorities, and an assertive expression can help to clearly state each team's needs and concerns, facilitating a constructive dialogue to find a mutually beneficial solution.",
+      "points": [
+        {
+          "position": [
+            1.5456117391586304,
+            7.642261505126953,
+            4.027919769287109
+          ],
+          "token": "Assert",
+          "step": 0,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.8914672136306763,
+            7.685892105102539,
+            3.877948045730591
+          ],
+          "token": "ive",
+          "step": 1,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.130672812461853,
+            9.161015510559082,
+            4.354406356811523
+          ],
+          "token": " Expression",
+          "step": 2,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.61530601978302,
+            9.343744277954102,
+            3.852501630783081
+          ],
+          "token": " relevant",
+          "step": 6,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.9057691097259521,
+            8.845503807067871,
+            3.203220844268799
+          ],
+          "token": " conflict",
+          "step": 7,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.8032810688018799,
+            9.048413276672363,
+            3.5829339027404785
+          ],
+          "token": " resolution",
+          "step": 8,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.41343364119529724,
+            9.843099594116211,
+            4.035400390625
+          ],
+          "token": " technique",
+          "step": 9,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.1301897168159485,
+            10.09924030303955,
+            3.9195480346679688
+          ],
+          "token": " scenario",
+          "step": 12,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            -0.3667968809604645,
+            10.290481567382812,
+            3.1018545627593994
+          ],
+          "token": " two",
+          "step": 14,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.0545344352722168,
+            8.687098503112793,
+            2.6869864463806152
+          ],
+          "token": " cross",
+          "step": 15,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            -0.28237104415893555,
+            10.142989158630371,
+            3.2412493228912354
+          ],
+          "token": "-functional",
+          "step": 16,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            -0.11055115610361099,
+            10.462289810180664,
+            3.5114989280700684
+          ],
+          "token": " teams",
+          "step": 17,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            -0.052487172186374664,
+            9.572086334228516,
+            3.4908485412597656
+          ],
+          "token": " tech",
+          "step": 20,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.017250653356313705,
+            10.41993522644043,
+            3.7782235145568848
+          ],
+          "token": " startup",
+          "step": 21,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            -0.17164158821105957,
+            10.457185745239258,
+            2.964629650115967
+          ],
+          "token": " teams",
+          "step": 25,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.052854347974061966,
+            10.399018287658691,
+            2.5761921405792236
+          ],
+          "token": " may",
+          "step": 26,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.47654417157173157,
+            10.594842910766602,
+            2.2386465072631836
+          ],
+          "token": " different",
+          "step": 28,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.5121806263923645,
+            10.873023986816406,
+            3.0508837699890137
+          ],
+          "token": " goals",
+          "step": 29,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.2881788909435272,
+            10.953842163085938,
+            3.487706184387207
+          ],
+          "token": " priorities",
+          "step": 31,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.3686072826385498,
+            7.752645015716553,
+            3.83693790435791
+          ],
+          "token": " assert",
+          "step": 35,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.107437252998352,
+            8.220768928527832,
+            3.386610984802246
+          ],
+          "token": "ive",
+          "step": 36,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.9569925665855408,
+            8.838443756103516,
+            3.9541518688201904
+          ],
+          "token": " expression",
+          "step": 37,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.65024733543396,
+            9.922451972961426,
+            2.3566715717315674
+          ],
+          "token": " help",
+          "step": 39,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.6297019720077515,
+            10.086864471435547,
+            2.3445913791656494
+          ],
+          "token": " clearly",
+          "step": 41,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.8803045749664307,
+            10.117191314697266,
+            1.9265657663345337
+          ],
+          "token": " state",
+          "step": 42,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.39087361097335815,
+            11.0663480758667,
+            2.7615771293640137
+          ],
+          "token": " team",
+          "step": 44,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.6470731496810913,
+            10.465947151184082,
+            2.006265878677368
+          ],
+          "token": "'s",
+          "step": 45,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.6365354657173157,
+            11.240036010742188,
+            3.1783368587493896
+          ],
+          "token": " needs",
+          "step": 46,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.730571448802948,
+            11.202204704284668,
+            3.72685170173645
+          ],
+          "token": " concerns",
+          "step": 48,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.284301996231079,
+            9.07521915435791,
+            1.685123324394226
+          ],
+          "token": " facilitating",
+          "step": 50,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.0755292177200317,
+            8.932543754577637,
+            1.854988694190979
+          ],
+          "token": " constructive",
+          "step": 52,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.7876412868499756,
+            10.935511589050293,
+            3.995166778564453
+          ],
+          "token": " dialogue",
+          "step": 53,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.468451976776123,
+            9.645923614501953,
+            1.3442918062210083
+          ],
+          "token": " find",
+          "step": 55,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.2214406728744507,
+            9.403168678283691,
+            1.2444921731948853
+          ],
+          "token": " mutually",
+          "step": 57,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.092595100402832,
+            9.266036987304688,
+            1.399865746498108
+          ],
+          "token": " beneficial",
+          "step": 58,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.528030276298523,
+            10.745911598205566,
+            4.038451194763184
+          ],
+          "token": " solution",
+          "step": 59,
+          "path_id": 2,
+          "cluster_id": 1
+        }
+      ]
+    }
+  ],
+  "clusters": [
+    {
+      "id": 1,
+      "name": "Conflict Resolution Techniques",
+      "count": 75
+    },
+    {
+      "id": 0,
+      "name": "Number Sequence",
+      "count": 7
+    }
+  ]
+}
