@@ -105,14 +105,10 @@ export const useChart = create<ChartState>()(set => ({
   },
 
   setMode: mode =>
-    set(state => ({
+    set(() => ({
       mode,
       playingPaths: {},
-      hiddenPaths: new Set(),
       hiddenClusters: new Set(),
-      pathVisibleSteps: state.data
-        ? state.data.paths.reduce((acc, path) => ({ ...acc, [path.id]: path.points.length }), {})
-        : state.pathVisibleSteps,
     })),
 
   setSpreadScale: spreadScale => set({ spreadScale }),
