@@ -1,15 +1,18 @@
 import { Icon } from '@iconify/react'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import { useChart, type ChartData } from '@stores'
 
 // Automatically list files from public/datasets using Vite's glob feature
 const datasetModules = import.meta.glob('/public/datasets/*.json')
-const datasets = Object.keys(datasetModules).map(path => path.split('/').pop() || '')
+const defaultDatasets = Object.keys(datasetModules).map(path => path.split('/').pop() || '')
 
 export function DatasetSelector() {
   const data = useChart(s => s.data)
   const fileInputRef = useRef<HTMLInputElement>(null!)
+  const uploadedCache = useRef<Map<string, ChartData>>(new Map())
+  const [datasetOptions, setDatasetOptions] = useState(defaultDatasets)
+  const [selected, setSelected] = useState(defaultDatasets[0] || '')
 
   const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0]
@@ -19,7 +22,14 @@ export function DatasetSelector() {
     reader.onload = e => {
       try {
         const parsed: ChartData = JSON.parse(e.target?.result as string)
+        const name = file.name
+
+        // Cache uploaded data so it can be re-selected later
+        uploadedCache.current.set(name, parsed)
         useChart.getState().setData(parsed)
+
+        setDatasetOptions(prev => (prev.includes(name) ? prev : [...prev, name]))
+        setSelected(name)
       } catch (err) {
         console.error('JSON Error:', err)
         alert('JSON format error.')
@@ -33,11 +43,20 @@ export function DatasetSelector() {
   const loadDataset = async (filename: string) => {
     if (!filename) return
 
+    // Check if this is a cached uploaded file
+    const cached = uploadedCache.current.get(filename)
+    if (cached) {
+      useChart.getState().setData(cached)
+      setSelected(filename)
+      return
+    }
+
     try {
       const response = await fetch(`/datasets/${filename}`)
       if (!response.ok) throw new Error('Dataset fetch failed')
       const parsed: ChartData = await response.json()
       useChart.getState().setData(parsed)
+      setSelected(filename)
     } catch (err) {
       console.error('Fetch JSON Error:', err)
       alert('Failed to load selected dataset.')
@@ -50,8 +69,8 @@ export function DatasetSelector() {
 
   // Auto-load first dataset on mount if no data exists
   useEffect(() => {
-    if (!data && datasets.length > 0) {
-      loadDataset(datasets[0])
+    if (!data && defaultDatasets.length > 0) {
+      loadDataset(defaultDatasets[0])
     }
   }, [data])
 
@@ -69,9 +88,9 @@ export function DatasetSelector() {
           <select
             className="w-full bg-white/[0.08] hover:bg-white/[0.12] text-white font-medium py-1.5 pl-3 pr-8 rounded-lg cursor-pointer transition-colors outline-none focus:ring-2 focus:ring-blue-500/50 appearance-none text-sm"
             onChange={handleSelectDataset}
-            defaultValue={datasets[0] || ''}
+            value={selected}
           >
-            {datasets.map(name => (
+            {datasetOptions.map(name => (
               <option key={name} value={name} className="text-black">
                 {name.replace('.json', '')}
               </option>
