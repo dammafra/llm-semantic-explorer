@@ -8,7 +8,7 @@ const datasetModules = import.meta.glob('/public/datasets/*.json')
 const datasets = Object.keys(datasetModules).map(path => path.split('/').pop() || '')
 
 export function DatasetSelector() {
-  const state = useChart()
+  const data = useChart(s => s.data)
   const fileInputRef = useRef<HTMLInputElement>(null!)
 
   const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -19,7 +19,7 @@ export function DatasetSelector() {
     reader.onload = e => {
       try {
         const parsed: ChartData = JSON.parse(e.target?.result as string)
-        state.setData(parsed)
+        useChart.getState().setData(parsed)
       } catch (err) {
         console.error('JSON Error:', err)
         alert('JSON format error.')
@@ -37,7 +37,7 @@ export function DatasetSelector() {
       const response = await fetch(`/datasets/${filename}`)
       if (!response.ok) throw new Error('Dataset fetch failed')
       const parsed: ChartData = await response.json()
-      state.setData(parsed)
+      useChart.getState().setData(parsed)
     } catch (err) {
       console.error('Fetch JSON Error:', err)
       alert('Failed to load selected dataset.')
@@ -50,10 +50,10 @@ export function DatasetSelector() {
 
   // Auto-load first dataset on mount if no data exists
   useEffect(() => {
-    if (!state.data && datasets.length > 0) {
+    if (!data && datasets.length > 0) {
       loadDataset(datasets[0])
     }
-  }, [state.data])
+  }, [data])
 
   return (
     <>

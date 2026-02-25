@@ -21,7 +21,7 @@ export type ParsedPath = {
   smoothPoints: Vector3[]
 }
 
-interface TrajectoryProps {
+interface PathProps {
   path: ParsedPath
   mode: 'paths' | 'clusters'
   onPointOver: (p: ParsedPoint, clientX: number, clientY: number) => void
@@ -29,11 +29,10 @@ interface TrajectoryProps {
   pointRadius: number
 }
 
-export function Path({ path, mode, onPointOver, onPointOut, pointRadius }: TrajectoryProps) {
+export function Path({ path, mode, onPointOver, onPointOut, pointRadius }: PathProps) {
   const visibleSteps = useChart(state => state.pathVisibleSteps[path.id] ?? path.points.length)
   const hiddenPaths = useChart(state => state.hiddenPaths)
   const hiddenClusters = useChart(state => state.hiddenClusters)
-  const lineOpacity = mode === 'paths' ? 0.6 : 0.15
 
   if (hiddenPaths.has(path.id)) return null
 
@@ -51,7 +50,7 @@ export function Path({ path, mode, onPointOver, onPointOut, pointRadius }: Traje
         <Line
           points={visibleSmoothPoints}
           color={getColor(path.id)}
-          opacity={lineOpacity}
+          opacity={0.6}
           transparent
           lineWidth={1}
         />
@@ -63,7 +62,6 @@ export function Path({ path, mode, onPointOver, onPointOut, pointRadius }: Traje
           <Point
             key={i}
             point={p}
-            index={i}
             pointRadius={pointRadius}
             onPointOver={onPointOver}
             onPointOut={onPointOut}

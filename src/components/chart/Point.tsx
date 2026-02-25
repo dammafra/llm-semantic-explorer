@@ -7,7 +7,6 @@ import { type ParsedPoint } from './Path'
 
 interface PointProps {
   point: ParsedPoint
-  index: number
   pointRadius: number
   onPointOver: (p: ParsedPoint, clientX: number, clientY: number) => void
   onPointOut: () => void
@@ -35,7 +34,7 @@ export function Point({ point, pointRadius, onPointOver, onPointOut }: PointProp
         onPointOut()
       }}
     >
-      <icosahedronGeometry args={[pointRadius, 2]} />
+      <icosahedronGeometry args={[pointRadius, 8]} />
       <meshMatcapMaterial color={getColor(mode === 'paths' ? point.pathId : point.clusterId)} />
     </mesh>
   )

@@ -2,9 +2,7 @@ import { useFrame } from '@react-three/fiber'
 import { useRef } from 'react'
 
 import { useChart } from '@stores'
-
 export function PlaybackManager() {
-  const { playingPaths, pathVisibleSteps, setVisibleSteps, setPlaying, data } = useChart()
   const lastUpdate = useRef(0)
   const interval = 0.1 // 100ms per step (10 steps/sec)
 
@@ -12,6 +10,9 @@ export function PlaybackManager() {
     const time = state.clock.getElapsedTime()
     if (time - lastUpdate.current < interval) return
     lastUpdate.current = time
+
+    const { playingPaths, pathVisibleSteps, setVisibleSteps, setPlaying, data } =
+      useChart.getState()
 
     Object.entries(playingPaths).forEach(([pathIdStr, isPlaying]) => {
       if (!isPlaying) return

@@ -20,7 +20,6 @@ export function Chart() {
   const parsedPaths = useMemo(() => {
     if (!data || !data.paths || !data.paths.length) return []
     const result: ParsedPath[] = []
-    let pathIdx = 0
 
     data.paths.forEach(path => {
       const parsedPoints: ParsedPoint[] = []
@@ -55,11 +54,10 @@ export function Chart() {
         points: parsedPoints,
         smoothPoints,
       })
-      pathIdx++
     })
 
     return result
-  }, [data, centroid, spreadScale, mode])
+  }, [data, centroid, spreadScale])
 
   return (
     <>
