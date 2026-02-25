@@ -1,0 +1,406 @@
+{
+  "paths": [
+    {
+      "id": 0,
+      "name": "bad_prompt",
+      "prompt": "Extract the customer name, order number, and the issue from this email: 'Hi, I'm Sarah Jenkins. I received order #99281-A yesterday, but the screen on the tablet is completely shattered.'",
+      "response": "Customer name: Sarah Jenkins\nOrder number: 99281-A\nIssue: Shattered screen on the tablet",
+      "points": [
+        {
+          "position": [
+            1.4364101886749268,
+            8.840165138244629,
+            2.6403298377990723
+          ],
+          "token": "Customer",
+          "step": 0,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.0271297693252563,
+            8.520679473876953,
+            2.5339701175689697
+          ],
+          "token": " name",
+          "step": 1,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.6322389841079712,
+            8.101619720458984,
+            3.129312038421631
+          ],
+          "token": " Sarah",
+          "step": 3,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.3992938995361328,
+            8.5917329788208,
+            2.679363250732422
+          ],
+          "token": " Jenkins",
+          "step": 4,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.2814265489578247,
+            9.014728546142578,
+            2.124807119369507
+          ],
+          "token": "Order",
+          "step": 6,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.4608440399169922,
+            8.465807914733887,
+            2.197275400161743
+          ],
+          "token": " number",
+          "step": 7,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.6600890159606934,
+            8.6617431640625,
+            3.6382944583892822
+          ],
+          "token": "992",
+          "step": 10,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.5066961050033569,
+            9.301380157470703,
+            2.480926275253296
+          ],
+          "token": "81",
+          "step": 11,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.5045579671859741,
+            9.017333030700684,
+            2.939446210861206
+          ],
+          "token": "-A",
+          "step": 12,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.1317145824432373,
+            8.483969688415527,
+            1.828392505645752
+          ],
+          "token": "Issue",
+          "step": 14,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.01956922933459282,
+            7.459813594818115,
+            1.843185544013977
+          ],
+          "token": " Sh",
+          "step": 16,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.5039447546005249,
+            8.256967544555664,
+            1.7553749084472656
+          ],
+          "token": "attered",
+          "step": 17,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.08162292093038559,
+            8.19471549987793,
+            2.084480047225952
+          ],
+          "token": " screen",
+          "step": 18,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.17635159194469452,
+            8.67307186126709,
+            2.019306182861328
+          ],
+          "token": " tablet",
+          "step": 21,
+          "path_id": 0,
+          "cluster_id": 1
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "good_prompt",
+      "prompt": "Extract structured data from customer service emails and format it as a strict JSON object. Follow the exact keys and data types shown in the examples.\n\nExample 1:\nEmail: \"Hello, my name is Robert Chen. I'm writing about order #445-B. The package arrived, but it is missing the power cable.\"\nOutput:\n{\n  \"customer_name\": \"Robert Chen\",\n  \"order_id\": \"#445-B\",\n  \"issue_category\": \"Missing Item\",\n  \"issue_description\": \"The package arrived, but it is missing the power cable.\"\n}\n\nExample 2:\nEmail: \"This is Amanda Silva. Order 88192 just got here and it's the wrong color. I ordered blue, not red.\"\nOutput:\n{\n  \"customer_name\": \"Amanda Silva\",\n  \"order_id\": \"88192\",\n  \"issue_category\": \"Wrong Item\",\n  \"issue_description\": \"It's the wrong color. I ordered blue, not red.\"\n}\n\nTarget:\nEmail: \"Hi, I'm Sarah Jenkins. I received order #99281-A yesterday, but the screen on the tablet is completely shattered.\"\nOutput:",
+      "response": "{\n  \"customer_name\": \"Sarah Jenkins\",\n  \"order_id\": \"#99281-A\",\n  \"issue_category\": \"Damaged Item\",\n  \"issue_description\": \"The screen on the tablet is completely shattered.\"",
+      "points": [
+        {
+          "position": [
+            2.5891072750091553,
+            5.871815204620361,
+            3.1569716930389404
+          ],
+          "token": "customer",
+          "step": 3,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            1.5760387182235718,
+            5.901486396789551,
+            3.155564308166504
+          ],
+          "token": "_name",
+          "step": 4,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            0.8117690086364746,
+            7.594751834869385,
+            3.4141054153442383
+          ],
+          "token": "Sarah",
+          "step": 7,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.0447331666946411,
+            6.648072719573975,
+            3.356874704360962
+          ],
+          "token": " Jenkins",
+          "step": 8,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.6819732189178467,
+            5.72860860824585,
+            2.6602530479431152
+          ],
+          "token": "order",
+          "step": 12,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            1.6579968929290771,
+            5.665823459625244,
+            2.7957239151000977
+          ],
+          "token": "_id",
+          "step": 13,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            0.4013923108577728,
+            8.29946517944336,
+            3.8201005458831787
+          ],
+          "token": "992",
+          "step": 16,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.9530499577522278,
+            8.159099578857422,
+            3.7934634685516357
+          ],
+          "token": "81",
+          "step": 17,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.8469820022583008,
+            6.832749843597412,
+            3.6788339614868164
+          ],
+          "token": "-A",
+          "step": 18,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.301799774169922,
+            5.936882019042969,
+            2.863936185836792
+          ],
+          "token": "issue",
+          "step": 22,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            1.2756599187850952,
+            5.547661304473877,
+            2.859445571899414
+          ],
+          "token": "_category",
+          "step": 23,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            0.6267756223678589,
+            7.5150251388549805,
+            1.7124433517456055
+          ],
+          "token": "Dam",
+          "step": 26,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.089030146598816,
+            7.477296352386475,
+            2.0106892585754395
+          ],
+          "token": "aged",
+          "step": 27,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.9919565320014954,
+            6.852652549743652,
+            2.857102394104004
+          ],
+          "token": " Item",
+          "step": 28,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.316336154937744,
+            5.412941932678223,
+            2.9561080932617188
+          ],
+          "token": "issue",
+          "step": 32,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            1.4712600708007812,
+            5.554962635040283,
+            3.2676641941070557
+          ],
+          "token": "_description",
+          "step": 33,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            0.2277885377407074,
+            7.702026844024658,
+            2.5617454051971436
+          ],
+          "token": " screen",
+          "step": 37,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            -0.1554023027420044,
+            7.2997965812683105,
+            2.8062551021575928
+          ],
+          "token": " tablet",
+          "step": 40,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            -0.28786537051200867,
+            7.153101921081543,
+            2.245532751083374
+          ],
+          "token": " completely",
+          "step": 42,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.18695233762264252,
+            6.964871883392334,
+            2.938220500946045
+          ],
+          "token": " shattered",
+          "step": 43,
+          "path_id": 1,
+          "cluster_id": 1
+        }
+      ]
+    }
+  ],
+  "clusters": [
+    {
+      "id": 1,
+      "name": "Customer Order Issue",
+      "count": 26
+    },
+    {
+      "id": 0,
+      "name": "Customer Order Details",
+      "count": 8
+    }
+  ]
+}
