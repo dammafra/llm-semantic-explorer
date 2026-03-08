@@ -4,161 +4,832 @@
       "id": 0,
       "name": "bad_prompt",
       "prompt": "My local independent bookstore is losing customers to a massive new supermarket chain that opened across the street. How can I get my customers back?",
-      "response": "Offer personalized service and recommendations, host author events and workshops, and create a loyalty program to reward repeat customers.",
+      "response": "1. Offer personalized service and loyalty rewards.\n2. Host author events and book clubs to create a sense of community.\n3. Develop strategic partnerships with local businesses and schools.\n4. Improve online presence and social media engagement.\n5. Enhance in-store experience with comfortable seating and amenities.\n6. Curate a diverse selection of products and expert staff recommendations.\n7. Offer competitive pricing and discounts for local customers.\n8. Create a loyalty program with exclusive benefits.\n9. Collaborate with influencers and local artists to promote your store.\n10. Gather customer feedback to make data-driven improvements.",
       "points": [
         {
           "position": [
-            9.955268859863281,
-            3.0329623222351074,
-            4.773458480834961
+            11.987049102783203,
+            4.674528121948242,
+            10.510605812072754
           ],
-          "token": "Offer",
+          "token": "1",
           "step": 0,
           "path_id": 0,
-          "cluster_id": 7
+          "cluster_id": 0
         },
         {
           "position": [
-            10.316683769226074,
-            2.61537504196167,
-            4.3515801429748535
+            2.480034112930298,
+            1.521368145942688,
+            4.614368438720703
           ],
-          "token": " personalized",
-          "step": 1,
-          "path_id": 0,
-          "cluster_id": 9
-        },
-        {
-          "position": [
-            11.475258827209473,
-            4.770336151123047,
-            2.7985429763793945
-          ],
-          "token": " service",
+          "token": " Offer",
           "step": 2,
           "path_id": 0,
-          "cluster_id": 12
+          "cluster_id": 1
         },
         {
           "position": [
-            11.443140029907227,
-            4.731470108032227,
-            2.7258503437042236
+            2.956554889678955,
+            1.4118324518203735,
+            4.270322322845459
           ],
-          "token": " recommendations",
+          "token": " personalized",
+          "step": 3,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.550335884094238,
+            0.04227784276008606,
+            4.057044982910156
+          ],
+          "token": " service",
           "step": 4,
           "path_id": 0,
-          "cluster_id": 12
+          "cluster_id": 1
         },
         {
           "position": [
-            9.83395004272461,
-            3.32021164894104,
-            4.656368732452393
-          ],
-          "token": " host",
-          "step": 6,
-          "path_id": 0,
-          "cluster_id": 7
-        },
-        {
-          "position": [
-            9.76685905456543,
-            3.597315788269043,
-            4.654609680175781
-          ],
-          "token": " author",
-          "step": 7,
-          "path_id": 0,
-          "cluster_id": 7
-        },
-        {
-          "position": [
-            11.629313468933105,
-            4.909708499908447,
-            3.166034698486328
-          ],
-          "token": " events",
-          "step": 8,
-          "path_id": 0,
-          "cluster_id": 12
-        },
-        {
-          "position": [
-            11.753739356994629,
-            4.86109733581543,
-            2.9819915294647217
-          ],
-          "token": " workshops",
-          "step": 10,
-          "path_id": 0,
-          "cluster_id": 12
-        },
-        {
-          "position": [
-            9.4218168258667,
-            3.0373852252960205,
-            4.449232578277588
-          ],
-          "token": " create",
-          "step": 13,
-          "path_id": 0,
-          "cluster_id": -1
-        },
-        {
-          "position": [
-            11.176361083984375,
-            4.9178924560546875,
-            3.1679859161376953
+            6.033959865570068,
+            -0.16677185893058777,
+            3.5925748348236084
           ],
           "token": " loyalty",
+          "step": 6,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.882716655731201,
+            -0.37828248739242554,
+            3.5143542289733887
+          ],
+          "token": " rewards",
+          "step": 7,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            11.969609260559082,
+            4.71462345123291,
+            10.631820678710938
+          ],
+          "token": "2",
+          "step": 9,
+          "path_id": 0,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            2.672959327697754,
+            1.5774133205413818,
+            4.63001012802124
+          ],
+          "token": " Host",
+          "step": 11,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            3.5896925926208496,
+            1.8769681453704834,
+            4.125199794769287
+          ],
+          "token": " author",
+          "step": 12,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.255151748657227,
+            0.5019465684890747,
+            3.667325258255005
+          ],
+          "token": " events",
+          "step": 13,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            3.575209856033325,
+            2.0488739013671875,
+            4.219448566436768
+          ],
+          "token": " book",
           "step": 15,
           "path_id": 0,
-          "cluster_id": 12
+          "cluster_id": 1
         },
         {
           "position": [
-            11.430267333984375,
-            4.956510066986084,
-            2.9434664249420166
+            5.60040807723999,
+            0.25791144371032715,
+            3.6120851039886475
           ],
-          "token": " program",
+          "token": " clubs",
           "step": 16,
           "path_id": 0,
-          "cluster_id": 12
+          "cluster_id": 1
         },
         {
           "position": [
-            8.797161102294922,
-            3.028017997741699,
-            4.404843807220459
+            2.5301122665405273,
+            0.18325354158878326,
+            5.274837017059326
           ],
-          "token": " reward",
+          "token": " create",
           "step": 18,
           "path_id": 0,
-          "cluster_id": 10
+          "cluster_id": 1
         },
         {
           "position": [
-            8.863995552062988,
-            3.1665806770324707,
-            4.538534641265869
+            5.361377239227295,
+            -0.9293670654296875,
+            4.276123523712158
           ],
-          "token": " repeat",
-          "step": 19,
-          "path_id": 0,
-          "cluster_id": 10
-        },
-        {
-          "position": [
-            11.356295585632324,
-            4.683593273162842,
-            2.652742385864258
-          ],
-          "token": " customers",
+          "token": " sense",
           "step": 20,
           "path_id": 0,
-          "cluster_id": 12
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.666082382202148,
+            -1.1871225833892822,
+            3.808370351791382
+          ],
+          "token": " community",
+          "step": 22,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            11.92931079864502,
+            4.749159812927246,
+            10.61080265045166
+          ],
+          "token": "3",
+          "step": 24,
+          "path_id": 0,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            2.4084932804107666,
+            1.2418235540390015,
+            4.776785850524902
+          ],
+          "token": " Develop",
+          "step": 26,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.3215372562408447,
+            1.4510297775268555,
+            4.591038227081299
+          ],
+          "token": " strategic",
+          "step": 27,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            4.922354698181152,
+            0.018815133720636368,
+            3.7502410411834717
+          ],
+          "token": " partnerships",
+          "step": 28,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.494314670562744,
+            2.133418560028076,
+            4.028806686401367
+          ],
+          "token": " local",
+          "step": 30,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.327942371368408,
+            -0.04645152390003204,
+            3.5555596351623535
+          ],
+          "token": " businesses",
+          "step": 31,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.478118419647217,
+            -0.340778648853302,
+            3.378066062927246
+          ],
+          "token": " schools",
+          "step": 33,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            11.997791290283203,
+            4.766794681549072,
+            10.67857551574707
+          ],
+          "token": "4",
+          "step": 35,
+          "path_id": 0,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            2.540370225906372,
+            0.9364442229270935,
+            4.469330787658691
+          ],
+          "token": " Improve",
+          "step": 37,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            3.504253625869751,
+            0.7222359776496887,
+            4.464034080505371
+          ],
+          "token": " online",
+          "step": 38,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.094521522521973,
+            -0.3324184715747833,
+            3.8052690029144287
+          ],
+          "token": " presence",
+          "step": 39,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            3.906439781188965,
+            0.5007322430610657,
+            4.445950508117676
+          ],
+          "token": " social",
+          "step": 41,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            3.860964298248291,
+            0.5637861490249634,
+            4.42132043838501
+          ],
+          "token": " media",
+          "step": 42,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.616793155670166,
+            -0.8469476103782654,
+            3.48437762260437
+          ],
+          "token": " engagement",
+          "step": 43,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            11.988954544067383,
+            4.838534355163574,
+            10.565475463867188
+          ],
+          "token": "5",
+          "step": 45,
+          "path_id": 0,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            -0.4759364426136017,
+            2.687556028366089,
+            4.7945942878723145
+          ],
+          "token": " Enh",
+          "step": 47,
+          "path_id": 0,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            2.639272689819336,
+            0.9929185509681702,
+            4.539916038513184
+          ],
+          "token": "ance",
+          "step": 48,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.9521842002868652,
+            1.118628740310669,
+            4.391519546508789
+          ],
+          "token": "-store",
+          "step": 50,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.122681617736816,
+            -0.4763631224632263,
+            3.9398694038391113
+          ],
+          "token": " experience",
+          "step": 51,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.9908735752105713,
+            1.1605397462844849,
+            4.543247699737549
+          ],
+          "token": " comfortable",
+          "step": 53,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            4.892433166503906,
+            0.5081866979598999,
+            3.6772851943969727
+          ],
+          "token": " seating",
+          "step": 54,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.682097911834717,
+            -0.9460729360580444,
+            3.1129660606384277
+          ],
+          "token": " amenities",
+          "step": 56,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            12.049606323242188,
+            4.920506954193115,
+            10.62304401397705
+          ],
+          "token": "6",
+          "step": 58,
+          "path_id": 0,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            -0.519905686378479,
+            2.7543792724609375,
+            4.774169445037842
+          ],
+          "token": " Cur",
+          "step": 60,
+          "path_id": 0,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            2.6363110542297363,
+            1.3935627937316895,
+            4.702131748199463
+          ],
+          "token": "ate",
+          "step": 61,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.748265266418457,
+            1.2977852821350098,
+            4.669760227203369
+          ],
+          "token": " diverse",
+          "step": 63,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.4985785484313965,
+            0.013700190931558609,
+            4.046882152557373
+          ],
+          "token": " selection",
+          "step": 64,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.529735565185547,
+            -0.02252354845404625,
+            4.003006458282471
+          ],
+          "token": " products",
+          "step": 66,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            3.28527569770813,
+            1.590325117111206,
+            4.211336135864258
+          ],
+          "token": " expert",
+          "step": 68,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            3.5201334953308105,
+            1.3355233669281006,
+            4.109862804412842
+          ],
+          "token": " staff",
+          "step": 69,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.718467712402344,
+            -0.9068779349327087,
+            3.097965717315674
+          ],
+          "token": " recommendations",
+          "step": 70,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            11.98769760131836,
+            4.9868083000183105,
+            10.512954711914062
+          ],
+          "token": "7",
+          "step": 72,
+          "path_id": 0,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            2.556577205657959,
+            1.586142897605896,
+            4.605951309204102
+          ],
+          "token": " Offer",
+          "step": 74,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.5195863246917725,
+            1.3635905981063843,
+            4.183984756469727
+          ],
+          "token": " competitive",
+          "step": 75,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.038218975067139,
+            -0.6526567339897156,
+            2.7333788871765137
+          ],
+          "token": " pricing",
+          "step": 76,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.852829933166504,
+            -0.5509121417999268,
+            3.2059133052825928
+          ],
+          "token": " discounts",
+          "step": 78,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.5039563179016113,
+            2.05487322807312,
+            4.174300670623779
+          ],
+          "token": " local",
+          "step": 80,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.680602073669434,
+            -0.9152359962463379,
+            2.97752046585083
+          ],
+          "token": " customers",
+          "step": 81,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            12.12467098236084,
+            5.004306316375732,
+            10.45750904083252
+          ],
+          "token": "8",
+          "step": 83,
+          "path_id": 0,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            2.516369581222534,
+            1.5786964893341064,
+            4.650782108306885
+          ],
+          "token": " Create",
+          "step": 85,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            6.0712690353393555,
+            -0.14235499501228333,
+            3.5260820388793945
+          ],
+          "token": " loyalty",
+          "step": 87,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.924219131469727,
+            -0.25182968378067017,
+            3.568887948989868
+          ],
+          "token": " program",
+          "step": 88,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.7857797145843506,
+            1.8164883852005005,
+            4.343107223510742
+          ],
+          "token": " exclusive",
+          "step": 90,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.815742492675781,
+            -0.7201375961303711,
+            3.1150240898132324
+          ],
+          "token": " benefits",
+          "step": 91,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            12.012940406799316,
+            4.887596607208252,
+            10.565861701965332
+          ],
+          "token": "9",
+          "step": 93,
+          "path_id": 0,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            -0.4242519736289978,
+            2.59861421585083,
+            4.781590461730957
+          ],
+          "token": " Collabor",
+          "step": 95,
+          "path_id": 0,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            4.624781608581543,
+            0.01603170670568943,
+            3.858536958694458
+          ],
+          "token": "ate",
+          "step": 96,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.287479877471924,
+            -0.1337057501077652,
+            3.4816267490386963
+          ],
+          "token": " influencers",
+          "step": 98,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.5204601287841797,
+            2.165354013442993,
+            4.080644607543945
+          ],
+          "token": " local",
+          "step": 100,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.442338943481445,
+            -0.1823040395975113,
+            3.36956524848938
+          ],
+          "token": " artists",
+          "step": 101,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.7930986881256104,
+            0.6757039427757263,
+            4.582851886749268
+          ],
+          "token": " promote",
+          "step": 103,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.8180413246154785,
+            -0.9104834794998169,
+            2.9827287197113037
+          ],
+          "token": " store",
+          "step": 105,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            12.11691665649414,
+            4.998744964599609,
+            10.495138168334961
+          ],
+          "token": "10",
+          "step": 107,
+          "path_id": 0,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            3.3120312690734863,
+            0.26182910799980164,
+            3.582439422607422
+          ],
+          "token": " Gather",
+          "step": 109,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            3.5124826431274414,
+            0.048592276871204376,
+            3.414790630340576
+          ],
+          "token": " customer",
+          "step": 110,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            4.780228614807129,
+            -0.45084503293037415,
+            3.0290603637695312
+          ],
+          "token": " feedback",
+          "step": 111,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.9690866470336914,
+            0.6549085974693298,
+            3.735194444656372
+          ],
+          "token": " make",
+          "step": 113,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            3.3641536235809326,
+            0.5977432131767273,
+            3.405121088027954
+          ],
+          "token": " data",
+          "step": 114,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.9482944011688232,
+            0.741467297077179,
+            3.724954128265381
+          ],
+          "token": "-driven",
+          "step": 115,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.557957649230957,
+            -1.0509192943572998,
+            2.801781415939331
+          ],
+          "token": " improvements",
+          "step": 116,
+          "path_id": 0,
+          "cluster_id": 1
         }
       ]
     },
@@ -166,13 +837,13 @@
       "id": 1,
       "name": "step_back_1",
       "prompt": "What are the fundamental economic principles of competitive advantage and brand differentiation for small independent retail businesses operating in the shadow of large corporate competitors?",
-      "response": "1. **Unique Value Proposition (UVP)**: Develop a clear, unique value proposition that sets your business apart from competitors, addressing specific customer needs or pain points.\n2. **Local Focus**: Leverage local connections and community involvement to create a sense of belonging, fostering loyalty and trust among customers.\n3. **Niche Market Targeting**: Identify a specific niche or segment of the market, allowing for focused marketing efforts and resource allocation.\n4. **Personalized Service**: Offer exceptional, personalized service to build strong relationships with customers and differentiate from impersonal corporate stores.\n5. **Limited Product Offerings**: Curate a curated selection of products that are relevant to your target market, rather than carrying a wide range of products.\n6. **Transparency and Authenticity**: Maintain transparency in operations, pricing, and communication, ensuring trust with customers and avoiding corporate image manipulation.\n7. **Local Partnerships**: Collaborate with local suppliers, artisans, or service providers to create exclusive offerings and reinforce local connections.\n8. **Efficient Operations**: Optimize store operations to minimize costs, ensuring competitiveness in terms of pricing and efficiency.\n9. **Word-of-Mouth**: Encourage customer referrals and word-of-mouth marketing to build a loyal customer base.\n10. **Continuous Improvement",
+      "response": "1. **Unique Value Proposition**: Offer a distinctive product or service that fulfills a specific need or desire not met by competitors.\n2. **Brand Identity**: Develop a strong, consistent brand image that resonates with target audience, creating emotional connections and loyalty.\n3. **Personalization**: Cater to individual customers' needs and preferences through tailored experiences, fostering relationships and retention.\n4. **Local Focus**: Leverage the benefits of local presence, such as community involvement, to build trust and differentiate from corporate giants.\n5. **Innovative Services**: Offer services that complement products, enhancing the overall shopping experience and justifying higher prices.\n6. **Strategic Partnerships**: Collaborate with complementary businesses to expand offerings and increase reach without duplicating resources.\n7. **Cost Leadership**: Minimize costs through efficient operations, supply chain management, and effective inventory control, enabling price competitiveness.\n8. **Adaptability**: Continuously monitor market trends, adjusting strategies to stay relevant and responsive to changing consumer demands.",
       "points": [
         {
           "position": [
-            -0.5484360456466675,
-            2.927377223968506,
-            9.987658500671387
+            12.255300521850586,
+            4.319948673248291,
+            10.74078369140625
           ],
           "token": "1",
           "step": 0,
@@ -181,9 +852,9 @@
         },
         {
           "position": [
-            9.417014122009277,
-            0.38444870710372925,
-            5.709695816040039
+            -0.015012082643806934,
+            1.2310268878936768,
+            5.300677299499512
           ],
           "token": "Unique",
           "step": 3,
@@ -192,9 +863,9 @@
         },
         {
           "position": [
-            9.087815284729004,
-            0.3124384880065918,
-            6.190497398376465
+            -0.6329325437545776,
+            1.5292824506759644,
+            5.662184715270996
           ],
           "token": " Value",
           "step": 4,
@@ -203,9 +874,9 @@
         },
         {
           "position": [
-            8.845361709594727,
-            0.4424724280834198,
-            6.788016319274902
+            -0.9692600965499878,
+            1.69795823097229,
+            5.8013224601745605
           ],
           "token": " Proposition",
           "step": 5,
@@ -214,1722 +885,1348 @@
         },
         {
           "position": [
-            8.842047691345215,
-            0.4883663058280945,
-            6.361911296844482
+            3.1987414360046387,
+            -0.5978602170944214,
+            4.782820701599121
           ],
-          "token": "U",
+          "token": " Offer",
           "step": 7,
           "path_id": 1,
-          "cluster_id": 2
+          "cluster_id": 1
         },
         {
           "position": [
-            8.82246208190918,
-            0.4219842851161957,
-            6.750258922576904
+            3.2981154918670654,
+            -0.8803901672363281,
+            4.839494705200195
           ],
-          "token": "VP",
-          "step": 8,
+          "token": " distinctive",
+          "step": 9,
           "path_id": 1,
-          "cluster_id": 2
+          "cluster_id": 1
         },
         {
           "position": [
-            10.379228591918945,
-            2.6561203002929688,
-            2.3864920139312744
+            3.7019307613372803,
+            -0.9766226410865784,
+            4.850967884063721
           ],
-          "token": " Develop",
-          "step": 11,
+          "token": " product",
+          "step": 10,
           "path_id": 1,
-          "cluster_id": 5
+          "cluster_id": 1
         },
         {
           "position": [
-            10.473260879516602,
-            2.715953826904297,
-            2.329355478286743
+            3.7379705905914307,
+            -0.9669389128684998,
+            4.822485446929932
           ],
-          "token": " clear",
-          "step": 13,
+          "token": " service",
+          "step": 12,
           "path_id": 1,
-          "cluster_id": 5
+          "cluster_id": 1
         },
         {
           "position": [
-            10.490592002868652,
-            2.702512741088867,
-            2.380380392074585
+            3.934180498123169,
+            1.3775254487991333,
+            3.70483136177063
           ],
-          "token": " unique",
+          "token": " ful",
+          "step": 14,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            3.6992831230163574,
+            -0.8365728855133057,
+            4.565327167510986
+          ],
+          "token": "fills",
           "step": 15,
           "path_id": 1,
-          "cluster_id": 5
+          "cluster_id": 1
         },
         {
           "position": [
-            10.602341651916504,
-            2.926457643508911,
-            2.438516855239868
+            3.5111522674560547,
+            -0.8754491209983826,
+            4.521703243255615
           ],
-          "token": " value",
-          "step": 16,
-          "path_id": 1,
-          "cluster_id": 5
-        },
-        {
-          "position": [
-            10.727116584777832,
-            3.1716349124908447,
-            2.307924509048462
-          ],
-          "token": " proposition",
+          "token": " specific",
           "step": 17,
           "path_id": 1,
-          "cluster_id": 5
+          "cluster_id": 1
         },
         {
           "position": [
-            10.145296096801758,
-            2.990969181060791,
-            2.6305267810821533
+            4.132864475250244,
+            -0.9913963675498962,
+            4.577412128448486
           ],
-          "token": " sets",
-          "step": 19,
+          "token": " need",
+          "step": 18,
           "path_id": 1,
-          "cluster_id": -1
+          "cluster_id": 1
         },
         {
           "position": [
-            10.509560585021973,
-            3.2447917461395264,
-            2.402390718460083
+            4.123371124267578,
+            -0.956803023815155,
+            4.518956661224365
           ],
-          "token": " business",
-          "step": 21,
+          "token": " desire",
+          "step": 20,
           "path_id": 1,
-          "cluster_id": 5
+          "cluster_id": 1
         },
         {
           "position": [
-            10.877280235290527,
-            3.6191604137420654,
-            2.245112895965576
+            4.320470809936523,
+            -0.9086397886276245,
+            4.2450056076049805
           ],
-          "token": " apart",
+          "token": " met",
           "step": 22,
           "path_id": 1,
-          "cluster_id": 8
+          "cluster_id": 1
         },
         {
           "position": [
-            11.150111198425293,
-            3.925281286239624,
-            2.234992027282715
+            5.37990140914917,
+            -0.8963961601257324,
+            3.407181978225708
           ],
           "token": " competitors",
           "step": 24,
           "path_id": 1,
-          "cluster_id": 8
+          "cluster_id": 1
         },
         {
           "position": [
-            10.387523651123047,
-            2.7931132316589355,
-            1.901963472366333
-          ],
-          "token": " addressing",
-          "step": 26,
-          "path_id": 1,
-          "cluster_id": 5
-        },
-        {
-          "position": [
-            10.44918155670166,
-            2.729792833328247,
-            1.8257331848144531
-          ],
-          "token": " specific",
-          "step": 27,
-          "path_id": 1,
-          "cluster_id": 5
-        },
-        {
-          "position": [
-            10.456146240234375,
-            2.9568843841552734,
-            1.729171872138977
-          ],
-          "token": " customer",
-          "step": 28,
-          "path_id": 1,
-          "cluster_id": 5
-        },
-        {
-          "position": [
-            11.025917053222656,
-            3.5003840923309326,
-            1.7660084962844849
-          ],
-          "token": " needs",
-          "step": 29,
-          "path_id": 1,
-          "cluster_id": 8
-        },
-        {
-          "position": [
-            10.827969551086426,
-            3.422436237335205,
-            1.7080782651901245
-          ],
-          "token": " pain",
-          "step": 31,
-          "path_id": 1,
-          "cluster_id": 8
-        },
-        {
-          "position": [
-            11.041618347167969,
-            3.6600892543792725,
-            1.8635419607162476
-          ],
-          "token": " points",
-          "step": 32,
-          "path_id": 1,
-          "cluster_id": 8
-        },
-        {
-          "position": [
-            -0.46522971987724304,
-            2.9720096588134766,
-            10.037395477294922
+            12.408247947692871,
+            4.17832612991333,
+            10.828594207763672
           ],
           "token": "2",
-          "step": 34,
+          "step": 26,
           "path_id": 1,
           "cluster_id": 0
         },
         {
           "position": [
-            9.526139259338379,
-            0.6188539266586304,
-            5.50548791885376
+            -0.3416083753108978,
+            1.4056169986724854,
+            5.428295135498047
           ],
-          "token": "Local",
+          "token": "Brand",
+          "step": 29,
+          "path_id": 1,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            -0.8037840127944946,
+            1.6632323265075684,
+            5.658967018127441
+          ],
+          "token": " Identity",
+          "step": 30,
+          "path_id": 1,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            2.9618892669677734,
+            -0.6499992609024048,
+            5.2929863929748535
+          ],
+          "token": " Develop",
+          "step": 32,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            3.0956997871398926,
+            -0.8840842247009277,
+            5.1799116134643555
+          ],
+          "token": " strong",
+          "step": 34,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            3.1320860385894775,
+            -0.9193997383117676,
+            5.157825469970703
+          ],
+          "token": " consistent",
+          "step": 36,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            3.389467477798462,
+            -0.9973254203796387,
+            5.206503868103027
+          ],
+          "token": " brand",
           "step": 37,
           "path_id": 1,
-          "cluster_id": 2
+          "cluster_id": 1
         },
         {
           "position": [
-            9.103032112121582,
-            0.5530462861061096,
-            6.9541802406311035
+            4.612881183624268,
+            -1.0194300413131714,
+            4.628567218780518
           ],
-          "token": " Focus",
+          "token": " image",
           "step": 38,
           "path_id": 1,
-          "cluster_id": 2
+          "cluster_id": 1
         },
         {
           "position": [
-            11.658178329467773,
-            1.1862447261810303,
-            4.914347171783447
+            -0.1947956532239914,
+            2.764350175857544,
+            4.615988731384277
           ],
-          "token": " Le",
+          "token": " reson",
           "step": 40,
           "path_id": 1,
           "cluster_id": 3
         },
         {
           "position": [
-            9.298242568969727,
-            2.3103015422821045,
-            3.7692747116088867
+            4.34790563583374,
+            -0.5343811511993408,
+            4.368809223175049
           ],
-          "token": "verage",
+          "token": "ates",
           "step": 41,
           "path_id": 1,
-          "cluster_id": 10
+          "cluster_id": 1
         },
         {
           "position": [
-            9.578312873840332,
-            1.9939115047454834,
-            4.149469375610352
+            3.6123931407928467,
+            -0.7623552680015564,
+            4.0703277587890625
           ],
-          "token": " local",
-          "step": 42,
-          "path_id": 1,
-          "cluster_id": 10
-        },
-        {
-          "position": [
-            12.447882652282715,
-            4.108249664306641,
-            2.501664638519287
-          ],
-          "token": " connections",
+          "token": " target",
           "step": 43,
           "path_id": 1,
-          "cluster_id": 12
+          "cluster_id": 1
         },
         {
           "position": [
-            9.59213638305664,
-            1.9091041088104248,
-            4.240147590637207
+            4.669940948486328,
+            -0.9636042714118958,
+            4.48521089553833
           ],
-          "token": " community",
-          "step": 45,
+          "token": " audience",
+          "step": 44,
           "path_id": 1,
-          "cluster_id": 10
+          "cluster_id": 1
         },
         {
           "position": [
-            12.22920036315918,
-            4.175369739532471,
-            2.5305368900299072
+            2.6358048915863037,
+            -0.3222733736038208,
+            5.426190376281738
           ],
-          "token": " involvement",
+          "token": " creating",
           "step": 46,
           "path_id": 1,
-          "cluster_id": 12
+          "cluster_id": 1
         },
         {
           "position": [
-            9.091573715209961,
-            2.4681804180145264,
-            4.063716888427734
+            2.5713424682617188,
+            -0.32074910402297974,
+            5.449976444244385
           ],
-          "token": " create",
+          "token": " emotional",
+          "step": 47,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.011490821838379,
+            -1.1723796129226685,
+            4.371941566467285
+          ],
+          "token": " connections",
           "step": 48,
           "path_id": 1,
-          "cluster_id": 10
+          "cluster_id": 1
         },
         {
           "position": [
-            12.469877243041992,
-            3.1397063732147217,
-            2.29703426361084
-          ],
-          "token": " sense",
-          "step": 50,
-          "path_id": 1,
-          "cluster_id": -1
-        },
-        {
-          "position": [
-            11.965690612792969,
-            3.8622701168060303,
-            1.8681520223617554
-          ],
-          "token": " belonging",
-          "step": 52,
-          "path_id": 1,
-          "cluster_id": 8
-        },
-        {
-          "position": [
-            8.804713249206543,
-            2.555450439453125,
-            4.2077226638793945
-          ],
-          "token": " fostering",
-          "step": 54,
-          "path_id": 1,
-          "cluster_id": 10
-        },
-        {
-          "position": [
-            12.038066864013672,
-            4.079300403594971,
-            1.672070860862732
+            5.587203502655029,
+            -1.247453212738037,
+            4.191289901733398
           ],
           "token": " loyalty",
-          "step": 55,
+          "step": 50,
           "path_id": 1,
-          "cluster_id": 8
+          "cluster_id": 1
         },
         {
           "position": [
-            11.966358184814453,
-            4.140464782714844,
-            1.578869104385376
-          ],
-          "token": " trust",
-          "step": 57,
-          "path_id": 1,
-          "cluster_id": 8
-        },
-        {
-          "position": [
-            8.791051864624023,
-            2.9158923625946045,
-            4.31085729598999
-          ],
-          "token": " among",
-          "step": 58,
-          "path_id": 1,
-          "cluster_id": 10
-        },
-        {
-          "position": [
-            11.621552467346191,
-            4.265102863311768,
-            1.5730317831039429
-          ],
-          "token": " customers",
-          "step": 59,
-          "path_id": 1,
-          "cluster_id": 8
-        },
-        {
-          "position": [
-            -0.43418410420417786,
-            3.0248608589172363,
-            10.092458724975586
+            12.517147064208984,
+            4.06221866607666,
+            10.885594367980957
           ],
           "token": "3",
-          "step": 61,
+          "step": 52,
           "path_id": 1,
           "cluster_id": 0
         },
         {
           "position": [
-            9.603707313537598,
-            0.803901731967926,
-            5.375253200531006
-          ],
-          "token": "N",
-          "step": 64,
-          "path_id": 1,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            9.472073554992676,
-            0.2085096836090088,
-            6.018775939941406
-          ],
-          "token": "iche",
-          "step": 65,
-          "path_id": 1,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            9.31767749786377,
-            0.17095701396465302,
-            6.409117698669434
-          ],
-          "token": " Market",
-          "step": 66,
-          "path_id": 1,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            9.107596397399902,
-            0.2970882058143616,
-            6.593217372894287
-          ],
-          "token": " Target",
-          "step": 67,
-          "path_id": 1,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            8.897768020629883,
-            0.5323562622070312,
-            6.851343631744385
-          ],
-          "token": "ing",
-          "step": 68,
-          "path_id": 1,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            10.746524810791016,
-            2.5279507637023926,
-            1.8526649475097656
-          ],
-          "token": " Identify",
-          "step": 70,
-          "path_id": 1,
-          "cluster_id": 5
-        },
-        {
-          "position": [
-            10.628710746765137,
-            2.613389730453491,
-            1.8046776056289673
-          ],
-          "token": " specific",
-          "step": 72,
-          "path_id": 1,
-          "cluster_id": 5
-        },
-        {
-          "position": [
-            10.846738815307617,
-            2.6905300617218018,
-            1.7423628568649292
-          ],
-          "token": " niche",
-          "step": 73,
-          "path_id": 1,
-          "cluster_id": 5
-        },
-        {
-          "position": [
-            11.061543464660645,
-            2.791112184524536,
-            1.7730931043624878
-          ],
-          "token": " segment",
-          "step": 75,
-          "path_id": 1,
-          "cluster_id": 5
-        },
-        {
-          "position": [
-            11.123164176940918,
-            2.9409329891204834,
-            1.7688629627227783
-          ],
-          "token": " market",
-          "step": 78,
-          "path_id": 1,
-          "cluster_id": 5
-        },
-        {
-          "position": [
-            10.138801574707031,
-            2.8269643783569336,
-            2.758408784866333
-          ],
-          "token": " allowing",
-          "step": 80,
-          "path_id": 1,
-          "cluster_id": -1
-        },
-        {
-          "position": [
-            10.503336906433105,
-            2.4706833362579346,
-            2.8135926723480225
-          ],
-          "token": " focused",
-          "step": 82,
-          "path_id": 1,
-          "cluster_id": -1
-        },
-        {
-          "position": [
-            11.808429718017578,
-            3.2879831790924072,
-            1.7025084495544434
-          ],
-          "token": " marketing",
-          "step": 83,
-          "path_id": 1,
-          "cluster_id": 8
-        },
-        {
-          "position": [
-            11.834468841552734,
-            3.4353437423706055,
-            1.7623721361160278
-          ],
-          "token": " efforts",
-          "step": 84,
-          "path_id": 1,
-          "cluster_id": 8
-        },
-        {
-          "position": [
-            11.724124908447266,
-            3.2507224082946777,
-            1.669808030128479
-          ],
-          "token": " resource",
-          "step": 86,
-          "path_id": 1,
-          "cluster_id": 8
-        },
-        {
-          "position": [
-            11.649903297424316,
-            3.545206308364868,
-            1.6565237045288086
-          ],
-          "token": " allocation",
-          "step": 87,
-          "path_id": 1,
-          "cluster_id": 8
-        },
-        {
-          "position": [
-            -0.3670400381088257,
-            3.021017074584961,
-            10.095812797546387
-          ],
-          "token": "4",
-          "step": 89,
-          "path_id": 1,
-          "cluster_id": 0
-        },
-        {
-          "position": [
-            9.590922355651855,
-            0.5233333706855774,
-            5.79278564453125
+            -0.3072996437549591,
+            1.3117278814315796,
+            5.485860824584961
           ],
           "token": "Personal",
-          "step": 92,
+          "step": 55,
           "path_id": 1,
           "cluster_id": 2
         },
         {
           "position": [
-            9.557788848876953,
-            0.47405415773391724,
-            5.748544216156006
+            -1.0557029247283936,
+            1.7962310314178467,
+            5.707650661468506
           ],
-          "token": "ized",
-          "step": 93,
+          "token": "ization",
+          "step": 56,
           "path_id": 1,
           "cluster_id": 2
         },
         {
           "position": [
-            9.162667274475098,
-            0.5604794025421143,
-            6.817624568939209
+            4.400771617889404,
+            -0.6142056584358215,
+            4.344004154205322
           ],
-          "token": " Service",
-          "step": 94,
+          "token": " Cater",
+          "step": 58,
           "path_id": 1,
-          "cluster_id": 2
+          "cluster_id": 1
         },
         {
           "position": [
-            10.034896850585938,
-            2.47312593460083,
-            4.677787780761719
+            3.473118305206299,
+            -0.6875337958335876,
+            3.866018772125244
           ],
-          "token": " Offer",
-          "step": 96,
+          "token": " individual",
+          "step": 60,
           "path_id": 1,
-          "cluster_id": -1
+          "cluster_id": 1
         },
         {
           "position": [
-            10.341110229492188,
-            2.346604347229004,
-            4.289151191711426
-          ],
-          "token": " exceptional",
-          "step": 97,
-          "path_id": 1,
-          "cluster_id": 9
-        },
-        {
-          "position": [
-            10.429292678833008,
-            2.318422794342041,
-            4.229711532592773
-          ],
-          "token": " personalized",
-          "step": 99,
-          "path_id": 1,
-          "cluster_id": 9
-        },
-        {
-          "position": [
-            11.677410125732422,
-            4.341794013977051,
-            2.6606619358062744
-          ],
-          "token": " service",
-          "step": 100,
-          "path_id": 1,
-          "cluster_id": 12
-        },
-        {
-          "position": [
-            8.885174751281738,
-            2.4060769081115723,
-            4.2183003425598145
-          ],
-          "token": " build",
-          "step": 102,
-          "path_id": 1,
-          "cluster_id": 10
-        },
-        {
-          "position": [
-            8.974324226379395,
-            2.290363073348999,
-            4.23216438293457
-          ],
-          "token": " strong",
-          "step": 103,
-          "path_id": 1,
-          "cluster_id": 10
-        },
-        {
-          "position": [
-            12.016719818115234,
-            4.075786113739014,
-            1.6011139154434204
-          ],
-          "token": " relationships",
-          "step": 104,
-          "path_id": 1,
-          "cluster_id": 8
-        },
-        {
-          "position": [
-            11.83287239074707,
-            4.029242992401123,
-            1.653989315032959
+            4.57618522644043,
+            -0.7095781564712524,
+            4.199219226837158
           ],
           "token": " customers",
-          "step": 106,
+          "step": 61,
           "path_id": 1,
-          "cluster_id": 8
+          "cluster_id": 1
         },
         {
           "position": [
-            10.18447208404541,
-            3.1296825408935547,
-            2.75089430809021
+            4.69249153137207,
+            -0.8472113013267517,
+            4.329090118408203
           ],
-          "token": " differentiate",
-          "step": 108,
+          "token": " needs",
+          "step": 63,
           "path_id": 1,
-          "cluster_id": -1
+          "cluster_id": 1
         },
         {
           "position": [
-            11.045507431030273,
-            1.9942681789398193,
-            4.469873905181885
+            4.7237677574157715,
+            -0.8864684700965881,
+            4.329277992248535
           ],
-          "token": " imperson",
-          "step": 110,
+          "token": " preferences",
+          "step": 65,
           "path_id": 1,
-          "cluster_id": -1
+          "cluster_id": 1
         },
         {
           "position": [
-            10.749688148498535,
-            2.6959922313690186,
-            4.169694423675537
+            2.5726242065429688,
+            0.5414517521858215,
+            4.337127685546875
           ],
-          "token": "al",
-          "step": 111,
+          "token": " tailored",
+          "step": 67,
           "path_id": 1,
-          "cluster_id": 7
+          "cluster_id": 1
         },
         {
           "position": [
-            10.75943374633789,
-            3.140826463699341,
-            4.059193134307861
+            4.871819972991943,
+            -0.9138408899307251,
+            4.166058540344238
           ],
-          "token": " corporate",
-          "step": 112,
+          "token": " experiences",
+          "step": 68,
           "path_id": 1,
-          "cluster_id": 7
+          "cluster_id": 1
         },
         {
           "position": [
-            11.257253646850586,
-            4.0713276863098145,
-            2.298125743865967
+            2.4672529697418213,
+            -0.16749893128871918,
+            5.246711730957031
           ],
-          "token": " stores",
-          "step": 113,
+          "token": " fostering",
+          "step": 70,
           "path_id": 1,
-          "cluster_id": 8
+          "cluster_id": 1
         },
         {
           "position": [
-            -0.36121270060539246,
-            3.0717110633850098,
-            10.146624565124512
+            5.103289604187012,
+            -1.2828171253204346,
+            4.242946147918701
           ],
-          "token": "5",
-          "step": 115,
+          "token": " relationships",
+          "step": 71,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.46748685836792,
+            -1.311865210533142,
+            4.091993808746338
+          ],
+          "token": " retention",
+          "step": 73,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            12.578154563903809,
+            3.99957013130188,
+            10.92602252960205
+          ],
+          "token": "4",
+          "step": 75,
           "path_id": 1,
           "cluster_id": 0
         },
         {
           "position": [
-            9.549712181091309,
-            0.25085410475730896,
-            5.899491310119629
+            -0.10522764921188354,
+            1.2179795503616333,
+            5.41067361831665
           ],
-          "token": "Limited",
-          "step": 118,
+          "token": "Local",
+          "step": 78,
           "path_id": 1,
           "cluster_id": 2
         },
         {
           "position": [
-            9.425747871398926,
-            0.11004532128572464,
-            6.242869853973389
+            -0.9783609509468079,
+            1.8427029848098755,
+            5.733031749725342
           ],
-          "token": " Product",
-          "step": 119,
+          "token": " Focus",
+          "step": 79,
           "path_id": 1,
           "cluster_id": 2
         },
         {
           "position": [
-            9.141093254089355,
-            0.41451495885849,
-            6.5320329666137695
+            -0.5588361620903015,
+            2.8734843730926514,
+            4.6662139892578125
           ],
-          "token": " Offer",
-          "step": 120,
-          "path_id": 1,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            8.99533748626709,
-            0.4325876235961914,
-            6.903988838195801
-          ],
-          "token": "ings",
-          "step": 121,
-          "path_id": 1,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            11.663639068603516,
-            1.318284034729004,
-            4.78322696685791
-          ],
-          "token": " Cur",
-          "step": 123,
+          "token": " Le",
+          "step": 81,
           "path_id": 1,
           "cluster_id": 3
         },
         {
           "position": [
-            11.382311820983887,
-            2.4643845558166504,
-            3.1859848499298096
+            2.1025609970092773,
+            -0.25470587611198425,
+            5.050108909606934
           ],
-          "token": "ate",
-          "step": 124,
+          "token": "verage",
+          "step": 82,
           "path_id": 1,
-          "cluster_id": 6
+          "cluster_id": 1
         },
         {
           "position": [
-            11.215042114257812,
-            2.2922146320343018,
-            3.305673837661743
+            5.110794544219971,
+            -0.8133633732795715,
+            3.9758877754211426
           ],
-          "token": " curated",
-          "step": 126,
+          "token": " benefits",
+          "step": 84,
           "path_id": 1,
-          "cluster_id": 6
+          "cluster_id": 1
         },
         {
           "position": [
-            11.738527297973633,
-            2.883181095123291,
-            2.597426652908325
+            2.055849552154541,
+            -0.2414432018995285,
+            5.223077774047852
           ],
-          "token": " selection",
-          "step": 127,
+          "token": " local",
+          "step": 86,
           "path_id": 1,
-          "cluster_id": 6
+          "cluster_id": 1
         },
         {
           "position": [
-            11.696127891540527,
-            3.0209381580352783,
-            2.604645013809204
+            4.915482044219971,
+            -0.6155860424041748,
+            3.7858848571777344
           ],
-          "token": " products",
-          "step": 129,
+          "token": " presence",
+          "step": 87,
           "path_id": 1,
-          "cluster_id": 6
+          "cluster_id": 1
         },
         {
           "position": [
-            11.774852752685547,
-            3.3577070236206055,
-            2.3238840103149414
+            2.1414191722869873,
+            -0.2908658981323242,
+            5.381643295288086
           ],
-          "token": " relevant",
-          "step": 132,
+          "token": " community",
+          "step": 91,
           "path_id": 1,
-          "cluster_id": 6
+          "cluster_id": 1
         },
         {
           "position": [
-            10.57236099243164,
-            2.663086175918579,
-            1.722455620765686
+            4.799459934234619,
+            -0.6642792224884033,
+            3.506723642349243
           ],
-          "token": " target",
-          "step": 135,
+          "token": " involvement",
+          "step": 92,
           "path_id": 1,
-          "cluster_id": 5
+          "cluster_id": 1
         },
         {
           "position": [
-            11.472243309020996,
-            3.333282709121704,
-            1.7943490743637085
+            2.3998985290527344,
+            -0.24121056497097015,
+            5.354894638061523
           ],
-          "token": " market",
-          "step": 136,
+          "token": " build",
+          "step": 95,
           "path_id": 1,
-          "cluster_id": 8
+          "cluster_id": 1
         },
         {
           "position": [
-            11.74522876739502,
-            2.487833023071289,
-            2.7536540031433105
-          ],
-          "token": " rather",
-          "step": 138,
-          "path_id": 1,
-          "cluster_id": 6
-        },
-        {
-          "position": [
-            11.650899887084961,
-            2.2819769382476807,
-            3.036144971847534
-          ],
-          "token": " carrying",
-          "step": 140,
-          "path_id": 1,
-          "cluster_id": 6
-        },
-        {
-          "position": [
-            11.636903762817383,
-            2.250173330307007,
-            3.1129212379455566
-          ],
-          "token": " wide",
-          "step": 142,
-          "path_id": 1,
-          "cluster_id": 6
-        },
-        {
-          "position": [
-            11.800651550292969,
-            2.4057672023773193,
-            2.851449489593506
-          ],
-          "token": " range",
-          "step": 143,
-          "path_id": 1,
-          "cluster_id": 6
-        },
-        {
-          "position": [
-            11.734075546264648,
-            2.508056879043579,
-            2.7058675289154053
-          ],
-          "token": " products",
-          "step": 145,
-          "path_id": 1,
-          "cluster_id": 6
-        },
-        {
-          "position": [
-            -0.2705613076686859,
-            3.1765804290771484,
-            10.248787879943848
-          ],
-          "token": "6",
-          "step": 147,
-          "path_id": 1,
-          "cluster_id": 0
-        },
-        {
-          "position": [
-            9.727551460266113,
-            0.9699617624282837,
-            5.884218215942383
-          ],
-          "token": "Trans",
-          "step": 150,
-          "path_id": 1,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            9.112016677856445,
-            0.871992826461792,
-            6.871500015258789
-          ],
-          "token": "parency",
-          "step": 151,
-          "path_id": 1,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            9.543882369995117,
-            0.7278375625610352,
-            5.879241943359375
-          ],
-          "token": " Authentic",
-          "step": 153,
-          "path_id": 1,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            8.980595588684082,
-            0.8239554166793823,
-            6.830677032470703
-          ],
-          "token": "ity",
-          "step": 154,
-          "path_id": 1,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            9.36767292022705,
-            2.5581209659576416,
-            4.405807971954346
-          ],
-          "token": " Maintain",
-          "step": 156,
-          "path_id": 1,
-          "cluster_id": -1
-        },
-        {
-          "position": [
-            12.896183967590332,
-            4.026982307434082,
-            2.7486765384674072
-          ],
-          "token": " transparency",
-          "step": 157,
-          "path_id": 1,
-          "cluster_id": -1
-        },
-        {
-          "position": [
-            12.934096336364746,
-            4.271623611450195,
-            3.2264833450317383
-          ],
-          "token": " operations",
-          "step": 159,
-          "path_id": 1,
-          "cluster_id": 11
-        },
-        {
-          "position": [
-            12.914291381835938,
-            4.10833740234375,
-            3.103153944015503
-          ],
-          "token": " pricing",
-          "step": 161,
-          "path_id": 1,
-          "cluster_id": 11
-        },
-        {
-          "position": [
-            12.73281478881836,
-            4.293060302734375,
-            2.7699315547943115
-          ],
-          "token": " communication",
-          "step": 164,
-          "path_id": 1,
-          "cluster_id": 11
-        },
-        {
-          "position": [
-            9.31389331817627,
-            2.6107866764068604,
-            4.457755088806152
-          ],
-          "token": " ensuring",
-          "step": 166,
-          "path_id": 1,
-          "cluster_id": -1
-        },
-        {
-          "position": [
-            12.092162132263184,
-            4.165349006652832,
-            1.6272836923599243
+            4.98058557510376,
+            -1.2149161100387573,
+            4.04957914352417
           ],
           "token": " trust",
-          "step": 167,
+          "step": 96,
           "path_id": 1,
-          "cluster_id": 8
+          "cluster_id": 1
         },
         {
           "position": [
-            11.684396743774414,
-            4.272459030151367,
-            1.5513969659805298
+            3.558722496032715,
+            -0.20891918241977692,
+            4.231914520263672
           ],
-          "token": " customers",
-          "step": 169,
+          "token": " differentiate",
+          "step": 98,
           "path_id": 1,
-          "cluster_id": 8
+          "cluster_id": 1
         },
         {
           "position": [
-            10.793354988098145,
-            3.1953125,
-            3.673522710800171
-          ],
-          "token": " avoiding",
-          "step": 171,
-          "path_id": 1,
-          "cluster_id": -1
-        },
-        {
-          "position": [
-            10.852266311645508,
-            3.227013349533081,
-            3.7440526485443115
+            1.8163584470748901,
+            0.12298724055290222,
+            4.570014953613281
           ],
           "token": " corporate",
-          "step": 172,
+          "step": 100,
           "path_id": 1,
-          "cluster_id": -1
+          "cluster_id": 1
         },
         {
           "position": [
-            10.998330116271973,
-            3.368215799331665,
-            3.5421385765075684
+            5.4857869148254395,
+            -1.067820429801941,
+            3.214164972305298
           ],
-          "token": " image",
-          "step": 173,
+          "token": " giants",
+          "step": 101,
           "path_id": 1,
-          "cluster_id": -1
+          "cluster_id": 1
         },
         {
           "position": [
-            11.287205696105957,
-            3.976933240890503,
-            2.2121973037719727
+            12.508837699890137,
+            4.0645833015441895,
+            10.835066795349121
           ],
-          "token": " manipulation",
-          "step": 174,
-          "path_id": 1,
-          "cluster_id": 8
-        },
-        {
-          "position": [
-            -0.2631210386753082,
-            3.19500994682312,
-            10.26351261138916
-          ],
-          "token": "7",
-          "step": 176,
+          "token": "5",
+          "step": 103,
           "path_id": 1,
           "cluster_id": 0
         },
         {
           "position": [
-            9.640483856201172,
-            0.46621546149253845,
-            5.569291591644287
+            -0.6096838712692261,
+            2.4301018714904785,
+            4.884720325469971
           ],
-          "token": "Local",
-          "step": 179,
+          "token": "nov",
+          "step": 107,
+          "path_id": 1,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            -0.07009583711624146,
+            1.3549354076385498,
+            5.169123649597168
+          ],
+          "token": "ative",
+          "step": 108,
           "path_id": 1,
           "cluster_id": 2
         },
         {
           "position": [
-            9.292601585388184,
-            0.6994388699531555,
-            7.072591781616211
+            -0.9434710741043091,
+            1.7044272422790527,
+            5.872649669647217
+          ],
+          "token": " Services",
+          "step": 109,
+          "path_id": 1,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            2.635598659515381,
+            0.13895824551582336,
+            4.554948806762695
+          ],
+          "token": " Offer",
+          "step": 111,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.239013671875,
+            0.06546872109174728,
+            4.330660820007324
+          ],
+          "token": " services",
+          "step": 112,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.1853349208831787,
+            -0.06037833169102669,
+            4.563387393951416
+          ],
+          "token": " complement",
+          "step": 114,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            4.736562728881836,
+            -0.7831124663352966,
+            3.905724287033081
+          ],
+          "token": " products",
+          "step": 115,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.3652729988098145,
+            -0.2732726037502289,
+            4.5518574714660645
+          ],
+          "token": " enhancing",
+          "step": 117,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.682544469833374,
+            -0.5685061812400818,
+            4.606276035308838
+          ],
+          "token": " overall",
+          "step": 119,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.9880154132843018,
+            -0.7775195837020874,
+            4.577019691467285
+          ],
+          "token": " shopping",
+          "step": 120,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            4.845230579376221,
+            -1.061291217803955,
+            3.828098773956299
+          ],
+          "token": " experience",
+          "step": 121,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.058237314224243,
+            -0.3445456624031067,
+            4.494653701782227
+          ],
+          "token": "ifying",
+          "step": 124,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.0163919925689697,
+            -0.33902883529663086,
+            4.307567119598389
+          ],
+          "token": " higher",
+          "step": 125,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.1716694831848145,
+            -1.170513391494751,
+            2.9211597442626953
+          ],
+          "token": " prices",
+          "step": 126,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            12.580278396606445,
+            3.9987001419067383,
+            10.923550605773926
+          ],
+          "token": "6",
+          "step": 128,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            -0.4299392104148865,
+            2.1958415508270264,
+            4.925194263458252
+          ],
+          "token": "Str",
+          "step": 131,
+          "path_id": 1,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            -0.17509278655052185,
+            1.4820433855056763,
+            5.167010307312012
+          ],
+          "token": "ategic",
+          "step": 132,
+          "path_id": 1,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            -1.1798661947250366,
+            1.7955009937286377,
+            5.860447883605957
           ],
           "token": " Partners",
-          "step": 180,
+          "step": 133,
           "path_id": 1,
           "cluster_id": 2
         },
         {
           "position": [
-            9.156705856323242,
-            0.6043654680252075,
-            7.100218296051025
+            -1.033092975616455,
+            1.8450652360916138,
+            5.986757755279541
           ],
           "token": "hips",
+          "step": 134,
+          "path_id": 1,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            -0.38905033469200134,
+            2.719273567199707,
+            4.722400188446045
+          ],
+          "token": " Collabor",
+          "step": 136,
+          "path_id": 1,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            4.604409694671631,
+            -0.08009213209152222,
+            4.041950702667236
+          ],
+          "token": "ate",
+          "step": 137,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.4823102951049805,
+            2.089778423309326,
+            3.92629337310791
+          ],
+          "token": " complementary",
+          "step": 139,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            4.835804462432861,
+            -0.34225940704345703,
+            3.5811076164245605
+          ],
+          "token": " businesses",
+          "step": 140,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.0168309211730957,
+            -0.16700004041194916,
+            4.675297737121582
+          ],
+          "token": " expand",
+          "step": 142,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            4.7186126708984375,
+            -1.113486886024475,
+            3.560800313949585
+          ],
+          "token": " offerings",
+          "step": 143,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.032297134399414,
+            -0.37751591205596924,
+            4.744843006134033
+          ],
+          "token": " increase",
+          "step": 145,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            4.953568458557129,
+            -1.3182601928710938,
+            3.268352508544922
+          ],
+          "token": " reach",
+          "step": 146,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.6067864894866943,
+            -0.09359787404537201,
+            4.4332661628723145
+          ],
+          "token": " without",
+          "step": 147,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            -0.5332010984420776,
+            2.444021463394165,
+            4.807497501373291
+          ],
+          "token": " duplic",
+          "step": 148,
+          "path_id": 1,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            1.6909399032592773,
+            0.03055850975215435,
+            4.411204814910889
+          ],
+          "token": "ating",
+          "step": 149,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.4983811378479,
+            -1.2494900226593018,
+            3.0977275371551514
+          ],
+          "token": " resources",
+          "step": 150,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            12.627588272094727,
+            3.9564855098724365,
+            10.978455543518066
+          ],
+          "token": "7",
+          "step": 152,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            -0.6969484090805054,
+            1.468306064605713,
+            5.476400375366211
+          ],
+          "token": "Cost",
+          "step": 155,
+          "path_id": 1,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            -1.0255365371704102,
+            1.8101872205734253,
+            5.69149112701416
+          ],
+          "token": " Leadership",
+          "step": 156,
+          "path_id": 1,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            -0.5137150287628174,
+            2.8506503105163574,
+            4.640859127044678
+          ],
+          "token": " Min",
+          "step": 158,
+          "path_id": 1,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            1.7385932207107544,
+            0.06793440878391266,
+            4.076295375823975
+          ],
+          "token": "imize",
+          "step": 159,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            4.480403900146484,
+            -0.9413107633590698,
+            3.2241220474243164
+          ],
+          "token": " costs",
+          "step": 160,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.7576727867126465,
+            0.3138073980808258,
+            3.4277963638305664
+          ],
+          "token": " efficient",
+          "step": 162,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            4.465628623962402,
+            -0.9082531929016113,
+            3.1477651596069336
+          ],
+          "token": " operations",
+          "step": 163,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.940181851387024,
+            0.21289214491844177,
+            3.138129472732544
+          ],
+          "token": " supply",
+          "step": 165,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.8498116731643677,
+            0.12162525206804276,
+            3.1117587089538574
+          ],
+          "token": " chain",
+          "step": 166,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            4.36729097366333,
+            -0.7705413699150085,
+            2.9773855209350586
+          ],
+          "token": " management",
+          "step": 167,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.7787995338439941,
+            0.346424400806427,
+            3.443208932876587
+          ],
+          "token": " effective",
+          "step": 170,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.9776438474655151,
+            0.25636035203933716,
+            3.128971815109253
+          ],
+          "token": " inventory",
+          "step": 171,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            4.833349704742432,
+            -1.0314881801605225,
+            2.8625597953796387
+          ],
+          "token": " control",
+          "step": 172,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.7007907629013062,
+            -0.40482577681541443,
+            3.8331899642944336
+          ],
+          "token": " enabling",
+          "step": 174,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.5505688190460205,
+            -0.18467292189598083,
+            3.5770928859710693
+          ],
+          "token": " price",
+          "step": 175,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.320462703704834,
+            -1.2577011585235596,
+            2.7380545139312744
+          ],
+          "token": " competitiveness",
+          "step": 176,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            12.608030319213867,
+            3.9657344818115234,
+            10.881843566894531
+          ],
+          "token": "8",
+          "step": 178,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            -0.6592456698417664,
+            1.9895055294036865,
+            5.232868671417236
+          ],
+          "token": "Ad",
           "step": 181,
           "path_id": 1,
           "cluster_id": 2
         },
         {
           "position": [
-            11.841964721679688,
-            1.437328577041626,
-            4.844672679901123
+            -0.8131272196769714,
+            2.082270860671997,
+            5.320796966552734
           ],
-          "token": " Collabor",
+          "token": "apt",
+          "step": 182,
+          "path_id": 1,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            -1.0717037916183472,
+            1.9662606716156006,
+            5.656066417694092
+          ],
+          "token": "ability",
           "step": 183,
           "path_id": 1,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            -0.4535362422466278,
+            2.824634552001953,
+            4.561653137207031
+          ],
+          "token": " Contin",
+          "step": 185,
+          "path_id": 1,
           "cluster_id": 3
         },
         {
           "position": [
-            12.432380676269531,
-            3.057243824005127,
-            3.5385169982910156
+            3.925673484802246,
+            -0.7310632467269897,
+            2.8916733264923096
           ],
-          "token": "ate",
-          "step": 184,
-          "path_id": 1,
-          "cluster_id": -1
-        },
-        {
-          "position": [
-            10.27077579498291,
-            3.71319317817688,
-            4.2281951904296875
-          ],
-          "token": " local",
+          "token": "uously",
           "step": 186,
           "path_id": 1,
-          "cluster_id": 7
+          "cluster_id": 1
         },
         {
           "position": [
-            12.409798622131348,
-            4.473021030426025,
-            3.01798152923584
+            3.349607467651367,
+            -0.5682123303413391,
+            3.1031055450439453
           ],
-          "token": " suppliers",
+          "token": " monitor",
           "step": 187,
           "path_id": 1,
-          "cluster_id": 12
+          "cluster_id": 1
         },
         {
           "position": [
-            12.36591625213623,
-            4.798032760620117,
-            3.2002038955688477
+            3.5405595302581787,
+            -0.5914769768714905,
+            3.000818967819214
           ],
-          "token": " artisans",
+          "token": " market",
+          "step": 188,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            4.252035140991211,
+            -0.7241705656051636,
+            2.8308463096618652
+          ],
+          "token": " trends",
           "step": 189,
           "path_id": 1,
-          "cluster_id": 12
+          "cluster_id": 1
         },
         {
           "position": [
-            10.430900573730469,
-            3.8022873401641846,
-            4.157076358795166
+            1.9803987741470337,
+            0.35002899169921875,
+            4.241707801818848
           ],
-          "token": " service",
+          "token": " adjusting",
+          "step": 191,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            4.426593780517578,
+            -0.9853495955467224,
+            2.650472402572632
+          ],
+          "token": " strategies",
           "step": 192,
           "path_id": 1,
-          "cluster_id": -1
+          "cluster_id": 1
         },
         {
           "position": [
-            12.329568862915039,
-            4.283814907073975,
-            2.811896324157715
+            2.0945448875427246,
+            -0.6255950331687927,
+            3.684457302093506
           ],
-          "token": " providers",
-          "step": 193,
+          "token": " stay",
+          "step": 194,
           "path_id": 1,
-          "cluster_id": 12
+          "cluster_id": 1
         },
         {
           "position": [
-            9.470979690551758,
-            2.6124136447906494,
-            4.032112121582031
+            4.808712005615234,
+            -1.2471590042114258,
+            2.667135000228882
           ],
-          "token": " create",
+          "token": " relevant",
           "step": 195,
           "path_id": 1,
-          "cluster_id": 10
+          "cluster_id": 1
         },
         {
           "position": [
-            9.996700286865234,
-            2.365657091140747,
-            4.051197528839111
+            4.893001079559326,
+            -1.1712034940719604,
+            2.620959758758545
           ],
-          "token": " exclusive",
-          "step": 196,
-          "path_id": 1,
-          "cluster_id": 10
-        },
-        {
-          "position": [
-            11.867594718933105,
-            3.6034576892852783,
-            2.0347800254821777
-          ],
-          "token": " offerings",
+          "token": " responsive",
           "step": 197,
           "path_id": 1,
-          "cluster_id": 8
+          "cluster_id": 1
         },
         {
           "position": [
-            9.370266914367676,
-            2.3680500984191895,
-            3.861096143722534
+            3.3390228748321533,
+            -0.6474898457527161,
+            3.4807658195495605
           ],
-          "token": " reinforce",
+          "token": " changing",
           "step": 199,
           "path_id": 1,
-          "cluster_id": 10
+          "cluster_id": 1
         },
         {
           "position": [
-            9.637542724609375,
-            1.968441367149353,
-            4.187044620513916
+            3.432671546936035,
+            -0.45025113224983215,
+            3.3291773796081543
           ],
-          "token": " local",
+          "token": " consumer",
           "step": 200,
           "path_id": 1,
-          "cluster_id": 10
+          "cluster_id": 1
         },
         {
           "position": [
-            11.502455711364746,
-            4.096376419067383,
-            2.2310876846313477
+            5.483705997467041,
+            -1.0847232341766357,
+            2.8451719284057617
           ],
-          "token": " connections",
+          "token": " demands",
           "step": 201,
           "path_id": 1,
-          "cluster_id": 8
-        },
-        {
-          "position": [
-            -0.3895101845264435,
-            3.2685959339141846,
-            10.337162971496582
-          ],
-          "token": "8",
-          "step": 203,
-          "path_id": 1,
-          "cluster_id": 0
-        },
-        {
-          "position": [
-            9.897972106933594,
-            1.0956029891967773,
-            5.6307549476623535
-          ],
-          "token": "Eff",
-          "step": 206,
-          "path_id": 1,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            9.594871520996094,
-            0.424553245306015,
-            5.682313919067383
-          ],
-          "token": "icient",
-          "step": 207,
-          "path_id": 1,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            8.949529647827148,
-            0.4960731565952301,
-            6.927616596221924
-          ],
-          "token": " Operations",
-          "step": 208,
-          "path_id": 1,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            11.782066345214844,
-            1.2836729288101196,
-            5.001129150390625
-          ],
-          "token": " Opt",
-          "step": 210,
-          "path_id": 1,
-          "cluster_id": 3
-        },
-        {
-          "position": [
-            11.453899383544922,
-            2.770735263824463,
-            5.355228900909424
-          ],
-          "token": "imize",
-          "step": 211,
-          "path_id": 1,
-          "cluster_id": 4
-        },
-        {
-          "position": [
-            11.502127647399902,
-            2.7713401317596436,
-            5.2838616371154785
-          ],
-          "token": " store",
-          "step": 212,
-          "path_id": 1,
-          "cluster_id": 4
-        },
-        {
-          "position": [
-            12.97947883605957,
-            4.27775764465332,
-            3.461015224456787
-          ],
-          "token": " operations",
-          "step": 213,
-          "path_id": 1,
-          "cluster_id": 11
-        },
-        {
-          "position": [
-            11.327856063842773,
-            2.7322022914886475,
-            5.136460781097412
-          ],
-          "token": " minimize",
-          "step": 215,
-          "path_id": 1,
-          "cluster_id": 4
-        },
-        {
-          "position": [
-            13.010162353515625,
-            3.8839821815490723,
-            2.9733285903930664
-          ],
-          "token": " costs",
-          "step": 216,
-          "path_id": 1,
-          "cluster_id": 11
-        },
-        {
-          "position": [
-            10.567837715148926,
-            2.822791814804077,
-            5.221992015838623
-          ],
-          "token": " ensuring",
-          "step": 218,
-          "path_id": 1,
-          "cluster_id": 4
-        },
-        {
-          "position": [
-            12.794537544250488,
-            3.517944097518921,
-            2.9878087043762207
-          ],
-          "token": " competitiveness",
-          "step": 219,
-          "path_id": 1,
-          "cluster_id": 11
-        },
-        {
-          "position": [
-            12.788451194763184,
-            3.2799644470214844,
-            2.74601674079895
-          ],
-          "token": " terms",
-          "step": 221,
-          "path_id": 1,
-          "cluster_id": -1
-        },
-        {
-          "position": [
-            12.910379409790039,
-            3.607271432876587,
-            2.9859817028045654
-          ],
-          "token": " pricing",
-          "step": 223,
-          "path_id": 1,
-          "cluster_id": 11
-        },
-        {
-          "position": [
-            12.68715763092041,
-            3.5003247261047363,
-            2.7488701343536377
-          ],
-          "token": " efficiency",
-          "step": 225,
-          "path_id": 1,
-          "cluster_id": 11
-        },
-        {
-          "position": [
-            -0.3025912046432495,
-            3.1254866123199463,
-            10.197016716003418
-          ],
-          "token": "9",
-          "step": 227,
-          "path_id": 1,
-          "cluster_id": 0
-        },
-        {
-          "position": [
-            9.920099258422852,
-            1.4600564241409302,
-            6.403336048126221
-          ],
-          "token": "Word",
-          "step": 230,
-          "path_id": 1,
           "cluster_id": 1
-        },
-        {
-          "position": [
-            10.001086235046387,
-            1.372702717781067,
-            6.329741954803467
-          ],
-          "token": "-of",
-          "step": 231,
-          "path_id": 1,
-          "cluster_id": 1
-        },
-        {
-          "position": [
-            10.161439895629883,
-            1.3044695854187012,
-            6.0936384201049805
-          ],
-          "token": "-M",
-          "step": 232,
-          "path_id": 1,
-          "cluster_id": 1
-        },
-        {
-          "position": [
-            9.375938415527344,
-            0.9214620590209961,
-            6.340695381164551
-          ],
-          "token": "outh",
-          "step": 233,
-          "path_id": 1,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            11.710225105285645,
-            1.2220040559768677,
-            4.948364734649658
-          ],
-          "token": " Enc",
-          "step": 235,
-          "path_id": 1,
-          "cluster_id": 3
-        },
-        {
-          "position": [
-            8.681169509887695,
-            2.5145277976989746,
-            4.452503681182861
-          ],
-          "token": "ourage",
-          "step": 236,
-          "path_id": 1,
-          "cluster_id": 10
-        },
-        {
-          "position": [
-            8.702688217163086,
-            2.2068796157836914,
-            4.72832727432251
-          ],
-          "token": " customer",
-          "step": 237,
-          "path_id": 1,
-          "cluster_id": 10
-        },
-        {
-          "position": [
-            12.528275489807129,
-            4.3852410316467285,
-            2.416388988494873
-          ],
-          "token": " referrals",
-          "step": 238,
-          "path_id": 1,
-          "cluster_id": 12
-        },
-        {
-          "position": [
-            10.00794506072998,
-            1.6329528093338013,
-            6.286888599395752
-          ],
-          "token": " word",
-          "step": 240,
-          "path_id": 1,
-          "cluster_id": 1
-        },
-        {
-          "position": [
-            9.98405933380127,
-            1.4433144330978394,
-            6.2139081954956055
-          ],
-          "token": "-of",
-          "step": 241,
-          "path_id": 1,
-          "cluster_id": 1
-        },
-        {
-          "position": [
-            8.890539169311523,
-            2.0743274688720703,
-            4.95820951461792
-          ],
-          "token": "-mouth",
-          "step": 242,
-          "path_id": 1,
-          "cluster_id": 10
-        },
-        {
-          "position": [
-            12.53696346282959,
-            4.366097450256348,
-            2.4553840160369873
-          ],
-          "token": " marketing",
-          "step": 243,
-          "path_id": 1,
-          "cluster_id": 12
-        },
-        {
-          "position": [
-            8.694329261779785,
-            2.2818331718444824,
-            4.319384574890137
-          ],
-          "token": " build",
-          "step": 245,
-          "path_id": 1,
-          "cluster_id": 10
-        },
-        {
-          "position": [
-            8.684916496276855,
-            2.198232650756836,
-            4.453317165374756
-          ],
-          "token": " loyal",
-          "step": 247,
-          "path_id": 1,
-          "cluster_id": 10
-        },
-        {
-          "position": [
-            8.627120971679688,
-            2.1879823207855225,
-            4.640128135681152
-          ],
-          "token": " customer",
-          "step": 248,
-          "path_id": 1,
-          "cluster_id": 10
-        },
-        {
-          "position": [
-            11.739095687866211,
-            4.207993984222412,
-            1.6083369255065918
-          ],
-          "token": " base",
-          "step": 249,
-          "path_id": 1,
-          "cluster_id": 8
-        },
-        {
-          "position": [
-            -0.34573936462402344,
-            3.243108034133911,
-            10.31214427947998
-          ],
-          "token": "10",
-          "step": 251,
-          "path_id": 1,
-          "cluster_id": 0
-        },
-        {
-          "position": [
-            9.684273719787598,
-            0.3369561433792114,
-            5.919875144958496
-          ],
-          "token": "Continuous",
-          "step": 254,
-          "path_id": 1,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            8.815580368041992,
-            0.6013706922531128,
-            7.048059940338135
-          ],
-          "token": " Improvement",
-          "step": 255,
-          "path_id": 1,
-          "cluster_id": 2
         }
       ]
     },
     {
       "id": 2,
       "name": "step_back_2",
-      "prompt": "1. **Unique Value Proposition (UVP)**: Develop a clear, unique value proposition that sets your business apart from competitors, addressing specific customer needs or pain points.\n2. **Local Focus**: Leverage local connections and community involvement to create a sense of belonging, fostering loyalty and trust among customers.\n3. **Niche Market Targeting**: Identify a specific niche or segment of the market, allowing for focused marketing efforts and resource allocation.\n4. **Personalized Service**: Offer exceptional, personalized service to build strong relationships with customers and differentiate from impersonal corporate stores.\n5. **Limited Product Offerings**: Curate a curated selection of products that are relevant to your target market, rather than carrying a wide range of products.\n6. **Transparency and Authenticity**: Maintain transparency in operations, pricing, and communication, ensuring trust with customers and avoiding corporate image manipulation.\n7. **Local Partnerships**: Collaborate with local suppliers, artisans, or service providers to create exclusive offerings and reinforce local connections.\n8. **Efficient Operations**: Optimize store operations to minimize costs, ensuring competitiveness in terms of pricing and efficiency.\n9. **Word-of-Mouth**: Encourage customer referrals and word-of-mouth marketing to build a loyal customer base.\n10. **Continuous Improvement\n\nBased on the fundamental economic principles you just explained, propose a concrete, 3-step turnaround strategy for a local independent bookstore that is losing customers to a massive new supermarket chain across the street.",
-      "response": "1. **Product Curation and Pricing**: Reduce the store's inventory to focus on niche titles and local authors, priced competitively with online retailers but with a premium for personalized service. This will create a curated selection that appeals to book enthusiasts and fosters a sense of exclusivity.\n2. **Partnerships and Events**: Collaborate with local authors, publishers, and book clubs to host exclusive events, workshops, and book signings, leveraging the store's unique setting and personalized service to create a hub for literary enthusiasts. This will foster a sense of community and drive foot traffic.\n3. **Operations Optimization**: Implement efficient store operations by streamlining processes, such as online ordering and inventory management, to minimize costs and ensure timely restocking. This will enable the store to compete on pricing and offer a more personalized shopping experience, encouraging customers to choose the store over the supermarket chain.",
+      "prompt": "1. **Unique Value Proposition**: Offer a distinctive product or service that fulfills a specific need or desire not met by competitors.\n2. **Brand Identity**: Develop a strong, consistent brand image that resonates with target audience, creating emotional connections and loyalty.\n3. **Personalization**: Cater to individual customers' needs and preferences through tailored experiences, fostering relationships and retention.\n4. **Local Focus**: Leverage the benefits of local presence, such as community involvement, to build trust and differentiate from corporate giants.\n5. **Innovative Services**: Offer services that complement products, enhancing the overall shopping experience and justifying higher prices.\n6. **Strategic Partnerships**: Collaborate with complementary businesses to expand offerings and increase reach without duplicating resources.\n7. **Cost Leadership**: Minimize costs through efficient operations, supply chain management, and effective inventory control, enabling price competitiveness.\n8. **Adaptability**: Continuously monitor market trends, adjusting strategies to stay relevant and responsive to changing consumer demands.\n\nBased on the fundamental economic principles you just explained, propose a concrete, 3-step turnaround strategy for a local independent bookstore that is losing customers to a massive new supermarket chain across the street.",
+      "response": "1. **Revise Store Experience**: Implement personalized services such as in-store book clubs, author meet-and-greets, and curated recommendations based on customers' reading history, fostering a sense of community and loyalty.\n2. **Local Partnerships**: Collaborate with nearby businesses to offer bundled services, such as in-store workshops, coffee and book pairings, and joint promotions, increasing foot traffic and reinforcing the local focus.\n3. **Dynamic Pricing**: Adopt an intelligent inventory management system that adjusts pricing in real-time based on sales data, competitor prices, and seasonal demand, ensuring that the store remains competitive and profitable while maintaining a unique value proposition.",
       "points": [
         {
           "position": [
-            -0.5531569719314575,
-            2.9347174167633057,
-            9.993075370788574
+            12.112227439880371,
+            4.659437656402588,
+            10.628669738769531
           ],
           "token": "1",
           "step": 0,
@@ -1938,1183 +2235,885 @@
         },
         {
           "position": [
-            9.433741569519043,
-            -0.024593155831098557,
-            6.627337455749512
+            -0.6389512419700623,
+            2.508913040161133,
+            4.900999546051025
           ],
-          "token": "Product",
+          "token": "Rev",
           "step": 3,
           "path_id": 2,
-          "cluster_id": 2
+          "cluster_id": 3
         },
         {
           "position": [
-            9.506614685058594,
-            0.07832677662372589,
-            6.4206671714782715
+            0.11055819690227509,
+            1.3205504417419434,
+            5.050094127655029
           ],
-          "token": " C",
+          "token": "ise",
           "step": 4,
           "path_id": 2,
           "cluster_id": 2
         },
         {
           "position": [
-            9.201210021972656,
-            0.11787480115890503,
-            6.9879889488220215
+            -0.22505490481853485,
+            1.4636956453323364,
+            5.198174476623535
           ],
-          "token": "uration",
+          "token": " Store",
           "step": 5,
           "path_id": 2,
           "cluster_id": 2
         },
         {
           "position": [
-            9.320915222167969,
-            -0.006516109686344862,
-            6.873516082763672
+            -1.0299744606018066,
+            1.809132695198059,
+            5.755030632019043
           ],
-          "token": " Pricing",
-          "step": 7,
+          "token": " Experience",
+          "step": 6,
           "path_id": 2,
           "cluster_id": 2
         },
         {
           "position": [
-            11.642425537109375,
-            2.325791358947754,
-            3.551616668701172
-          ],
-          "token": " Reduce",
-          "step": 9,
-          "path_id": 2,
-          "cluster_id": 6
-        },
-        {
-          "position": [
-            11.648655891418457,
-            2.411463737487793,
-            3.5586955547332764
-          ],
-          "token": " store",
-          "step": 11,
-          "path_id": 2,
-          "cluster_id": 6
-        },
-        {
-          "position": [
-            11.5812406539917,
-            2.2658839225769043,
-            3.5542449951171875
-          ],
-          "token": "'s",
-          "step": 12,
-          "path_id": 2,
-          "cluster_id": 6
-        },
-        {
-          "position": [
-            11.848640441894531,
-            2.514619827270508,
-            3.3752622604370117
-          ],
-          "token": " inventory",
-          "step": 13,
-          "path_id": 2,
-          "cluster_id": 6
-        },
-        {
-          "position": [
-            11.99820613861084,
-            2.738769292831421,
-            3.3832647800445557
-          ],
-          "token": " focus",
-          "step": 15,
-          "path_id": 2,
-          "cluster_id": 6
-        },
-        {
-          "position": [
-            10.379095077514648,
-            3.36411714553833,
-            4.350887775421143
-          ],
-          "token": " niche",
-          "step": 17,
-          "path_id": 2,
-          "cluster_id": 7
-        },
-        {
-          "position": [
-            11.62818431854248,
-            3.531257152557373,
-            2.932631254196167
-          ],
-          "token": " titles",
-          "step": 18,
-          "path_id": 2,
-          "cluster_id": -1
-        },
-        {
-          "position": [
-            10.234111785888672,
-            3.3223109245300293,
-            4.413395881652832
-          ],
-          "token": " local",
-          "step": 20,
-          "path_id": 2,
-          "cluster_id": 7
-        },
-        {
-          "position": [
-            11.787421226501465,
-            4.37500524520874,
-            3.257524013519287
-          ],
-          "token": " authors",
-          "step": 21,
-          "path_id": 2,
-          "cluster_id": 12
-        },
-        {
-          "position": [
-            12.333124160766602,
-            3.322200298309326,
-            3.217820405960083
-          ],
-          "token": " priced",
-          "step": 23,
-          "path_id": 2,
-          "cluster_id": -1
-        },
-        {
-          "position": [
-            12.517928123474121,
-            3.121382713317871,
-            3.5781590938568115
-          ],
-          "token": " competit",
-          "step": 24,
-          "path_id": 2,
-          "cluster_id": -1
-        },
-        {
-          "position": [
-            12.3927640914917,
-            3.5781400203704834,
-            3.1254098415374756
-          ],
-          "token": "ively",
-          "step": 25,
-          "path_id": 2,
-          "cluster_id": -1
-        },
-        {
-          "position": [
-            10.671233177185059,
-            3.28438138961792,
-            4.276461601257324
-          ],
-          "token": " online",
-          "step": 27,
-          "path_id": 2,
-          "cluster_id": 7
-        },
-        {
-          "position": [
-            11.824674606323242,
-            4.119112491607666,
-            2.930360794067383
-          ],
-          "token": " retailers",
-          "step": 28,
-          "path_id": 2,
-          "cluster_id": -1
-        },
-        {
-          "position": [
-            10.891693115234375,
-            2.63836407661438,
-            3.7247133255004883
-          ],
-          "token": " premium",
-          "step": 32,
-          "path_id": 2,
-          "cluster_id": -1
-        },
-        {
-          "position": [
-            10.425237655639648,
-            2.5050525665283203,
-            4.328045845031738
-          ],
-          "token": " personalized",
-          "step": 34,
-          "path_id": 2,
-          "cluster_id": 9
-        },
-        {
-          "position": [
-            11.568063735961914,
-            4.311838150024414,
-            2.712263584136963
-          ],
-          "token": " service",
-          "step": 35,
-          "path_id": 2,
-          "cluster_id": 12
-        },
-        {
-          "position": [
-            9.171375274658203,
-            2.7564024925231934,
-            4.037013530731201
-          ],
-          "token": " create",
-          "step": 39,
-          "path_id": 2,
-          "cluster_id": 10
-        },
-        {
-          "position": [
-            10.654951095581055,
-            2.322958469390869,
-            3.7168657779693604
-          ],
-          "token": " curated",
-          "step": 41,
-          "path_id": 2,
-          "cluster_id": 9
-        },
-        {
-          "position": [
-            11.631173133850098,
-            3.128702163696289,
-            2.379399538040161
-          ],
-          "token": " selection",
-          "step": 42,
-          "path_id": 2,
-          "cluster_id": 6
-        },
-        {
-          "position": [
-            11.799873352050781,
-            3.4262871742248535,
-            2.4025421142578125
-          ],
-          "token": " appeals",
-          "step": 44,
-          "path_id": 2,
-          "cluster_id": 6
-        },
-        {
-          "position": [
-            9.484546661376953,
-            3.7080025672912598,
-            4.580256938934326
-          ],
-          "token": " book",
-          "step": 46,
-          "path_id": 2,
-          "cluster_id": 7
-        },
-        {
-          "position": [
-            11.411937713623047,
-            4.20853328704834,
-            1.6995183229446411
-          ],
-          "token": " enthusiasts",
-          "step": 47,
-          "path_id": 2,
-          "cluster_id": 8
-        },
-        {
-          "position": [
-            11.796517372131348,
-            1.278470516204834,
-            5.026787281036377
-          ],
-          "token": " fost",
-          "step": 49,
-          "path_id": 2,
-          "cluster_id": 3
-        },
-        {
-          "position": [
-            8.887271881103516,
-            2.6377854347229004,
-            4.083757400512695
-          ],
-          "token": "ers",
-          "step": 50,
-          "path_id": 2,
-          "cluster_id": 10
-        },
-        {
-          "position": [
-            12.544618606567383,
-            3.04923415184021,
-            2.3066306114196777
-          ],
-          "token": " sense",
-          "step": 52,
-          "path_id": 2,
-          "cluster_id": -1
-        },
-        {
-          "position": [
-            10.07444953918457,
-            1.2116985321044922,
-            5.3794169425964355
-          ],
-          "token": " exclus",
-          "step": 54,
-          "path_id": 2,
-          "cluster_id": -1
-        },
-        {
-          "position": [
-            11.542991638183594,
-            4.172761917114258,
-            2.1889679431915283
-          ],
-          "token": "ivity",
-          "step": 55,
-          "path_id": 2,
-          "cluster_id": 8
-        },
-        {
-          "position": [
-            -0.5143707394599915,
-            2.9718515872955322,
-            10.0343017578125
-          ],
-          "token": "2",
-          "step": 57,
-          "path_id": 2,
-          "cluster_id": 0
-        },
-        {
-          "position": [
-            9.547941207885742,
-            0.5475796461105347,
-            6.8140549659729
-          ],
-          "token": "Part",
-          "step": 60,
-          "path_id": 2,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            9.47282600402832,
-            0.6393345594406128,
-            7.13576602935791
-          ],
-          "token": "ners",
-          "step": 61,
-          "path_id": 2,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            9.245859146118164,
-            0.4511144459247589,
-            7.126652240753174
-          ],
-          "token": "hips",
-          "step": 62,
-          "path_id": 2,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            8.944384574890137,
-            0.477804571390152,
-            7.083600997924805
-          ],
-          "token": " Events",
-          "step": 64,
-          "path_id": 2,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            11.809367179870605,
-            1.396491527557373,
-            4.852783679962158
-          ],
-          "token": " Collabor",
-          "step": 66,
-          "path_id": 2,
-          "cluster_id": 3
-        },
-        {
-          "position": [
-            12.355367660522461,
-            2.9791316986083984,
-            3.4533610343933105
-          ],
-          "token": "ate",
-          "step": 67,
-          "path_id": 2,
-          "cluster_id": -1
-        },
-        {
-          "position": [
-            10.071741104125977,
-            3.6463053226470947,
-            4.438055992126465
-          ],
-          "token": " local",
-          "step": 69,
-          "path_id": 2,
-          "cluster_id": 7
-        },
-        {
-          "position": [
-            12.20893669128418,
-            4.772642135620117,
-            3.3243632316589355
-          ],
-          "token": " authors",
-          "step": 70,
-          "path_id": 2,
-          "cluster_id": 12
-        },
-        {
-          "position": [
-            12.299646377563477,
-            4.772461891174316,
-            3.18979549407959
-          ],
-          "token": " publishers",
-          "step": 72,
-          "path_id": 2,
-          "cluster_id": 12
-        },
-        {
-          "position": [
-            9.781268119812012,
-            3.7492730617523193,
-            4.607339859008789
-          ],
-          "token": " book",
-          "step": 75,
-          "path_id": 2,
-          "cluster_id": 7
-        },
-        {
-          "position": [
-            12.076886177062988,
-            4.568990230560303,
-            3.082799196243286
-          ],
-          "token": " clubs",
-          "step": 76,
-          "path_id": 2,
-          "cluster_id": 12
-        },
-        {
-          "position": [
-            9.825531959533691,
-            3.5308353900909424,
-            4.702870845794678
-          ],
-          "token": " host",
-          "step": 78,
-          "path_id": 2,
-          "cluster_id": 7
-        },
-        {
-          "position": [
-            9.817421913146973,
-            3.501262664794922,
-            4.686807632446289
-          ],
-          "token": " exclusive",
-          "step": 79,
-          "path_id": 2,
-          "cluster_id": 7
-        },
-        {
-          "position": [
-            11.87044906616211,
-            4.875074863433838,
-            3.161902904510498
-          ],
-          "token": " events",
-          "step": 80,
-          "path_id": 2,
-          "cluster_id": 12
-        },
-        {
-          "position": [
-            12.007311820983887,
-            4.972787380218506,
-            3.132643699645996
-          ],
-          "token": " workshops",
-          "step": 82,
-          "path_id": 2,
-          "cluster_id": 12
-        },
-        {
-          "position": [
-            9.652885437011719,
-            3.7428102493286133,
-            4.761411666870117
-          ],
-          "token": " book",
-          "step": 85,
-          "path_id": 2,
-          "cluster_id": 7
-        },
-        {
-          "position": [
-            11.78194808959961,
-            4.765757083892822,
-            3.0045180320739746
-          ],
-          "token": " signings",
-          "step": 86,
-          "path_id": 2,
-          "cluster_id": 12
-        },
-        {
-          "position": [
-            9.200769424438477,
-            2.4150400161743164,
-            3.7949016094207764
-          ],
-          "token": " leveraging",
-          "step": 88,
-          "path_id": 2,
-          "cluster_id": 10
-        },
-        {
-          "position": [
-            11.365334510803223,
-            3.8376846313476562,
-            3.0325570106506348
-          ],
-          "token": " store",
-          "step": 90,
-          "path_id": 2,
-          "cluster_id": -1
-        },
-        {
-          "position": [
-            9.661401748657227,
-            2.2702367305755615,
-            3.7493655681610107
-          ],
-          "token": "'s",
-          "step": 91,
-          "path_id": 2,
-          "cluster_id": 10
-        },
-        {
-          "position": [
-            10.158292770385742,
-            2.1434669494628906,
-            3.905700922012329
-          ],
-          "token": " unique",
-          "step": 92,
-          "path_id": 2,
-          "cluster_id": 10
-        },
-        {
-          "position": [
-            11.979647636413574,
-            4.0473408699035645,
-            2.575047016143799
-          ],
-          "token": " setting",
-          "step": 93,
-          "path_id": 2,
-          "cluster_id": 12
-        },
-        {
-          "position": [
-            10.519083976745605,
-            2.341047525405884,
-            4.159774303436279
-          ],
-          "token": " personalized",
-          "step": 95,
-          "path_id": 2,
-          "cluster_id": 9
-        },
-        {
-          "position": [
-            11.900538444519043,
-            4.209729194641113,
-            2.695526361465454
-          ],
-          "token": " service",
-          "step": 96,
-          "path_id": 2,
-          "cluster_id": 12
-        },
-        {
-          "position": [
-            9.175312042236328,
-            2.7919154167175293,
-            4.025713920593262
-          ],
-          "token": " create",
-          "step": 98,
-          "path_id": 2,
-          "cluster_id": 10
-        },
-        {
-          "position": [
-            12.353330612182617,
-            3.434648275375366,
-            2.2972536087036133
-          ],
-          "token": " hub",
-          "step": 100,
-          "path_id": 2,
-          "cluster_id": -1
-        },
-        {
-          "position": [
-            9.494122505187988,
-            3.670362710952759,
-            4.5260491371154785
-          ],
-          "token": " literary",
-          "step": 102,
-          "path_id": 2,
-          "cluster_id": 7
-        },
-        {
-          "position": [
-            11.558349609375,
-            4.333909034729004,
-            2.1430599689483643
-          ],
-          "token": " enthusiasts",
-          "step": 103,
-          "path_id": 2,
-          "cluster_id": 8
-        },
-        {
-          "position": [
-            8.875313758850098,
-            2.6038787364959717,
-            4.029481410980225
-          ],
-          "token": " foster",
-          "step": 107,
-          "path_id": 2,
-          "cluster_id": 10
-        },
-        {
-          "position": [
-            12.491315841674805,
-            3.1040472984313965,
-            2.2654099464416504
-          ],
-          "token": " sense",
-          "step": 109,
-          "path_id": 2,
-          "cluster_id": -1
-        },
-        {
-          "position": [
-            12.155692100524902,
-            3.8587682247161865,
-            1.8324493169784546
-          ],
-          "token": " community",
-          "step": 111,
-          "path_id": 2,
-          "cluster_id": 8
-        },
-        {
-          "position": [
-            8.645964622497559,
-            2.744257926940918,
-            4.370299816131592
-          ],
-          "token": " drive",
-          "step": 113,
-          "path_id": 2,
-          "cluster_id": 10
-        },
-        {
-          "position": [
-            8.780540466308594,
-            2.7471377849578857,
-            4.724493026733398
-          ],
-          "token": " foot",
-          "step": 114,
-          "path_id": 2,
-          "cluster_id": -1
-        },
-        {
-          "position": [
-            11.727967262268066,
-            4.374499797821045,
-            1.993659257888794
-          ],
-          "token": " traffic",
-          "step": 115,
-          "path_id": 2,
-          "cluster_id": 8
-        },
-        {
-          "position": [
-            -0.6017128229141235,
-            3.058453321456909,
-            10.11561393737793
-          ],
-          "token": "3",
-          "step": 117,
-          "path_id": 2,
-          "cluster_id": 0
-        },
-        {
-          "position": [
-            9.406436920166016,
-            -0.017537621781229973,
-            6.815377712249756
-          ],
-          "token": "Operations",
-          "step": 120,
-          "path_id": 2,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            9.051206588745117,
-            0.5055733919143677,
-            7.18679666519165
-          ],
-          "token": " Optimization",
-          "step": 121,
-          "path_id": 2,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            11.06750774383545,
-            2.952472686767578,
-            5.409839153289795
+            2.485182523727417,
+            1.1889643669128418,
+            4.372310638427734
           ],
           "token": " Implement",
-          "step": 123,
-          "path_id": 2,
-          "cluster_id": 4
-        },
-        {
-          "position": [
-            11.446540832519531,
-            2.925480604171753,
-            5.471324443817139
-          ],
-          "token": " efficient",
-          "step": 124,
-          "path_id": 2,
-          "cluster_id": 4
-        },
-        {
-          "position": [
-            11.454877853393555,
-            2.860471248626709,
-            5.523887634277344
-          ],
-          "token": " store",
-          "step": 125,
-          "path_id": 2,
-          "cluster_id": 4
-        },
-        {
-          "position": [
-            12.999735832214355,
-            4.375729084014893,
-            3.520773410797119
-          ],
-          "token": " operations",
-          "step": 126,
-          "path_id": 2,
-          "cluster_id": 11
-        },
-        {
-          "position": [
-            10.065237998962402,
-            1.634227991104126,
-            6.3447113037109375
-          ],
-          "token": " stream",
-          "step": 128,
+          "step": 8,
           "path_id": 2,
           "cluster_id": 1
         },
         {
           "position": [
-            11.535812377929688,
-            2.9270501136779785,
-            5.329620838165283
-          ],
-          "token": "lining",
-          "step": 129,
-          "path_id": 2,
-          "cluster_id": 4
-        },
-        {
-          "position": [
-            12.898843765258789,
-            4.396362781524658,
-            3.399722099304199
-          ],
-          "token": " processes",
-          "step": 130,
-          "path_id": 2,
-          "cluster_id": 11
-        },
-        {
-          "position": [
-            11.654102325439453,
-            3.1154487133026123,
-            5.3559722900390625
-          ],
-          "token": " online",
-          "step": 134,
-          "path_id": 2,
-          "cluster_id": 4
-        },
-        {
-          "position": [
-            11.919897079467773,
-            3.2512264251708984,
-            5.213551044464111
-          ],
-          "token": " ordering",
-          "step": 135,
-          "path_id": 2,
-          "cluster_id": 4
-        },
-        {
-          "position": [
-            11.737077713012695,
-            3.084380626678467,
-            5.3612871170043945
-          ],
-          "token": " inventory",
-          "step": 137,
-          "path_id": 2,
-          "cluster_id": 4
-        },
-        {
-          "position": [
-            12.858359336853027,
-            4.244754314422607,
-            3.667220115661621
-          ],
-          "token": " management",
-          "step": 138,
-          "path_id": 2,
-          "cluster_id": 11
-        },
-        {
-          "position": [
-            11.340780258178711,
-            2.8171002864837646,
-            5.228116512298584
-          ],
-          "token": " minimize",
-          "step": 141,
-          "path_id": 2,
-          "cluster_id": 4
-        },
-        {
-          "position": [
-            12.878759384155273,
-            3.799603223800659,
-            3.0854783058166504
-          ],
-          "token": " costs",
-          "step": 142,
-          "path_id": 2,
-          "cluster_id": 11
-        },
-        {
-          "position": [
-            10.77023983001709,
-            2.8488757610321045,
-            5.343265533447266
-          ],
-          "token": " ensure",
-          "step": 144,
-          "path_id": 2,
-          "cluster_id": 4
-        },
-        {
-          "position": [
-            11.57833194732666,
-            2.9697484970092773,
-            5.396393775939941
-          ],
-          "token": " timely",
-          "step": 145,
-          "path_id": 2,
-          "cluster_id": 4
-        },
-        {
-          "position": [
-            11.757288932800293,
-            2.9924325942993164,
-            5.264242649078369
-          ],
-          "token": " rest",
-          "step": 146,
-          "path_id": 2,
-          "cluster_id": 4
-        },
-        {
-          "position": [
-            12.844961166381836,
-            3.8741636276245117,
-            3.4581401348114014
-          ],
-          "token": "ocking",
-          "step": 147,
-          "path_id": 2,
-          "cluster_id": 11
-        },
-        {
-          "position": [
-            10.631048202514648,
-            2.8428750038146973,
-            5.216511249542236
-          ],
-          "token": " enable",
-          "step": 151,
-          "path_id": 2,
-          "cluster_id": 4
-        },
-        {
-          "position": [
-            11.59975528717041,
-            3.9878079891204834,
-            2.9261395931243896
-          ],
-          "token": " store",
-          "step": 153,
-          "path_id": 2,
-          "cluster_id": -1
-        },
-        {
-          "position": [
-            12.624907493591309,
-            3.2440595626831055,
-            3.321614980697632
-          ],
-          "token": " compete",
-          "step": 155,
-          "path_id": 2,
-          "cluster_id": -1
-        },
-        {
-          "position": [
-            12.881988525390625,
-            3.6371231079101562,
-            3.0868682861328125
-          ],
-          "token": " pricing",
-          "step": 157,
-          "path_id": 2,
-          "cluster_id": 11
-        },
-        {
-          "position": [
-            10.45419692993164,
-            2.833070755004883,
-            5.156250953674316
-          ],
-          "token": " offer",
-          "step": 159,
-          "path_id": 2,
-          "cluster_id": 4
-        },
-        {
-          "position": [
-            10.578495979309082,
-            2.3626084327697754,
-            4.060164928436279
+            2.888314723968506,
+            1.4334927797317505,
+            4.422590255737305
           ],
           "token": " personalized",
-          "step": 162,
+          "step": 9,
           "path_id": 2,
-          "cluster_id": 9
+          "cluster_id": 1
         },
         {
           "position": [
-            10.706554412841797,
-            2.394411087036133,
-            3.783047914505005
+            5.311801433563232,
+            0.30424538254737854,
+            4.048024654388428
           ],
-          "token": " shopping",
-          "step": 163,
+          "token": " services",
+          "step": 10,
           "path_id": 2,
-          "cluster_id": 9
+          "cluster_id": 1
         },
         {
           "position": [
-            11.698734283447266,
-            4.478147029876709,
-            2.496251344680786
+            3.1195993423461914,
+            1.745623230934143,
+            4.418337345123291
           ],
-          "token": " experience",
-          "step": 164,
+          "token": "-store",
+          "step": 14,
           "path_id": 2,
-          "cluster_id": -1
+          "cluster_id": 1
         },
         {
           "position": [
-            8.618404388427734,
-            2.8169009685516357,
-            4.472930431365967
+            3.4232640266418457,
+            1.8879013061523438,
+            4.280129909515381
           ],
-          "token": " encouraging",
-          "step": 166,
+          "token": " book",
+          "step": 15,
           "path_id": 2,
-          "cluster_id": 10
+          "cluster_id": 1
         },
         {
           "position": [
-            11.563860893249512,
-            4.404430389404297,
-            1.7963736057281494
+            5.303607940673828,
+            0.6371302008628845,
+            3.525535821914673
+          ],
+          "token": " clubs",
+          "step": 16,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            3.6484642028808594,
+            1.9447013139724731,
+            4.0926032066345215
+          ],
+          "token": " author",
+          "step": 18,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            4.139651298522949,
+            1.6491761207580566,
+            3.858070135116577
+          ],
+          "token": " meet",
+          "step": 19,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            3.9563562870025635,
+            1.7868075370788574,
+            3.854097843170166
+          ],
+          "token": "-and",
+          "step": 20,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            3.9646284580230713,
+            1.8080774545669556,
+            3.839923620223999
+          ],
+          "token": "-g",
+          "step": 21,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.152275562286377,
+            0.5066812038421631,
+            3.4279534816741943
+          ],
+          "token": "ets",
+          "step": 23,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            3.0192136764526367,
+            1.5548746585845947,
+            4.5860748291015625
+          ],
+          "token": " curated",
+          "step": 26,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.4114484786987305,
+            0.4354526400566101,
+            3.415473461151123
+          ],
+          "token": " recommendations",
+          "step": 27,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            4.508641719818115,
+            0.03714221715927124,
+            3.2189016342163086
+          ],
+          "token": " based",
+          "step": 28,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            4.291079044342041,
+            -0.01925077848136425,
+            3.3477039337158203
           ],
           "token": " customers",
-          "step": 167,
+          "step": 30,
           "path_id": 2,
-          "cluster_id": 8
+          "cluster_id": 1
         },
         {
           "position": [
-            9.9539155960083,
-            3.1044676303863525,
-            3.0021684169769287
+            3.807227849960327,
+            -0.06092841178178787,
+            3.2709054946899414
           ],
-          "token": " choose",
-          "step": 169,
+          "token": " reading",
+          "step": 32,
           "path_id": 2,
-          "cluster_id": -1
+          "cluster_id": 1
         },
         {
           "position": [
-            11.155145645141602,
-            4.0626139640808105,
-            2.730867624282837
+            5.1120924949646,
+            0.2547459304332733,
+            3.2805206775665283
+          ],
+          "token": " history",
+          "step": 33,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.5246036052703857,
+            -0.040019143372774124,
+            5.30689811706543
+          ],
+          "token": " fostering",
+          "step": 35,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.359768867492676,
+            -1.0476645231246948,
+            4.252971172332764
+          ],
+          "token": " sense",
+          "step": 37,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.362224102020264,
+            -1.286921501159668,
+            4.084208011627197
+          ],
+          "token": " community",
+          "step": 39,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.698943614959717,
+            -1.2240533828735352,
+            4.044835090637207
+          ],
+          "token": " loyalty",
+          "step": 41,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            12.192975044250488,
+            4.542813777923584,
+            10.726612091064453
+          ],
+          "token": "2",
+          "step": 43,
+          "path_id": 2,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            -0.2084364891052246,
+            1.3503652811050415,
+            5.324074745178223
+          ],
+          "token": "Local",
+          "step": 46,
+          "path_id": 2,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            -1.2146811485290527,
+            1.7030127048492432,
+            5.85434627532959
+          ],
+          "token": " Partners",
+          "step": 47,
+          "path_id": 2,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            -1.1368825435638428,
+            1.870307445526123,
+            5.816276550292969
+          ],
+          "token": "hips",
+          "step": 48,
+          "path_id": 2,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            -0.47122570872306824,
+            2.777172088623047,
+            4.804166316986084
+          ],
+          "token": " Collabor",
+          "step": 50,
+          "path_id": 2,
+          "cluster_id": 3
+        },
+        {
+          "position": [
+            4.639770030975342,
+            0.08781112730503082,
+            3.8339099884033203
+          ],
+          "token": "ate",
+          "step": 51,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.519904851913452,
+            2.143181800842285,
+            4.038143634796143
+          ],
+          "token": " nearby",
+          "step": 53,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.175991535186768,
+            0.08693009614944458,
+            3.669524669647217
+          ],
+          "token": " businesses",
+          "step": 54,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.547187328338623,
+            1.7275110483169556,
+            4.686113357543945
+          ],
+          "token": " offer",
+          "step": 56,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.7291433811187744,
+            1.9426137208938599,
+            4.507500648498535
+          ],
+          "token": " bundled",
+          "step": 57,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.282636642456055,
+            0.39523929357528687,
+            3.987752914428711
+          ],
+          "token": " services",
+          "step": 58,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.951711654663086,
+            1.8705122470855713,
+            4.400514602661133
+          ],
+          "token": "-store",
+          "step": 63,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.214957237243652,
+            0.6748391389846802,
+            3.5872669219970703
+          ],
+          "token": " workshops",
+          "step": 64,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            3.6590230464935303,
+            2.018005132675171,
+            4.188488960266113
+          ],
+          "token": " coffee",
+          "step": 66,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            3.5883424282073975,
+            2.0366556644439697,
+            4.224610328674316
+          ],
+          "token": " book",
+          "step": 68,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            3.8400180339813232,
+            1.9332159757614136,
+            4.025181293487549
+          ],
+          "token": " pair",
+          "step": 69,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.2547430992126465,
+            0.7451241612434387,
+            3.5874197483062744
+          ],
+          "token": "ings",
+          "step": 70,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.737475633621216,
+            2.0031402111053467,
+            4.516541004180908
+          ],
+          "token": " joint",
+          "step": 73,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.4411845207214355,
+            0.6474138498306274,
+            3.4567067623138428
+          ],
+          "token": " promotions",
+          "step": 74,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.218369960784912,
+            -0.3200104236602783,
+            4.730289459228516
+          ],
+          "token": " increasing",
+          "step": 76,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            3.983480453491211,
+            0.5149791836738586,
+            3.5458078384399414
+          ],
+          "token": " foot",
+          "step": 77,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            4.795220851898193,
+            -1.2273365259170532,
+            3.604119300842285
+          ],
+          "token": " traffic",
+          "step": 78,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.1975507736206055,
+            -0.4192989766597748,
+            4.911256313323975
+          ],
+          "token": " reinforcing",
+          "step": 80,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.382603168487549,
+            -0.6234486699104309,
+            5.062568187713623
+          ],
+          "token": " local",
+          "step": 82,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.619021892547607,
+            -1.2610673904418945,
+            3.737596035003662
+          ],
+          "token": " focus",
+          "step": 83,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            12.16152286529541,
+            4.585504531860352,
+            10.68093490600586
+          ],
+          "token": "3",
+          "step": 85,
+          "path_id": 2,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            0.003507833229377866,
+            1.301584243774414,
+            5.191452980041504
+          ],
+          "token": "Dynamic",
+          "step": 88,
+          "path_id": 2,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            -1.1437879800796509,
+            1.9509649276733398,
+            5.867833614349365
+          ],
+          "token": " Pricing",
+          "step": 89,
+          "path_id": 2,
+          "cluster_id": 2
+        },
+        {
+          "position": [
+            2.241145610809326,
+            0.6174954175949097,
+            3.7188022136688232
+          ],
+          "token": " Adopt",
+          "step": 91,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.128939390182495,
+            0.5927451848983765,
+            3.551541805267334
+          ],
+          "token": " intelligent",
+          "step": 93,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.2511088848114014,
+            0.41107720136642456,
+            3.1528432369232178
+          ],
+          "token": " inventory",
+          "step": 94,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            3.732933521270752,
+            0.0573921836912632,
+            2.621506452560425
+          ],
+          "token": " management",
+          "step": 95,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            4.058781623840332,
+            -0.07745356112718582,
+            2.5444047451019287
+          ],
+          "token": " system",
+          "step": 96,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.1883137226104736,
+            0.7035579085350037,
+            3.927135705947876
+          ],
+          "token": " adjusts",
+          "step": 98,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            4.095187187194824,
+            -0.6172552108764648,
+            2.434804916381836
+          ],
+          "token": " pricing",
+          "step": 99,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            4.2537617683410645,
+            -0.08852609992027283,
+            2.8128750324249268
+          ],
+          "token": " real",
+          "step": 101,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            4.265608787536621,
+            -0.39402538537979126,
+            2.483874559402466
+          ],
+          "token": "-time",
+          "step": 102,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            4.384732246398926,
+            -0.2885429561138153,
+            2.757638454437256
+          ],
+          "token": " based",
+          "step": 103,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            3.6275062561035156,
+            -0.42214471101760864,
+            2.6524994373321533
+          ],
+          "token": " sales",
+          "step": 105,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            4.088383197784424,
+            -0.3677368462085724,
+            2.4731717109680176
+          ],
+          "token": " data",
+          "step": 106,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            3.221339702606201,
+            -0.3966776430606842,
+            2.7427661418914795
+          ],
+          "token": " competitor",
+          "step": 108,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            4.190351963043213,
+            -0.48469778895378113,
+            2.483656644821167
+          ],
+          "token": " prices",
+          "step": 109,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            3.342733144760132,
+            -0.42444735765457153,
+            2.940840721130371
+          ],
+          "token": " seasonal",
+          "step": 112,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            4.001864433288574,
+            -0.3509766459465027,
+            2.4752557277679443
+          ],
+          "token": " demand",
+          "step": 113,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.813130497932434,
+            -0.565144419670105,
+            3.741511106491089
+          ],
+          "token": " ensuring",
+          "step": 115,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.762892723083496,
+            -0.6391253471374512,
+            3.618222236633301
           ],
           "token": " store",
-          "step": 171,
+          "step": 118,
           "path_id": 2,
-          "cluster_id": -1
+          "cluster_id": 1
         },
         {
           "position": [
-            11.124738693237305,
-            4.153214931488037,
-            2.7870607376098633
+            1.8485126495361328,
+            -0.5844512581825256,
+            3.671283006668091
           ],
-          "token": " supermarket",
-          "step": 174,
+          "token": " remains",
+          "step": 119,
           "path_id": 2,
-          "cluster_id": -1
+          "cluster_id": 1
         },
         {
           "position": [
-            11.199566841125488,
-            4.1914544105529785,
-            2.67628812789917
+            5.082358360290527,
+            -1.2194297313690186,
+            2.4986536502838135
           ],
-          "token": " chain",
-          "step": 175,
+          "token": " competitive",
+          "step": 120,
           "path_id": 2,
-          "cluster_id": -1
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.234265327453613,
+            -1.248867392539978,
+            2.5982863903045654
+          ],
+          "token": " profitable",
+          "step": 122,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.8621292114257812,
+            -0.5414310693740845,
+            4.062992095947266
+          ],
+          "token": " maintaining",
+          "step": 124,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            2.5525074005126953,
+            -0.7942284345626831,
+            4.852522850036621
+          ],
+          "token": " unique",
+          "step": 126,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            3.1481881141662598,
+            -1.1043078899383545,
+            4.737116813659668
+          ],
+          "token": " value",
+          "step": 127,
+          "path_id": 2,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            5.561123371124268,
+            -1.211225152015686,
+            2.795684814453125
+          ],
+          "token": " proposition",
+          "step": 128,
+          "path_id": 2,
+          "cluster_id": 1
         }
       ]
     }
   ],
   "clusters": [
     {
-      "id": 7,
-      "name": "Literary Book Publishing",
-      "count": 16
-    },
-    {
-      "id": 9,
-      "name": "Personalized Shopping Experience",
-      "count": 8
-    },
-    {
-      "id": 12,
-      "name": "Business Networking",
-      "count": 25
-    },
-    {
-      "id": 10,
-      "name": "Customer Loyalty Program",
-      "count": 29
-    },
-    {
       "id": 0,
       "name": "Number Sequence",
+      "count": 21
+    },
+    {
+      "id": 1,
+      "name": "Customer Experience",
+      "count": 218
+    },
+    {
+      "id": 3,
+      "name": "Enhancement Strategy",
       "count": 13
     },
     {
       "id": 2,
-      "name": "Personalized Optimization Services",
-      "count": 42
-    },
-    {
-      "id": 5,
-      "name": "Market Target Definition",
-      "count": 15
-    },
-    {
-      "id": 8,
-      "name": "Customer Relationship Management",
-      "count": 29
-    },
-    {
-      "id": 3,
-      "name": "Collaborative Opt Encouragement",
-      "count": 7
-    },
-    {
-      "id": 6,
-      "name": "Product Inventory Management",
-      "count": 17
-    },
-    {
-      "id": 11,
-      "name": "Business Operations Management",
-      "count": 14
-    },
-    {
-      "id": 4,
-      "name": "E-commerce Logistics Management",
-      "count": 17
-    },
-    {
-      "id": 1,
-      "name": "Word Stream Component",
-      "count": 6
+      "name": "Business Strategy",
+      "count": 27
     }
   ]
 }

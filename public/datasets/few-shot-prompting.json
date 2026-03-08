@@ -4,161 +4,161 @@
       "id": 0,
       "name": "bad_prompt",
       "prompt": "Extract the customer name, order number, and the issue from this email: 'Hi, I'm Sarah Jenkins. I received order #99281-A yesterday, but the screen on the tablet is completely shattered.'",
-      "response": "customer name: Sarah Jenkins \norder number: 99281-A \nissue: tablet screen is completely shattered",
+      "response": "Customer Name: Sarah Jenkins\nOrder Number: 99281-A\nIssue: Screen on the tablet is completely shattered",
       "points": [
         {
           "position": [
-            9.447489738464355,
-            -1.9320839643478394,
-            1.1238001585006714
+            9.251083374023438,
+            10.46185302734375,
+            -0.597795307636261
           ],
-          "token": "customer",
+          "token": "Customer",
           "step": 0,
           "path_id": 0,
-          "cluster_id": 0
+          "cluster_id": 1
         },
         {
           "position": [
-            10.113801002502441,
-            -1.4780769348144531,
-            1.163478136062622
+            9.69396686553955,
+            10.940386772155762,
+            -0.3334224820137024
           ],
-          "token": " name",
+          "token": " Name",
           "step": 1,
           "path_id": 0,
-          "cluster_id": 0
+          "cluster_id": 1
         },
         {
           "position": [
-            9.152878761291504,
-            -1.385730266571045,
-            1.860021710395813
+            9.773962020874023,
+            10.380769729614258,
+            -1.1099390983581543
           ],
           "token": " Sarah",
           "step": 3,
           "path_id": 0,
-          "cluster_id": 0
+          "cluster_id": 1
         },
         {
           "position": [
-            9.55648136138916,
-            -1.298156976699829,
-            1.301483154296875
+            9.734929084777832,
+            10.346597671508789,
+            -0.1254500299692154
           ],
           "token": " Jenkins",
           "step": 4,
           "path_id": 0,
-          "cluster_id": 0
+          "cluster_id": 1
         },
         {
           "position": [
-            9.635719299316406,
-            -1.7277570962905884,
-            0.6329848170280457
+            8.965929985046387,
+            10.89038372039795,
+            -0.9356507062911987
           ],
-          "token": "order",
+          "token": "Order",
           "step": 6,
           "path_id": 0,
-          "cluster_id": 0
+          "cluster_id": 1
         },
         {
           "position": [
-            10.007375717163086,
-            -1.9127142429351807,
-            1.0611467361450195
+            9.35245418548584,
+            11.122390747070312,
+            -0.5585771203041077
           ],
-          "token": " number",
+          "token": " Number",
           "step": 7,
           "path_id": 0,
-          "cluster_id": 0
+          "cluster_id": 1
         },
         {
           "position": [
-            9.568451881408691,
-            -0.760480523109436,
-            2.004704236984253
+            10.40406322479248,
+            10.750256538391113,
+            -0.896411657333374
           ],
           "token": "992",
           "step": 10,
           "path_id": 0,
-          "cluster_id": 0
+          "cluster_id": 1
         },
         {
           "position": [
-            9.54157829284668,
-            -0.591192901134491,
-            1.2643688917160034
+            10.334792137145996,
+            10.24740219116211,
+            -0.4662975072860718
           ],
           "token": "81",
           "step": 11,
           "path_id": 0,
-          "cluster_id": 0
+          "cluster_id": 1
         },
         {
           "position": [
-            9.741695404052734,
-            -0.9168890714645386,
-            0.8748892545700073
+            9.325803756713867,
+            10.062385559082031,
+            -0.052665021270513535
           ],
           "token": "-A",
           "step": 12,
           "path_id": 0,
-          "cluster_id": 0
+          "cluster_id": 1
         },
         {
           "position": [
-            10.06320858001709,
-            -1.4258344173431396,
-            0.4957294166088104
+            9.013416290283203,
+            10.793635368347168,
+            -0.2101505845785141
           ],
-          "token": "issue",
+          "token": "Issue",
           "step": 14,
           "path_id": 0,
-          "cluster_id": 0
+          "cluster_id": 1
         },
         {
           "position": [
-            9.211845397949219,
-            -1.2496684789657593,
-            0.3710390627384186
+            9.517104148864746,
+            9.044001579284668,
+            -0.27450278401374817
           ],
-          "token": " tablet",
+          "token": " Screen",
           "step": 16,
           "path_id": 0,
-          "cluster_id": 0
+          "cluster_id": 1
         },
         {
           "position": [
-            8.843240737915039,
-            -0.9174483418464661,
-            0.3566718101501465
+            9.96711254119873,
+            9.195252418518066,
+            -0.24808095395565033
           ],
-          "token": " screen",
-          "step": 17,
-          "path_id": 0,
-          "cluster_id": 0
-        },
-        {
-          "position": [
-            8.47123908996582,
-            -1.3830655813217163,
-            0.2437809854745865
-          ],
-          "token": " completely",
+          "token": " tablet",
           "step": 19,
           "path_id": 0,
-          "cluster_id": 0
+          "cluster_id": 1
         },
         {
           "position": [
-            9.30493450164795,
-            -0.791429340839386,
-            0.5998522043228149
+            9.125292778015137,
+            8.891448020935059,
+            -0.6248733997344971
+          ],
+          "token": " completely",
+          "step": 21,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            9.668222427368164,
+            9.512797355651855,
+            -0.11241510510444641
           ],
           "token": " shattered",
-          "step": 20,
+          "step": 22,
           "path_id": 0,
-          "cluster_id": 0
+          "cluster_id": 1
         }
       ]
     },
@@ -166,240 +166,240 @@
       "id": 1,
       "name": "good_prompt",
       "prompt": "Extract structured data from customer service emails and format it as a strict JSON object. Follow the exact keys and data types shown in the examples.\n\nExample 1:\nEmail: \"Hello, my name is Robert Chen. I'm writing about order #445-B. The package arrived, but it is missing the power cable.\"\nOutput:\n{\n  \"customer_name\": \"Robert Chen\",\n  \"order_id\": \"#445-B\",\n  \"issue_category\": \"Missing Item\",\n  \"issue_description\": \"The package arrived, but it is missing the power cable.\"\n}\n\nExample 2:\nEmail: \"This is Amanda Silva. Order 88192 just got here and it's the wrong color. I ordered blue, not red.\"\nOutput:\n{\n  \"customer_name\": \"Amanda Silva\",\n  \"order_id\": \"88192\",\n  \"issue_category\": \"Wrong Item\",\n  \"issue_description\": \"It's the wrong color. I ordered blue, not red.\"\n}\n\nTarget:\nEmail: \"Hi, I'm Sarah Jenkins. I received order #99281-A yesterday, but the screen on the tablet is completely shattered.\"\nOutput:",
-      "response": "{\n  \"customer_name\": \"Sarah Jenkins\",\n  \"order_id\": \"#99281-A\",\n  \"issue_category\": \"Damaged Item\",\n  \"issue_description\": \"the screen on the tablet is completely shattered\"",
+      "response": "{\n  \"customer_name\": \"Sarah Jenkins\",\n  \"order_id\": \"#99281-A\",\n  \"issue_category\": \"Damaged Item\",\n  \"issue_description\": \"The screen on the tablet is completely shattered.\"",
       "points": [
         {
           "position": [
-            6.1871018409729,
-            -1.250052571296692,
-            3.262542486190796
+            10.880351066589355,
+            9.908191680908203,
+            -3.9199323654174805
           ],
           "token": "customer",
           "step": 3,
           "path_id": 1,
-          "cluster_id": 1
+          "cluster_id": 0
         },
         {
           "position": [
-            6.858716011047363,
-            -1.1481305360794067,
-            2.490241289138794
+            10.343603134155273,
+            9.52184009552002,
+            -3.231224775314331
           ],
           "token": "_name",
           "step": 4,
           "path_id": 1,
-          "cluster_id": 1
+          "cluster_id": 0
         },
         {
           "position": [
-            8.67664909362793,
-            -1.3048444986343384,
-            2.1494810581207275
+            10.062358856201172,
+            9.932344436645508,
+            -1.6214983463287354
           ],
           "token": "Sarah",
           "step": 7,
           "path_id": 1,
-          "cluster_id": 0
+          "cluster_id": 1
         },
         {
           "position": [
-            7.77057409286499,
-            -1.1753162145614624,
-            2.4965226650238037
+            10.095723152160645,
+            9.396293640136719,
+            -2.367211103439331
           ],
           "token": " Jenkins",
           "step": 8,
           "path_id": 1,
-          "cluster_id": 0
+          "cluster_id": 1
         },
         {
           "position": [
-            6.359529495239258,
-            -1.1061720848083496,
-            2.976520538330078
+            10.613747596740723,
+            9.694244384765625,
+            -4.093577861785889
           ],
           "token": "order",
           "step": 12,
           "path_id": 1,
-          "cluster_id": 1
+          "cluster_id": 0
         },
         {
           "position": [
-            6.389593124389648,
-            -1.3875808715820312,
-            2.352893352508545
+            10.015355110168457,
+            9.343986511230469,
+            -3.551914691925049
           ],
           "token": "_id",
           "step": 13,
           "path_id": 1,
-          "cluster_id": 1
+          "cluster_id": 0
         },
         {
           "position": [
-            9.156882286071777,
-            -0.660006046295166,
-            2.2454583644866943
+            10.547006607055664,
+            10.496793746948242,
+            -1.2041425704956055
           ],
           "token": "992",
           "step": 16,
           "path_id": 1,
-          "cluster_id": 0
+          "cluster_id": 1
         },
         {
           "position": [
-            9.127134323120117,
-            -0.3622015416622162,
-            1.7558904886245728
+            10.758459091186523,
+            9.996049880981445,
+            -0.9993501305580139
           ],
           "token": "81",
           "step": 17,
           "path_id": 1,
-          "cluster_id": 0
+          "cluster_id": 1
         },
         {
           "position": [
-            7.616369724273682,
-            -0.8584529161453247,
-            2.1138837337493896
+            10.387986183166504,
+            9.205305099487305,
+            -2.021146059036255
           ],
           "token": "-A",
           "step": 18,
           "path_id": 1,
-          "cluster_id": 0
+          "cluster_id": 1
         },
         {
           "position": [
-            6.465449333190918,
-            -0.9342207312583923,
-            3.430427074432373
+            10.63092041015625,
+            10.097959518432617,
+            -3.733698844909668
           ],
           "token": "issue",
           "step": 22,
           "path_id": 1,
-          "cluster_id": 1
+          "cluster_id": 0
         },
         {
           "position": [
-            6.580014228820801,
-            -1.6900198459625244,
-            2.6308767795562744
+            10.073958396911621,
+            9.825712203979492,
+            -3.2597646713256836
           ],
           "token": "_category",
           "step": 23,
           "path_id": 1,
-          "cluster_id": 1
+          "cluster_id": 0
         },
         {
           "position": [
-            8.37335205078125,
-            -1.862448811531067,
-            0.8553215265274048
+            8.955652236938477,
+            9.500880241394043,
+            -1.0205330848693848
           ],
           "token": "Dam",
           "step": 26,
           "path_id": 1,
-          "cluster_id": 0
+          "cluster_id": 1
         },
         {
           "position": [
-            8.09272575378418,
-            -1.7342355251312256,
-            1.3415359258651733
+            9.045360565185547,
+            9.900067329406738,
+            -1.2778488397598267
           ],
           "token": "aged",
           "step": 27,
           "path_id": 1,
-          "cluster_id": 0
+          "cluster_id": 1
         },
         {
           "position": [
-            7.740906238555908,
-            -1.3898329734802246,
-            1.9012967348098755
+            9.69048023223877,
+            9.24606990814209,
+            -1.8804563283920288
           ],
           "token": " Item",
           "step": 28,
           "path_id": 1,
-          "cluster_id": 0
+          "cluster_id": 1
         },
         {
           "position": [
-            6.5507378578186035,
-            -1.4156274795532227,
-            3.415132522583008
+            10.469670295715332,
+            10.281496047973633,
+            -4.093055725097656
           ],
           "token": "issue",
           "step": 32,
           "path_id": 1,
-          "cluster_id": 1
+          "cluster_id": 0
         },
         {
           "position": [
-            6.905346393585205,
-            -1.4959958791732788,
-            2.3707292079925537
+            9.740631103515625,
+            9.674002647399902,
+            -3.468362331390381
           ],
           "token": "_description",
           "step": 33,
           "path_id": 1,
-          "cluster_id": 1
+          "cluster_id": 0
         },
         {
           "position": [
-            8.551467895507812,
-            -0.568869411945343,
-            0.9730517268180847
+            10.293493270874023,
+            9.03962516784668,
+            -0.6623713374137878
           ],
           "token": " screen",
           "step": 37,
           "path_id": 1,
-          "cluster_id": 0
+          "cluster_id": 1
         },
         {
           "position": [
-            8.244900703430176,
-            -0.9187793731689453,
-            1.105670690536499
+            9.938028335571289,
+            9.030205726623535,
+            -0.8858545422554016
           ],
           "token": " tablet",
           "step": 40,
           "path_id": 1,
-          "cluster_id": 0
+          "cluster_id": 1
         },
         {
           "position": [
-            8.168655395507812,
-            -1.196528434753418,
-            0.516688346862793
+            9.294876098632812,
+            8.41686725616455,
+            -0.7109522223472595
           ],
           "token": " completely",
           "step": 42,
           "path_id": 1,
-          "cluster_id": 0
+          "cluster_id": 1
         },
         {
           "position": [
-            7.788571834564209,
-            -0.603900134563446,
-            1.583036184310913
+            9.947197914123535,
+            8.844494819641113,
+            -1.4266306161880493
           ],
           "token": " shattered",
           "step": 43,
           "path_id": 1,
-          "cluster_id": 0
+          "cluster_id": 1
         }
       ]
     }
   ],
   "clusters": [
     {
-      "id": 0,
+      "id": 1,
       "name": "Customer Complaint",
       "count": 26
     },
     {
-      "id": 1,
-      "name": "Product Information",
+      "id": 0,
+      "name": "Customer Information",
       "count": 8
     }
   ]
