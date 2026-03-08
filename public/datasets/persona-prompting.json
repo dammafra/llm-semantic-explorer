@@ -4,13 +4,13 @@
       "id": 0,
       "name": "bad_prompt",
       "prompt": "Write a rejection email to a job candidate.",
-      "response": "Subject: Update on Your Job Application\n\nDear [Candidate Name],\n\nWe appreciate your interest in the [Position] role at [Company]. After careful consideration, we have decided not to move forward with your application at this time.\n\nThank you for your time and effort.\n\nSincerely,\n[Your Name]",
+      "response": "Subject: Update on Job Application for [Position]\n\nDear [Candidate Name],\n\nWe have reviewed your application for [Position] at [Company Name]. After careful consideration, we regret to inform you that we will not be moving forward with your application at this time.\n\nWe appreciate the time and effort you took to apply for this role, and we wish you the best of luck in your job search.\n\nSincerely,\n[Your Name]",
       "points": [
         {
           "position": [
-            1.3434253931045532,
-            7.229740619659424,
-            -2.043043375015259
+            0.4581618010997772,
+            7.162492275238037,
+            6.763595104217529
           ],
           "token": "Subject",
           "step": 0,
@@ -19,9 +19,9 @@
         },
         {
           "position": [
-            1.1162201166152954,
-            6.972643852233887,
-            -2.0783345699310303
+            0.7820219993591309,
+            7.142414093017578,
+            6.501871109008789
           ],
           "token": " Update",
           "step": 2,
@@ -30,243 +30,353 @@
         },
         {
           "position": [
-            1.2045623064041138,
-            7.036586284637451,
-            -2.2476067543029785
+            0.678519070148468,
+            7.5267109870910645,
+            6.6662516593933105
           ],
           "token": " Job",
+          "step": 4,
+          "path_id": 0,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            0.5245277881622314,
+            7.524807929992676,
+            6.468865871429443
+          ],
+          "token": " Application",
           "step": 5,
           "path_id": 0,
           "cluster_id": 0
         },
         {
           "position": [
-            1.177247166633606,
-            7.101384162902832,
-            -2.0386831760406494
+            0.14150206744670868,
+            6.974292278289795,
+            6.995449542999268
           ],
-          "token": " Application",
-          "step": 6,
-          "path_id": 0,
-          "cluster_id": 0
-        },
-        {
-          "position": [
-            1.5501450300216675,
-            7.184353828430176,
-            -2.251263380050659
-          ],
-          "token": "Dear",
+          "token": "Position",
           "step": 8,
           "path_id": 0,
           "cluster_id": 0
         },
         {
           "position": [
-            1.0271590948104858,
-            7.291324615478516,
-            -2.482210636138916
+            0.38648924231529236,
+            7.0808234214782715,
+            6.42179536819458
           ],
-          "token": "Candidate",
+          "token": "Dear",
           "step": 10,
           "path_id": 0,
           "cluster_id": 0
         },
         {
           "position": [
-            1.2273650169372559,
-            7.693852424621582,
-            -2.559260845184326
+            0.17686933279037476,
+            6.983426570892334,
+            6.802902698516846
+          ],
+          "token": "Candidate",
+          "step": 12,
+          "path_id": 0,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            0.02229994721710682,
+            6.699889183044434,
+            6.9793219566345215
           ],
           "token": " Name",
-          "step": 11,
+          "step": 13,
           "path_id": 0,
           "cluster_id": 0
         },
         {
           "position": [
-            0.07075612246990204,
-            4.530269622802734,
-            -4.9335618019104
+            -0.17539358139038086,
+            7.7796311378479,
+            2.9470901489257812
           ],
-          "token": " appreciate",
-          "step": 14,
-          "path_id": 0,
-          "cluster_id": 4
-        },
-        {
-          "position": [
-            0.21965883672237396,
-            4.699220180511475,
-            -3.1975483894348145
-          ],
-          "token": " interest",
-          "step": 16,
-          "path_id": 0,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            1.34323251247406,
-            7.523679256439209,
-            -3.014014720916748
-          ],
-          "token": "Position",
-          "step": 20,
-          "path_id": 0,
-          "cluster_id": 0
-        },
-        {
-          "position": [
-            0.762490451335907,
-            4.287445545196533,
-            -2.576294183731079
-          ],
-          "token": " role",
-          "step": 22,
-          "path_id": 0,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            1.1932296752929688,
-            7.466577529907227,
-            -2.8990478515625
-          ],
-          "token": "Company",
-          "step": 25,
-          "path_id": 0,
-          "cluster_id": 0
-        },
-        {
-          "position": [
-            1.6550323963165283,
-            3.3619346618652344,
-            -3.9557385444641113
-          ],
-          "token": " careful",
-          "step": 28,
+          "token": " reviewed",
+          "step": 17,
           "path_id": 0,
           "cluster_id": 1
         },
         {
           "position": [
-            1.1737576723098755,
-            4.893669128417969,
-            -3.0044991970062256
-          ],
-          "token": " consideration",
-          "step": 29,
-          "path_id": 0,
-          "cluster_id": -1
-        },
-        {
-          "position": [
-            0.9524390697479248,
-            3.8611903190612793,
-            -4.061098098754883
-          ],
-          "token": " decided",
-          "step": 33,
-          "path_id": 0,
-          "cluster_id": -1
-        },
-        {
-          "position": [
-            0.7473639249801636,
-            3.608327865600586,
-            -3.7353851795196533
-          ],
-          "token": " move",
-          "step": 36,
-          "path_id": 0,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            0.7185019254684448,
-            3.858806610107422,
-            -3.106410026550293
-          ],
-          "token": " forward",
-          "step": 37,
-          "path_id": 0,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            1.088494896888733,
-            3.9436824321746826,
-            -2.803217649459839
+            -0.11306938529014587,
+            7.578924655914307,
+            4.3525519371032715
           ],
           "token": " application",
-          "step": 40,
+          "step": 19,
           "path_id": 0,
-          "cluster_id": 2
+          "cluster_id": 1
         },
         {
           "position": [
-            1.3387423753738403,
-            4.092918872833252,
-            -2.464787721633911
+            -0.22944338619709015,
+            6.998330116271973,
+            6.73300838470459
           ],
-          "token": " time",
-          "step": 43,
-          "path_id": 0,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            -0.31374549865722656,
-            4.400793075561523,
-            -5.213326454162598
-          ],
-          "token": "Thank",
-          "step": 45,
-          "path_id": 0,
-          "cluster_id": 4
-        },
-        {
-          "position": [
-            -0.2575192451477051,
-            4.458022117614746,
-            -3.2720062732696533
-          ],
-          "token": " time",
-          "step": 49,
-          "path_id": 0,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            -0.02056065760552883,
-            4.440582752227783,
-            -2.9256231784820557
-          ],
-          "token": " effort",
-          "step": 51,
-          "path_id": 0,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            2.01310658454895,
-            7.451199054718018,
-            -2.3872733116149902
-          ],
-          "token": "incerely",
-          "step": 54,
+          "token": "Position",
+          "step": 22,
           "path_id": 0,
           "cluster_id": 0
         },
         {
           "position": [
-            1.6340328454971313,
-            7.713606357574463,
-            -2.9007887840270996
+            -0.40335628390312195,
+            6.893710613250732,
+            6.7909016609191895
+          ],
+          "token": "Company",
+          "step": 26,
+          "path_id": 0,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            -0.6217107772827148,
+            7.182368755340576,
+            6.378171443939209
           ],
           "token": " Name",
-          "step": 58,
+          "step": 27,
+          "path_id": 0,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            -0.22198298573493958,
+            7.50278902053833,
+            3.550377607345581
+          ],
+          "token": " careful",
+          "step": 30,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            -0.6628338098526001,
+            7.736609935760498,
+            4.998871326446533
+          ],
+          "token": " consideration",
+          "step": 31,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.6230642795562744,
+            7.950653076171875,
+            3.243025064468384
+          ],
+          "token": " regret",
+          "step": 34,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.5782482624053955,
+            8.2672758102417,
+            2.861577033996582
+          ],
+          "token": " inform",
+          "step": 36,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.865655243396759,
+            7.929574966430664,
+            3.9739933013916016
+          ],
+          "token": " moving",
+          "step": 43,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.6776297092437744,
+            7.98605489730835,
+            4.277807712554932
+          ],
+          "token": " forward",
+          "step": 44,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.26242849230766296,
+            8.038273811340332,
+            4.7495598793029785
+          ],
+          "token": " application",
+          "step": 47,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            -0.3744354546070099,
+            8.306807518005371,
+            4.933541297912598
+          ],
+          "token": " time",
+          "step": 50,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.4028758704662323,
+            7.633819103240967,
+            2.455801010131836
+          ],
+          "token": " appreciate",
+          "step": 53,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.0054917335510254,
+            6.869448184967041,
+            2.3804750442504883
+          ],
+          "token": " time",
+          "step": 55,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.1017595529556274,
+            6.946658134460449,
+            2.4026129245758057
+          ],
+          "token": " effort",
+          "step": 57,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.9470124840736389,
+            6.949653625488281,
+            2.5338006019592285
+          ],
+          "token": " took",
+          "step": 59,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            -0.02250184677541256,
+            7.980693817138672,
+            4.198920726776123
+          ],
+          "token": " apply",
+          "step": 61,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            -0.627038300037384,
+            8.37348461151123,
+            4.654026031494141
+          ],
+          "token": " role",
+          "step": 64,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.71568763256073,
+            8.418423652648926,
+            2.649250030517578
+          ],
+          "token": " wish",
+          "step": 68,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.670356810092926,
+            8.891985893249512,
+            4.366508483886719
+          ],
+          "token": " best",
+          "step": 71,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.6156386137008667,
+            8.84990406036377,
+            4.269706726074219
+          ],
+          "token": " luck",
+          "step": 73,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.33610984683036804,
+            9.026650428771973,
+            4.779860973358154
+          ],
+          "token": " job",
+          "step": 76,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.09652284532785416,
+            8.7175874710083,
+            4.658572196960449
+          ],
+          "token": " search",
+          "step": 77,
+          "path_id": 0,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            -0.13033555448055267,
+            7.100491523742676,
+            6.065028667449951
+          ],
+          "token": "incerely",
+          "step": 80,
+          "path_id": 0,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            -0.2066265344619751,
+            6.675265789031982,
+            6.854818820953369
+          ],
+          "token": " Name",
+          "step": 84,
           "path_id": 0,
           "cluster_id": 0
         }
@@ -276,953 +386,733 @@
       "id": 1,
       "name": "good_prompt",
       "prompt": "You are an empathetic HR Manager at a tech startup. Write a rejection email to a candidate who reached the final interview stage but was not selected. Maintain a professional yet warm tone, provide constructive feedback on their coding test, and encourage them to apply for future roles.",
-      "response": "Dear [Candidate Name],\n\nWe appreciate the time you took to interview with our team and share your qualifications for the [Position] role. After careful consideration, we regret to inform you that we will not be moving forward with your application at this time.\n\nWe were impressed by your passion for [specific area of technology] and the way you approached [specific problem]. However, our team decided to pursue another candidate whose skills and experience better aligned with our current needs.\n\nPlease know that this decision is not a reflection on your abilities or potential as a candidate. Your coding test demonstrated a solid understanding of [specific concepts], and we encourage you to continue developing your skills.\n\nWe appreciate your interest in our company and would like to invite you to apply for future openings that may be a better fit for your skills. We will keep your application on file and consider you for any future opportunities.\n\nThank you again for your time and consideration.\n\nSincerely,\n[Your Name]\nHR Manager",
+      "response": "Subject: Update on Your Application\n\nDear [Candidate Name],\n\nThank you for taking the time to interview with our team. We appreciate the effort you put into preparing for our conversations and submitting your coding test. \n\nWe were impressed by your background and experience, but after careful consideration, we have decided not to move forward with your application at this time. \n\nWe received a strong signal in your test that you have solid foundation in programming concepts, but there were some areas where we felt you could further improve, particularly in problem-solving strategies. \n\nWe encourage you to continue honing your skills and staying up-to-date with industry developments. We wish you the best in your job search and welcome you to apply for future openings that may be a better fit.",
       "points": [
         {
           "position": [
-            1.4402130842208862,
-            7.3418121337890625,
-            -2.1252048015594482
+            0.49905556440353394,
+            7.283432960510254,
+            6.886582374572754
           ],
-          "token": "Dear",
+          "token": "Subject",
           "step": 0,
           "path_id": 1,
           "cluster_id": 0
         },
         {
           "position": [
-            1.2155628204345703,
-            7.4188232421875,
-            -2.3723418712615967
+            0.6781430840492249,
+            7.3197760581970215,
+            6.307904243469238
           ],
-          "token": "Candidate",
+          "token": " Update",
           "step": 2,
           "path_id": 1,
           "cluster_id": 0
         },
         {
           "position": [
-            1.1064996719360352,
-            7.560861587524414,
-            -2.6973493099212646
+            0.3885432779788971,
+            7.628644943237305,
+            6.4467267990112305
+          ],
+          "token": " Application",
+          "step": 5,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            0.35124701261520386,
+            7.061672687530518,
+            6.352044582366943
+          ],
+          "token": "Dear",
+          "step": 7,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            0.3379991948604584,
+            6.771392345428467,
+            6.90435791015625
+          ],
+          "token": "Candidate",
+          "step": 9,
+          "path_id": 1,
+          "cluster_id": 0
+        },
+        {
+          "position": [
+            -0.04575548321008682,
+            6.900877475738525,
+            7.169398784637451
           ],
           "token": " Name",
-          "step": 3,
-          "path_id": 1,
-          "cluster_id": 0
-        },
-        {
-          "position": [
-            -0.01711392216384411,
-            4.797536849975586,
-            -4.938436985015869
-          ],
-          "token": " appreciate",
-          "step": 6,
-          "path_id": 1,
-          "cluster_id": 4
-        },
-        {
-          "position": [
-            -0.39149487018585205,
-            4.477357387542725,
-            -3.9601221084594727
-          ],
-          "token": " time",
-          "step": 8,
-          "path_id": 1,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            -0.36213648319244385,
-            4.428342342376709,
-            -3.504694938659668
-          ],
-          "token": " took",
           "step": 10,
           "path_id": 1,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            0.36669909954071045,
-            4.172324180603027,
-            -2.7941532135009766
-          ],
-          "token": " interview",
-          "step": 12,
-          "path_id": 1,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            0.43242934346199036,
-            4.545502185821533,
-            -2.5806117057800293
-          ],
-          "token": " team",
-          "step": 15,
-          "path_id": 1,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            0.3847775161266327,
-            5.039183139801025,
-            -4.800990104675293
-          ],
-          "token": " share",
-          "step": 17,
-          "path_id": 1,
-          "cluster_id": 4
-        },
-        {
-          "position": [
-            0.37469905614852905,
-            4.355600833892822,
-            -2.4853122234344482
-          ],
-          "token": " qualifications",
-          "step": 19,
-          "path_id": 1,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            1.3453001976013184,
-            7.388411045074463,
-            -3.0874836444854736
-          ],
-          "token": "Position",
-          "step": 23,
-          "path_id": 1,
           "cluster_id": 0
         },
         {
           "position": [
-            0.6341049671173096,
-            4.188676357269287,
-            -2.415644407272339
+            0.6209726929664612,
+            8.335205078125,
+            2.4864673614501953
           ],
-          "token": " role",
-          "step": 25,
-          "path_id": 1,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            1.5525425672531128,
-            3.387877941131592,
-            -4.10977840423584
-          ],
-          "token": " careful",
-          "step": 28,
+          "token": "Thank",
+          "step": 12,
           "path_id": 1,
           "cluster_id": 1
         },
         {
           "position": [
-            1.1870993375778198,
-            4.836174964904785,
-            -3.001101016998291
+            0.5498313903808594,
+            7.301311016082764,
+            2.4297964572906494
           ],
-          "token": " consideration",
-          "step": 29,
+          "token": " taking",
+          "step": 15,
           "path_id": 1,
-          "cluster_id": -1
+          "cluster_id": 1
         },
         {
           "position": [
-            0.33908811211586,
-            4.025404930114746,
-            -4.748766899108887
-          ],
-          "token": " regret",
-          "step": 32,
-          "path_id": 1,
-          "cluster_id": -1
-        },
-        {
-          "position": [
-            0.32126712799072266,
-            4.312621593475342,
-            -4.94289493560791
-          ],
-          "token": " inform",
-          "step": 34,
-          "path_id": 1,
-          "cluster_id": 4
-        },
-        {
-          "position": [
-            0.6466546058654785,
-            3.6418094635009766,
-            -3.698371171951294
-          ],
-          "token": " moving",
-          "step": 41,
-          "path_id": 1,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            0.7476961016654968,
-            3.7760887145996094,
-            -3.1416573524475098
-          ],
-          "token": " forward",
-          "step": 42,
-          "path_id": 1,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            1.1284408569335938,
-            3.7635552883148193,
-            -2.8129360675811768
-          ],
-          "token": " application",
-          "step": 45,
-          "path_id": 1,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            1.3181037902832031,
-            4.077783584594727,
-            -2.3443498611450195
+            0.8285609483718872,
+            6.81679630279541,
+            2.3597302436828613
           ],
           "token": " time",
-          "step": 48,
+          "step": 17,
           "path_id": 1,
-          "cluster_id": 2
+          "cluster_id": 1
         },
         {
           "position": [
-            0.45411401987075806,
-            5.039648056030273,
-            -4.3621649742126465
+            -0.28408101201057434,
+            7.896287441253662,
+            4.1505656242370605
           ],
-          "token": " impressed",
-          "step": 52,
+          "token": " interview",
+          "step": 19,
           "path_id": 1,
-          "cluster_id": -1
+          "cluster_id": 1
         },
         {
           "position": [
-            0.5139694809913635,
-            5.055903434753418,
-            -3.099261522293091
-          ],
-          "token": " passion",
-          "step": 55,
-          "path_id": 1,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            2.017007350921631,
-            6.120913982391357,
-            -4.430728435516357
-          ],
-          "token": "specific",
-          "step": 58,
-          "path_id": 1,
-          "cluster_id": 3
-        },
-        {
-          "position": [
-            1.590412974357605,
-            6.662820339202881,
-            -4.0597758293151855
-          ],
-          "token": " area",
-          "step": 59,
-          "path_id": 1,
-          "cluster_id": 0
-        },
-        {
-          "position": [
-            1.6998491287231445,
-            6.935557842254639,
-            -3.852173089981079
-          ],
-          "token": " technology",
-          "step": 61,
-          "path_id": 1,
-          "cluster_id": 0
-        },
-        {
-          "position": [
-            0.6020124554634094,
-            5.208175182342529,
-            -4.941011905670166
-          ],
-          "token": " way",
-          "step": 65,
-          "path_id": 1,
-          "cluster_id": 4
-        },
-        {
-          "position": [
-            1.537765622138977,
-            5.572950839996338,
-            -4.673488140106201
-          ],
-          "token": " approached",
-          "step": 67,
-          "path_id": 1,
-          "cluster_id": 3
-        },
-        {
-          "position": [
-            1.9037381410598755,
-            5.832499980926514,
-            -4.61482572555542
-          ],
-          "token": "specific",
-          "step": 69,
-          "path_id": 1,
-          "cluster_id": 3
-        },
-        {
-          "position": [
-            1.804446816444397,
-            6.817194938659668,
-            -3.9634523391723633
-          ],
-          "token": " problem",
-          "step": 70,
-          "path_id": 1,
-          "cluster_id": 0
-        },
-        {
-          "position": [
-            1.3046249151229858,
-            5.038696765899658,
-            -3.4704794883728027
-          ],
-          "token": " However",
-          "step": 72,
-          "path_id": 1,
-          "cluster_id": -1
-        },
-        {
-          "position": [
-            1.7721028327941895,
-            4.290578365325928,
-            -4.02549934387207
+            -0.6959665417671204,
+            7.841011047363281,
+            4.390286445617676
           ],
           "token": " team",
-          "step": 75,
+          "step": 22,
           "path_id": 1,
-          "cluster_id": -1
+          "cluster_id": 1
         },
         {
           "position": [
-            1.4694974422454834,
-            4.060831069946289,
-            -4.160195827484131
+            0.2704986035823822,
+            7.525424480438232,
+            2.4486277103424072
+          ],
+          "token": " appreciate",
+          "step": 25,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.1195251941680908,
+            7.050904750823975,
+            2.256005048751831
+          ],
+          "token": " effort",
+          "step": 27,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            1.303345799446106,
+            7.063470363616943,
+            2.4916677474975586
+          ],
+          "token": " put",
+          "step": 29,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            -0.7338460683822632,
+            7.799468040466309,
+            3.416691541671753
+          ],
+          "token": " preparing",
+          "step": 31,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            -1.0075465440750122,
+            8.217759132385254,
+            4.436032772064209
+          ],
+          "token": " conversations",
+          "step": 34,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            -1.0111498832702637,
+            8.034948348999023,
+            2.968090057373047
+          ],
+          "token": " submitting",
+          "step": 36,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            -1.4355789422988892,
+            8.048874855041504,
+            3.2560362815856934
+          ],
+          "token": " coding",
+          "step": 38,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            -1.3098429441452026,
+            7.9451704025268555,
+            3.652674913406372
+          ],
+          "token": " test",
+          "step": 39,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            -1.123254418373108,
+            9.014172554016113,
+            3.86297345161438
+          ],
+          "token": " impressed",
+          "step": 44,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            -1.6213282346725464,
+            9.023681640625,
+            4.1938276290893555
+          ],
+          "token": " background",
+          "step": 47,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            -1.437930703163147,
+            8.818400382995605,
+            4.4025397300720215
+          ],
+          "token": " experience",
+          "step": 49,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            -0.3175954222679138,
+            7.399532794952393,
+            3.4385082721710205
+          ],
+          "token": " careful",
+          "step": 53,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            -0.8524419069290161,
+            8.014998435974121,
+            4.927807331085205
+          ],
+          "token": " consideration",
+          "step": 54,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.5864157676696777,
+            7.792102336883545,
+            3.751265287399292
           ],
           "token": " decided",
-          "step": 76,
+          "step": 58,
           "path_id": 1,
-          "cluster_id": -1
+          "cluster_id": 1
         },
         {
           "position": [
-            2.026297092437744,
-            3.9104580879211426,
-            -4.381309986114502
+            0.9340486526489258,
+            7.933495998382568,
+            3.9254908561706543
           ],
-          "token": " pursue",
+          "token": " move",
+          "step": 61,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.6231158375740051,
+            7.946434497833252,
+            4.340535640716553
+          ],
+          "token": " forward",
+          "step": 62,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.022297950461506844,
+            8.201781272888184,
+            4.923176288604736
+          ],
+          "token": " application",
+          "step": 65,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            -0.6479699015617371,
+            8.564553260803223,
+            5.07838773727417
+          ],
+          "token": " time",
+          "step": 68,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            -1.5182280540466309,
+            8.375894546508789,
+            2.854294776916504
+          ],
+          "token": " received",
+          "step": 72,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            -1.665238380432129,
+            8.267793655395508,
+            2.983821153640747
+          ],
+          "token": " strong",
+          "step": 74,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            -1.941169261932373,
+            8.641867637634277,
+            3.0912325382232666
+          ],
+          "token": " signal",
+          "step": 75,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            -1.9791443347930908,
+            8.407954216003418,
+            3.4576666355133057
+          ],
+          "token": " test",
           "step": 78,
           "path_id": 1,
           "cluster_id": 1
         },
         {
           "position": [
-            2.369658946990967,
-            4.038717269897461,
-            -4.36903715133667
+            -2.0378353595733643,
+            9.221588134765625,
+            3.6996676921844482
           ],
-          "token": " another",
-          "step": 79,
-          "path_id": 1,
-          "cluster_id": 1
-        },
-        {
-          "position": [
-            2.4709649085998535,
-            4.056377410888672,
-            -4.124663829803467
-          ],
-          "token": " candidate",
-          "step": 80,
-          "path_id": 1,
-          "cluster_id": 1
-        },
-        {
-          "position": [
-            2.494649648666382,
-            4.4637451171875,
-            -4.336659908294678
-          ],
-          "token": " whose",
-          "step": 81,
-          "path_id": 1,
-          "cluster_id": 1
-        },
-        {
-          "position": [
-            2.5863258838653564,
-            4.273773670196533,
-            -3.799851655960083
-          ],
-          "token": " skills",
+          "token": " solid",
           "step": 82,
           "path_id": 1,
           "cluster_id": 1
         },
         {
           "position": [
-            2.608431577682495,
-            4.041814804077148,
-            -3.9747626781463623
+            -2.029033899307251,
+            9.250290870666504,
+            4.005112648010254
           ],
-          "token": " experience",
-          "step": 84,
+          "token": " foundation",
+          "step": 83,
           "path_id": 1,
           "cluster_id": 1
         },
         {
           "position": [
-            2.675751209259033,
-            4.011727809906006,
-            -3.986415386199951
+            -2.0485992431640625,
+            9.275738716125488,
+            4.114512920379639
           ],
-          "token": " better",
+          "token": " programming",
           "step": 85,
           "path_id": 1,
           "cluster_id": 1
         },
         {
           "position": [
-            2.210852861404419,
-            4.075692653656006,
-            -3.554260730743408
+            -1.883994221687317,
+            9.071585655212402,
+            4.382837295532227
           ],
-          "token": " aligned",
+          "token": " concepts",
           "step": 86,
           "path_id": 1,
           "cluster_id": 1
         },
         {
           "position": [
-            2.145838975906372,
-            3.345285415649414,
-            -3.6524486541748047
+            -1.7961426973342896,
+            8.921675682067871,
+            3.2256648540496826
           ],
-          "token": " current",
-          "step": 89,
+          "token": " areas",
+          "step": 92,
           "path_id": 1,
           "cluster_id": 1
         },
         {
           "position": [
-            1.7166584730148315,
-            4.112791538238525,
-            -2.729682445526123
+            -1.7665005922317505,
+            9.091338157653809,
+            2.964578866958618
           ],
-          "token": " needs",
-          "step": 90,
+          "token": " felt",
+          "step": 95,
           "path_id": 1,
-          "cluster_id": 2
+          "cluster_id": 1
         },
         {
           "position": [
-            0.6397200226783752,
-            4.6565752029418945,
-            -5.128532409667969
+            -1.3650412559509277,
+            9.286697387695312,
+            2.9653244018554688
           ],
-          "token": "Please",
-          "step": 92,
+          "token": " could",
+          "step": 97,
           "path_id": 1,
-          "cluster_id": 4
+          "cluster_id": 1
         },
         {
           "position": [
-            0.630736768245697,
-            4.680675029754639,
-            -4.947099685668945
+            -2.156132221221924,
+            9.15458869934082,
+            3.5387842655181885
           ],
-          "token": " know",
-          "step": 93,
+          "token": " improve",
+          "step": 99,
           "path_id": 1,
-          "cluster_id": 4
+          "cluster_id": 1
         },
         {
           "position": [
-            1.1002016067504883,
-            4.5452775955200195,
-            -4.105281829833984
+            -2.149411678314209,
+            9.025803565979004,
+            3.361872673034668
           ],
-          "token": " decision",
-          "step": 96,
+          "token": " particularly",
+          "step": 101,
           "path_id": 1,
-          "cluster_id": -1
+          "cluster_id": 1
         },
         {
           "position": [
-            0.9062386155128479,
-            4.986713886260986,
-            -3.979810953140259
+            -2.469754934310913,
+            8.989395141601562,
+            3.7356390953063965
           ],
-          "token": " reflection",
-          "step": 100,
-          "path_id": 1,
-          "cluster_id": -1
-        },
-        {
-          "position": [
-            1.739614486694336,
-            4.463926792144775,
-            -2.2491350173950195
-          ],
-          "token": " abilities",
+          "token": " problem",
           "step": 103,
           "path_id": 1,
-          "cluster_id": 2
+          "cluster_id": 1
         },
         {
           "position": [
-            1.5033458471298218,
-            4.3298115730285645,
-            -2.0815536975860596
+            -2.3025457859039307,
+            8.902030944824219,
+            3.6463918685913086
           ],
-          "token": " potential",
+          "token": "-solving",
+          "step": 104,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            -1.8384262323379517,
+            8.75930118560791,
+            4.095631122589111
+          ],
+          "token": " strategies",
           "step": 105,
           "path_id": 1,
-          "cluster_id": 2
+          "cluster_id": 1
         },
         {
           "position": [
-            1.385627031326294,
-            4.3731536865234375,
-            -2.114917755126953
-          ],
-          "token": " candidate",
-          "step": 108,
-          "path_id": 1,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            2.2567930221557617,
-            5.4854655265808105,
-            -4.71693754196167
-          ],
-          "token": " coding",
-          "step": 111,
-          "path_id": 1,
-          "cluster_id": 3
-        },
-        {
-          "position": [
-            2.090510845184326,
-            5.094716548919678,
-            -4.396511077880859
-          ],
-          "token": " test",
-          "step": 112,
-          "path_id": 1,
-          "cluster_id": 3
-        },
-        {
-          "position": [
-            1.9967029094696045,
-            5.43430757522583,
-            -4.499091148376465
-          ],
-          "token": " demonstrated",
-          "step": 113,
-          "path_id": 1,
-          "cluster_id": 3
-        },
-        {
-          "position": [
-            2.0294153690338135,
-            5.427736759185791,
-            -4.497068405151367
-          ],
-          "token": " solid",
-          "step": 115,
-          "path_id": 1,
-          "cluster_id": 3
-        },
-        {
-          "position": [
-            1.2807148694992065,
-            5.436418056488037,
-            -3.9974849224090576
-          ],
-          "token": " understanding",
-          "step": 116,
-          "path_id": 1,
-          "cluster_id": -1
-        },
-        {
-          "position": [
-            2.0382204055786133,
-            6.03425407409668,
-            -4.498632431030273
-          ],
-          "token": "specific",
-          "step": 119,
-          "path_id": 1,
-          "cluster_id": 3
-        },
-        {
-          "position": [
-            1.646431803703308,
-            7.078758239746094,
-            -3.679037094116211
-          ],
-          "token": " concepts",
-          "step": 120,
-          "path_id": 1,
-          "cluster_id": 0
-        },
-        {
-          "position": [
-            0.4543605446815491,
-            4.845386028289795,
-            -5.210729598999023
+            -0.10591574013233185,
+            8.746434211730957,
+            2.805143117904663
           ],
           "token": " encourage",
-          "step": 124,
+          "step": 109,
           "path_id": 1,
-          "cluster_id": 4
+          "cluster_id": 1
         },
         {
           "position": [
-            1.1946666240692139,
-            5.16232967376709,
-            -4.956911087036133
+            -1.0625181198120117,
+            9.270526885986328,
+            3.0021228790283203
           ],
           "token": " continue",
-          "step": 127,
+          "step": 112,
           "path_id": 1,
-          "cluster_id": 3
+          "cluster_id": 1
         },
         {
           "position": [
-            1.0915861129760742,
-            5.266963958740234,
-            -4.779080390930176
+            -0.8832240700721741,
+            9.304573059082031,
+            3.1274778842926025
           ],
-          "token": " developing",
-          "step": 128,
+          "token": " hon",
+          "step": 113,
           "path_id": 1,
-          "cluster_id": 4
+          "cluster_id": 1
         },
         {
           "position": [
-            1.9629839658737183,
-            4.365863800048828,
-            -2.41866397857666
+            -1.0386148691177368,
+            9.115731239318848,
+            3.1826159954071045
+          ],
+          "token": "ing",
+          "step": 114,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            -1.1981526613235474,
+            9.338420867919922,
+            4.099865436553955
           ],
           "token": " skills",
+          "step": 116,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            -1.2732925415039062,
+            9.539621353149414,
+            3.46364164352417
+          ],
+          "token": " staying",
+          "step": 118,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            -1.6871258020401,
+            9.63622760772705,
+            3.911975860595703
+          ],
+          "token": "-to",
+          "step": 120,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            -1.4063340425491333,
+            9.595081329345703,
+            3.8855297565460205
+          ],
+          "token": "-date",
+          "step": 121,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            -1.7578141689300537,
+            9.696822166442871,
+            4.047179222106934
+          ],
+          "token": " industry",
+          "step": 123,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            -1.2324947118759155,
+            9.267992973327637,
+            4.632045269012451
+          ],
+          "token": " developments",
+          "step": 124,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.3274312913417816,
+            8.620405197143555,
+            2.61136794090271
+          ],
+          "token": " wish",
+          "step": 127,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            0.4583556354045868,
+            9.164874076843262,
+            4.187412738800049
+          ],
+          "token": " best",
           "step": 130,
           "path_id": 1,
-          "cluster_id": 2
+          "cluster_id": 1
         },
         {
           "position": [
-            0.17096714675426483,
-            4.9021100997924805,
-            -5.042296886444092
+            0.10619555413722992,
+            9.198527336120605,
+            4.588113307952881
           ],
-          "token": " appreciate",
+          "token": " job",
           "step": 133,
           "path_id": 1,
-          "cluster_id": 4
+          "cluster_id": 1
         },
         {
           "position": [
-            0.3525536358356476,
-            4.979650497436523,
-            -3.376156806945801
+            -0.2645851969718933,
+            8.841242790222168,
+            4.779430866241455
           ],
-          "token": " interest",
-          "step": 135,
+          "token": " search",
+          "step": 134,
           "path_id": 1,
-          "cluster_id": 2
+          "cluster_id": 1
         },
         {
           "position": [
-            0.7070850729942322,
-            4.752303123474121,
-            -2.387965440750122
+            0.08530370146036148,
+            8.476284980773926,
+            2.7138051986694336
           ],
-          "token": " company",
-          "step": 138,
+          "token": " welcome",
+          "step": 136,
           "path_id": 1,
-          "cluster_id": 2
+          "cluster_id": 1
         },
         {
           "position": [
-            0.5658793449401855,
-            4.560283184051514,
-            -5.66278600692749
-          ],
-          "token": " would",
-          "step": 140,
-          "path_id": 1,
-          "cluster_id": 4
-        },
-        {
-          "position": [
-            0.23456668853759766,
-            4.481029033660889,
-            -5.356507778167725
-          ],
-          "token": " like",
-          "step": 141,
-          "path_id": 1,
-          "cluster_id": 4
-        },
-        {
-          "position": [
-            0.3102671205997467,
-            4.380377769470215,
-            -5.459258556365967
-          ],
-          "token": " invite",
-          "step": 143,
-          "path_id": 1,
-          "cluster_id": 4
-        },
-        {
-          "position": [
-            1.3527233600616455,
-            3.2741341590881348,
-            -2.983837604522705
+            -0.11770288646221161,
+            8.80133056640625,
+            4.011590957641602
           ],
           "token": " apply",
-          "step": 146,
+          "step": 139,
           "path_id": 1,
-          "cluster_id": 2
+          "cluster_id": 1
         },
         {
           "position": [
-            2.1550068855285645,
-            3.116915225982666,
-            -3.7854902744293213
+            -0.32393020391464233,
+            9.22323989868164,
+            4.216219425201416
           ],
           "token": " future",
+          "step": 141,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            -0.5269871354103088,
+            9.048544883728027,
+            4.541709899902344
+          ],
+          "token": " openings",
+          "step": 142,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            -0.7460675239562988,
+            9.510501861572266,
+            4.271674633026123
+          ],
+          "token": " may",
+          "step": 144,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            -0.5285125374794006,
+            9.379178047180176,
+            4.3217387199401855
+          ],
+          "token": " better",
+          "step": 147,
+          "path_id": 1,
+          "cluster_id": 1
+        },
+        {
+          "position": [
+            -0.7802952527999878,
+            8.928143501281738,
+            4.900540828704834
+          ],
+          "token": " fit",
           "step": 148,
           "path_id": 1,
           "cluster_id": 1
-        },
-        {
-          "position": [
-            1.8041118383407593,
-            3.45991587638855,
-            -2.7377700805664062
-          ],
-          "token": " openings",
-          "step": 149,
-          "path_id": 1,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            2.7436182498931885,
-            3.7263057231903076,
-            -3.846630334854126
-          ],
-          "token": " may",
-          "step": 151,
-          "path_id": 1,
-          "cluster_id": 1
-        },
-        {
-          "position": [
-            2.5901784896850586,
-            3.647887706756592,
-            -3.988571882247925
-          ],
-          "token": " better",
-          "step": 154,
-          "path_id": 1,
-          "cluster_id": 1
-        },
-        {
-          "position": [
-            1.88852059841156,
-            3.839005947113037,
-            -2.4998679161071777
-          ],
-          "token": " fit",
-          "step": 155,
-          "path_id": 1,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            1.8806251287460327,
-            4.174520015716553,
-            -2.302299976348877
-          ],
-          "token": " skills",
-          "step": 158,
-          "path_id": 1,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            0.5910300612449646,
-            4.110171318054199,
-            -5.275895595550537
-          ],
-          "token": " keep",
-          "step": 162,
-          "path_id": 1,
-          "cluster_id": 4
-        },
-        {
-          "position": [
-            0.7439319491386414,
-            3.4292614459991455,
-            -2.654038906097412
-          ],
-          "token": " application",
-          "step": 164,
-          "path_id": 1,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            1.3020837306976318,
-            3.5289275646209717,
-            -2.402182102203369
-          ],
-          "token": " file",
-          "step": 166,
-          "path_id": 1,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            0.48279526829719543,
-            4.196007251739502,
-            -5.404806137084961
-          ],
-          "token": " consider",
-          "step": 168,
-          "path_id": 1,
-          "cluster_id": 4
-        },
-        {
-          "position": [
-            2.153888702392578,
-            3.244438648223877,
-            -3.7472705841064453
-          ],
-          "token": " future",
-          "step": 172,
-          "path_id": 1,
-          "cluster_id": 1
-        },
-        {
-          "position": [
-            1.7057689428329468,
-            3.628538131713867,
-            -2.4791347980499268
-          ],
-          "token": " opportunities",
-          "step": 173,
-          "path_id": 1,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            -0.18560506403446198,
-            4.506001949310303,
-            -5.171753883361816
-          ],
-          "token": "Thank",
-          "step": 175,
-          "path_id": 1,
-          "cluster_id": 4
-        },
-        {
-          "position": [
-            -0.2810482680797577,
-            4.297474384307861,
-            -3.01540207862854
-          ],
-          "token": " time",
-          "step": 180,
-          "path_id": 1,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            1.010831594467163,
-            4.444650650024414,
-            -2.2311153411865234
-          ],
-          "token": " consideration",
-          "step": 182,
-          "path_id": 1,
-          "cluster_id": 2
-        },
-        {
-          "position": [
-            1.9890339374542236,
-            7.433793544769287,
-            -2.3904433250427246
-          ],
-          "token": "incerely",
-          "step": 185,
-          "path_id": 1,
-          "cluster_id": 0
-        },
-        {
-          "position": [
-            1.570250153541565,
-            7.786971569061279,
-            -2.9549083709716797
-          ],
-          "token": " Name",
-          "step": 189,
-          "path_id": 1,
-          "cluster_id": 0
-        },
-        {
-          "position": [
-            1.7724487781524658,
-            7.627391815185547,
-            -2.4602534770965576
-          ],
-          "token": "HR",
-          "step": 191,
-          "path_id": 1,
-          "cluster_id": 0
-        },
-        {
-          "position": [
-            1.859787106513977,
-            7.673530101776123,
-            -2.5086522102355957
-          ],
-          "token": " Manager",
-          "step": 192,
-          "path_id": 1,
-          "cluster_id": 0
         }
       ]
     }
@@ -1230,28 +1120,13 @@
   "clusters": [
     {
       "id": 0,
-      "name": "Job Application Update",
-      "count": 23
-    },
-    {
-      "id": 4,
-      "name": "Expressing Gratitude",
-      "count": 17
-    },
-    {
-      "id": 2,
-      "name": "Job Application Process",
-      "count": 35
+      "name": "Job Application Letter",
+      "count": 19
     },
     {
       "id": 1,
-      "name": "Career Development",
-      "count": 15
-    },
-    {
-      "id": 3,
       "name": "Software Development",
-      "count": 9
+      "count": 81
     }
   ]
 }
