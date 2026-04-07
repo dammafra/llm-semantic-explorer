@@ -8,7 +8,7 @@ I \textit{Large Language Models} (LLM) basati sull'architettura \textit{Transfor
 
 Per far fronte a questa limitazione è emerso il filone di ricerca definito \textit{Mechanistic Interpretability} \cite{elhage2021mathematical}. L'obiettivo di questa disciplina è decodificare i meccanismi interni delle reti neurali per comprendere come le strutture profonde concorrano alla formazione dei concetti e alla formulazione delle risposte. Invece di limitarsi a una valutazione comportamentale basata unicamente sul testo generato, l'approccio meccanicistico sposta l'analisi sulle rappresentazioni intermedie. In questa prospettiva, la generazione di ogni singolo token può essere interpretata come il punto di una più complessa traiettoria vettoriale all'interno dello spazio latente ad alta dimensionalità del modello.
 
-In questo scenario si inserisce anche il \textit{Prompt Engineering}, ovvero l'insieme di metodologie utilizzate per istruire e guidare gli LLM. L'impiego di tecniche avanzate, quali il \textit{Few-Shot Prompting} o il \textit{Chain-of-Thought} \cite{wei2022chain}, consente di migliorare la qualità e l'accuratezza delle risposte inducendo il modello a emulare processi logici e di ragionamento più rigidi. 
+In questo scenario si inserisce anche il \textit{Prompt Engineering}, ovvero l'insieme di metodologie utilizzate per istruire e guidare gli LLM. L'impiego di tecniche avanzate, quali il \textit{Few-Shot Prompting} o il \textit{Chain of Thought} \cite{wei2022chain}, consente di migliorare la qualità e l'accuratezza delle risposte inducendo il modello a emulare processi logici e di ragionamento più rigidi. 
 
 \subsection{Stato dell'Arte e Strumenti di Visualizzazione Semantica}
 \label{sec:stato_arte}
@@ -26,7 +26,7 @@ In questo contesto, lo studio del \textit{Prompt Engineering} rappresenta un cas
 \begin{enumerate}
     \item \textbf{Tracciamento della Generazione}: superare l'analisi ``black-box'' dell'output testuale mediante l'estrazione sequenziale delle rappresentazioni vettoriali interne durante la fase di inferenza auto-regressiva.
     \item \textbf{Mappatura Topologica}: progettare una pipeline in grado di ridurre la dimensionalità di tali vettori, proiettandoli in uno spazio tridimensionale che preservi le relazioni semantiche e permetta di raggruppare i token in base alla loro densità concettuale.
-    \item \textbf{Definizione di Metriche Quantitative}: introdurre parametri in grado di misurare di quanto un prompt strutturato riesca a deviare le traiettorie del modello rispetto a una semplice query \textit{zero-shot}, quantificando sia la porzione di spazio latente inedito esplorato, sia le specifiche macro-aree semantiche attivate.
+    \item \textbf{Definizione di Metriche Quantitative}: introdurre parametri in grado di misurare di quanto un prompt strutturato riesca a deviare le traiettorie del modello rispetto a una semplice query \textit{zero-shot}.
 \end{enumerate}
 
 In sintesi, l'elaborato si pone l'obiettivo di costruire uno strumento di analisi visiva, fornendo un ambiente esplorativo che permetta di osservare, in termini puramente spaziali e geometrici, come le diverse istruzioni modifichino concretamente il percorso del modello.

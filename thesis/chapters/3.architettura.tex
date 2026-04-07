@@ -6,7 +6,7 @@ L'architettura sviluppata per questo elaborato orchestra il processo di inferenz
 \subsection{Generazione e Filtraggio dei Dati}
 \label{sec:gestione_dati}
 
-La prima fase della pipeline riguarda l'interazione con il modello linguistico e la gestione dei prompt. Per poter misurare l'effetto dello \textit{steering} semantico, il sistema è configurato per processare iterativamente coppie o catene di prompt. Ad ogni tecnica avanzata (come \textit{Chain-of-Thought}, \textit{Few-Shot} o \textit{Persona Prompting}) viene affiancato un prompt ``di base'' (\textit{zero-shot}) che funge da traiettoria di controllo.
+La prima fase della pipeline riguarda l'interazione con il modello linguistico e la gestione dei prompt. Per poter misurare l'effetto dello \textit{steering} semantico, il sistema è configurato per processare iterativamente coppie o catene di prompt. Ad ogni tecnica avanzata (come \textit{Chain of Thought}, \textit{Few-Shot} o \textit{Persona Prompting}) viene affiancato un prompt ``di base'' (\textit{zero-shot}) che funge da traiettoria di controllo.
 
 Per isolare l'impatto della struttura del prompt sul ragionamento ed evitare rumore generato da convenzioni colloquiali, al modello viene fornito un \textit{system prompt} restrittivo. Tale istruzione di sistema impone la generazione di risposte dirette e prive di preamboli (es. formule di saluto o conclusioni discorsive), forzando l'LLM ad emettere esclusivamente i token strettamente necessari all'esecuzione del task.
 
