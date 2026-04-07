@@ -1,0 +1,49 @@
+\section{Architettura della Pipeline}
+\label{sec:architettura}
+
+L'architettura sviluppata per questo elaborato orchestra il processo di inferenza, estrazione vettoriale, riduzione dimensionale e salvataggio dei dati. L'intera logica di esecuzione è stata implementata all'interno del notebook Python \texttt{llm-semantic-explorer-pipeline.ipynb} \cite{notebook_pipeline}. Di seguito vengono analizzate le singole fasi del flusso di elaborazione.
+
+\subsection{Generazione e Filtraggio dei Dati}
+\label{sec:gestione_dati}
+
+La prima fase della pipeline riguarda l'interazione con il modello linguistico e la gestione dei prompt. Per poter misurare l'effetto dello \textit{steering} semantico, il sistema è configurato per processare iterativamente coppie o catene di prompt. Ad ogni tecnica avanzata (come \textit{Chain-of-Thought}, \textit{Few-Shot} o \textit{Persona Prompting}) viene affiancato un prompt ``di base'' (\textit{zero-shot}) che funge da traiettoria di controllo.
+
+Per isolare l'impatto della struttura del prompt sul ragionamento ed evitare rumore generato da convenzioni colloquiali, al modello viene fornito un \textit{system prompt} restrittivo. Tale istruzione di sistema impone la generazione di risposte dirette e prive di preamboli (es. formule di saluto o conclusioni discorsive), forzando l'LLM ad emettere esclusivamente i token strettamente necessari all'esecuzione del task.
+
+Una volta avviato il processo di inferenza, il modello genera sequenzialmente i token che compongono la risposta. Tuttavia, la proiezione dell'intero output produrrebbe una mappa tridimensionale eccessivamente densa di elementi puramente grammaticali o sintattici, privi di reale rilevanza topologica. Per ovviare a questo problema, la pipeline implementa una routine di filtraggio post-generazione:
+\begin{itemize}
+    \item \textbf{Rimozione della punteggiatura e dei caratteri speciali}: vengono scartati i token contenenti esclusivamente simboli, spaziature isolate o tag di sistema (come i marcatori di fine sequenza).
+    \item \textbf{Rimozione delle \textit{stop-words}}: vengono eliminati articoli, preposizioni e congiunzioni avvalendosi del vocabolario fornito dalla libreria NLTK.
+\end{itemize}
+
+L'applicazione di questa funzione di filtraggio fa sì che all'interno della struttura dati vengano conservati unicamente i token portatori di un significato semantico definito. Solo per questo sottoinsieme filtrato verranno mantenuti in memoria i corrispondenti vettori ad alta dimensionalità, ottimizzando così il carico computazionale per le successive fasi di clustering e riduzione.
+
+\subsection{Estrazione degli Embeddings dai Layer del Modello}
+\label{sec:estrazione_embeddings}
+
+La fase centrale dell'architettura sperimentale consiste nell'estrazione delle rappresentazioni vettoriali durante il processo generativo del modello. Poiché l'obiettivo dell'elaborato è misurare lo spazio latente in modo dinamico, la semplice funzione \texttt{generate} non è sufficiente, in quanto di default restituisce esclusivamente la sequenza di identificativi (\textit{token IDs}) che costituiscono il testo di output.
+
+Per catturare le attivazioni interne della rete neurale (\textit{hidden states}), la pipeline implementa un passaggio aggiuntivo (\textit{forward pass}) eseguito parallelamente alla generazione standard. Sfruttando le specifiche fornite dalla libreria \textit{Transformers}, è possibile inviare al modello una richiesta di processamento abilitando il parametro \texttt{output\_hidden\_states} \cite{huggingface_transformers_docs}. Questa impostazione istruisce la rete a restituire non solo la predizione del vocabolario, ma anche la matrice multidimensionale prodotta in uscita da ogni singolo layer.
+
+Al fine di ottenere una rappresentazione sintetica ma semanticamente completa, il sistema intercetta unicamente i tensori in uscita dall'ultimo layer della rete (accessibili all'indice -1 dell'array restituito dal modello). Come consolidato in letteratura \cite{belrose2023eliciting}, l'ultimo strato di una rete auto-regressiva contiene infatti i vettori contestuali definitivi, i quali aggregano tutte le informazioni sintattiche e semantiche elaborate dai layer precedenti e vengono impiegati direttamente per la proiezione finale (\textit{language modeling head}).
+
+Dal punto di vista dell'implementazione tecnica, l'estrazione avviene all'interno dell'ambiente \textit{PyTorch} associato all'acceleratore hardware. I vettori estratti assumono la forma di tensori ad alta dimensionalità allocati nella memoria video (VRAM). Per rendere questi dati compatibili con i successivi algoritmi di analisi geometrica, i tensori vengono trasferiti dalla VRAM alla memoria di sistema della CPU e successivamente convertiti dal formato tensoriale \textit{PyTorch} al formato matriciale \textit{NumPy}. Questa matrice costituisce il dataset matematico su cui verranno eseguiti la riduzione dimensionale e il calcolo delle metriche.
+
+\subsection{Integrazione dei Processi di Riduzione Dimensionale e Clustering}
+\label{sec:integrazione_riduzione_clustering}
+
+Ottenuta la matrice filtrata degli \textit{hidden states}, il sistema procede all'estrazione della topologia spaziale. La gestione di questo processo si articola in tre stadi computazionali, progettati per aggirare il fenomeno della \textit{Curse of Dimensionality} \cite{bellman1961adaptive}, critico per gli algoritmi basati sulla distanza in spazi ad alta dimensionalità \cite{altman2018curse}.
+
+Il primo stadio consiste in una riduzione dimensionale propedeutica, applicando l'algoritmo UMAP per comprimere i vettori originali da 3072 a 30 dimensioni. Questo valore rappresenta un compromesso euristico ottimale: è sufficientemente basso da ripristinare il potere discriminante della metrica di distanza spaziale, ma abbastanza elevato da trattenere l'intricata informazione semantica necessaria al partizionamento. 
+
+Il secondo stadio prevede l'applicazione dell'algoritmo HDBSCAN sui vettori a 30 dimensioni. L'algoritmo è stato configurato per adattarsi alla specifica natura linguistica dei dati:
+\begin{itemize}
+    \item \texttt{min\_samples = 2}: regola la fase di esplorazione locale definendo il numero minimo di vicini affinché un punto formi un nucleo (\textit{core point}). Un valore così basso abbassa la soglia di tolleranza, permettendo di preservare e raggruppare anche i \textit{token} che formano le frasi di transizione logica, essenziali per tracciare la continuità del ragionamento del modello.
+    \item \texttt{min\_cluster\_size = 5}: regola la soglia di sopravvivenza finale dei gruppi. Essendo ogni vettore un singolo \textit{token}, un limite di 5 unità garantisce l'identificazione di micro-concetti validi (es. proposizioni chiave di poche parole), impedendo al contempo la formazione di aggregazioni puramente accidentali.
+\end{itemize}
+
+A valle del clustering vettoriale, la pipeline esegue un processo di \textit{Cluster Labeling} automatizzato. Per ogni gruppo identificato da HDBSCAN, l'insieme dei token testuali corrispondenti viene raggruppato e fornito in input allo stesso LLM. Tramite un prompt di sistema restrittivo (che vincola l'output a un massimo di 1-5 parole), il modello genera un'etichetta semantica che descrive sinteticamente l'argomento trattato in quella specifica regione dello spazio latente. Per garantire che l'LLM operi in maniera più  rigorosa, il parametro \textit{temperature} in questa fase è stato abbassato a 0.1, forzando un comportamento strettamente deterministico che massimizza la riproducibilità e l'oggettività dell'etichetta generata.
+
+Il terzo e ultimo stadio riguarda la proiezione spaziale definitiva per l'esportazione. Una seconda istanza indipendente dell'algoritmo UMAP viene applicata alla medesima matrice di \textit{hidden states} originaria per comprimerla in uno spazio visibile (\texttt{n\_components = 3}). Per preservare la continuità visiva della traiettoria di generazione, i parametri vengono configurati specificamente \cite{mcinnes2018umap}: \texttt{n\_neighbors} è fissato a 15, bilanciando la struttura locale (token adiacenti nella frase) con quella globale (paragrafi diversi), mentre \texttt{min\_dist} è fissato a 0.1, garantendo che i token semanticamente identici mantengano una minima separazione fisica, evitando l'eccessivo collasso visivo dei punti e consentendone l'ispezione interattiva.
+
+L'output finale, composto da coordinate tridimensionali, etichette matematiche HDBSCAN e tag semantici, viene aggregato e serializzato in formato JSON, strutturando la base di dati per l'analisi quantitativa e la navigazione 3D.

@@ -1,0 +1,37 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+\usepackage[italian]{babel}
+\usepackage{geometry}
+\geometry{a4paper, margin=2.5cm, left=3cm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, allcolors=black}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage[font=footnotesize]{caption}
+\usepackage{subcaption}
+\usepackage[backend=biber, style=numeric]{biblatex} 
+\setcounter{biburllcpenalty}{7000}
+\setcounter{biburlucpenalty}{8000}
+\setcounter{biburlnumpenalty}{9000}
+\addbibresource{bibliografia.bib}
+\onehalfspacing
+
+\begin{document}
+\include{frontespizio}
+\pagenumbering{gobble}
+\include{chapters/0.abstract}
+\tableofcontents
+\pagenumbering{arabic}
+\include{chapters/1.introduzione}
+\include{chapters/2.background}
+\include{chapters/3.architettura}
+\include{chapters/4.metriche}
+\include{chapters/5.risultati}
+\include{chapters/6.conclusioni}
+\printbibliography
+\end{document}

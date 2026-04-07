@@ -1,0 +1,57 @@
+\section{Background Teorico e Tecnologie Utilizzate}
+\label{sec:background}
+
+\subsection{Lo Spazio degli Embeddings e la Rappresentazione Vettoriale}
+\label{sec:spazio_embeddings}
+
+Alla base del funzionamento di qualsiasi modello di \textit{Natural Language Processing} (NLP) vi è la necessità di convertire entità testuali discrete, come i token o le parole, in formati matematici computabili dalle reti neurali. Questa trasformazione avviene tramite il processo di \textit{embedding}, che associa a ogni unità testuale un vettore denso di numeri reali all'interno di uno spazio vettoriale ad alta dimensionalità \cite{mikolov2013efficient}.
+
+L'assunto geometrico fondamentale degli \textit{embedding} è che la distanza e l'orientamento tra i vettori riflettano le relazioni semantiche e sintattiche tra i concetti che essi rappresentano. Nelle architetture NLP di prima generazione, come \textit{Word2Vec} o \textit{GloVe}, la mappatura era biunivoca e statica: a ogni parola del vocabolario corrispondeva un unico vettore fisso, calcolato massimizzando la probabilità di co-occorrenza delle parole all'interno di vaste finestre di contesto \cite{mikolov2013efficient}. Tali modelli consentivano di catturare proprietà relazionali (dimostrabili attraverso la ben nota aritmetica vettoriale, es. $v(\text{Re}) - v(\text{Uomo}) + v(\text{Donna}) \approx v(\text{Regina})$), ma risultavano inadeguati per gestire la polisemia, assegnando lo stesso vettore a una parola indipendentemente dal suo reale significato nella frase.
+
+L'avvento dell'architettura \textit{Transformer} \cite{vaswani2017attention} ha segnato il passaggio agli \textit{embedding} contestuali. In modelli come LLaMA, GPT o BERT, l'iniziale proiezione statica del token costituisce solo il punto di partenza. Man mano che il dato fluisce attraverso i vari layer della rete, i meccanismi di \textit{self-attention} ricalcolano iterativamente il vettore del token pesandolo in base a tutti gli altri token presenti nella sequenza di input \cite{vaswani2017attention}. 
+
+I vettori in uscita da ciascun blocco \textit{Transformer} prendono il nome di \textit{hidden states}. A differenza del semplice \textit{token embedding} iniziale, un \textit{hidden state} codifica una rappresentazione dinamica, ricca di informazioni sul contesto, sulla grammatica e sulla logica globale della frase \cite{belrose2023eliciting}. Lo spazio latente in cui risiedono questi vettori è tipicamente caratterizzato da migliaia di dimensioni (ad esempio, 3072 dimensioni per l'architettura LLaMA-3.2-3B).
+
+In ottica di \textit{Mechanistic Interpretability}, l'estrazione degli \textit{hidden} states dal livello terminale della rete durante la generazione è cruciale: è proprio questa complessa matrice vettoriale che contiene la ``conoscenza contestuale'' finale. Tale vettore viene infatti utilizzato dal modello per calcolare, tramite una funzione \textit{Softmax}, la distribuzione di probabilità necessaria a selezionare il token successivo \cite{vaswani2017attention}.
+
+\subsection{Tecniche di Riduzione della Dimensionalità: PCA, t-SNE e UMAP}
+\label{sec:riduzione_dimensionalita}
+
+L'analisi degli \textit{hidden states} estratti dagli LLM comporta la gestione di vettori caratterizzati da migliaia di dimensioni. Poiché lo spazio tridimensionale è il limite massimo per la visualizzazione umana, è necessario ricorrere ad algoritmi di riduzione dimensionale che comprimano i dati minimizzando la perdita di informazione \cite{mcinnes2018umap}. La scelta dell'algoritmo determina intrinsecamente quali proprietà topologiche dello spazio vettoriale verranno preservate.
+
+Storicamente, l'approccio standard è rappresentato dalla \textit{Principal Component Analysis} (PCA). La PCA è una tecnica lineare che identifica assi ortogonali (componenti principali) lungo i quali la varianza dei dati risulta massimizzata. Pur essendo computazionalmente molto efficiente, la natura lineare della PCA la rende inadeguata per mappare spazi latenti altamente complessi e non lineari come quelli generati dalle architetture \textit{Transformer}, poiché tende a collassare e sovrapporre token che in realtà appartengono a concetti diversi, distruggendo la naturale separazione in \textit{cluster} tipica di queste architetture.
+
+Per superare i limiti delle proiezioni lineari, l'analisi visiva moderna fa largo uso di algoritmi non lineari, tra cui spiccano t-SNE (\textit{t-Distributed Stochastic Neighbor Embedding}) e il più recente UMAP (\textit{Uniform Manifold Approximation and Projection}). L'idea alla base di entrambi i metodi è simile: invece di schiacciare rigidamente lo spazio vettoriale, costruiscono prima una mappa delle vicinanze (un grafo topologico) che registra quali token sono semanticamente correlati nell'alta dimensionalità. Successivamente, cercano di riprodurre questa complessa rete di collegamenti nello spazio ridotto (es. 2D o 3D) \cite{mcinnes2018umap}.
+
+Tuttavia, t-SNE presenta due criticità fondamentali. In primo luogo, richiede un enorme sforzo computazionale, poiché per ottimizzare la proiezione necessita di ricalcolare continuamente le relazioni probabilistiche tra ogni singolo punto e l'intero dataset. In secondo luogo, tende a preservare unicamente la struttura locale: pur riuscendo a formare cluster visivamente compatti per concetti simili, finisce per posizionare i vari raggruppamenti a distanze arbitrarie, distorcendo le reali relazioni semantiche globali dello spazio latente.
+
+UMAP si è imposto come lo standard attuale proprio per superare questi ostacoli \cite{mcinnes2018umap}, sfruttando un'architettura matematica più efficiente per la costruzione del grafo, evita i gravosi calcoli globali di t-SNE, limitandosi a ottimizzare le connessioni locali e riuscendo a preservare in modo eccellente la coerenza macroscopica delle distanze tra concetti slegati.
+
+Per tali ragioni matematiche e operative, la pipeline illustrata nel prossimo capitolo impiega UMAP come motore esclusivo per la proiezione tridimensionale degli \textit{hidden states}.
+
+\subsection{Tecniche di Clustering basate sulla Densità (HDBSCAN)}
+\label{sec:clustering_hdbscan}
+
+La fase successiva alla proiezione tridimensionale dello spazio latente consiste nell'identificare e raggruppare i token in aree semantiche omogenee. Tale operazione richiede l'impiego di un algoritmo di \textit{clustering} robusto, in grado di operare efficacemente su geometrie spaziali complesse e distribuzioni non uniformi.
+
+Approcci tradizionali, come il \textit{K-Means}, si basano sull'assunto che i cluster abbiano forme sferiche e densità simili e richiedono soprattutto di definire a priori il numero totale di cluster ($k$). Questa rigidità rende il \textit{K-Means} metodologicamente incompatibile con l'analisi dinamica generata dagli LLM: il numero di concetti esplorati dal modello durante un'inferenza è ignoto a priori e dipende fortemente dalla complessità del prompt, rendendo impossibile un'impostazione arbitraria del parametro $k$. 
+
+Per superare tali limiti, i metodi di partizionamento spaziale più moderni si basano sul concetto di densità, operando sul presupposto che i cluster siano aree dello spazio ad alta densità di dati, separate da regioni più rade. L'algoritmo di riferimento in questo ambito è storicamente DBSCAN (\textit{Density-Based Spatial Clustering of Applications with Noise}). DBSCAN non richiede la definizione a priori del numero di cluster ed è in grado di identificare aggregazioni di forma arbitraria. Tuttavia, esso si avvale di una soglia di densità fissa che lo rende inefficace qualora il dataset presenti cluster con densità molto variabili \cite{campello2013density}.
+
+L'algoritmo HDBSCAN (\textit{Hierarchical Density-Based Spatial Clustering of Applications with Noise}) rappresenta l'evoluzione gerarchica di DBSCAN e costituisce la scelta adottata all'interno della pipeline di questo elaborato. Invece di basarsi su una soglia di distanza globale, HDBSCAN costruisce un albero gerarchico basato sulle distanze di mutua raggiungibilità dei punti. Attraverso una successiva fase di \textit{pruning} basata sulla stabilità temporale dei cluster, l'algoritmo estrae in modo automatico i raggruppamenti più solidi, adattandosi in maniera dinamica a densità variabili \cite{campello2013density}. 
+
+Inoltre, un attributo critico di HDBSCAN è la sua esplicita capacità di gestire il rumore (\textit{noise}). I punti che non soddisfano i criteri di densità per appartenere a un cluster strutturato non vengono forzatamente allocati, ma restano isolati (etichettati convenzionalmente con il valore $-1$). Nell'esplorazione semantica di un LLM, questa caratteristica è fondamentale: permette di separare i concetti focali del ragionamento (i cluster densi) da particelle sintattiche di transizione o \textit{stop-words} (che si comportano come rumore statistico), aumentando drasticamente la pulizia e la leggibilità della mappatura topologica.
+
+\subsection{Stack Tecnologico e Ambiente di Sviluppo}
+\label{sec:stack_tecnologico}
+
+L'infrastruttura implementata in questo elaborato si divide in due componenti operative principali: una pipeline di elaborazione dati per l'estrazione e la riduzione dei vettori, e un'applicazione web per la loro visualizzazione. Di seguito vengono descritte le tecnologie adottate per entrambe le fasi.
+
+\paragraph{Ambiente di Calcolo ed Ecosistema Python}
+L'intera pipeline di calcolo è stata sviluppata ed eseguita all'interno dell'ambiente cloud \textit{Kaggle}. L'impiego di questa piattaforma ha fornito l'accesso agli acceleratori hardware (GPU Tesla T4) necessari per sostenere il carico computazionale dell'inferenza. Il codice è scritto in Python e utilizza la libreria \textit{Transformers} di \textit{Hugging Face} \cite{wolf2020transformers} per la gestione dei \textit{tokenizer} e l'estrazione degli \textit{hidden states}. 
+
+\paragraph{Modello Linguistico e Quantizzazione (Unsloth)}
+Il modello utilizzato per la generazione è \textit{LLaMA-3.2-3B-Instruct} \cite{dubey2024llama3}, caricato in memoria tramite la libreria \textit{Unsloth} \cite{unsloth_guide_2025}. Tale libreria applica una quantizzazione a 4-bit ai pesi della rete neurale, riducendo le dimensioni del modello e rendendone possibile l'esecuzione all'interno dei limiti hardware imposti dall'ambiente.
+
+\paragraph{Visualizzazione Interattiva (Three.js)}
+Al termine del processo di riduzione dimensionale e clustering, le coordinate spaziali dei token e le relative etichette vengono aggregate ed esportate in file in formato JSON. Per analizzare visivamente tali dati, è stata sviluppata una web-app dedicata utilizzando \textit{Three.js}. Si tratta di una libreria JavaScript che utilizza le API WebGL per il rendering di grafica 3D all'interno del browser. L'interfaccia così realizzata legge il file JSON prodotto dalla pipeline e proietta i vettori nello spazio tridimensionale, consentendo la navigazione interattiva e l'osservazione geometrica delle traiettorie dei token.

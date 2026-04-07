@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Esplorazione Semantica degli LLM</title>
+
+  <!-- Reveal.js -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <!-- No theme - custom styles only -->
+
+  <!-- Fonts -->
+  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      /* Palette - Academic dark teal + warm accents */
+      --c-bg: #0d1b2a;
+      --c-bg-alt: #132238;
+      --c-surface: #1a2d44;
+      --c-accent: #4ecdc4;
+      --c-accent-dim: rgba(78, 205, 196, 0.15);
+      --c-accent-2: #ff6b6b;
+      --c-accent-3: #ffe66d;
+      --c-text: #e8edf2;
+      --c-text-muted: #8899aa;
+      --c-text-dim: #5a6f83;
+      --c-divider: rgba(78, 205, 196, 0.2);
+
+      --font-display: 'Cabinet Grotesk', 'Helvetica Neue', sans-serif;
+      --font-body: 'Satoshi', 'Inter', sans-serif;
+    }
+
+    .reveal-viewport {
+      background: var(--c-bg);
+      background-image:
+        radial-gradient(ellipse at 20% 80%, rgba(78, 205, 196, 0.04) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(255, 107, 107, 0.03) 0%, transparent 50%);
+    }
+
+    .reveal {
+      font-family: var(--font-body);
+      font-size: 22px;
+      color: var(--c-text);
+    }
+
+    .reveal .slides section {
+      text-align: left;
+      padding: 32px 48px !important;
+      box-sizing: border-box !important;
+    }
+
+    .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+      font-family: var(--font-display);
+      color: var(--c-text);
+      text-transform: none;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 0.6em;
+    }
+
+    .reveal h1 {
+      font-size: 2.4em;
+      font-weight: 800;
+    }
+
+    .reveal h2 {
+      font-size: 1.5em;
+      font-weight: 700;
+    }
+
+    .reveal h3 {
+      font-size: 1.15em;
+      font-weight: 700;
+      color: var(--c-accent);
+    }
+
+    .reveal p, .reveal li {
+      font-size: 0.75em;
+      line-height: 1.55;
+      color: var(--c-text);
+      max-width: none;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    .reveal li {
+      margin-bottom: 0.4em;
+    }
+
+    .reveal ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .reveal ul > li::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--c-accent);
+      margin-right: 12px;
+      vertical-align: middle;
+    }
+
+    .reveal strong {
+      color: var(--c-accent);
+      font-weight: 700;
+    }
+
+    .reveal em {
+      color: var(--c-text-muted);
+      font-style: italic;
+    }
+
+    .reveal code {
+      font-size: 0.85em;
+      background: var(--c-surface);
+      padding: 2px 8px;
+      border-radius: 4px;
+      color: var(--c-accent);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* --- Slide Layouts --- */
+
+    /* Title slide */
+    .slide-title {
+      display: flex !important;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .slide-title h1 {
+      font-size: 2.2em;
+      max-width: 16ch;
+      background: linear-gradient(135deg, var(--c-accent) 0%, #6ee7de 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .slide-title .subtitle {
+      font-size: 0.9em;
+      color: var(--c-text-muted);
+      margin-top: 0.3em;
+      max-width: 36ch;
+      text-align: center;
+    }
+
+    .slide-title .author {
+      font-size: 0.72em;
+      color: var(--c-text-dim);
+      margin-top: 2em;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .slide-title .institution {
+      font-size: 0.62em;
+      color: var(--c-text-dim);
+      margin-top: 0.5em;
+    }
+
+    /* Section divider */
+    .slide-section {
+      display: flex !important;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .slide-section .section-number {
+      font-family: var(--font-display);
+      font-size: 4em;
+      font-weight: 800;
+      color: var(--c-accent);
+      opacity: 0.2;
+      line-height: 1;
+      margin-bottom: 0.1em;
+    }
+
+    .slide-section h2 {
+      font-size: 2em;
+    }
+
+    .slide-section .section-desc {
+      font-size: 0.8em;
+      color: var(--c-text-muted);
+      max-width: 40ch;
+    }
+
+    /* Two-column layout */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      align-items: start;
+    }
+
+    .two-col-wide {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 36px;
+      align-items: start;
+    }
+
+    /* Metric cards */
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .metric-card {
+      background: var(--c-surface);
+      border-radius: 12px;
+      padding: 20px;
+      border: 1px solid var(--c-divider);
+    }
+
+    .metric-card .label {
+      font-size: 0.6em;
+      color: var(--c-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+
+    .metric-card .value {
+      font-family: var(--font-display);
+      font-size: 1.7em;
+      font-weight: 800;
+      color: var(--c-accent);
+      line-height: 1;
+    }
+
+    .metric-card .desc {
+      font-size: 0.58em;
+      color: var(--c-text-dim);
+      margin-top: 6px;
+      line-height: 1.4;
+    }
+
+    /* Pipeline steps */
+    .pipeline {
+      display: flex;
+      gap: 8px;
+      align-items: stretch;
+      margin-top: 20px;
+    }
+
+    .pipeline-step {
+      flex: 1;
+      background: var(--c-surface);
+      border-radius: 10px;
+      padding: 16px 14px;
+      border-top: 3px solid var(--c-accent);
+      position: relative;
+    }
+
+    .pipeline-step::after {
+      content: '→';
+      position: absolute;
+      right: -14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--c-accent);
+      font-size: 1.1em;
+      font-weight: 700;
+    }
+
+    .pipeline-step:last-child::after {
+      display: none;
+    }
+
+    .pipeline-step .step-num {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.65em;
+      color: var(--c-accent);
+      margin-bottom: 4px;
+    }
+
+    .pipeline-step .step-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.68em;
+      color: var(--c-text);
+      margin-bottom: 4px;
+    }
+
+    .pipeline-step .step-desc {
+      font-size: 0.52em;
+      color: var(--c-text-muted);
+      line-height: 1.45;
+    }
+
+    /* Data table */
+    .data-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      font-size: 0.68em;
+      margin-top: 16px;
+    }
+
+    .data-table thead th {
+      background: var(--c-surface);
+      color: var(--c-accent);
+      font-weight: 700;
+      font-family: var(--font-display);
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 2px solid var(--c-accent);
+      font-size: 0.95em;
+    }
+
+    .data-table thead th:first-child {
+      border-radius: 8px 0 0 0;
+    }
+
+    .data-table thead th:last-child {
+      border-radius: 0 8px 0 0;
+    }
+
+    .data-table tbody td {
+      padding: 10px 16px;
+      border-bottom: 1px solid rgba(78, 205, 196, 0.08);
+      color: var(--c-text);
+    }
+
+    .data-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .data-table .highlight {
+      color: var(--c-accent);
+      font-weight: 700;
+    }
+
+    .data-table .highlight-warm {
+      color: var(--c-accent-3);
+      font-weight: 700;
+    }
+
+    /* Tag / badge */
+    .tag {
+      display: inline-block;
+      font-size: 0.6em;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      background: var(--c-accent-dim);
+      color: var(--c-accent);
+      margin-right: 6px;
+      margin-bottom: 4px;
+    }
+
+    .tag.warm {
+      background: rgba(255, 107, 107, 0.15);
+      color: var(--c-accent-2);
+    }
+
+    .tag.gold {
+      background: rgba(255, 230, 109, 0.15);
+      color: var(--c-accent-3);
+    }
+
+    /* Image */
+    .slide-img {
+      border-radius: 10px;
+      border: 1px solid var(--c-divider);
+      max-height: 400px;
+      width: auto;
+    }
+
+    .slide-img-full {
+      border-radius: 10px;
+      border: 1px solid var(--c-divider);
+      max-height: 450px;
+      width: auto;
+      margin: 12px auto 0;
+      display: block;
+    }
+
+    /* Footnote */
+    .footnote {
+      font-size: 0.5em;
+      color: var(--c-text-dim);
+      margin-top: 24px;
+    }
+
+    /* Bullet list compact */
+    .compact li {
+      font-size: 0.72em;
+      margin-bottom: 0.25em;
+    }
+
+    /* Key takeaway box */
+    .takeaway {
+      background: var(--c-accent-dim);
+      border-left: 4px solid var(--c-accent);
+      padding: 16px 20px;
+      border-radius: 0 10px 10px 0;
+      margin-top: 16px;
+    }
+
+    .takeaway p {
+      font-size: 0.72em;
+      color: var(--c-text);
+      line-height: 1.5;
+      max-width: none;
+    }
+
+    /* Slide number */
+    .reveal .slide-number {
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: var(--c-text-dim);
+      background: none;
+    }
+
+    /* Progress bar */
+    .reveal .progress {
+      height: 3px;
+      color: var(--c-accent);
+    }
+
+    /* Formula block */
+    .formula {
+      background: var(--c-surface);
+      border-radius: 10px;
+      padding: 18px 24px;
+      text-align: center;
+      font-family: 'Georgia', serif;
+      font-size: 1em;
+      color: var(--c-text);
+      margin: 16px 0;
+      border: 1px solid var(--c-divider);
+    }
+
+    .formula .eq {
+      font-style: italic;
+      font-size: 1.15em;
+    }
+
+    .formula .label {
+      font-family: var(--font-body);
+      font-size: 0.6em;
+      color: var(--c-text-muted);
+      margin-top: 6px;
+    }
+
+    /* Objectives grid */
+    .obj-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .obj-card {
+      background: var(--c-surface);
+      border-radius: 12px;
+      padding: 20px;
+      border-top: 3px solid var(--c-accent);
+    }
+
+    .obj-card.warm {
+      border-top-color: var(--c-accent-2);
+    }
+
+    .obj-card.gold {
+      border-top-color: var(--c-accent-3);
+    }
+
+    .obj-card .obj-num {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.5em;
+      opacity: 0.25;
+      color: var(--c-text);
+      margin-bottom: 4px;
+    }
+
+    .obj-card .obj-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.75em;
+      color: var(--c-text);
+      margin-bottom: 6px;
+    }
+
+    .obj-card .obj-desc {
+      font-size: 0.58em;
+      color: var(--c-text-muted);
+      line-height: 1.45;
+    }
+
+    /* Tech stack */
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .tech-item {
+      background: var(--c-surface);
+      border-radius: 10px;
+      padding: 16px;
+      border: 1px solid var(--c-divider);
+    }
+
+    .tech-item .tech-name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.78em;
+      color: var(--c-accent);
+      margin-bottom: 4px;
+    }
+
+    .tech-item .tech-desc {
+      font-size: 0.58em;
+      color: var(--c-text-muted);
+      line-height: 1.4;
+    }
+
+    /* Conclusion cards */
+    .conclusion-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .conclusion-card {
+      background: var(--c-surface);
+      border-radius: 12px;
+      padding: 20px;
+      border: 1px solid var(--c-divider);
+    }
+
+    .conclusion-card h4 {
+      font-size: 0.72em;
+      color: var(--c-accent);
+      margin-bottom: 6px;
+    }
+
+    .conclusion-card p {
+      font-size: 0.6em;
+      color: var(--c-text-muted);
+      line-height: 1.5;
+      max-width: none;
+    }
+
+    .conclusion-card.future {
+      border-color: rgba(255, 230, 109, 0.2);
+    }
+
+    .conclusion-card.future h4 {
+      color: var(--c-accent-3);
+    }
+
+    /* Annotation for images */
+    .img-caption {
+      font-size: 0.55em;
+      color: var(--c-text-dim);
+      text-align: center;
+      margin-top: 6px;
+      font-style: italic;
+    }
+
+    /* Horizontal bar */
+    .hbar {
+      height: 2px;
+      background: linear-gradient(90deg, var(--c-accent), transparent);
+      border: none;
+      margin: 20px 0;
+      width: 120px;
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- SLIDE 1: Title -->
+      <section class="slide-title">
+        <h1>Esplorazione Semantica degli LLM</h1>
+        <p class="subtitle">Un approccio di Mechanistic Interpretability tramite visualizzazione degli embeddings</p>
+        <p class="author">Francesco Dammacco</p>
+        <p class="institution">Universita degli Studi di Bari Aldo Moro &mdash; Dipartimento di Informatica<br>
+        Short Master in Generative AI &middot; A.A. 2025&ndash;2026</p>
+      </section>
+
+      <!-- SLIDE 2: Il Problema -->
+      <section>
+        <h2>Il Problema</h2>
+        <hr class="hbar">
+        <div class="two-col">
+          <div>
+            <p>I Large Language Models basati su Transformer operano su spazi vettoriali con <strong>migliaia di dimensioni</strong>, rendendo il processo decisionale opaco e difficile da interpretare.</p>
+            <br>
+            <p>La <strong>Mechanistic Interpretability</strong> si propone di decodificare i meccanismi interni delle reti neurali, spostando l'analisi dalle valutazioni comportamentali alle <strong>rappresentazioni intermedie</strong>.</p>
+          </div>
+          <div>
+            <h3>Domanda di ricerca</h3>
+            <p>Le tecniche di Prompt Engineering modificano la geometria dello spazio latente durante la generazione?</p>
+            <br>
+            <div class="takeaway">
+              <p>Ogni token generato e un punto di una <strong>traiettoria vettoriale</strong> nello spazio latente ad alta dimensionalita.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 3: Obiettivi -->
+      <section>
+        <h2>Obiettivi del Progetto</h2>
+        <hr class="hbar">
+        <div class="obj-grid">
+          <div class="obj-card">
+            <div class="obj-num">01</div>
+            <div class="obj-title">Tracciamento della Generazione</div>
+            <div class="obj-desc">Superare l'analisi black-box estraendo sequenzialmente le rappresentazioni vettoriali interne durante l'inferenza auto-regressiva.</div>
+          </div>
+          <div class="obj-card warm">
+            <div class="obj-num">02</div>
+            <div class="obj-title">Mappatura Topologica</div>
+            <div class="obj-desc">Ridurre la dimensionalita dei vettori proiettandoli in 3D, preservando le relazioni semantiche e raggruppando i token per densita concettuale.</div>
+          </div>
+          <div class="obj-card gold">
+            <div class="obj-num">03</div>
+            <div class="obj-title">Metriche Quantitative</div>
+            <div class="obj-desc">Misurare quanto un prompt strutturato devia le traiettorie del modello rispetto a una query zero-shot, quantificando lo spazio latente inedito esplorato.</div>
+          </div>
+        </div>
+        <div class="takeaway" style="margin-top:24px;">
+          <p>Costruire uno strumento di analisi visiva che permetta di osservare, in termini spaziali e geometrici, come le istruzioni modifichino il percorso del modello.</p>
+        </div>
+      </section>
+
+      <!-- SLIDE 4: Background Teorico -->
+      <section>
+        <h2>Background Teorico</h2>
+        <hr class="hbar">
+        <div class="two-col">
+          <div>
+            <h3>Embeddings &amp; Hidden States</h3>
+            <ul>
+              <li>Nei Transformer, ogni token viene convertito in un <strong>vettore denso</strong> (3072 dim. in LLaMA-3.2-3B)</li>
+              <li>La self-attention ricalcola iterativamente il vettore pesandolo in base al contesto</li>
+              <li>Gli <strong>hidden states</strong> dell'ultimo layer contengono la "conoscenza contestuale" finale</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Riduzione &amp; Clustering</h3>
+            <ul>
+              <li><strong>UMAP</strong> &mdash; preserva coerenza macroscopica delle distanze tra concetti, supera i limiti di PCA (lineare) e t-SNE (solo struttura locale)</li>
+              <li><strong>HDBSCAN</strong> &mdash; clustering basato sulla densita: non richiede k a priori, gestisce densita variabili e classifica come rumore le stop-words</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 5: Stack & Pipeline -->
+      <section>
+        <h2>Architettura della Pipeline</h2>
+        <hr class="hbar">
+        <div class="pipeline">
+          <div class="pipeline-step">
+            <div class="step-num">01</div>
+            <div class="step-title">Generazione</div>
+            <div class="step-desc">Inferenza con LLaMA-3.2-3B-Instruct via Unsloth (4-bit). Filtraggio stop-words e punteggiatura.</div>
+          </div>
+          <div class="pipeline-step">
+            <div class="step-num">02</div>
+            <div class="step-title">Estrazione</div>
+            <div class="step-desc">Forward pass parallelo. Hidden states dall'ultimo layer (3072 dim) &rarr; NumPy.</div>
+          </div>
+          <div class="pipeline-step">
+            <div class="step-num">03</div>
+            <div class="step-title">UMAP 30D</div>
+            <div class="step-desc">Riduzione propedeutica a 30 dimensioni per aggirare la Curse of Dimensionality.</div>
+          </div>
+          <div class="pipeline-step">
+            <div class="step-num">04</div>
+            <div class="step-title">HDBSCAN</div>
+            <div class="step-desc">Clustering sui vettori a 30D. Auto-labeling semantico via LLM (temp=0.1).</div>
+          </div>
+          <div class="pipeline-step">
+            <div class="step-num">05</div>
+            <div class="step-title">UMAP 3D</div>
+            <div class="step-desc">Proiezione finale a 3 dimensioni &rarr; JSON &rarr; Visualizzazione Three.js.</div>
+          </div>
+        </div>
+        <div class="tech-grid" style="margin-top:24px;">
+          <div class="tech-item">
+            <div class="tech-name">Ambiente di calcolo</div>
+            <div class="tech-desc">Kaggle (GPU Tesla T4) &middot; Python &middot; HuggingFace Transformers &middot; PyTorch</div>
+          </div>
+          <div class="tech-item">
+            <div class="tech-name">Visualizzazione</div>
+            <div class="tech-desc">Web app interattiva con Three.js &middot; Navigazione 3D nel browser via WebGL</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 6: Dataset Sperimentale -->
+      <section>
+        <h2>Dataset Sperimentale</h2>
+        <hr class="hbar">
+        <p>Sei famiglie di tecniche di prompting, ognuna con un prompt di controllo (zero-shot) e una o piu varianti strutturate:</p>
+        <div class="metric-grid" style="grid-template-columns: repeat(3, 1fr); margin-top:16px;">
+          <div class="metric-card">
+            <div class="label">Persona</div>
+            <div class="value" style="font-size:1em;">Persona Prompting</div>
+            <div class="desc">Ruolo esplicito e vincoli di tono (HR empatico)</div>
+          </div>
+          <div class="metric-card">
+            <div class="label">Formato</div>
+            <div class="value" style="font-size:1em;">Few-shot</div>
+            <div class="desc">Esempi completi di output (estrazione JSON)</div>
+          </div>
+          <div class="metric-card">
+            <div class="label">Ragionamento</div>
+            <div class="value" style="font-size:1em;">Chain-of-Thought</div>
+            <div class="desc">Passaggi deduttivi espliciti passo-passo</div>
+          </div>
+          <div class="metric-card">
+            <div class="label">Astrazione</div>
+            <div class="value" style="font-size:1em;">Step-back</div>
+            <div class="desc">Principi generali &rarr; applicazione concreta</div>
+          </div>
+          <div class="metric-card">
+            <div class="label">Composizione</div>
+            <div class="value" style="font-size:1em;">Prompt Chaining</div>
+            <div class="desc">Task scomposto in fasi sequenziali dipendenti</div>
+          </div>
+          <div class="metric-card">
+            <div class="label">Decisione</div>
+            <div class="value" style="font-size:1em;">Tree of Thoughts</div>
+            <div class="desc">Struttura ramificata: brainstorm &rarr; valutazione &rarr; selezione</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 7: Metriche di Validazione -->
+      <section>
+        <h2>Metriche di Validazione</h2>
+        <hr class="hbar">
+        <div class="two-col">
+          <div>
+            <h3>Trustworthiness</h3>
+            <p>Misura la fedelta della riduzione dimensionale: quanti dei k vicini nello spazio originale restano vicini in 3D.</p>
+            <div class="metric-card" style="margin-top:16px;">
+              <div class="label">Range osservato</div>
+              <div class="value">0.934 &ndash; 0.967</div>
+              <div class="desc">Topologia locale preservata fedelmente in tutte le tecniche.</div>
+            </div>
+          </div>
+          <div>
+            <h3>Silhouette Score</h3>
+            <p>Valuta coesione intra-cluster e separazione inter-cluster. Varia da -1 a +1.</p>
+            <div class="metric-card" style="margin-top:16px;">
+              <div class="label">Valore massimo</div>
+              <div class="value">0.743 <span style="font-size:0.45em;color:var(--c-text-muted);font-weight:400;">(CoT)</span></div>
+              <div class="desc">Il Chain-of-Thought produce cluster estremamente coesi &mdash; il "tunnel cognitivo" riduce il rumore.</div>
+            </div>
+          </div>
+        </div>
+        <div class="takeaway" style="margin-top:20px;">
+          <p>Lo spazio 3D esplorato riflette in modo fedele e strutturato i reali processi interni del modello.</p>
+        </div>
+      </section>
+
+      <!-- SLIDE 8: Metriche Quantitative -->
+      <section>
+        <h2>Divergenza Semantica</h2>
+        <hr class="hbar">
+        <div class="two-col-wide">
+          <div>
+            <p>Porzione di "nuovo" spazio latente esplorato dal prompt avanzato rispetto al prompt zero-shot. Basata su <strong>voxelizzazione 3D</strong> e indice di <strong>Jaccard spaziale</strong>:</p>
+            <div class="formula">
+              <div class="eq">Divergenza = 1 &minus; J(A, B) = 1 &minus; |A &cap; B| / |A &cup; B|</div>
+              <div class="label">A = voxel occupati dal prompt base &middot; B = voxel occupati dal prompt avanzato</div>
+            </div>
+            <div class="takeaway">
+              <p>In tutti gli scenari, il modello esplora regioni vettoriali diverse con valori medi <strong>superiori all'80%</strong>. Few-shot e CoT superano il 95%.</p>
+            </div>
+          </div>
+          <div>
+            <table class="data-table">
+              <thead>
+                <tr><th>Tecnica</th><th>Divergenza</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Persona</td><td>85.7%</td></tr>
+                <tr><td>Few-shot</td><td class="highlight">96.3%</td></tr>
+                <tr><td>CoT</td><td class="highlight">95.2%</td></tr>
+                <tr><td>Step-back</td><td>80.4%</td></tr>
+                <tr><td>Chaining</td><td>92.2%</td></tr>
+                <tr><td>ToT</td><td>90.3%</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 9: Attivazione Concettuale - Few-shot -->
+      <section>
+        <h2>Attivazione Concettuale: Few-shot</h2>
+        <hr class="hbar">
+        <div class="two-col-wide">
+          <div>
+            <img src="assets/few-shot-prompting_cluster_activation.png" alt="Few-shot cluster activation" class="slide-img" style="max-height:360px;">
+            <p class="img-caption">Cluster Activation &mdash; Few-shot Prompting</p>
+          </div>
+          <div>
+            <h3>Biforcazione strutturale</h3>
+            <ul>
+              <li>Il <strong>bad prompt</strong> alloca il 100% dei token in un singolo cluster (generazione discorsiva)</li>
+              <li>Il <strong>few-shot prompt</strong> ripartisce su due cluster: <strong>40%</strong> e <strong>60%</strong></li>
+              <li>Riflette l'alternanza tra sintassi JSON e estrazione del contenuto testuale</li>
+            </ul>
+            <div class="takeaway" style="margin-top:16px;">
+              <p>L'imposizione di vincoli di formato crea confini netti nello spazio semantico del modello.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 10: Attivazione - Chaining -->
+      <section>
+        <h2>Attivazione: Chaining &amp; ToT</h2>
+        <hr class="hbar">
+        <div class="two-col">
+          <div>
+            <img src="assets/prompt-chaining_cluster_activation.png" alt="Prompt Chaining" class="slide-img" style="max-height:320px;">
+            <p class="img-caption">Prompt Chaining &mdash; transizione sequenziale tra cluster</p>
+            <ul class="compact" style="margin-top:12px;">
+              <li>La seconda fase concentra ~65% su un singolo cluster</li>
+              <li>Il modello transita tra stati semantici successivi</li>
+            </ul>
+          </div>
+          <div>
+            <img src="assets/tree-of-thoughts_cluster_activation.png" alt="Tree of Thoughts" class="slide-img" style="max-height:320px;">
+            <p class="img-caption">Tree of Thoughts &mdash; distribuzione ramificata</p>
+            <ul class="compact" style="margin-top:12px;">
+              <li>Ogni ramo attiva regioni semantiche variabili</li>
+              <li>Amplia l'eterogeneita concettuale rispetto al prompt monolitico</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 11: Risultati chiave -->
+      <section>
+        <h2>Risultati Complessivi</h2>
+        <hr class="hbar">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Tecnica</th>
+              <th>Trustworthiness</th>
+              <th>Silhouette</th>
+              <th>Divergenza</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Persona Prompting</td><td>0.934</td><td>0.466</td><td>85.7%</td></tr>
+            <tr><td>Few-shot Prompting</td><td>0.936</td><td>0.536</td><td class="highlight">96.3%</td></tr>
+            <tr><td>Chain-of-Thought</td><td class="highlight">0.966</td><td class="highlight">0.743</td><td class="highlight">95.2%</td></tr>
+            <tr><td>Step-back Prompting</td><td>0.959</td><td>0.412</td><td>80.4%</td></tr>
+            <tr><td>Prompt Chaining</td><td>0.959</td><td>0.484</td><td>92.2%</td></tr>
+            <tr><td>Tree of Thoughts</td><td class="highlight">0.967</td><td>0.520</td><td>90.3%</td></tr>
+          </tbody>
+        </table>
+        <div class="takeaway" style="margin-top:20px;">
+          <p>Le istruzioni ben strutturate non si limitano a orientare l'output testuale: <strong>guidano il modello verso specifiche regioni dello spazio latente</strong>, riducendo l'entropia nella scelta dei token successivi.</p>
+        </div>
+      </section>
+
+      <!-- SLIDE 12: Conclusioni -->
+      <section>
+        <h2>Conclusioni &amp; Sviluppi Futuri</h2>
+        <hr class="hbar">
+        <div class="conclusion-grid">
+          <div class="conclusion-card">
+            <h4>Risultato principale</h4>
+            <p>Il contesto fornito nel prompt modifica la distribuzione dei token, inducendo la formazione di cluster semantici distinti e misurabili nello spazio latente 3D.</p>
+          </div>
+          <div class="conclusion-card">
+            <h4>Strumento pratico</h4>
+            <p>La pipeline fornisce un ambiente esplorativo per ispezionare la "scatola nera" della decodifica probabilistica attraverso traiettorie spaziali navigabili.</p>
+          </div>
+          <div class="conclusion-card future">
+            <h4>Limitazioni</h4>
+            <p>Dataset ad hoc numerico limitato. Nessuno studio sulla variazione dei parametri. Perdita di granularita nella riduzione dimensionale.</p>
+          </div>
+          <div class="conclusion-card future">
+            <h4>Sviluppi futuri</h4>
+            <p>Integrazione con architetture RAG per mappare l'efficacia del retrieval. Tracciamento dei pattern decisionali degli agenti. Adozione di strumenti scalabili (Nomic Atlas).</p>
+          </div>
+        </div>
+        <p style="text-align:center; margin-top:32px; font-size:0.7em; color:var(--c-text-muted);">
+          <span class="tag">Pipeline</span>
+          <span class="tag warm">Metrics</span>
+          <span class="tag gold">Viewer</span>
+          &nbsp; kaggle.com/dammafra
+        </p>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: 'c/t',
+      width: 1280,
+      height: 720,
+      margin: 0.05,
+      transition: 'fade',
+      transitionSpeed: 'fast',
+      backgroundTransition: 'none',
+      center: false,
+      controls: true,
+      progress: true,
+    });
+  </script>
+<script data-pplx-inline-edit>
+(function(){
+  if(window===window.top)return;
+  function inlineAll(orig,clone){
+    if(orig.nodeType!==1)return;
+    try{
+      var cs=getComputedStyle(orig);
+      var t='';
+      for(var i=0;i<cs.length;i++){t+=cs[i]+':'+cs.getPropertyValue(cs[i])+';';}
+      clone.style.cssText=t;
+    }catch(e){}
+    var oc=orig.children,cc=clone.children;
+    for(var j=0;j<oc.length&&j<cc.length;j++){inlineAll(oc[j],cc[j]);}
+  }
+  function stripExternal(clone){
+    var imgs=clone.querySelectorAll('img');
+    for(var i=0;i<imgs.length;i++){
+      var s=imgs[i].getAttribute('src');
+      if(s&&!s.startsWith('data:'))imgs[i].removeAttribute('src');
+    }
+    var all=clone.querySelectorAll('*');
+    for(var i=0;i<all.length;i++){
+      var st=all[i].style.cssText;
+      if(st&&st.indexOf('url(')>=0){
+        all[i].style.cssText=st.replace(/url\(["']?(?!data:)[^)"']*["']?\)/gi,'none');
+      }
+    }
+  }
+  window.addEventListener('message',function(e){
+    if(!e.data||e.data.type!=='INLINE_EDIT_CAPTURE_REQUEST')return;
+    var scrollX=window.scrollX||window.pageXOffset||0;
+    var scrollY=window.scrollY||window.pageYOffset||0;
+    var w=window.innerWidth,h=window.innerHeight;
+    try{
+      var clone=document.documentElement.cloneNode(true);
+      var rm=clone.querySelectorAll('script,link[rel="stylesheet"],style');
+      for(var i=0;i<rm.length;i++){rm[i].remove();}
+      inlineAll(document.documentElement,clone);
+      stripExternal(clone);
+      var html=new XMLSerializer().serializeToString(clone);
+      var svg='<svg xmlns="http://www.w3.org/2000/svg" width="'+w+'" height="'+h+'">'
+        +'<foreignObject width="100%" height="100%">'
+        +'<div xmlns="http://www.w3.org/1999/xhtml" style="width:'+w+'px;height:'+h+'px;overflow:hidden">'
+        +'<div style="transform:translate(-'+scrollX+'px,-'+scrollY+'px);transform-origin:top left">'
+        +html+'</div></div></foreignObject></svg>';
+      var svgUrl='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);
+      var img=new Image();
+      img.onload=function(){
+        var c=document.createElement('canvas');c.width=w;c.height=h;
+        c.getContext('2d').drawImage(img,0,0);
+        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:c.toDataURL('image/png'),scrollX:scrollX,scrollY:scrollY},'*');
+      };
+      img.onerror=function(){
+        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
+      };
+      img.src=svgUrl;
+    }catch(err){
+      window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
+    }
+  });
+})();
+</script></body>
+</html>

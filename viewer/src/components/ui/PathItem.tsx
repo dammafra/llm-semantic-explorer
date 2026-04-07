@@ -32,7 +32,7 @@ export function PathItem({ path }: Props) {
 
   return (
     <div className="flex flex-col bg-white/5 rounded-lg overflow-hidden border border-white/5 shrink-0">
-      <button
+      <div
         onClick={() => setExpanded(prev => !prev)}
         className="w-full p-2 flex items-center gap-2 hover:bg-white/5 cursor-pointer"
       >
@@ -53,7 +53,7 @@ export function PathItem({ path }: Props) {
           icon="ri:arrow-down-s-line"
           className={clsx('size-4 text-white/40 transition-transform', expanded && 'rotate-180')}
         />
-      </button>
+      </div>
 
       {expanded && (
         <div className="p-2 pt-0 flex flex-col gap-2 border-t border-white/5 bg-black/20">

@@ -1,0 +1,4 @@
+{
+  "bad_prompt": "Write a rejection email to a job candidate.",
+  "good_prompt": "You are an empathetic HR Manager at a tech startup. Write a rejection email to a candidate who reached the final interview stage but was not selected. Maintain a professional yet warm tone, provide constructive feedback on their coding test, and encourage them to apply for future roles."
+}

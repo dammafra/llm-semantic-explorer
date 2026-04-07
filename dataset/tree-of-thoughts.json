@@ -1,0 +1,16 @@
+{
+  "bad_prompt": "Suggest a marketing strategy for a new coffee shop.",
+  "tree_of_thoughts_1": "Brainstorm 3 distinct marketing strategies for a new coffee shop that is opening next month in a mid-sized city.",
+  "tree_of_thoughts_2": {
+    "prompt": "For each of the 3 strategies you just proposed, list: (a) 2 potential benefits, (b) 1 potential risk, and (c) an estimated relative cost level (Low/Medium/High).",
+    "deps": ["tree_of_thoughts_1"]
+  },
+  "tree_of_thoughts_3": {
+    "prompt": "Compare the 3 strategies using clear criteria (expected impact, cost, speed to execute, risk). Then choose the single best strategy for the first 30 days and justify your choice.",
+    "deps": ["tree_of_thoughts_1", "tree_of_thoughts_2"]
+  },
+  "tree_of_thoughts_4": {
+    "prompt": "Turn your chosen strategy into a concrete 7-day action plan with daily tasks and a simple success metric for each day.",
+    "deps": ["tree_of_thoughts_1", "tree_of_thoughts_2", "tree_of_thoughts_3"]
+  }
+}

@@ -1,0 +1,69 @@
+\section{Analisi Sperimentale e Metriche}
+\label{sec:metriche}
+
+Il presente capitolo illustra le metodologie analitiche applicate ai dati vettoriali estratti e raggruppati dalla pipeline. La logica per la validazione topologica e per il calcolo delle distanze semantiche è stata sviluppata separatamente all'interno del notebook Python \texttt{llm-semantic-explorer-metrics.ipynb} \cite{notebook_metrics}. Prima di quantificare l'impatto dei prompt sullo spazio semantico, è necessario validare la robustezza matematica delle trasformazioni subite dai dati originali. Successivamente, vengono definite le metriche per valutare oggettivamente le traiettorie generative.
+
+\subsection{Costruzione del dataset sperimentale}
+\label{sec:dataset_sperimentali}
+
+Per condurre un'analisi rigorosa sull'impatto vettoriale delle diverse strategie di prompting, è stato costruito un dataset sperimentale ad hoc \cite{notebook_dataset}. L'obiettivo primario di questa raccolta è fornire un ambiente di test controllato: per ogni scenario analizzato, il compito generativo di base rimane invariato, mentre cambia esclusivamente la tecnica di interrogazione sottoposta al modello. Il dataset esplora sei famiglie principali di \textit{Prompt Engineering}:
+\begin{enumerate}
+    \item \textbf{Persona Prompting}: si confronta un'istruzione neutra con una che impone un ruolo esplicito e vincoli di tono (la redazione di un'email di rifiuto da parte di un HR empatico).
+    \item \textbf{Few-shot Prompting}: si confronta una richiesta di estrazione dati \textit{zero-shot} con una in cui vengono forniti esempi completi di formato (l'estrazione strutturata in JSON da email di supporto).
+    \item \textbf{Chain-of-Thought (CoT)}: si confronta la risposta diretta a un quesito logico di posizionamento spaziale con una in cui il modello è forzato a esplicitare i passaggi deduttivi intermedi passo dopo passo.
+    \item \textbf{Step-back Prompting}: si confronta una domanda diretta su un caso di business specifico con una sequenza che richiede prima un'astrazione sui principi economici generali, per poi tornare alla pianificazione strategica concreta.
+    \item \textbf{Prompt Chaining}: un compito composito (scrivere una storia di fantascienza, estrarre i personaggi e generare un quiz) viene affrontato prima in un'unica iterazione monolitica e poi scomposto in passaggi sequenziali dipendenti l'uno dall'altro.
+    \item \textbf{Tree of Thoughts (ToT)}: il processo decisionale per definire una strategia di marketing viene esplorato attraverso una struttura ramificata che prevede fasi distinte di brainstorming, valutazione comparativa, selezione e pianificazione esecutiva.
+\end{enumerate}
+
+Per ogni scenario, il dataset definisce un caso di controllo (\textit{bad prompt}), che formula il problema in modo immediato e non strutturato, affiancandogli una o più varianti ottimizzate. Queste ultime possono consistere in una singola istruzione elaborata (\textit{good prompt}) o in una sequenza di passaggi distinti (come \textit{step\_back\_1} e \textit{step\_back\_2}); in quest'ultimo caso, il dataset mappa esplicitamente le dipendenze logiche tra i nodi della catena o dell'albero decisionale, assicurando che l'output generato in un passaggio diventi automaticamente il contesto di input per il successivo.
+
+Mantenendo costante l'obiettivo finale, i risultati presentati nei paragrafi successivi si concentreranno esclusivamente su come la strutturazione dell'input modifichi la geometria dello spazio latente e orienti la distribuzione dei token all'interno dei cluster concettuali.
+
+\subsection{Validazione Strutturale della rappresentazione dello Spazio Latente}
+\label{sec:validazione_strutturale}
+
+L'applicazione in cascata di algoritmi di riduzione dimensionale (UMAP) e clustering (HDBSCAN) altera inevitabilmente la rappresentazione nativa degli \textit{hidden states}. Per garantire che l'analisi spaziale non si basi su artefatti matematici introdotti dalla compressione a tre dimensioni, il sistema implementa due metriche di validazione strutturale.
+
+La prima metrica impiegata è la \textbf{Trustworthiness} (Affidabilità), utilizzata per valutare la qualità della riduzione dimensionale operata da UMAP. Questa misura quantifica in che proporzione i $k$ vicini più prossimi di un punto nello spazio originale ad alta dimensionalità rimangano tali anche nello spazio ridotto a bassa dimensionalità (3D). Una \textit{Trustworthiness} elevata (prossima a 1) certifica che la topologia locale è stata preservata: due token che risultavano semanticamente affini nell'ultimo layer del Transformer continuano ad essere rappresentati come vicini fisici nella visualizzazione tridimensionale, validando di conseguenza le misurazioni successive \cite{arxiv_trustworthy_dr_2024}.
+
+La seconda metrica adottata è il \textbf{Silhouette Score}, applicata per valutare la coesione e la separazione dei gruppi identificati dall'algoritmo HDBSCAN \cite{silhouette_methods_2025}. Questo indice si basa su due parametri: la distanza media dal token a tutti gli altri token del suo stesso cluster (\textit{coesione}) e la distanza media dal token ai token del cluster più vicino (\textit{separazione}). Il \textit{Silhouette Score} varia in un intervallo compreso tra -1 e +1. Un valore positivo elevato indica che i cluster semantici estratti non sono sovrapposti in modo ambiguo, ma formano entità concettuali ben distinte nello spazio latente, confermando l'efficacia dei parametri di calibrazione. L'osservazione congiunta di queste due metriche fornisce la garanzia matematica che lo spazio 3D esplorato rifletta in modo fedele e strutturato i reali processi logici interni del modello.
+
+\subsection{Analisi Quantitativa: Divergenza Semantica e Attivazione Concettuale}
+\label{sec:metriche_dislocamento}
+
+A seguito della validazione strutturale, l'analisi si concentra sulla misurazione dello \textit{steering} indotto dai prompt. Lo scopo è superare il semplice calcolo della distanza vettoriale (come la \textit{Cosine Similarity}, idonea per i singoli \textit{hidden states}), per adottare un approccio che valuti la distribuzione complessiva della generazione nello spazio tridimensionale continuo. A tale fine, l'elaborato introduce e implementa due metriche quantitative: la Divergenza Semantica e l'Attivazione dei Cluster.
+
+La \textbf{Divergenza Semantica} è progettata per misurare la porzione di ``nuovo'' spazio latente esplorato dal modello sotto l'effetto di un prompt avanzato rispetto a un prompt \textit{zero-shot} di base. Il calcolo si basa sulla discretizzazione volumetrica e sull'indice di similarità di Jaccard spaziale \cite{arxiv_jaccard_polygon_2025}, e procede attraverso i seguenti passaggi formali:
+\begin{enumerate}
+    \item \textbf{Calcolo del Bounding Box Globale}: si determina il volume minimo circoscritto che racchiude tutte le coordinate $(x, y, z)$ associate a una coppia di prompt in esame.
+    \item \textbf{Discretizzazione Spaziale (Voxelization)}: il \textit{bounding box} viene suddiviso in una griglia tridimensionale uniforme. Ogni singola cella (\textit{voxel}) rappresenta una delimitata sotto-regione semantica.
+    \item \textbf{Mappatura delle Frequenze}: per ciascuna delle traiettorie, si costruisce un istogramma 3D che registra la presenza o l'assenza di token all'interno di ogni \textit{voxel}.
+    \item \textbf{Calcolo dell'Indice}: la sovrapposizione tra la regione esplorata dal prompt di base (Insieme $A$) e quella del prompt avanzato (Insieme $B$) viene calcolata tramite l'equazione di Jaccard:
+    \[
+        J(A,B) = \frac{|A \cap B|}{|A \cup B|}
+    \]
+    La Divergenza Semantica finale viene definita come l'inverso della similarità di Jaccard:
+    \[
+        1 - J(A,B)
+    \]
+\end{enumerate}
+Un valore prossimo a $1$ evidenzia un dislocamento radicale: l'istruzione strutturata ha indotto il modello a deviare dalla traiettoria originale, navigando regioni vettoriali del tutto inesplorate dalla query di controllo.
+
+La seconda metrica introdotta è l'\textbf{Attivazione Concettuale}. Mentre la divergenza fornisce una misurazione spaziale assoluta, questa metrica valuta la distribuzione semantica del ragionamento. Sfruttando le macro-aree concettuali identificate e categorizzate da HDBSCAN precedentemente descritte, il sistema calcola la percentuale di token allocati all'interno di specifici cluster durante un'inferenza. Il confronto permette di identificare numericamente quali specifici domini di significato (es. argomentazioni logiche, strutture sintattiche, categorie tematiche) vengano innescati, amplificati o del tutto ignorati in risposta a diverse direttive iniziali.
+
+\subsection{Analisi Qualitativa: Visualizzazione delle Traiettorie nello Spazio 3D}
+\label{sec:analisi_qualitativa}
+
+Parallelamente alle metriche quantitative introdotte, l'elaborato propone un approccio esplorativo basato sull'osservazione visiva diretta. A tale scopo, è stata sviluppata un'applicazione web interattiva, destinata a caricare e renderizzare i dataset vettoriali precedentemente esportati in formato JSON dalla pipeline Python.
+
+Il sistema di visualizzazione decodifica il JSON ed esegue il seguente mapping visivo:
+\begin{itemize}
+    \item Le \textbf{coordinate spaziali} $(x, y, z)$ calcolate tramite UMAP vengono utilizzate per posizionare i nodi nel canva 3D. Ogni nodo rappresenta l' \textit{hidden state} di un singolo token testuale generato.
+    \item Il parametro cronologico di generazione (lo \textit{step} auteregressivo) viene impiegato per tracciare i collegamenti tra un nodo e il successivo. Questo permette di ricostruire visivamente l'esatta traiettoria percorsa dal ragionamento del modello.
+    \item Le etichette di raggruppamento assegnate da HDBSCAN vengono mappate su una scala cromatica. I token appartenenti al medesimo cluster assumono lo stesso colore.
+\end{itemize}
+
+Oltre al rendering grafico, l'interfaccia implementa controlli interattivi che consentono all'utente di ispezionare i singoli nodi o di filtrare i nodi visualizzati.
+
+Questa architettura di \textit{front-end} fornisce una restituzione spaziale tangibile dei dislocamenti quantificati dalla metrica di Jaccard. La possibilità di sovrapporre e isolare selettivamente le traiettorie di diverse tipologie di prompt permette di condurre un'analisi comparativa immediata e intuitiva sulle geometrie del ragionamento latente.

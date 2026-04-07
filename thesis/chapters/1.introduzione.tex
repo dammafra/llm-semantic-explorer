@@ -1,0 +1,32 @@
+\section{Introduzione}
+\label{sec:introduzione}
+
+\subsection{Contesto: LLM e Mechanistic Interpretability}
+\label{sec:contesto_motivazioni}
+
+I \textit{Large Language Models} (LLM) basati sull'architettura \textit{Transformer} \cite{vaswani2017attention} hanno rivoluzionato l'elaborazione del linguaggio naturale. Grazie all'impiego del meccanismo di \textit{self-attention} e a un massiccio pre-addestramento su ampi corpora testuali, questi modelli dimostrano straordinarie capacità di comprensione, ragionamento e generazione \cite{brown2020language}. Tuttavia, la crescente complessità parametrica ha progressivamente accentuato la natura ``black-box'' di tali architetture: sebbene gli output generati risultino sintatticamente corretti e semanticamente coerenti, l'esatto processo computazionale che mappa l'input (prompt) nel risultato finale rimane in gran parte opaco.
+
+Per far fronte a questa limitazione è emerso il filone di ricerca definito \textit{Mechanistic Interpretability} \cite{elhage2021mathematical}. L'obiettivo di questa disciplina è decodificare i meccanismi interni delle reti neurali per comprendere come le strutture profonde concorrano alla formazione dei concetti e alla formulazione delle risposte. Invece di limitarsi a una valutazione comportamentale basata unicamente sul testo generato, l'approccio meccanicistico sposta l'analisi sulle rappresentazioni intermedie. In questa prospettiva, la generazione di ogni singolo token può essere interpretata come il punto di una più complessa traiettoria vettoriale all'interno dello spazio latente ad alta dimensionalità del modello.
+
+In questo scenario si inserisce anche il \textit{Prompt Engineering}, ovvero l'insieme di metodologie utilizzate per istruire e guidare gli LLM. L'impiego di tecniche avanzate, quali il \textit{Few-Shot Prompting} o il \textit{Chain-of-Thought} \cite{wei2022chain}, consente di migliorare la qualità e l'accuratezza delle risposte inducendo il modello a emulare processi logici e di ragionamento più rigidi. 
+
+\subsection{Stato dell'Arte e Strumenti di Visualizzazione Semantica}
+\label{sec:stato_arte}
+
+L'analisi visiva degli spazi vettoriali in ambito di \textit{Machine Learning} ha visto una progressiva evoluzione metodologica parallela allo sviluppo dei modelli linguistici. Inizialmente, l'esplorazione degli spazi semantici si è concentrata su rappresentazioni vettoriali statiche. Strumenti consolidati come l'\textit{Embedding Projector} di \textit{TensorBoard} \cite{smilkov2016embedding} hanno fornito interfacce per l'osservazione delle relazioni geometriche tra le parole, impiegando algoritmi di riduzione dimensionale per ispezionare vocabolari generati da modelli come \textit{Word2Vec} o \textit{GloVe}.
+
+Con l'introduzione dei modelli basati su architettura \textit{Transformer} \cite{vaswani2017attention}, la natura delle rappresentazioni vettoriali è divenuta dipendente dal contesto e l'osservazione di questi \textit{embedding} contestuali ha richiesto lo sviluppo di nuovi strumenti. Lavori come quelli di Coenen et al. \cite{coenen2019pair} oppure \textit{BertViz} e \textit{exBERT} \cite{hoover2019exbert} hanno documentato la geometria delle rappresentazioni interne di modelli pre-addestrati, consentendo di vedere quali parti di una frase attirano di più l'attenzione del modello e come le informazioni vengono elaborate nei vari strati del sistema mentre cerca di interpretare un testo.
+
+Mentre questi strumenti si limitavano a ``fotografare'' le rappresentazioni interne di una frase data, l'interpretabilità dei moderni LLM richiede di osservare un testo mentre viene generato ed è oggi un ambito di ricerca in forte espansione. Inserendosi in questo filone, l'elaborato propone una semplice pipeline capace di catturare queste traiettorie di generazione, rendendole quantificabili e navigabili visivamente in uno spazio tridimensionale.
+
+\subsection{Obiettivi del Progetto}
+\label{sec:obiettivi_progetto}
+
+In questo contesto, lo studio del \textit{Prompt Engineering} rappresenta un caso d'uso ideale per testare la pipeline. Grazie alla visualizzazione tridimensionale diventa infatti possibile osservare concretamente come prompt diversi riescano a guidare (\textit{steering}) le scelte del modello, deviandone in modo misurabile il percorso durante la generazione del testo. Lo studio si articola in tre fasi:
+\begin{enumerate}
+    \item \textbf{Tracciamento della Generazione}: superare l'analisi ``black-box'' dell'output testuale mediante l'estrazione sequenziale delle rappresentazioni vettoriali interne durante la fase di inferenza auto-regressiva.
+    \item \textbf{Mappatura Topologica}: progettare una pipeline in grado di ridurre la dimensionalità di tali vettori, proiettandoli in uno spazio tridimensionale che preservi le relazioni semantiche e permetta di raggruppare i token in base alla loro densità concettuale.
+    \item \textbf{Definizione di Metriche Quantitative}: introdurre parametri in grado di misurare di quanto un prompt strutturato riesca a deviare le traiettorie del modello rispetto a una semplice query \textit{zero-shot}, quantificando sia la porzione di spazio latente inedito esplorato, sia le specifiche macro-aree semantiche attivate.
+\end{enumerate}
+
+In sintesi, l'elaborato si pone l'obiettivo di costruire uno strumento di analisi visiva, fornendo un ambiente esplorativo che permetta di osservare, in termini puramente spaziali e geometrici, come le diverse istruzioni modifichino concretamente il percorso del modello.
