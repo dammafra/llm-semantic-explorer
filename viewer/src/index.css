@@ -21,3 +21,20 @@ body,
 .gui-scroll::-webkit-scrollbar-thumb {
   @apply bg-white/20 rounded-full;
 }
+
+/* ── No-background mode (?background=false) ── */
+
+html.no-bg,
+html.no-bg body,
+html.no-bg #root {
+  @apply bg-transparent;
+  background-image: none;
+}
+
+html.no-bg .glass {
+  @apply bg-black/5 border-black/10;
+}
+
+html.no-bg .gui-scroll::-webkit-scrollbar-thumb {
+  @apply bg-black/20;
+}

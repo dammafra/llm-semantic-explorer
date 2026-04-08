@@ -1,7 +1,7 @@
 import { CameraControls } from '@react-three/drei'
 import { useChart } from '@stores'
 import { useEffect, useRef } from 'react'
-import { Box3, Sphere, type Group } from 'three'
+import { type Group } from 'three'
 
 export function CameraRig({ children }: { children: React.ReactNode }) {
   const controlsRef = useRef<any>(null)
@@ -22,16 +22,12 @@ export function CameraRig({ children }: { children: React.ReactNode }) {
     if (!hasAutoFitted.current && controls && groupRef.current && hasData) {
       setTimeout(() => {
         if (groupRef.current) {
-          // Compute bounding sphere to determine required camera distance
-          const box = new Box3().setFromObject(groupRef.current)
-          const sphere = new Sphere()
-          box.getBoundingSphere(sphere)
-
-          // Dolly to fit the sphere with padding, keep target at origin
-          const padding = 2
-          const distance = sphere.radius * padding
-          controls.setTarget(0, 0, 0, true)
-          controls.dollyTo(distance, true)
+          controls.fitToBox(groupRef.current, true, {
+            paddingTop: 1.2,
+            paddingLeft: 1.2,
+            paddingRight: 1.2,
+            paddingBottom: 1.2,
+          })
 
           hasAutoFitted.current = true
         }

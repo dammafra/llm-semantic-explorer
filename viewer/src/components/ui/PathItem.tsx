@@ -2,6 +2,7 @@ import { Icon } from '@iconify/react'
 import clsx from 'clsx'
 import { useState } from 'react'
 
+import { useQueryParams } from '@hooks'
 import { useChart, type ChartData } from '@stores'
 import { getColor } from '@utils'
 
@@ -14,6 +15,7 @@ type Props = {
 }
 
 export function PathItem({ path }: Props) {
+  const { background } = useQueryParams()
   const hiddenPaths = useChart(s => s.hiddenPaths)
   const togglePathVisibility = useChart(s => s.togglePathVisibility)
   const playingPaths = useChart(s => s.playingPaths)
@@ -31,10 +33,18 @@ export function PathItem({ path }: Props) {
   }
 
   return (
-    <div className="flex flex-col bg-white/5 rounded-lg overflow-hidden border border-white/5 shrink-0">
+    <div
+      className={clsx(
+        'flex flex-col rounded-lg overflow-hidden border shrink-0',
+        background ? 'bg-white/5 border-black/5' : 'bg-black/5 border-white/5',
+      )}
+    >
       <div
         onClick={() => setExpanded(prev => !prev)}
-        className="w-full p-2 flex items-center gap-2 hover:bg-white/5 cursor-pointer"
+        className={clsx(
+          'w-full p-2 flex items-center gap-2 cursor-pointer',
+          background ? 'hover:bg-white/5' : 'hover:bg-black/5',
+        )}
       >
         <ColorCheckbox
           color={getColor(path.id)}
@@ -44,21 +54,41 @@ export function PathItem({ path }: Props) {
         <span
           className={clsx(
             'text-xs font-medium truncate flex-1 text-left',
-            isHidden ? 'text-white/30' : 'text-white/80',
+            isHidden
+              ? background
+                ? 'text-white/30'
+                : 'text-black/30'
+              : background
+                ? 'text-white/80'
+                : 'text-black/80',
           )}
         >
           {path.name}
         </span>
         <Icon
           icon="ri:arrow-down-s-line"
-          className={clsx('size-4 text-white/40 transition-transform', expanded && 'rotate-180')}
+          className={clsx(
+            'size-4 transition-transform',
+            background ? 'text-white/40' : 'text-black/40',
+            expanded && 'rotate-180',
+          )}
         />
       </div>
 
       {expanded && (
-        <div className="p-2 pt-0 flex flex-col gap-2 border-t border-white/5 bg-black/20">
+        <div
+          className={clsx(
+            'p-2 pt-0 flex flex-col gap-2 border-t',
+            background ? 'border-black/5 bg-black/5' : 'border-white/5',
+          )}
+        >
           <div className="flex flex-col gap-1 mt-2">
-            <div className="flex justify-between items-center text-[10px] text-white/30 uppercase tracking-tighter mb-1">
+            <div
+              className={clsx(
+                'flex justify-between items-center text-[10px] uppercase tracking-tighter mb-1',
+                background ? 'text-white/30' : 'text-black/30',
+              )}
+            >
               <div className="flex items-center gap-1.5">
                 <button
                   onClick={e => {
@@ -74,7 +104,7 @@ export function PathItem({ path }: Props) {
                 </button>
                 <span>Playback</span>
               </div>
-              <span className="text-white font-mono">
+              <span className={clsx('font-mono', background ? 'text-white' : 'text-black')}>
                 {pathVisibleSteps[path.id]} / {path.points.length}
               </span>
             </div>
@@ -91,15 +121,39 @@ export function PathItem({ path }: Props) {
           </div>
 
           <div className="flex flex-col gap-1 mt-2">
-            <span className="text-[10px] text-white/30 uppercase tracking-tighter">Prompt</span>
-            <p className="text-[11px] text-white/70 bg-white/5 p-1.5 rounded whitespace-break-spaces">
+            <span
+              className={clsx(
+                'text-[10px] uppercase tracking-tighter',
+                background ? 'text-white/30' : 'text-black/30',
+              )}
+            >
+              Prompt
+            </span>
+            <p
+              className={clsx(
+                'text-[11px] p-1.5 rounded whitespace-break-spaces',
+                background ? 'text-white/70 bg-white/5' : 'text-black/70 bg-black/5',
+              )}
+            >
               {path.prompt}
             </p>
           </div>
 
           <div className="flex flex-col gap-1">
-            <span className="text-[10px] text-white/30 uppercase tracking-tighter">Response</span>
-            <p className="text-[11px] text-white/70 bg-white/5 p-1.5 rounded whitespace-break-spaces">
+            <span
+              className={clsx(
+                'text-[10px] uppercase tracking-tighter',
+                background ? 'text-white/30' : 'text-black/30',
+              )}
+            >
+              Response
+            </span>
+            <p
+              className={clsx(
+                'text-[11px] p-1.5 rounded whitespace-break-spaces',
+                background ? 'text-white/70 bg-white/5' : 'text-black/70 bg-black/5',
+              )}
+            >
               {path.response}
             </p>
           </div>

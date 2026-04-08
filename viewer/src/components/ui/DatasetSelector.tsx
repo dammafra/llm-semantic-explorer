@@ -1,6 +1,8 @@
 import { Icon } from '@iconify/react'
+import clsx from 'clsx'
 import { useEffect, useRef, useState } from 'react'
 
+import { useQueryParams } from '@hooks'
 import { useChart, type ChartData } from '@stores'
 
 // Automatically list files from public/datasets using Vite's glob feature
@@ -8,6 +10,7 @@ const datasetModules = import.meta.glob('/public/datasets/*.json')
 const defaultDatasets = Object.keys(datasetModules).map(path => path.split('/').pop() || '')
 
 export function DatasetSelector() {
+  const { background, dataset: queryDataset } = useQueryParams()
   const data = useChart(s => s.data)
   const fileInputRef = useRef<HTMLInputElement>(null!)
   const uploadedCache = useRef<Map<string, ChartData>>(new Map())
@@ -67,12 +70,21 @@ export function DatasetSelector() {
     loadDataset(event.target.value)
   }
 
-  // Auto-load first dataset on mount if no data exists
+  // Auto-load dataset on mount: prefer query param, then first available
   useEffect(() => {
-    if (!data && defaultDatasets.length > 0) {
-      loadDataset(defaultDatasets[0])
+    if (!data) {
+      if (queryDataset) {
+        // Add .json extension if not present
+        const filename = queryDataset.endsWith('.json') ? queryDataset : `${queryDataset}.json`
+        loadDataset(filename)
+      } else if (defaultDatasets.length > 0) {
+        loadDataset(defaultDatasets[0])
+      }
     }
   }, [data])
+
+  // If dataset set from query param, hide the selector entirely
+  if (queryDataset) return null
 
   return (
     <>
@@ -86,7 +98,12 @@ export function DatasetSelector() {
       <div className="flex gap-2">
         <div className="relative flex-1">
           <select
-            className="w-full bg-white/[0.08] hover:bg-white/[0.12] text-white font-medium py-1.5 pl-3 pr-8 rounded-lg cursor-pointer transition-colors outline-none focus:ring-2 focus:ring-blue-500/50 appearance-none text-sm"
+            className={clsx(
+              'w-full font-medium py-1.5 pl-3 pr-8 rounded-lg cursor-pointer transition-colors outline-none focus:ring-2 focus:ring-blue-500/50 appearance-none text-sm',
+              background
+                ? 'bg-white/[0.08] hover:bg-white/[0.12] text-white'
+                : 'bg-black/[0.08] hover:bg-black/[0.12] text-black',
+            )}
             onChange={handleSelectDataset}
             value={selected}
           >
@@ -97,7 +114,10 @@ export function DatasetSelector() {
             ))}
           </select>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
-            <Icon icon="ri:arrow-down-s-line" className="w-4 h-4 text-white/40" />
+            <Icon
+              icon="ri:arrow-down-s-line"
+              className={clsx('w-4 h-4', background ? 'text-white/40' : 'text-black/40')}
+            />
           </div>
         </div>
         <button

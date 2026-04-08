@@ -1,8 +1,11 @@
+import clsx from 'clsx'
 import { useMemo } from 'react'
 
+import { useQueryParams } from '@hooks'
 import { useChart } from '@stores'
 
 export function NoiseCounter() {
+  const { background } = useQueryParams()
   const data = useChart(s => s.data)
   const hiddenPaths = useChart(s => s.hiddenPaths)
   const pathVisibleSteps = useChart(s => s.pathVisibleSteps)
@@ -23,9 +26,28 @@ export function NoiseCounter() {
   if (noiseCount === 0) return null
 
   return (
-    <div className="flex items-center gap-2 bg-white/5 rounded-lg border border-white/5 p-2">
-      <span className="text-xs font-medium truncate flex-1 text-left text-white/30">Noise</span>
-      <span className="text-xs text-white/30 font-mono shrink-0">{noiseCount} tks</span>
+    <div
+      className={clsx(
+        'flex items-center gap-2 rounded-lg border p-2',
+        background ? 'bg-white/5 border-black/5' : 'bg-black/5 border-white/5',
+      )}
+    >
+      <span
+        className={clsx(
+          'text-xs font-medium truncate flex-1 text-left',
+          background ? 'text-white/30' : 'text-black/30',
+        )}
+      >
+        Noise
+      </span>
+      <span
+        className={clsx(
+          'text-xs font-mono shrink-0',
+          background ? 'text-white/30' : 'text-black/30',
+        )}
+      >
+        {noiseCount} tks
+      </span>
     </div>
   )
 }

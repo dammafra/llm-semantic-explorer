@@ -1,7 +1,11 @@
+import clsx from 'clsx'
+
+import { useQueryParams } from '@hooks'
 import { useChart } from '@stores'
 import { getColor } from '@utils'
 
 export function Tooltip() {
+  const { background } = useQueryParams()
   const hoveredNode = useChart(state => state.hoveredNode)
   const mode = useChart(state => state.mode)
   const clusters = useChart(state => state.data?.clusters)
@@ -17,7 +21,10 @@ export function Tooltip() {
       }}
     >
       <div
-        className="font-bold mb-2 border-b border-white/10 pb-1.5 uppercase tracking-wider text-sm"
+        className={clsx(
+          'font-bold mb-2 border-b pb-1.5 uppercase tracking-wider text-sm',
+          background ? 'border-white/10' : 'border-black/10',
+        )}
         style={{
           color: getColor(mode === 'paths' ? hoveredNode.pathId : hoveredNode.clusterId),
         }}
@@ -28,27 +35,63 @@ export function Tooltip() {
       </div>
       <div className="flex flex-col gap-2">
         <div className="flex flex-col gap-0.5">
-          <div className="flex justify-between items-center bg-white/5 px-2 py-1 rounded-md">
-            <span className="text-xs text-white/30 uppercase tracking-tighter font-semibold">
+          <div
+            className={clsx(
+              'flex justify-between items-center px-2 py-1 rounded-md',
+              background ? 'bg-white/5' : 'bg-black/5',
+            )}
+          >
+            <span
+              className={clsx(
+                'text-xs uppercase tracking-tighter font-semibold',
+                background ? 'text-white/30' : 'text-black/40',
+              )}
+            >
               Token
             </span>
-            <b className="text-xs text-white/90">"{hoveredNode.token}"</b>
+            <b className={clsx('text-xs', background ? 'text-white/90' : 'text-black/90')}>
+              "{hoveredNode.token}"
+            </b>
           </div>
         </div>
 
-        <div className="flex justify-between items-center bg-white/5 px-2 py-1 rounded-md">
-          <span className="text-xs text-white/30 uppercase tracking-tighter font-semibold">
+        <div
+          className={clsx(
+            'flex justify-between items-center px-2 py-1 rounded-md',
+            background ? 'bg-white/5' : 'bg-black/5',
+          )}
+        >
+          <span
+            className={clsx(
+              'text-xs uppercase tracking-tighter font-semibold',
+              background ? 'text-white/30' : 'text-black/40',
+            )}
+          >
             Step
           </span>
-          <span className="text-xs text-white/90 font-mono">{hoveredNode.step}</span>
+          <span
+            className={clsx('text-xs font-mono', background ? 'text-white/90' : 'text-black/90')}
+          >
+            {hoveredNode.step}
+          </span>
         </div>
 
-        <div className="flex justify-between items-center bg-white/5 px-2 py-1 rounded-md">
-          <span className="text-xs text-white/30 uppercase tracking-tighter font-semibold">
+        <div
+          className={clsx(
+            'flex justify-between items-center px-2 py-1 rounded-md',
+            background ? 'bg-white/5' : 'bg-black/5',
+          )}
+        >
+          <span
+            className={clsx(
+              'text-xs uppercase tracking-tighter font-semibold',
+              background ? 'text-white/30' : 'text-black/40',
+            )}
+          >
             {mode === 'paths' ? 'Cluster' : 'Path'}
           </span>
           <span
-            className="text-xs text-white/90 text-right"
+            className={clsx('text-xs text-right', background ? 'text-white/90' : 'text-black/90')}
             style={{
               color: getColor(mode === 'paths' ? hoveredNode.clusterId : hoveredNode.pathId),
             }}
