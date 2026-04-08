@@ -15,6 +15,7 @@ export function CameraRig({ children }: { children: React.ReactNode }) {
 
   const data = useChart(state => state.data)
   const spreadScale = useChart(state => state.spreadScale)
+  const hoveredNode = useChart(state => state.hoveredNode)
 
   useEffect(() => {
     hasAutoFitted.current = false
@@ -59,7 +60,7 @@ export function CameraRig({ children }: { children: React.ReactNode }) {
     if (!controls) return
 
     const elapsed = performance.now() - lastInteraction.current
-    if (elapsed > IDLE_DELAY) {
+    if (elapsed > IDLE_DELAY && !hoveredNode) {
       controls.azimuthAngle += AUTO_ROTATE_SPEED * delta
     }
   })
