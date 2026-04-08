@@ -27,7 +27,7 @@ Tuttavia, t-SNE presenta due criticità fondamentali. In primo luogo, richiede u
 
 UMAP si è imposto come lo standard attuale proprio per superare questi ostacoli \cite{mcinnes2018umap}, sfruttando un'architettura matematica più efficiente per la costruzione del grafo, evita i gravosi calcoli globali di t-SNE, limitandosi a ottimizzare le connessioni locali e riuscendo a preservare in modo eccellente la coerenza macroscopica delle distanze tra concetti slegati.
 
-Per tali ragioni matematiche e operative, la pipeline illustrata nel prossimo capitolo impiega UMAP come motore esclusivo per la proiezione tridimensionale degli \textit{hidden states}.
+Per tali ragioni matematiche e operative, la pipeline illustrata nel prossimo capitolo impiega UMAP come motore esclusivo per la proiezione tridimensionale degli \textit{hidden states} dell'ultimo layer.
 
 \subsection{Tecniche di Clustering basate sulla Densità (HDBSCAN)}
 \label{sec:clustering_hdbscan}

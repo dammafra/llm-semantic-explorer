@@ -20,7 +20,7 @@ Prompt Chaining & 0.939 \\
 Tree of Thoughts & 0.976 \\
 \hline
 \end{tabular}
-\caption{Riepilogo della Trustworthiness estratta dalle traiettorie degli hidden states per le sei tecniche di prompting analizzate.}
+\caption{Riepilogo della Trustworthiness estratta dalle traiettorie dei last hidden states per le sei tecniche di prompting analizzate.}
 \label{tab:risultati_metriche}
 \end{table}
 
@@ -28,7 +28,7 @@ I valori di \textit{Trustworthiness} si attestano uniformemente su livelli molto
 
 
 \subsubsection*{Attivazione Concettuale}
-Di seguito si analizzano i profili di attivazione concettuale con un focus su CoT, Few-shot e Chaining, utili per osservare come il prompt modifichi la distribuzione semantica del modello in presenza di vincoli di formato o scomposizioni del task.
+Di seguito si analizzano i profili di attivazione concettuale con un focus su \textit{Few-Shot Prompting}, \textit{Chain of Thought} e \textit{Prompt Chaining}, utili per osservare come il prompt modifichi la distribuzione semantica del modello in presenza di vincoli di formato o scomposizioni del task.
 
 \begin{figure}[htbp]
     \centering
@@ -43,7 +43,7 @@ L'introduzione di esempi formattati produce un profondo cambiamento nella distri
 \newpage
 
 \paragraph{Ragionamento Distribuito: Chain of Thought (CoT)}
-Il profilo di attivazione del Chain of Thought mostra una chiara ripartizione su molteplici flussi semantici. A differenza del \textit{bad prompt}, in cui l'attivazione collassa interamente (100\%) su un unico polo dedicato ai \textit{Person Names}, l'introduzione del ragionamento logico distribuisce i token generati in modo più articolato. Il modello focalizza inizialmente una parte rilevante dell'attivazione proprio sull'estrazione dei \textit{Person Names} (42.1\%), per poi spostare il carico cognitivo verso concetti legati ai \textit{Directional Terms} (21.1\%), un'ulteriore area associata ai \textit{Person Names} (19.3\%) e fasi logiche di \textit{Conditional Reasoning} (17.5\%). Questa frammentazione suggerisce che il ragionamento passo-passo non agisce come un singolo tunnel compatto, ma richiede al modello di navigare dinamicamente attraverso diverse aree concettuali e condizionali per giungere alla risposta.
+Il profilo di attivazione del \textit{Chain of Thought} mostra una chiara ripartizione su molteplici flussi semantici. A differenza del \textit{bad prompt}, in cui l'attivazione collassa interamente (100\%) su un unico polo dedicato ai \textit{Person Names}, l'introduzione del ragionamento logico distribuisce i token generati in modo più articolato. Il modello focalizza inizialmente una parte rilevante dell'attivazione proprio sull'estrazione dei \textit{Person Names} (42.1\%), per poi spostare il carico cognitivo verso concetti legati ai \textit{Directional Terms} (21.1\%), un'ulteriore area associata ai \textit{Person Names} (19.3\%) e fasi logiche di \textit{Conditional Reasoning} (17.5\%). Questi dati suggeriscono che il ragionamento analitico costringe il modello a spostare progressivamente il proprio focus concettuale, navigando tra cluster differenti man mano che l'elaborazione avanza verso la risposta finale.
 
 \begin{figure}[htbp]
     \centering
@@ -60,4 +60,4 @@ Il profilo di attivazione del Chain of Thought mostra una chiara ripartizione su
 \end{figure}
 
 \paragraph{Transizione Sequenziale: Prompt Chaining}
-Nel Prompt Chaining, la scomposizione del compito porta il modello ad attraversare in sequenza domini semantici ben distinti. Il prompt di base mostra un'attivazione sparpagliata e frammentaria su moltissime aree diverse. Eseguendo il task per passaggi sequenziali (Figura \ref{fig:act_chaining}), le fasi modulano il loro focus: la prima catena (dedicata al contesto) isola la generazione principalmente nel dominio semantico relativo alle \textit{Cyber Warfare Operations} (56.5\%); la seconda fase (estrazione entità) sposta il carico cognitivo verso i concetti di \textit{Disaster Movie Villain}, \textit{Story Protagonist Figure} e \textit{Number Sequence}; l'ultima fase diluisce parzialmente l'attivazione in una distribuzione più morbida necessaria alla costruzione di un questionario.
+Nel \textit{Prompt Chaining}, la scomposizione del compito porta il modello ad attraversare in sequenza domini semantici ben distinti. Il prompt di base mostra un'attivazione sparpagliata e frammentaria su moltissime aree diverse. Eseguendo il task per passaggi sequenziali (Figura \ref{fig:act_chaining}), le fasi modulano il loro focus: la prima catena (dedicata al contesto) isola la generazione principalmente nel dominio semantico relativo alle \textit{Cyber Warfare Operations} (56.5\%); la seconda fase (estrazione entità) sposta il carico cognitivo verso i concetti di \textit{Disaster Movie Villain}, \textit{Story Protagonist Figure} e \textit{Number Sequence}; l'ultima fase diluisce parzialmente l'attivazione in una distribuzione più morbida necessaria alla costruzione di un questionario.

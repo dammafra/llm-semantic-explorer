@@ -41,11 +41,11 @@ Parallelamente alle metriche quantitative introdotte, l'elaborato propone un app
 
 Il sistema di visualizzazione decodifica il JSON ed esegue il seguente mapping visivo:
 \begin{itemize}
-    \item Le \textbf{coordinate spaziali} $(x, y, z)$ calcolate tramite UMAP vengono utilizzate per posizionare i nodi nel canva 3D. Ogni nodo rappresenta l' \textit{hidden state} di un singolo token testuale generato.
+    \item Le \textbf{coordinate spaziali} $(x, y, z)$ calcolate tramite UMAP vengono utilizzate per posizionare i nodi nel canvas 3D. Ogni nodo rappresenta il \textit{last hidden state} di un singolo token testuale generato.
     \item Il parametro cronologico di generazione (lo \textit{step} auteregressivo) viene impiegato per tracciare i collegamenti tra un nodo e il successivo. Questo permette di ricostruire visivamente l'esatta traiettoria percorsa dal ragionamento del modello.
     \item Le etichette di raggruppamento assegnate da HDBSCAN vengono mappate su una scala cromatica. I token appartenenti al medesimo cluster assumono lo stesso colore.
 \end{itemize}
 
 Oltre al rendering grafico, l'interfaccia implementa controlli interattivi che consentono all'utente di ispezionare i singoli nodi o di filtrare i nodi visualizzati.
 
-Questa architettura di \textit{front-end} fornisce una restituzione spaziale tangibile dei dislocamenti quantificati dalla metrica di Jaccard. La possibilità di sovrapporre e isolare selettivamente le traiettorie di diverse tipologie di prompt permette di condurre un'analisi comparativa immediata e intuitiva sulle geometrie del ragionamento latente.
+Questa architettura di \textit{front-end} fornisce una restituzione spaziale tangibile dei dislocamenti. La possibilità di sovrapporre e isolare selettivamente le traiettorie di diverse tipologie di prompt permette di condurre un'analisi comparativa immediata e intuitiva sulle geometrie del ragionamento latente.
