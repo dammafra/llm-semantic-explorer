@@ -1,5 +1,17 @@
 @import "tailwindcss";
 
-.reveal {
+@import "reveal.js/reveal.css";
+@import "reveal.js/theme/serif.css";
+
+@layer base {
+  /* Reverts Tailwind's !important rule so Reveal.js can control visibility */
+  [hidden] {
+    display: revert !important;
+  }
+}
+
+html,
+body,
+#root {
   @apply h-screen w-screen;
 }
