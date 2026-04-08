@@ -1,3 +1,6 @@
+import clsx from 'clsx'
+
+import { useQueryParams } from '@hooks'
 import { useChart } from '@stores'
 
 import { ClusterItem } from './ClusterItem'
@@ -9,9 +12,15 @@ import { PathItem } from './PathItem'
 export function GUI() {
   const data = useChart(s => s.data)
   const mode = useChart(s => s.mode)
+  const { orientation } = useQueryParams()
 
   return (
-    <div className="fixed top-4 bottom-4 left-4 z-1000 w-80 flex flex-col pointer-events-none">
+    <div
+      className={clsx(
+        'fixed top-4 bottom-4 z-1000 w-80 flex flex-col pointer-events-none',
+        orientation === 'rtl' ? 'right-4' : 'left-4',
+      )}
+    >
       <div className="glass p-4 rounded-xl flex flex-col gap-4 pointer-events-auto min-h-0 overflow-hidden">
         <DatasetSelector />
 
