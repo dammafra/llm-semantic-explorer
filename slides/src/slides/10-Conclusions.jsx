@@ -52,6 +52,21 @@ export function ConclusionsSlide() {
           <li>Analisi di pattern decisionali più complessi, agentic</li>
         </ul>
       </div>
+
+      <aside className="notes">
+        Avviandomi alla conclusione, posso affermare che questo lavoro fornisce
+        uno strumento pratico per ispezionare geometricamente la decodifica
+        probabilistica degli LLM. Siamo riusciti a mappare fisicamente come il
+        ragionamento testuale si traduca in traiettorie spaziali misurabili.
+        Ovviamente, il progetto presenta delle limitazioni. Il dataset impiegato
+        è stato costruito su misura e risulta numericamente ridotto. La mancanza
+        di un corpus esteso non ci ha permesso di effettuare validazioni
+        statistiche su grandissima scala. Tuttavia, questo lavoro pone delle
+        solide basi metodologiche. I futuri sviluppi potrebbero applicare questo
+        stesso ambiente di visualizzazione ad architetture ben più complesse,
+        come i sistemi RAG (Retrieval-Augmented Generation), o per mappare i
+        pattern di ragionamento di agenti autonomi avanzati.
+      </aside>
     </Slide>
   );
 }

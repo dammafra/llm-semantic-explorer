@@ -26,6 +26,17 @@ export function ProblemSlide() {
           <p>output</p>
         </div>
       </div>
+
+      <aside className="notes">
+        Tutti noi oggi utilizziamo modelli basati sull'architettura Transformer.
+        Grazie al meccanismo di self-attention e all'addestramento su enormi
+        quantità di dati, questi modelli mostrano capacità straordinarie di
+        comprensione e generazione del testo. Tuttavia, l'aumento vertiginoso
+        del numero di parametri ha reso queste reti neurali sempre più opache.
+        Noi inseriamo un prompt e otteniamo un output testuale semanticamente
+        coerente, ma l'esatto processo computazionale che avviene nel mezzo ci è
+        in gran parte sconosciuto.
+      </aside>
     </Slide>
   );
 }

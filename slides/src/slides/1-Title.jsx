@@ -27,6 +27,16 @@ export function TitleSlide() {
           10 aprile 2026
         </p>
       </div>
+
+      <aside className="notes">
+        Buongiorno a tutti, sono Francesco Dammacco e oggi vi presento il mio
+        progetto di tesi per lo Short Master in Generative AI, intitolato
+        "Esplorazione Semantica degli LLM: Un Approccio di Mechanistic
+        Interpretability tramite Visualizzazione degli Embeddings". L'obiettivo
+        di questo lavoro è stato quello di provare ad "aprire" la scatola nera
+        dei Large Language Models per capire, visivamente e geometricamente,
+        come le nostre istruzioni ne guidino il ragionamento.
+      </aside>
     </Slide>
   );
 }

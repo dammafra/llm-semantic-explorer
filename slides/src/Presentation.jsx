@@ -1,4 +1,5 @@
 import { Deck, Slide, Stack } from "@revealjs/react";
+import RevealNotes from "reveal.js/plugin/notes";
 import {
   ChainOfThoughtResultsSlide,
   ConclusionsSlide,
@@ -14,7 +15,10 @@ import {
 
 export function Presentation() {
   return (
-    <Deck config={{ hash: true, navigationMode: "linear" }}>
+    <Deck
+      plugins={[RevealNotes]}
+      config={{ hash: true, navigationMode: "linear" }}
+    >
       <TitleSlide />
       <Stack>
         <ProblemSlide />

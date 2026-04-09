@@ -8,6 +8,13 @@ export function ObjectiveSlide() {
         Rendere tangibile lo spazio semantico degli LLM attraverso una
         rappresentazione 3D interattiva
       </p>
+
+      <aside className="notes">
+        Lo scopo principale del progetto è stato tradurre queste dinamiche
+        interne in una rappresentazione visiva tangibile. Per farlo, ho
+        implementato un ambiente per l'esplorazione tridimensionale dello spazio
+        latente degli embeddings.
+      </aside>
     </Slide>
   );
 }

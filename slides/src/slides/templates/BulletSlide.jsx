@@ -1,6 +1,6 @@
 import { Slide } from "@revealjs/react";
 
-export function BulletSlide({ title, items, ...props }) {
+export function BulletSlide({ title, items, children, ...props }) {
   return (
     <Slide className="text-left" {...props}>
       <h3>{title}</h3>
@@ -9,6 +9,7 @@ export function BulletSlide({ title, items, ...props }) {
           <li key={index}>{item}</li>
         ))}
       </ul>
+      {children}
     </Slide>
   );
 }

@@ -41,6 +41,23 @@ export function PipelineSlide() {
           ottimizzato tramite <span className="italic">Unsloth</span>
         </p>
       </div>
+
+      <aside className="notes">
+        Per realizzare questo ambiente esplorativo, è stato necessario estrarre
+        i cosiddetti "hidden states", ovvero gli embeddings generati nei layer
+        interni del modello durante la fase di inferenza. Parliamo di vettori
+        con migliaia di dimensioni, nello specifico 4096. Per renderli
+        analizzabili dall'occhio umano, la pipeline che ho sviluppato utilizza
+        l'algoritmo di riduzione dimensionale UMAP, che comprime i dati da 4096
+        a sole 3 dimensioni. UMAP è stato scelto perché è eccellente nel
+        preservare la topologia locale e le relazioni di vicinanza tra i vettori
+        originali. Successivamente, ho integrato un algoritmo di clustering
+        basato sulla densità, chiamato HDBSCAN. Questo strumento permette di
+        individuare automaticamente raggruppamenti semantici all'interno dello
+        spazio tridimensionale, senza dover ipotizzare a priori il numero di
+        cluster. Tutta questa logica è stata orchestrata all'interno di un
+        notebook Python dedicato.
+      </aside>
     </Slide>
   );
 }
