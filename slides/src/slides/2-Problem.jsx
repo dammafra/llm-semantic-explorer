@@ -10,7 +10,7 @@ export function ProblemSlide() {
           <p>prompt</p>
           <Icon icon="solar:arrow-right-linear" fontSize="100px" />
         </div>
-        <div className="drop-shadow-2xl shadow-2xl size-100 bg-black text-white rounded-md p-4">
+        <div className="shadow size-100 bg-black text-white rounded-md p-4">
           <h3 className="text-white!">LLM</h3>
           <ul className="text-xl">
             <li>Architettura Transformer</li>

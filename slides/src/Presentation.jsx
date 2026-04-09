@@ -14,15 +14,7 @@ import {
 
 export function Presentation() {
   return (
-    <Deck
-      config={{
-        hash: true,
-        navigationMode: "linear",
-        slideNumber: "c/t",
-        showSlideNumber: "all",
-        preloadIframes: true,
-      }}
-    >
+    <Deck config={{ hash: true, navigationMode: "linear" }}>
       <TitleSlide />
       <Stack>
         <ProblemSlide />

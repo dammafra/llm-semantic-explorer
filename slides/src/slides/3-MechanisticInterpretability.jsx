@@ -10,6 +10,7 @@ export function MechanisticInterpretabilitySlide() {
         "Ogni parola generata è un punto lungo una traiettoria in uno spazio vettoriale ad alta dimensionalità",
       ]}
       background="black"
+      backgroundImage="assets/bg-layers.png"
       transition="zoom"
     />
   );

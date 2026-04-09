@@ -1,11 +1,13 @@
-import { BulletSlide } from "./templates/BulletSlide";
+import { Slide } from "@revealjs/react";
 
 export function ObjectiveSlide() {
   return (
-    <BulletSlide
-      title="Obbiettivo"
-      items={["Item 1", "Item 2", "Item 3"]}
-      backgroundImage="assets/bg-compass.png"
-    />
+    <Slide className="text-left" backgroundImage="assets/bg-compass.png">
+      <h3>Obiettivo</h3>
+      <p className="max-w-1/2">
+        Rendere tangibile lo spazio semantico degli LLM attraverso una
+        rappresentazione 3D interattiva
+      </p>
+    </Slide>
   );
 }
