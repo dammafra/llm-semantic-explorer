@@ -15,7 +15,7 @@ type Props = {
 }
 
 export function PathItem({ path }: Props) {
-  const { background } = useQueryParams()
+  const { background, doubleClick } = useQueryParams()
   const hiddenPaths = useChart(s => s.hiddenPaths)
   const togglePathVisibility = useChart(s => s.togglePathVisibility)
   const setOnlyPathVisible = useChart(s => s.setOnlyPathVisible)
@@ -31,7 +31,6 @@ export function PathItem({ path }: Props) {
     e.stopPropagation()
     if (e.shiftKey) {
       setOnlyPathVisible(path.id)
-      setExpanded(true)
     } else {
       togglePathVisibility(path.id)
       if (!isHidden) setExpanded(false)
@@ -46,7 +45,12 @@ export function PathItem({ path }: Props) {
       )}
     >
       <div
-        onClick={() => setExpanded(prev => !prev)}
+        onClick={() => {
+          if (!doubleClick) setExpanded(prev => !prev)
+        }}
+        onDoubleClick={() => {
+          if (doubleClick) setExpanded(prev => !prev)
+        }}
         className={clsx(
           'w-full p-2 flex items-center gap-2 cursor-pointer',
           background ? 'hover:bg-white/5' : 'hover:bg-black/5',

@@ -13,7 +13,7 @@ export function ResultSlide({
       className="h-full text-left"
       backgroundTransition="none"
       backgroundGradient="radial-gradient(#1d293d, #020618)"
-      backgroundIframe={`https://llm-semantic-explorer.vercel.app?dataset=${dataset}&orientation=rtl`}
+      backgroundIframe={`https://llm-semantic-explorer.vercel.app?dataset=${dataset}&orientation=rtl&double-click=true`}
       backgroundInteractive
     >
       <div className="w-1/2 text-white pointer-events-auto select-none">

@@ -8,6 +8,7 @@ type QueryParams = {
   background: boolean
   dataset: string | null
   orientation: Orientation
+  doubleClick: boolean
 }
 
 export function useQueryParams(): QueryParams {
@@ -16,6 +17,7 @@ export function useQueryParams(): QueryParams {
       background: params.get('background') !== 'false',
       dataset: params.get('dataset'),
       orientation: params.get('orientation') === 'rtl' ? 'rtl' : 'ltr',
+      doubleClick: params.get('double-click') === 'true' || params.get('doubleClick') === 'true',
     }),
     [],
   )
