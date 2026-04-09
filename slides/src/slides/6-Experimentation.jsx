@@ -17,6 +17,9 @@ export function ExperimentationSlide() {
           compito
         </li>
         <li>
+          Osservazione dello <span className="italic">steering</span>
+        </li>
+        <li>
           Validazione
           <Icon icon="solar:arrow-right-linear" className="mx-8 inline-block" />
           Trustworthiness
@@ -28,9 +31,6 @@ export function ExperimentationSlide() {
             className="ml-30 mr-8 inline-block"
           />
           Attivazione Concettuale
-        </li>
-        <li>
-          Osservazione dello <span className="italic">steering</span>
         </li>
       </ul>
 

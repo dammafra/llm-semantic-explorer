@@ -3,7 +3,7 @@ import { Slide } from "@revealjs/react";
 
 export function PipelineSlide() {
   const stepClass =
-    "shadow content-center text-2xl w-56 h-40 bg-slate-300 rounded-md last:w-53 px-2";
+    "shadow content-center text-2xl w-56 h-44 bg-slate-300 rounded-md last:w-53 px-2";
   const Separator = (
     <Icon
       icon="solar:menu-dots-bold"
@@ -17,7 +17,7 @@ export function PipelineSlide() {
 
       <div className="flex flex-wrap gap-y-4 items-center my-10">
         <div className={stepClass}>
-          Generazione con forward pass per ottenere gli hidden states (4096D)
+          Generazione output <br />+<br /> hidden states (4096D)
         </div>
         {Separator}
         <div className={stepClass}>
@@ -34,11 +34,13 @@ export function PipelineSlide() {
         <div className={stepClass}>Riduzione dimensionale con UMAP (3D)</div>
       </div>
       <div className="flex items-center gap-4">
-        <Icon icon="boxicons:chip" fontSize="80px" className="text-slate-400" />
-        <p className="text-left text-2xl">
-          Implementazione in ambiente Kaggle su 2 ⨉ GPU Tesla T4 eseguendo{" "}
+        <Icon icon="boxicons:chip" fontSize="60px" className="text-slate-400" />
+        <p className="text-left text-xl">
+          Implementazione in ambiente Kaggle su 2 ⨉ GPU Tesla T4 (16 GB VRAM
+          totali), <br /> eseguendo{" "}
           <span className="text-nowrap italic">Llama-3.2-3B-Instruct</span>{" "}
-          ottimizzato tramite <span className="italic">Unsloth</span>
+          ottimizzato tramite <span className="italic">Unsloth</span> con
+          quantizzazione a 4 bit
         </p>
       </div>
 
