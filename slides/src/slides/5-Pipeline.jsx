@@ -17,7 +17,7 @@ export function PipelineSlide() {
 
       <div className="flex flex-wrap gap-y-4 items-center my-10">
         <div className={stepClass}>
-          Generazione output <br />+<br /> hidden states (4096D)
+          Generazione output <br />+<br /> hidden states (3072D)
         </div>
         {Separator}
         <div className={stepClass}>
@@ -48,9 +48,9 @@ export function PipelineSlide() {
         Per realizzare questo ambiente esplorativo, è stato necessario estrarre
         i cosiddetti "hidden states", ovvero gli embeddings generati nei layer
         interni del modello durante la fase di inferenza. Parliamo di vettori
-        con migliaia di dimensioni, nello specifico 4096. Per renderli
+        con migliaia di dimensioni, nello specifico 3072. Per renderli
         analizzabili dall'occhio umano, la pipeline che ho sviluppato utilizza
-        l'algoritmo di riduzione dimensionale UMAP, che comprime i dati da 4096
+        l'algoritmo di riduzione dimensionale UMAP, che comprime i dati da 3072
         a sole 3 dimensioni. UMAP è stato scelto perché è eccellente nel
         preservare la topologia locale e le relazioni di vicinanza tra i vettori
         originali. Successivamente, ho integrato un algoritmo di clustering
