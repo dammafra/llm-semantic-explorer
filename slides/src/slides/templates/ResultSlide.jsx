@@ -41,7 +41,7 @@ export function ResultSlide({
           </tbody>
         </table>
 
-        <p className="text-xl text-center absolute bottom-0 px-25 m-0!">
+        <p className="text-xl text-center absolute bottom-0 px-25">
           {description}
         </p>
       </div>
