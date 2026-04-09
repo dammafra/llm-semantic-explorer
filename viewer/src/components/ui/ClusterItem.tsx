@@ -1,5 +1,4 @@
 import clsx from 'clsx'
-import { useMemo } from 'react'
 
 import { useQueryParams } from '@hooks'
 import { useChart, type ChartData } from '@stores'
@@ -11,13 +10,11 @@ type Cluster = ChartData['clusters'][number]
 
 type Props = {
   cluster: Cluster
+  count: number
 }
 
-export function ClusterItem({ cluster }: Props) {
+export function ClusterItem({ cluster, count }: Props) {
   const { background } = useQueryParams()
-  const data = useChart(s => s.data)
-  const hiddenPaths = useChart(s => s.hiddenPaths)
-  const pathVisibleSteps = useChart(s => s.pathVisibleSteps)
   const hiddenClusters = useChart(s => s.hiddenClusters)
   const toggleClusterVisibility = useChart(s => s.toggleClusterVisibility)
   const setOnlyClusterVisible = useChart(s => s.setOnlyClusterVisible)
@@ -33,20 +30,7 @@ export function ClusterItem({ cluster }: Props) {
     }
   }
 
-  const filteredCount = useMemo(() => {
-    if (!data) return 0
-    let count = 0
-    for (const path of data.paths) {
-      if (hiddenPaths.has(path.id)) continue
-      const visibleSteps = pathVisibleSteps[path.id] ?? path.points.length
-      for (let i = 0; i < visibleSteps && i < path.points.length; i++) {
-        if (path.points[i].cluster_id === cluster.id) count++
-      }
-    }
-    return count
-  }, [data, hiddenPaths, pathVisibleSteps, cluster.id])
-
-  if (filteredCount === 0) return null
+  if (count === 0) return null
 
   return (
     <div
@@ -77,7 +61,7 @@ export function ClusterItem({ cluster }: Props) {
       <span
         className={clsx('text-xs font-mono shrink-0', background ? 'text-white' : 'text-black')}
       >
-        {filteredCount} tks
+        {count} tks
       </span>
     </div>
   )
