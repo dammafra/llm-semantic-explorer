@@ -19,6 +19,7 @@ export function ExperimentationSlide() {
         <li>
           Osservazione dello <span className="italic">steering</span>
         </li>
+        <br />
         <li>
           Validazione
           <Icon icon="solar:arrow-right-linear" className="mx-8 inline-block" />

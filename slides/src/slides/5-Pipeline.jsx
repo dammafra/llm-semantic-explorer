@@ -21,17 +21,17 @@ export function PipelineSlide() {
         </div>
         {Separator}
         <div className={stepClass}>
-          Filtraggio da <span className="text-nowrap">stop-words</span>,
+          Filtraggio <span className="text-nowrap">stop-words</span>,
           punteggiatura, token speciali
         </div>
         {Separator}
-        <div className={stepClass}>Riduzione dimensionale con UMAP (30D)</div>
+        <div className={stepClass}>Riduzione dimensionale UMAP (30D)</div>
         {Separator}
-        <div className={stepClass}>Clustering con HDBSCAN</div>
+        <div className={stepClass}>Clustering "semantico" HDBSCAN</div>
         {Separator}
         <div className={stepClass}>Generazione etichette</div>
         {Separator}
-        <div className={stepClass}>Riduzione dimensionale con UMAP (3D)</div>
+        <div className={stepClass}>Riduzione dimensionale UMAP (3D)</div>
       </div>
       <div className="flex items-center gap-4">
         <Icon icon="boxicons:chip" fontSize="60px" className="text-slate-400" />
