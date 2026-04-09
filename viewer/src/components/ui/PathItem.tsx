@@ -18,6 +18,7 @@ export function PathItem({ path }: Props) {
   const { background } = useQueryParams()
   const hiddenPaths = useChart(s => s.hiddenPaths)
   const togglePathVisibility = useChart(s => s.togglePathVisibility)
+  const setOnlyPathVisible = useChart(s => s.setOnlyPathVisible)
   const playingPaths = useChart(s => s.playingPaths)
   const togglePlaying = useChart(s => s.togglePlaying)
   const pathVisibleSteps = useChart(s => s.pathVisibleSteps)
@@ -28,8 +29,13 @@ export function PathItem({ path }: Props) {
 
   const handleToggleVisibility = (e: React.MouseEvent) => {
     e.stopPropagation()
-    togglePathVisibility(path.id)
-    if (!isHidden) setExpanded(false)
+    if (e.shiftKey) {
+      setOnlyPathVisible(path.id)
+      setExpanded(true)
+    } else {
+      togglePathVisibility(path.id)
+      if (!isHidden) setExpanded(false)
+    }
   }
 
   return (

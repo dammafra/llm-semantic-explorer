@@ -20,8 +20,18 @@ export function ClusterItem({ cluster }: Props) {
   const pathVisibleSteps = useChart(s => s.pathVisibleSteps)
   const hiddenClusters = useChart(s => s.hiddenClusters)
   const toggleClusterVisibility = useChart(s => s.toggleClusterVisibility)
+  const setOnlyClusterVisible = useChart(s => s.setOnlyClusterVisible)
 
   const isHidden = hiddenClusters.has(cluster.id)
+
+  const handleToggleVisibility = (e: React.MouseEvent) => {
+    e.stopPropagation()
+    if (e.shiftKey) {
+      setOnlyClusterVisible(cluster.id)
+    } else {
+      toggleClusterVisibility(cluster.id)
+    }
+  }
 
   const filteredCount = useMemo(() => {
     if (!data) return 0
@@ -48,7 +58,7 @@ export function ClusterItem({ cluster }: Props) {
       <ColorCheckbox
         color={getColor(cluster.id)}
         checked={!isHidden}
-        onClick={() => toggleClusterVisibility(cluster.id)}
+        onClick={handleToggleVisibility}
       />
       <span
         className={clsx(

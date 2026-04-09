@@ -59,6 +59,8 @@ type ChartState = {
   togglePlaying: (pathId: number) => void
   togglePathVisibility: (id: number) => void
   toggleClusterVisibility: (id: number) => void
+  setOnlyPathVisible: (id: number) => void
+  setOnlyClusterVisible: (id: number) => void
 }
 
 export const useChart = create<ChartState>()(set => ({
@@ -161,5 +163,31 @@ export const useChart = create<ChartState>()(set => ({
       const next = new Set(state.hiddenClusters)
       next.has(id) ? next.delete(id) : next.add(id)
       return { hiddenClusters: next }
+    }),
+
+  setOnlyPathVisible: id =>
+    set(state => {
+      const allPaths = state.data?.paths.map(p => p.id) || []
+      const isCurrentlyOnlyVisible =
+        state.hiddenPaths.size === allPaths.length - 1 && !state.hiddenPaths.has(id)
+      if (isCurrentlyOnlyVisible) {
+        return { hiddenPaths: new Set() }
+      }
+      const nextHidden = new Set(allPaths)
+      nextHidden.delete(id)
+      return { hiddenPaths: nextHidden }
+    }),
+
+  setOnlyClusterVisible: id =>
+    set(state => {
+      const allClusters = state.data?.clusters.map(c => c.id) || []
+      const isCurrentlyOnlyVisible =
+        state.hiddenClusters.size === allClusters.length - 1 && !state.hiddenClusters.has(id)
+      if (isCurrentlyOnlyVisible) {
+        return { hiddenClusters: new Set() }
+      }
+      const nextHidden = new Set(allClusters)
+      nextHidden.delete(id)
+      return { hiddenClusters: nextHidden }
     }),
 }))
