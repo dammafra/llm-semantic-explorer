@@ -33,14 +33,12 @@ export function PipelineSlide() {
         {Separator}
         <div className={stepClass}>Riduzione dimensionale UMAP (3D)</div>
       </div>
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-4 border-t-2 border-slate-400 pt-4">
         <Icon icon="boxicons:chip" fontSize="60px" className="text-slate-400" />
-        <p className="text-left text-xl">
-          Implementazione in ambiente Kaggle su 2 ⨉ GPU Tesla T4 (16 GB VRAM
-          totali), <br /> eseguendo{" "}
-          <span className="text-nowrap italic">Llama-3.2-3B-Instruct</span>{" "}
-          ottimizzato tramite <span className="italic">Unsloth</span> con
-          quantizzazione a 4 bit
+        <p className="text-left text-xl font-mono">
+          Kaggle | GPU T4 (16 GB VRAM) |{" "}
+          <span className="text-nowrap ">Llama-3.2-3B-Instruct</span> | Unsloth
+          4-bit
         </p>
       </div>
 
