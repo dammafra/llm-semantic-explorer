@@ -16,8 +16,8 @@ export function ResultSlide({
       backgroundIframe={`https://llm-semantic-explorer.vercel.app?dataset=${dataset}&orientation=rtl`}
       backgroundInteractive
     >
-      <div className="w-1/2 text-white">
-        <h4 className="text-white! pointer-events-auto">
+      <div className="w-1/2 text-white pointer-events-auto select-none">
+        <h4 className="text-white!">
           <span className="text-base">Risultati ({index}/3)</span> <br />
           {title}
         </h4>
