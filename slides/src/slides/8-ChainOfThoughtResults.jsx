@@ -13,10 +13,7 @@ export function ChainOfThoughtResultsSlide() {
         "Person Names (2)": [0, 19.3],
         "Conditional Reasoning": [0, 17.5],
       }}
-      description="  A differenza del collasso totale su un singolo concetto del prompt zero,
-        il CoT costringe il modello a spostare progressivamente il proprio
-        focus, navigando tra molteplici cluster semantici man mano che
-        costruisce la risposta finale"
+      description="A differenza del collasso totale su un singolo concetto del prompt zero-shot, il CoT costringe il modello a spostare progressivamente il proprio focus, navigando tra molteplici cluster semantici man mano che costruisce la risposta finale"
     />
   );
 }

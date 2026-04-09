@@ -12,9 +12,7 @@ export function FewShotPromptingResultsSlide() {
         "Customer Information": [0, 42.1],
         "Damaged Tablet": [0, 42.1],
       }}
-      description="La divisione in due poli primari riflette geometricamente l'alternanza
-        tra la sintassi vincolante del formato richiesto e l'inserimento dei
-        dati estratti dal contesto"
+      description="La divisione in due poli primari riflette geometricamente l'alternanza i vincolante del formato richiesto e l'inserimento dei dati estratti dal contesto"
     />
   );
 }
