@@ -8,12 +8,16 @@ export function ResultSlide({
   conceptualFootprint,
   description,
 }) {
+  const baseURL = import.meta.env.PROD
+    ? "https://llm-semantic-explorer.vercel.app"
+    : "http://localhost:5174";
+
   return (
     <Slide
       className="h-full text-left"
       backgroundTransition="none"
       backgroundGradient="radial-gradient(#1d293d, #020618)"
-      backgroundIframe={`https://llm-semantic-explorer.vercel.app?dataset=${dataset}&orientation=rtl&double-click=true`}
+      backgroundIframe={`${baseURL}?dataset=${dataset}&orientation=rtl&double-click=true`}
       backgroundInteractive
     >
       <div className="w-1/2 text-white pointer-events-auto select-none">

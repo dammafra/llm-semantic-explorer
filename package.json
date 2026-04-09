@@ -1,0 +1,24 @@
+{
+  "name": "llm-semantic-explorer",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "workspaces": [
+    "slides",
+    "viewer"
+  ],
+  "scripts": {
+    "dev": "concurrently --names \"slides,viewer\" --prefix \"name\" --prefix-colors \"blue,green\" \"npm run dev:slides\" \"npm run dev:viewer\"",
+    "dev:slides": "npm run dev --workspace=slides",
+    "dev:viewer": "npm run dev --workspace=viewer",
+    "build": "npm run build:slides && npm run build:viewer",
+    "build:slides": "npm run build --workspace=slides",
+    "build:viewer": "npm run build --workspace=viewer",
+    "preview": "concurrently --names \"slides,viewer\" --prefix \"name\" --prefix-colors \"blue,green\" \"npm run preview:slides\" \"npm run preview:viewer\"",
+    "preview:slides": "npm run preview --workspace=slides",
+    "preview:viewer": "npm run preview --workspace=viewer"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0"
+  }
+}
