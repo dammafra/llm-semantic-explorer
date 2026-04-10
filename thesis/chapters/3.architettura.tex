@@ -22,8 +22,8 @@ Una volta avviato il processo di inferenza, il modello genera sequenzialmente i 
 
 L'applicazione di questa funzione di filtraggio fa sì che all'interno della struttura dati vengano conservati unicamente i token portatori di un significato semantico definito. Solo per questo sottoinsieme filtrato verranno mantenuti in memoria i corrispondenti vettori ad alta dimensionalità, ottimizzando così il carico computazionale per le successive fasi di clustering e riduzione.
 
-\subsection{Estrazione degli Embeddings dai Layer del Modello}
-\label{sec:estrazione_embeddings}
+\subsection{Estrazione degli Hidden States dai Layer del Modello}
+\label{sec:estrazione_hidden_states}
 
 La fase centrale dell'architettura sperimentale consiste nell'estrazione delle rappresentazioni vettoriali durante il processo generativo del modello. Poiché l'obiettivo dell'elaborato è misurare lo spazio latente in modo dinamico, la semplice funzione \texttt{generate} non è sufficiente, in quanto di default restituisce esclusivamente la sequenza di identificativi (\textit{token IDs}) che costituiscono il testo di output.
 
