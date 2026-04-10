@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "dev": "concurrently --names \"slides,viewer\" --prefix \"name\" --prefix-colors \"blue,green\" \"npm run dev:slides\" \"npm run dev:viewer\"",
-    "dev:slides": "npm run dev --workspace=slides",
+    "dev:slides": "npm run dev --workspace=slides -- --port=5173",
     "dev:viewer": "npm run dev --workspace=viewer",
     "build": "npm run build:slides && npm run build:viewer",
     "build:slides": "npm run build --workspace=slides",
